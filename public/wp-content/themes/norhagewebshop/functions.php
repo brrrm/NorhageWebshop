@@ -135,9 +135,9 @@ add_action( 'init', 'norhagewebshop_register_acf_blocks' );
 // Our custom post type function
 function norhagewebshop_create_posttypes() {
 	$taxonomies = [
-		'product-type'		=> [
-			'machine-name'					=> 'product-type',
-			'content-type'					=> 'product',
+		'greenhouse-type'		=> [
+			'machine-name'					=> 'greenhouse-type',
+			'content-type'					=> 'greenhouse',
 			'labels'						=> [
 				'name' => _x( 'Greenhouse type', 'taxonomy general name' ),
 				'singular_name' => _x( 'Greenhouse types', 'taxonomy singular name' ),
@@ -226,9 +226,9 @@ function norhagewebshop_create_posttypes() {
 
 
  	$contentTypes = [
- 		'product'	=> [
- 			'slug'		=> 'product',
- 			'taxonomies'	=> ['product-type'],
+ 		'greenhouse'	=> [
+ 			'slug'		=> 'greenhouse',
+ 			'taxonomies'	=> ['greenhouse-type'],
  			'labels'	=> [
 				'name' 						=> __( 'Greenhouses', 'norhagewebshop' ),
 				'singular_name' 			=> __( 'Greenhouse', 'norhagewebshop' ),
@@ -296,13 +296,13 @@ function norhagewebshop_create_posttypes() {
 		'public' 				=> true,
 		'exclude_from_search'	=> false,
 		'has_archive' 			=> false,
-		'rewrite' 				=> array('slug' => 'product'),
+		'rewrite' 				=> array('slug' => 'greenhouse'),
 		'show_in_rest' 			=> true,
 		'show_in_menu'			=> true,
 		'show_in_nav_menus'		=> true,
 		'menu_position'			=> 4,
 		'menu_icon'				=> 'dashicons-carrot',
-		'taxonomies'			=> ['product-type'],
+		'taxonomies'			=> ['greenhouse-type'],
 		'supports'				=> [
 			'title',
 			'editor',
@@ -439,8 +439,8 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
     // Check if the item is a Category or Custom Taxonomy
     if( $args->menu_id == 'primary-menu' && $item->type == 'taxonomy' ) {
         switch($item->object){
-        	case 'product-type':
-        		$post_type = 'product';
+        	case 'greenhouse-type':
+        		$post_type = 'greenhouse';
         		break;
         	case 'plastic-type':
         		$post_type = 'plastic';

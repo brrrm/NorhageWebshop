@@ -11,8 +11,8 @@ $terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
 
 // set the correct post-type for the fallback query to get the image
 switch($catName){
-	case 'product-type':
-		$post_type = 'product';
+	case 'greenhouse-type':
+		$post_type = 'greenhouse';
 		break;
 	case 'plastic-type':
 		$post_type = 'plastic';
