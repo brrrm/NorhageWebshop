@@ -1,0 +1,29 @@
+{
+    "name": "norhagewebshop/cta-within-text-block",
+    "title": "Impulse call to action block",
+    "description": "Block with a cta, designed to be used inbetween paragraphs",
+    "style": [ "file:./ctaWithinTextBlock.css" ],
+    "category": "norhage",
+    "icon": "phone",
+    "keywords": ["cta", "phone"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "ctaWithinTextBlock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "damagerepair", "label": "Damage repair (bright orange)" }
+    ],
+    "editorStyle": "file:./editor.css"
+}

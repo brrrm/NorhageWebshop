@@ -1,0 +1,53 @@
+{
+	"name": "bramdeleeuw/norhagewebshop",
+	"authors": [
+		{
+			"name": "bram de leeuw",
+			"email": "bramdeleeuw@gmail.com"
+		}
+	],
+	"require": {
+		"johnpbloch/wordpress": "^6.3",
+		"wpengine/advanced-custom-fields-pro": "6.2.1.1",
+		"wpackagist-plugin/wordpress-seo": "^21.4",
+		"wpackagist-plugin/post-types-order": "^2.1",
+		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^3.1",
+		"wpackagist-plugin/woocommerce": "^8.5",
+		"wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "^3.7",
+		"wpackagist-theme/storefront": "^4.5"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+	    	]
+		},
+		{
+			"type": "composer",
+			"url": "https://connect.advancedcustomfields.com"
+		}
+	],
+	"extra": {
+		"wordpress-install-dir": "public",
+		"installer-paths": {
+			"public/wp-content/mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			],
+			"public/wp-content/plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"public/wp-content/themes/{$name}/": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"johnpbloch/wordpress-core-installer": true,
+			"composer/installers": true
+		}
+	}
+}

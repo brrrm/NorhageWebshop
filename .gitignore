@@ -1,0 +1,66 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/vendor
+/public/*
+!/public/wp-content
+/public/wp-content/*
+!/public/wp-content/themes
+/public/wp-content/themes/*
+!/public/wp-content/themes/norhageindustri
+!/public/wp-content/plugins
+/public/wp-content/plugins/*
+!/public/wp-content/themes/norhage*
+
+# Configuration
+wp-config.php
+
+# Example themes
+/public/wp-content/themes/twenty*/
+
+# Example plugin
+/wp-content/plugins/hello.php
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+/.htaccess
+
+#auth.json
+auth.json
+
+# track these files, if they exist
+!.editorconfig
+!.phpcs.xml.dist
+
+# track favicon files, if they exist
+!/public/android-chrome-*.png
+!/public/apple-touch-icon*.png
+!/public/browserconfig.xml
+!/public/favicon*.png
+!/public/favicon*.ico
+!/public/manifest.json
+!/public/mstile-*.png
+!/public/safari-pinned-tab.svg
+!/public/site.webmanifest
+!/public/robots.txt
+
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes

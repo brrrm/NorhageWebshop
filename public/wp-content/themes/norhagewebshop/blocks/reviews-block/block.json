@@ -1,0 +1,25 @@
+{
+    "name": "norhagewebshop/reviews-block",
+    "title": "Reviews block",
+    "description": "Block with customer reviews",
+    "style": [ "file:./reviewsBlock.css" ],
+    "category": "norhage",
+    "icon": "star-filled",
+    "keywords": ["reviews"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "reviewsBlock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css"
+}

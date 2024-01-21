@@ -1,0 +1,669 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: norhage Industri\n"
+"POT-Creation-Date: 2023-12-08 13:35+0100\n"
+"PO-Revision-Date: 2023-12-08 13:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:18
+msgid "404"
+msgstr "404"
+
+#: 404.php:20
+#, fuzzy
+msgid "oh dear, we had to short on material.."
+msgstr "Oh je, wir mussten an Material mangeln."
+
+#: blocks/categories-block/categoriesBlock.php:35
+#: blocks/categories-block/categoriesBlock.php:43
+#, php-format
+msgid "View all post filed under %s"
+msgstr "Alle unter %s eingereichten Stellen anzeigen"
+
+#: blocks/headerblock/headerblock.php:65
+msgid "Industrial greenhouse projects"
+msgstr "Industrielle Gewächshausprojekte"
+
+#: blocks/headerblock/headerblock.php:79
+msgid "Installation services"
+msgstr "Installationsdienstleistungen"
+
+#: blocks/headerblock/headerblock.php:86
+msgid "Maintenance & restoration"
+msgstr "Wartung & Renovierung"
+
+#: blocks/headerblock/headerblock.php:95
+msgid "Roofing & facade, PVC curtains"
+msgstr "Dach & Fassade, PVC-Vorhänge"
+
+#: blocks/projects-block/projectsBlock.php:53
+msgid "Left"
+msgstr "Links"
+
+#: blocks/projects-block/projectsBlock.php:54
+msgid "Right"
+msgstr "Rechts"
+
+#: blocks/projects-block/projectsBlock.php:71
+#, fuzzy
+msgid "Read more ->"
+msgstr "Weiterlesen"
+
+#: footer.php:16
+#, fuzzy
+msgid "Norhage Industri"
+msgstr "Norhage Industri"
+
+#: footer.php:19
+msgid "Address"
+msgstr "Adresse"
+
+#: footer.php:27
+msgid "Email"
+msgstr "E-Mail"
+
+#: footer.php:30
+msgid "Phone"
+msgstr "Telefonnummer"
+
+#: footer.php:36
+#, fuzzy
+msgid "B2C webshop"
+msgstr "B2C-Webshop"
+
+#: footer.php:41 footer.php:42
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: footer.php:51
+#, fuzzy
+msgid "Norhage can also be found on:"
+msgstr "Norhage ist auch zu finden auf:"
+
+#: functions.php:52
+msgid "Primary"
+msgstr "Primär"
+
+#: functions.php:53
+msgid "Secondary navigation"
+msgstr "Sekundärnavigation"
+
+#: functions.php:54
+msgid "Footer navigation"
+msgstr "Footernavigation"
+
+#: functions.php:142
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Greenhouse type"
+msgstr "Art des Gewächshauses"
+
+#: functions.php:143
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Greenhouse types"
+msgstr "Gewächshaus-Typen"
+
+#: functions.php:144
+#, fuzzy
+msgid "Search greenhouse types"
+msgstr "Gewächshaustypen suchen"
+
+#: functions.php:145
+#, fuzzy
+msgid "All greenhouse types"
+msgstr "Alle Gewächshaustypen"
+
+#: functions.php:146
+#, fuzzy
+msgid "Parent greenhouse type"
+msgstr "Typ des Elterngewächshauses"
+
+#: functions.php:147
+#, fuzzy
+msgid "Parent greenhouse type:"
+msgstr "Typ des Elterngewächshauses:"
+
+#: functions.php:148
+#, fuzzy
+msgid "Edit greenhouse type"
+msgstr "Gewächshaustyp bearbeiten"
+
+#: functions.php:149
+#, fuzzy
+msgid "Update greenhouse type"
+msgstr "Gewächshaustyp aktualisieren"
+
+#: functions.php:150
+#, fuzzy
+msgid "Save greenhouse type"
+msgstr "Gewächshaustyp speichern"
+
+#: functions.php:151
+#, fuzzy
+msgid "New greenhouse type name"
+msgstr "Neuer Name für den Gewächshaustyp"
+
+#: functions.php:152
+#, fuzzy
+msgid "Greenhouse types"
+msgstr "Gewächshaus-Typen"
+
+#: functions.php:159
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Plastic type"
+msgstr "Kunststoff-Typ"
+
+#: functions.php:160
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Plastic types"
+msgstr "Kunststoff-Typen"
+
+#: functions.php:161
+#, fuzzy
+msgid "Search plastic types"
+msgstr "Suche nach Kunststofftypen"
+
+#: functions.php:162
+#, fuzzy
+msgid "All plastic types"
+msgstr "Alle Kunststoffarten"
+
+#: functions.php:163
+#, fuzzy
+msgid "Parent plastic type"
+msgstr "Übergeordneter Kunststofftyp"
+
+#: functions.php:164
+#, fuzzy
+msgid "Parent plastic type:"
+msgstr "Übergeordneter Kunststofftyp:"
+
+#: functions.php:165
+#, fuzzy
+msgid "Edit plastic type"
+msgstr "Kunststofftyp bearbeiten"
+
+#: functions.php:166
+#, fuzzy
+msgid "Update plastic type"
+msgstr "Kunststofftyp aktualisieren"
+
+#: functions.php:167
+#, fuzzy
+msgid "Save plastic type"
+msgstr "Kunststofftyp speichern"
+
+#: functions.php:168
+#, fuzzy
+msgid "New plastic type name"
+msgstr "Neue Kunststoff-Typenbezeichnung"
+
+#: functions.php:169
+#, fuzzy
+msgid "Plastic types"
+msgstr "Kunststoff-Typen"
+
+#: functions.php:176
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Material type"
+msgstr "Materialart"
+
+#: functions.php:177
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Material types"
+msgstr "Materialarten"
+
+#: functions.php:178
+#, fuzzy
+msgid "Search material types"
+msgstr "Materialarten suchen"
+
+#: functions.php:179
+#, fuzzy
+msgid "All Material types"
+msgstr "Alle Materialarten"
+
+#: functions.php:180
+#, fuzzy
+msgid "Parent Material type"
+msgstr "Übergeordneter Materialtyp"
+
+#: functions.php:181
+#, fuzzy
+msgid "Parent Material type:"
+msgstr "Übergeordneter Materialtyp:"
+
+#: functions.php:182
+#, fuzzy
+msgid "Edit Material type"
+msgstr "Materialtyp bearbeiten"
+
+#: functions.php:183
+#, fuzzy
+msgid "Update Material type"
+msgstr "Materialart aktualisieren"
+
+#: functions.php:184
+#, fuzzy
+msgid "Save Material type"
+msgstr "Materialart speichern"
+
+#: functions.php:185
+#, fuzzy
+msgid "New Material type name"
+msgstr "Neuer Name des Materialtyps"
+
+#: functions.php:186
+#, fuzzy
+msgid "Material types"
+msgstr "Materialarten"
+
+#: functions.php:193
+msgctxt "taxonomy general name"
+msgid "Service type"
+msgstr "Transfer Typ"
+
+#: functions.php:194
+msgctxt "taxonomy singular name"
+msgid "Service types"
+msgstr "Service-Typen"
+
+#: functions.php:195
+#, fuzzy
+msgid "Search service types"
+msgstr "Suchdienst-Typen"
+
+#: functions.php:196
+#, fuzzy
+msgid "All Service types"
+msgstr "Alle Service-Typen"
+
+#: functions.php:197
+#, fuzzy
+msgid "Parent Service type"
+msgstr "Übergeordneter Diensttyp"
+
+#: functions.php:198
+#, fuzzy
+msgid "Parent Service type:"
+msgstr "Art des übergeordneten Dienstes:"
+
+#: functions.php:199
+#, fuzzy
+msgid "Edit Service type"
+msgstr "Servicetyp bearbeiten"
+
+#: functions.php:200
+#, fuzzy
+msgid "Update Service type"
+msgstr "Typ des Updatediensts"
+
+#: functions.php:201
+#, fuzzy
+msgid "Save Service type"
+msgstr "Servicetyp speichern"
+
+#: functions.php:202
+#, fuzzy
+msgid "New Service type name"
+msgstr "Neuer Name des Diensttyps"
+
+#: functions.php:203
+msgid "Service types"
+msgstr "Service-Typen"
+
+#: functions.php:233
+msgid "Greenhouses"
+msgstr "Gewächshäuser"
+
+#: functions.php:234
+msgid "Greenhouse"
+msgstr "Gewächshaus"
+
+#: functions.php:235 functions.php:238
+#, fuzzy
+msgid "New greenhouse"
+msgstr "Neues Gewächshaus"
+
+#: functions.php:236
+#, fuzzy
+msgid "Add new greenhouse"
+msgstr "Neues Gewächshaus hinzufügen"
+
+#: functions.php:237
+#, fuzzy
+msgid "Edit greenhouse"
+msgstr "Gewächshaus bearbeiten"
+
+#: functions.php:239
+#, fuzzy
+msgid "View greenhouse"
+msgstr "Gewächshaus ansehen"
+
+#: functions.php:240
+#, fuzzy
+msgid "Search greenhouse"
+msgstr "Gewächshaus suchen"
+
+#: functions.php:241
+#, fuzzy
+msgid "No greenhouses found"
+msgstr "Keine Gewächshäuser gefunden"
+
+#: functions.php:242
+#, fuzzy
+msgid "No greenhouses found in trash"
+msgstr "Keine Gewächshäuser im Müll gefunden"
+
+#: functions.php:249
+#, fuzzy
+msgid "Plastics"
+msgstr "Kunststoff"
+
+#: functions.php:250
+msgid "Plastic"
+msgstr "Kunststoff"
+
+#: functions.php:251 functions.php:254
+#, fuzzy
+msgid "New plastic"
+msgstr "Neuer Kunststoff"
+
+#: functions.php:252
+#, fuzzy
+msgid "Add new plastic"
+msgstr "Neuen Kunststoff hinzufügen"
+
+#: functions.php:253
+#, fuzzy
+msgid "Edit plastic"
+msgstr "Kunststoff bearbeiten"
+
+#: functions.php:255
+#, fuzzy
+msgid "View plastics"
+msgstr "Kunststoffe ansehen"
+
+#: functions.php:256
+#, fuzzy
+msgid "Search plastics"
+msgstr "Suche Kunststoffe"
+
+#: functions.php:257
+#, fuzzy
+msgid "No plastics found"
+msgstr "Keine Kunststoffe gefunden"
+
+#: functions.php:258
+#, fuzzy
+msgid "No plastics found in trash"
+msgstr "Kein Plastik im Müll gefunden"
+
+#: functions.php:265
+msgid "Services"
+msgstr "Serviceleistungen"
+
+#: functions.php:266
+msgid "Service"
+msgstr "Service"
+
+#: functions.php:267 functions.php:270
+msgid "New service"
+msgstr "Neuer Service"
+
+#: functions.php:268
+msgid "Add new service"
+msgstr "Neuen Service hinzufügen"
+
+#: functions.php:269
+msgid "Edit service"
+msgstr "Dienstleistung bearbeiten"
+
+#: functions.php:271
+msgid "View service"
+msgstr "Leistung ansehen"
+
+#: functions.php:272
+msgid "Search services"
+msgstr "Leistungen durchsuchen"
+
+#: functions.php:273
+msgid "No services found"
+msgstr "Keine Dienstleistungen gefunden"
+
+#: functions.php:274
+msgid "No services found in trash"
+msgstr "Keine Services im Papierkorb gefunden"
+
+#: functions.php:281
+msgid "Construction materials"
+msgstr "Baumaterialien"
+
+#: functions.php:282
+#, fuzzy
+msgid "Construction material"
+msgstr "Baustoff"
+
+#: functions.php:283 functions.php:286
+#, fuzzy
+msgid "New construction material"
+msgstr "Neuer Baustoff"
+
+#: functions.php:284
+#, fuzzy
+msgid "Add new construction material"
+msgstr "Neues Baumaterial hinzufügen"
+
+#: functions.php:285
+#, fuzzy
+msgid "Edit construction material"
+msgstr "Baumaterial bearbeiten"
+
+#: functions.php:287
+#, fuzzy
+msgid "View construction material"
+msgstr "Baumaterial ansehen"
+
+#: functions.php:288
+#, fuzzy
+msgid "Search construction materials"
+msgstr "Baustoffe durchsuchen"
+
+#: functions.php:289
+#, fuzzy
+msgid "No construction materials found"
+msgstr "Keine Baumaterialien gefunden"
+
+#: functions.php:290
+#, fuzzy
+msgid "No construction materials found in trash"
+msgstr "Keine Baumaterialien im Müll gefunden"
+
+#: functions.php:326
+#, fuzzy
+msgid "You should know that"
+msgstr "Das sollten Sie wissen"
+
+#: functions.php:384
+msgid "Projects"
+msgstr "Projekte"
+
+#: functions.php:385
+msgid "Project"
+msgstr "Projekt"
+
+#: functions.php:386 functions.php:389
+msgid "New project"
+msgstr "Neues Projekt"
+
+#: functions.php:387
+msgid "Add new project"
+msgstr "Neues Projekt hinzufügen"
+
+#: functions.php:388
+msgid "Edit project"
+msgstr "Projekt bearbeiten"
+
+#: functions.php:390
+msgid "View project"
+msgstr "Projekt ansehen"
+
+#: functions.php:391
+msgid "Search project"
+msgstr "Projekt suchen"
+
+#: functions.php:392
+msgid "No projects found"
+msgstr "Keine Projekte gefunden"
+
+#: functions.php:393
+msgid "No projects found in trash"
+msgstr "Keine Porojekte im Papierkorb gefunden"
+
+#: functions.php:465
+msgid "expand"
+msgstr "aufklappen"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Zum Inhalt springen"
+
+#: header.php:109
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: header.php:113
+msgid "Navigation"
+msgstr "Navigation"
+
+#: header.php:130
+#, fuzzy
+msgid "Contact us today"
+msgstr "Kontaktieren Sie uns noch heute"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Veröffentlicht am %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "von %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Veröffentlicht in %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Verschlagwortet mit %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Hinterlasse einen Kommentar <span class=\"screen-reader-text\"> zu %s</"
+"span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Bearbeiten <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Suchergebnisse für: %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nichts gefunden"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Sind Sie bereit Ihren ersten Beitrag zu veröffentlichen?  <a "
+"href=\"%1$s\">Starten Sie hier</a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Es tut uns leid. Ihre Suche ergab keinen Treffer. Bitte versuchen Sie es "
+"mit einem anderen Begriff."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Es scheint, dass wir nicht finden können, was du suchst. Vielleicht kann "
+"die Suche helfen."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:36
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Weiterlesen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "norhage Industri"
+msgstr "norhage Industri"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Garbo"
+msgstr "Müllmann"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://garbo.nl"
+msgstr "https://garbo.nl"

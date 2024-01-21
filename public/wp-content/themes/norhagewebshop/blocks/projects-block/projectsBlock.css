@@ -1,0 +1,112 @@
+.projects-block{
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	overflow: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	padding: 4rem 0 4rem 0;
+	border-top: 1px solid var(--dark-blue);
+	border-bottom: 1px solid var(--dark-blue);
+	margin-top: -1px;
+	font-family: "kiro", sans-serif;
+	scroll-behavior: smooth;
+}
+.projects-block::-webkit-scrollbar{
+	display: none;
+}
+.projects-block a{
+	color: #000000;
+}
+.projects-block .title-col{
+	flex: 40% 1 0;
+    position: sticky;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 2rem 0 2rem;
+    z-index: 10;
+    background: linear-gradient(90deg, white, transparent);
+}
+
+.projects-block .projects-col{
+	flex: 60% 1 0;
+}
+.projects-block .projects-col ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	width: auto;
+	gap: 1em;
+}
+.projects-block .projects-col ul li{
+	display: block;
+	flex: 33.3333% 0 0;
+	aspect-ratio: 1;
+}
+.projects-block.with-text-snippets .projects-col ul li h3{
+	margin: 1em 0 0.5em 0;
+	position: static;
+	text-align: left;
+	padding: 0;
+}
+.projects-block.with-text-snippets .projects-col ul li h3 a{
+	color: #000;
+}
+.projects-block.with-text-snippets .projects-col ul li p{
+	margin: .5em 0;
+}
+.projects-block.with-text-snippets .projects-col ul li p.excerpt{
+	max-height: 5.8em;
+	overflow: hidden;
+}
+.projects-block.with-text-snippets .projects-col ul li p:last-child{
+  	margin: 0;  
+  	text-align: right;
+}
+.projects-block.with-text-snippets .projects-col ul li p:last-child a{
+	font-weight: 300;
+	font-style: italic;
+	text-transform: lowercase;
+}
+
+
+ul.slider-nav  {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 1em;
+}
+ul.slider-nav li button{
+	background: #fff url(../../images/svg/arrow-left-dark-blue.svg) no-repeat center;
+	background-size: 70%;
+	display: block;
+    height: 3em;
+    width: 3em;
+    text-indent: -999em;
+    cursor: pointer;
+	border: 2px solid transparent;
+	border-radius: 50%;
+}
+ul.slider-nav li button.right{
+	background-image: url(../../images/svg/arrow-right-dark-blue.svg);
+}
+ul.slider-nav li button:hover{
+	border-color: var(--dark-blue);
+}
+
+@media screen and (max-width:768px){
+	.projects-block{
+		padding: 2em ;
+		flex-wrap: wrap;
+	}	
+	.projects-block .title-col{
+		flex: 100% 0 0;
+		padding: 0;
+	}
+	.projects-block .projects-col ul li{
+		flex: 70% 0 0;
+	}
+}

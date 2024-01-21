@@ -1,0 +1,25 @@
+{
+    "name": "norhagewebshop/headerblock",
+    "title": "Page header block",
+    "description": "A page header block for the homepage.",
+    "style": [ "file:./headerblock.css" ],
+    "category": "norhage",
+    "icon": "layout",
+    "keywords": ["header"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "headerblock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css"
+}

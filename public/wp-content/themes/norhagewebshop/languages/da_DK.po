@@ -1,0 +1,678 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: norhage Industri\n"
+"POT-Creation-Date: 2023-12-08 13:35+0100\n"
+"PO-Revision-Date: 2023-12-08 13:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:18
+msgid "404"
+msgstr "404"
+
+#: 404.php:20
+#, fuzzy
+msgid "oh dear, we had to short on material.."
+msgstr "Åh kære, vi var nødt til at kortlægge materiale. . ."
+
+#: blocks/categories-block/categoriesBlock.php:35
+#: blocks/categories-block/categoriesBlock.php:43
+#, fuzzy, php-format
+msgid "View all post filed under %s"
+msgstr "Se alle indlæg gemt under %s"
+
+#: blocks/headerblock/headerblock.php:65
+#, fuzzy
+msgid "Industrial greenhouse projects"
+msgstr "Industrielle drivhusprojekter"
+
+#: blocks/headerblock/headerblock.php:79
+msgid "Installation services"
+msgstr "Installation"
+
+#: blocks/headerblock/headerblock.php:86
+msgid "Maintenance & restoration"
+msgstr "Vedligeholdelse og restaurering"
+
+#: blocks/headerblock/headerblock.php:95
+msgid "Roofing & facade, PVC curtains"
+msgstr "Tagdækning & facade, PVC gardiner"
+
+#: blocks/projects-block/projectsBlock.php:53
+msgid "Left"
+msgstr "Venstre"
+
+#: blocks/projects-block/projectsBlock.php:54
+msgid "Right"
+msgstr "Højre"
+
+#: blocks/projects-block/projectsBlock.php:71
+#, fuzzy
+msgid "Read more ->"
+msgstr "Læs mere ->"
+
+#: footer.php:16
+#, fuzzy
+msgid "Norhage Industri"
+msgstr "Norhage Industri"
+
+#: footer.php:19
+msgid "Address"
+msgstr "Adresse"
+
+#: footer.php:27
+msgid "Email"
+msgstr "E-mail"
+
+#: footer.php:30
+msgid "Phone"
+msgstr "Telefon"
+
+#: footer.php:36
+#, fuzzy
+msgid "B2C webshop"
+msgstr "B2C webshop"
+
+#: footer.php:41 footer.php:42
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: footer.php:51
+#, fuzzy
+msgid "Norhage can also be found on:"
+msgstr "Norhage kan også findes på:"
+
+#: functions.php:52
+msgid "Primary"
+msgstr "Primær"
+
+#: functions.php:53
+msgid "Secondary navigation"
+msgstr "Sekundær navigation"
+
+#: functions.php:54
+msgid "Footer navigation"
+msgstr "Sidefod navigation"
+
+#: functions.php:142
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Greenhouse type"
+msgstr "Drivhus type"
+
+#: functions.php:143
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Greenhouse types"
+msgstr "Drivhustyper"
+
+#: functions.php:144
+#, fuzzy
+msgid "Search greenhouse types"
+msgstr "Søg drivhustyper"
+
+#: functions.php:145
+#, fuzzy
+msgid "All greenhouse types"
+msgstr "Alle drivhustyper"
+
+#: functions.php:146
+#, fuzzy
+msgid "Parent greenhouse type"
+msgstr "Forældre drivhus type"
+
+#: functions.php:147
+#, fuzzy
+msgid "Parent greenhouse type:"
+msgstr "Forældre drivhus type:"
+
+#: functions.php:148
+#, fuzzy
+msgid "Edit greenhouse type"
+msgstr "Rediger drivhustype"
+
+#: functions.php:149
+#, fuzzy
+msgid "Update greenhouse type"
+msgstr "Opdater drivhustype"
+
+#: functions.php:150
+#, fuzzy
+msgid "Save greenhouse type"
+msgstr "Gem drivhustype"
+
+#: functions.php:151
+#, fuzzy
+msgid "New greenhouse type name"
+msgstr "Nyt drivhustypenavn"
+
+#: functions.php:152
+#, fuzzy
+msgid "Greenhouse types"
+msgstr "Drivhustyper"
+
+#: functions.php:159
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Plastic type"
+msgstr "Plast type"
+
+#: functions.php:160
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Plastic types"
+msgstr "Plasttyper"
+
+#: functions.php:161
+#, fuzzy
+msgid "Search plastic types"
+msgstr "Søg plasttyper"
+
+#: functions.php:162
+#, fuzzy
+msgid "All plastic types"
+msgstr "Alle plasttyper"
+
+#: functions.php:163
+#, fuzzy
+msgid "Parent plastic type"
+msgstr "Overordnet plasttype"
+
+#: functions.php:164
+#, fuzzy
+msgid "Parent plastic type:"
+msgstr "Overordnet plasttype:"
+
+#: functions.php:165
+#, fuzzy
+msgid "Edit plastic type"
+msgstr "Rediger plasttype"
+
+#: functions.php:166
+#, fuzzy
+msgid "Update plastic type"
+msgstr "Opdater plasttype"
+
+#: functions.php:167
+#, fuzzy
+msgid "Save plastic type"
+msgstr "Spar plasttype"
+
+#: functions.php:168
+#, fuzzy
+msgid "New plastic type name"
+msgstr "Nyt navn på plasttype"
+
+#: functions.php:169
+#, fuzzy
+msgid "Plastic types"
+msgstr "Plasttyper"
+
+#: functions.php:176
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Material type"
+msgstr "Materiale type"
+
+#: functions.php:177
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Material types"
+msgstr "Materialetyper"
+
+#: functions.php:178
+#, fuzzy
+msgid "Search material types"
+msgstr "Søg materialetyper"
+
+#: functions.php:179
+#, fuzzy
+msgid "All Material types"
+msgstr "Alle materialetyper"
+
+#: functions.php:180
+#, fuzzy
+msgid "Parent Material type"
+msgstr "Overordnet materialetype"
+
+#: functions.php:181
+#, fuzzy
+msgid "Parent Material type:"
+msgstr "Overordnet materialetype:"
+
+#: functions.php:182
+#, fuzzy
+msgid "Edit Material type"
+msgstr "Rediger materialetype"
+
+#: functions.php:183
+#, fuzzy
+msgid "Update Material type"
+msgstr "Opdater materialetype"
+
+#: functions.php:184
+#, fuzzy
+msgid "Save Material type"
+msgstr "Typen Gem materiale"
+
+#: functions.php:185
+#, fuzzy
+msgid "New Material type name"
+msgstr "Nyt materialetypenavn"
+
+#: functions.php:186
+#, fuzzy
+msgid "Material types"
+msgstr "Materialetyper"
+
+#: functions.php:193
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Service type"
+msgstr "Servicetype"
+
+#: functions.php:194
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Service types"
+msgstr "Typer af tjenester"
+
+#: functions.php:195
+#, fuzzy
+msgid "Search service types"
+msgstr "Typer af søgetjenester"
+
+#: functions.php:196
+#, fuzzy
+msgid "All Service types"
+msgstr "Alle servicetyper"
+
+#: functions.php:197
+#, fuzzy
+msgid "Parent Service type"
+msgstr "Overordnet tjenestetype"
+
+#: functions.php:198
+#, fuzzy
+msgid "Parent Service type:"
+msgstr "Overordnet servicetype:"
+
+#: functions.php:199
+#, fuzzy
+msgid "Edit Service type"
+msgstr "Rediger tjenestetype"
+
+#: functions.php:200
+#, fuzzy
+msgid "Update Service type"
+msgstr "Opdater tjenestetype"
+
+#: functions.php:201
+#, fuzzy
+msgid "Save Service type"
+msgstr "Gem tjenestetype"
+
+#: functions.php:202
+#, fuzzy
+msgid "New Service type name"
+msgstr "Nyt navn på tjenestetype"
+
+#: functions.php:203
+#, fuzzy
+msgid "Service types"
+msgstr "Typer af tjenester"
+
+#: functions.php:233
+#, fuzzy
+msgid "Greenhouses"
+msgstr "Drivhuse"
+
+#: functions.php:234
+#, fuzzy
+msgid "Greenhouse"
+msgstr "Drivhus"
+
+#: functions.php:235 functions.php:238
+#, fuzzy
+msgid "New greenhouse"
+msgstr "Nyt drivhus"
+
+#: functions.php:236
+#, fuzzy
+msgid "Add new greenhouse"
+msgstr "Tilføj nyt drivhus"
+
+#: functions.php:237
+#, fuzzy
+msgid "Edit greenhouse"
+msgstr "Rediger drivhus"
+
+#: functions.php:239
+#, fuzzy
+msgid "View greenhouse"
+msgstr "Se drivhus"
+
+#: functions.php:240
+#, fuzzy
+msgid "Search greenhouse"
+msgstr "Søg drivhus"
+
+#: functions.php:241
+#, fuzzy
+msgid "No greenhouses found"
+msgstr "Ingen drivhuse fundet"
+
+#: functions.php:242
+#, fuzzy
+msgid "No greenhouses found in trash"
+msgstr "Ingen drivhuse fundet i skraldespanden"
+
+#: functions.php:249
+#, fuzzy
+msgid "Plastics"
+msgstr "Plast"
+
+#: functions.php:250
+#, fuzzy
+msgid "Plastic"
+msgstr "Plastic"
+
+#: functions.php:251 functions.php:254
+#, fuzzy
+msgid "New plastic"
+msgstr "Ny plast"
+
+#: functions.php:252
+#, fuzzy
+msgid "Add new plastic"
+msgstr "Tilføj ny plastik"
+
+#: functions.php:253
+#, fuzzy
+msgid "Edit plastic"
+msgstr "Rediger plastik"
+
+#: functions.php:255
+#, fuzzy
+msgid "View plastics"
+msgstr "Se plast"
+
+#: functions.php:256
+#, fuzzy
+msgid "Search plastics"
+msgstr "Søg plast"
+
+#: functions.php:257
+#, fuzzy
+msgid "No plastics found"
+msgstr "Ingen plast fundet"
+
+#: functions.php:258
+#, fuzzy
+msgid "No plastics found in trash"
+msgstr "Ingen plast fundet i skraldespanden"
+
+#: functions.php:265
+msgid "Services"
+msgstr "Services"
+
+#: functions.php:266
+msgid "Service"
+msgstr "Service"
+
+#: functions.php:267 functions.php:270
+msgid "New service"
+msgstr "Ny kompetence"
+
+#: functions.php:268
+msgid "Add new service"
+msgstr "Tilføj ny ydelse"
+
+#: functions.php:269
+msgid "Edit service"
+msgstr "Rediger kompetence"
+
+#: functions.php:271
+msgid "View service"
+msgstr "Se kompetence"
+
+#: functions.php:272
+#, fuzzy
+msgid "Search services"
+msgstr "Søg tjenester"
+
+#: functions.php:273
+msgid "No services found"
+msgstr "Ingen behandlinger blev fundet"
+
+#: functions.php:274
+msgid "No services found in trash"
+msgstr "Ingen behandlinger fundet i papirkurven"
+
+#: functions.php:281
+#, fuzzy
+msgid "Construction materials"
+msgstr "Byggematerialer"
+
+#: functions.php:282
+#, fuzzy
+msgid "Construction material"
+msgstr "Byggemateriale"
+
+#: functions.php:283 functions.php:286
+#, fuzzy
+msgid "New construction material"
+msgstr "Nyt byggemateriale"
+
+#: functions.php:284
+#, fuzzy
+msgid "Add new construction material"
+msgstr "Tilføj nyt byggemateriale"
+
+#: functions.php:285
+#, fuzzy
+msgid "Edit construction material"
+msgstr "Rediger byggemateriale"
+
+#: functions.php:287
+#, fuzzy
+msgid "View construction material"
+msgstr "Se byggemateriale"
+
+#: functions.php:288
+#, fuzzy
+msgid "Search construction materials"
+msgstr "Søg byggematerialer"
+
+#: functions.php:289
+#, fuzzy
+msgid "No construction materials found"
+msgstr "Ingen byggematerialer fundet"
+
+#: functions.php:290
+#, fuzzy
+msgid "No construction materials found in trash"
+msgstr "Ingen byggematerialer fundet i skraldespanden"
+
+#: functions.php:326
+#, fuzzy
+msgid "You should know that"
+msgstr "Det skal du vide"
+
+#: functions.php:384
+msgid "Projects"
+msgstr "Projekter"
+
+#: functions.php:385
+msgid "Project"
+msgstr "Projekt"
+
+#: functions.php:386 functions.php:389
+#, fuzzy
+msgid "New project"
+msgstr "Nyt projekt"
+
+#: functions.php:387
+msgid "Add new project"
+msgstr "Tilføj nyt projekt"
+
+#: functions.php:388
+msgid "Edit project"
+msgstr "Redigér projekt"
+
+#: functions.php:390
+#, fuzzy
+msgid "View project"
+msgstr "Se projekt"
+
+#: functions.php:391
+msgid "Search project"
+msgstr "Find projekt"
+
+#: functions.php:392
+msgid "No projects found"
+msgstr "Ingen Projekter Fundet"
+
+#: functions.php:393
+msgid "No projects found in trash"
+msgstr "Ingen Projekter Fundet I Papirkurv"
+
+#: functions.php:465
+msgid "expand"
+msgstr "udvide"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Fortsæt til indhold"
+
+#: header.php:109
+msgid "Primary Menu"
+msgstr "Primær Menu"
+
+#: header.php:113
+msgid "Navigation"
+msgstr "Navigation"
+
+#: header.php:130
+#, fuzzy
+msgid "Contact us today"
+msgstr "Kontakt os i dag"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Udgivet den %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "af %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:66
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Udgivet i %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:73
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tagget %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:83
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Skriv en kommentar<span class=\"screen-reader-text\"> til %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Redigér <span class=\"screen-reader-text\" >%s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Søgeresultater for: %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Klar til at udgive dit første indlæg <a href=\"%1$s\">Start her</a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, men din søgning gav ingen resultater. Prøv igen med nogle "
+"andre søgeord."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det lader til at vi ikke kan finde siden, du leder efter. Prøv en "
+"søgning i stedet."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:36
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Læs mere<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "norhage Industri"
+msgstr "norhage Industri"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "Garbo"
+msgstr "Garbo"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://garbo.nl"
+msgstr "https://garbo.nl"

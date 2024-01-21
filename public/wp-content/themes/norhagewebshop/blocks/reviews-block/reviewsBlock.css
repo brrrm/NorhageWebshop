@@ -1,0 +1,105 @@
+.reviews-block{
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 50vh;
+	background: var(--dark-blue);
+	color: var(--white);
+	padding: 3em 0;
+	font-family: "kiro", sans-serif;
+}
+.reviews-block + .norhage-block{
+	margin-top: -1px;
+}
+.reviews-block h2::before{
+	content: "  ";
+	background: transparent url(../../images/svg/stars.svg) no-repeat center center;
+	background-size: auto 50%;
+	height: 1em;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+.reviews-block h2,
+.reviews-block .reviews{
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.reviews-block h2{
+	font-style: normal;
+	font-weight: 700;
+}
+.reviews-block .reviews article{
+	display: grid;
+	grid-template-areas: "image header"
+						 "image text"
+						 "image footer";
+	grid-template-columns: 1fr 6fr ;
+	grid-column-gap: 1.625em;
+	grid-row-gap: 0;
+	margin: 4.17em 0;
+}
+.reviews-block .reviews article:first-child{
+	margin-top: 2.2em ;
+}
+.reviews-block .reviews article:last-child{
+	margin-bottom: 0;
+}
+.reviews-block .reviews article figure{
+	grid-area: image;
+}
+.reviews-block .reviews article header{
+	grid-area: header;
+}
+
+.reviews-block .reviews article footer{
+	grid-area: footer;
+}
+.reviews-block .reviews article footer span.name::before{
+	content: " - ";
+}
+.reviews-block .reviews article footer span.name::after{
+	content: ", ";
+}
+.reviews-block .reviews article .review-text{
+	grid-area: text;
+	line-height: 1.5em;
+}
+
+.reviews-block .reviews article header h3{
+	font-size: 1.5rem;
+	line-height: 1.195em;
+	position: relative;
+}
+.reviews-block .reviews article header h3::before{
+	content: " \201C"; /* left quote */
+	position: absolute;
+	left: -0.4em;
+}
+.reviews-block .reviews article header h3::after{
+	content: "\201D";/* right quote */
+}
+.reviews-block .reviews article figure,
+.reviews-block .reviews article figure img{
+	display: block;
+	margin: 0;
+}
+.reviews-block .reviews article figure{
+	border-radius: 50%;
+	overflow: hidden;
+	aspect-ratio: 1;
+}
+.reviews-block .reviews footer{
+	font-style: italic;
+}
+@media screen and (max-width:768px){
+	.reviews-block h2,
+	.reviews-block .reviews{
+		max-width: 100%;
+		padding: 0 2rem ;
+	}
+	.reviews-block h2{
+		text-align: center;
+	}
+}

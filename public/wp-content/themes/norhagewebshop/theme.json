@@ -1,0 +1,48 @@
+{
+	"version": 2,
+	"$schema": "https://schemas.wp.org/wp/6.2/theme.json",
+	"settings": {
+		"useRootPaddingAwareAlignments": false,
+		"layout": {
+			"contentSize": "50%",
+			"wideSize": "100%"
+		},
+		"typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"kiro\",sans-serif",
+                    "slug": "kiro",
+                    "name": "kiro"
+                }
+            ]
+        },
+        "blocks": {
+        	"core/heading": {
+        		"typography": {
+        			"textTransform": false,
+        			"fontSizes": [],
+        			"customFontSize": false,
+        			"fontWeight": false,
+        			"fontStyle": false,
+        			"textTransform": false,
+        			"letterSpacing": false,
+        			"fontFamilies": [],
+        			"textDecoration": false,
+        			"size": false
+        		}
+        	}
+        }
+	},
+	"styles": {
+		"spacing": {
+			"blockGap": "24px",
+			"padding": {
+				"top": "0px",
+				"right": "20%",
+				"bottom": "0px",
+				"left": "0px"
+			}
+		},
+		"css": "@import url(https://use.typekit.net/aus7nxi.css); html{font-family: kiro, sans-serif; font-weight:300;}*.alignfull{margin-right: -25%;}.block-editor-block-list__layout.is-root-container > *.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-right: -25% !important;}"
+	}
+}

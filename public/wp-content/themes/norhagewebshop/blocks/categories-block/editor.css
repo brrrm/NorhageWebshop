@@ -1,0 +1,61 @@
+/*
+ * DEDICATED COMPONENTS
+ */
+:root{
+	--dark-blue: #0A4164;
+	--light-blue: #E9F2F8;
+	--white: #fff;
+	--black:#000;
+	--bright-orange: #FF7F00;
+	--header-height: 8vw;
+	--header-nav-height: 8vw;
+	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
+}
+/* image-buttin */
+.image-button{
+	display: block;
+	flex: 33.3333% 0 0;
+	aspect-ratio: 1;
+	position: relative;
+}
+.image-button a{
+	display: block;
+}
+.image-button img{
+	width: 100%;
+	display: block;
+	object-fit: cover;
+	aspect-ratio: 1;
+	z-index: 1;
+	position: relative;
+}
+.image-button:after{
+	content: " ";
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	aspect-ratio: 1;
+	background: var(--img-gradient);
+	mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+.image-button .title{
+	position: absolute;
+	width: 100%;
+	bottom: 1em;
+    left: 0;
+    margin: 0;
+    z-index: 3;
+    text-align: center;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+}
+.image-button .title a{
+    display: block;
+    box-sizing: border-box;
+    color: var(--white);
+}

@@ -1,0 +1,94 @@
+.cta-within-text-block{
+	width: 100%;
+	border-top:1px solid var(--dark-blue);
+	border-bottom:1px solid var(--dark-blue);
+	color: var(--dark-blue);
+	font-family: "kiro", sans-serif;
+}
+.cta-within-text-block .wrapper{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	padding: 3em 0;
+	align-items: center;
+}
+.cta-within-text-block h2{
+	font-size: 1.5em;
+	font-weight: 700;
+	font-style: normal;
+}
+.cta-within-text-block .text-col > *:first-child{
+	margin-top: 0;
+}
+.cta-within-text-block .text-col > *:last-child{
+	margin-bottom: 0;
+}
+.cta-within-text-block .text-col{
+	flex: 40% 0 0;
+	padding-left: 2em;
+}
+.cta-within-text-block .image-col{
+	flex: 20% 0 0;
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-within-text-block.is-style-damagerepair{
+	border: none;
+	overflow: hidden;
+}
+.cta-within-text-block.is-style-damagerepair .wrapper{
+	background: var(--bright-orange);
+	color: #000;
+	transform: rotate(1deg) scale(1);
+	--dash-size: 55px;
+	--gap-size: 90px;
+	border-top: 24px solid;
+	border-bottom: 24px solid;
+	border-image: repeating-linear-gradient( to right, #fff 0, #fff var(--dash-size), transparent var(--dash-size), transparent calc( var(--dash-size) + var(--gap-size) ) );
+	border-image-slice: 1;
+	border-image-width: 24px 0;
+	border-image-outset: 1px;
+}
+.cta-within-text-block:not(.is-style-damagerepair) .cta-phone.button{
+	color: var(--white); 
+	background-color: var(--dark-blue) ;
+	background-image: url(../../images/svg/phone-icon-white.svg);
+}
+.is-style-damagerepair .cta-phone.button{
+	color: #000;
+	background-image: url(../../images/svg/phone-icon-black.svg);
+}
+.is-style-damagerepair .image-col,
+.is-style-damagerepair .text-col{
+	transform: rotate(-1deg);
+}
+@media screen and (max-width:768px){
+	.cta-within-text-block .wrapper,
+	.cta-within-text-block.is-style-damagerepair .wrapper{
+		flex-wrap: wrap;
+		padding: 2em;
+	}
+	.cta-within-text-block.is-style-damagerepair .wrapper,
+	.cta-within-text-block.is-style-damagerepair .wrapper > *{
+		transform: rotate(0);
+	}
+	.cta-within-text-block .image-col{
+		flex: 100% 1 0;
+		order: 2;
+		align-items: flex-start;
+	}
+	.cta-within-text-block .image-col .image{
+		order: 2;
+	}
+	.cta-within-text-block .image-col p{
+		order: 1;
+	}
+	.cta-within-text-block .text-col{
+		flex: 100% 0 0;
+		order: 1;
+		padding: 0;
+	}
+}

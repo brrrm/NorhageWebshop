@@ -1,0 +1,90 @@
+{
+    "key": "group_651e6ce5ebf27",
+    "title": "Block:Text&image paragraph",
+    "fields": [
+        {
+            "key": "field_651e6ce780c2f",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_651e6dd880c30",
+            "label": "Text paragraph",
+            "name": "text_paragraph",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<p>Quisque consectetur non nibh ac aliquam. Nam dignissim eu magna vel ultrices. Fusce semper nisl ante, vitae condimentum metus lobortis a. Sed nec elit orci. Cras volutpat, tortor et faucibus finibus, velit magna malesuada lorem, in feugiat nisi dui nec diam. Vivamus in finibus tortor, at pulvinar neque. Nunc efficitur nisl vel gravida mattis. Sed lacinia blandit diam, ac mollis quam pulvinar et. Sed accumsan libero id turpis facilisis aliquam. Maecenas feugiat justo sit amet posuere rhoncus.<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_651e6e0180c31",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "norhagewebshop\/text-image-block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1699979281
+}

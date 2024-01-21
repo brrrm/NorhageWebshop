@@ -1,0 +1,27 @@
+{
+    "name": "norhagewebshop/product-header-block",
+    "title": "Product header block",
+    "description": "header block for product pages with image slider and text",
+    "style": [ "file:./productHeaderBlock.css" ],
+    "category": "norhage",
+    "icon": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 64 64\" style=\"enable-background:new 0 0 64 64;\" xml:space=\"preserve\"><style type=\"text/css\">.st0{fill:#FFFFFF;}</style><g><rect width=\"64\" height=\"35.5\"/></g><g><rect x=\"7.8\" y=\"46\" width=\"48.4\" height=\"1.7\"/></g><g><rect x=\"7.8\" y=\"51.4\" width=\"48.4\" height=\"1.7\"/></g><g><rect x=\"7.8\" y=\"56.9\" width=\"48.4\" height=\"1.7\"/></g><g><rect x=\"7.8\" y=\"62.3\" width=\"48.4\" height=\"1.7\"/></g><g><rect x=\"31.4\" class=\"st0\" width=\"1.2\" height=\"35.5\"/></g></svg>",
+    "keywords": ["header", "picture", "image", "product"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "productHeaderBlock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true,
+        "jsx": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css",
+    "editorScript": "file:./editor.js"
+}

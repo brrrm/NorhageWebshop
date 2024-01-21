@@ -1,0 +1,25 @@
+{
+    "name": "norhagewebshop/text-image-block",
+    "title": "Text & image block",
+    "description": "A block with a title, a text paragraph and an image",
+    "style": [ "file:./textImageBlock.css" ],
+    "category": "norhage",
+    "icon": "text",
+    "keywords": ["image", "text", "title"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "textImageBlock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css"
+}

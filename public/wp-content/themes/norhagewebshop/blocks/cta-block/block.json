@@ -1,0 +1,25 @@
+{
+    "name": "norhagewebshop/cta-block",
+    "title": "Call to action block",
+    "description": "Block with a cta (\"contact us\")",
+    "style": [ "file:./ctaBlock.css" ],
+    "category": "norhage",
+    "icon": "phone",
+    "keywords": ["cta", "phone"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "ctaBlock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css"
+}
