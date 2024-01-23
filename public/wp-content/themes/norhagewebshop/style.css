@@ -416,7 +416,9 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu > li:
 		background-image: url(images/svg/cart-blue.svg);
 	}
 }
-
+header#masthead nav#site-navigation ul.menu ul.sub-menu{
+	display: none; /*tijdelijke oplossing*/
+}
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu,
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
 	position: absolute;
@@ -1252,3 +1254,8 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form .single_variation_wrap .woocommerce-variation-price span{
 	color: var(--black);
 }
+
+
+
+
+

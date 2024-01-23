@@ -2,13 +2,15 @@
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: nowrap;
+	color: #646464;
+	gap: 1em;
 	width: 100%;
 	overflow: auto;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	padding: 4rem 0 4rem 0;
-	border-top: 1px solid var(--dark-blue);
-	border-bottom: 1px solid var(--dark-blue);
+	padding: 4em 2em;
+	border-top: 1px solid var(--store-color);
+	border-bottom: 1px solid var(--store-color);
 	margin-top: -1px;
 	font-family: "kiro", sans-serif;
 	scroll-behavior: smooth;
@@ -16,86 +18,33 @@
 .products-block::-webkit-scrollbar{
 	display: none;
 }
-.products-block a{
-	color: #000000;
-}
-.products-block .title-col{
-	flex: 40% 1 0;
-    position: sticky;
-    left: 0;
-    box-sizing: border-box;
-    padding: 0 2rem 0 2rem;
-    z-index: 10;
-    background: linear-gradient(90deg, white, transparent);
-}
 
-.products-block .projects-col{
-	flex: 60% 1 0;
+.products-block .text-col{
+	flex: 40% 0 0;
 }
-.products-block .projects-col ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-	flex-wrap: nowrap;
-	width: auto;
-	gap: 1em;
-}
-.products-block .projects-col ul li{
-	display: block;
-	flex: 33.3333% 0 0;
-	aspect-ratio: 1;
-}
-.products-block.with-text-snippets .projects-col ul li h3{
-	margin: 1em 0 0.5em 0;
-	position: static;
-	text-align: left;
-	padding: 0;
-}
-.products-block.with-text-snippets .projects-col ul li h3 a{
-	color: #000;
-}
-.products-block.with-text-snippets .projects-col ul li p{
-	margin: .5em 0;
-}
-.products-block.with-text-snippets .projects-col ul li p.excerpt{
-	max-height: 5.8em;
-	overflow: hidden;
-}
-.products-block.with-text-snippets .projects-col ul li p:last-child{
-  	margin: 0;  
-  	text-align: right;
-}
-.products-block.with-text-snippets .projects-col ul li p:last-child a{
+.products-block .text-col h2{
 	font-weight: 300;
 	font-style: italic;
-	text-transform: lowercase;
 }
 
-
-ul.slider-nav  {
-	list-style: none;
-	padding: 0;
+.products-block .products-col{
+	flex: 60% 0 1;	
+}
+.products-block .products-col ul{
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1em;
+	margin: 0;
+	padding: 0;
 }
-ul.slider-nav li button{
-	background: #fff url(../../images/svg/arrow-left-dark-blue.svg) no-repeat center;
-	background-size: 70%;
-	display: block;
-    height: 3em;
-    width: 3em;
-    text-indent: -999em;
-    cursor: pointer;
-	border: 2px solid transparent;
-	border-radius: 50%;
+.products-block .products-col ul li.image-button{
+	flex:calc(100% / 3 - 0.7rem) 0 1;
 }
-ul.slider-nav li button.right{
-	background-image: url(../../images/svg/arrow-right-dark-blue.svg);
+.products-block .image-button .title,
+.products-block .image-button .title a {
+	text-align: left;
 }
-ul.slider-nav li button:hover{
-	border-color: var(--dark-blue);
-}
+
 
 @media screen and (max-width:768px){
 	.products-block{
