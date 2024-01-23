@@ -1157,7 +1157,6 @@ body .image-popup .scroll-button:hover{
 	color: var(--store-color);
 	font-weight: 600;
 	border-bottom: 1px solid var(--store-color);
-	height: 1.5em;
 }
 
 
@@ -1167,13 +1166,32 @@ body .image-popup .scroll-button:hover{
 .product .summary form.variations_form .dimensions .variations{
 	border-right: 1px dashed var(--store-color);
 	margin: 0;
-	padding: 1em 0;
+	padding:1em 1em 1.5em 0;
 }
-.summary form.variations_form .dimensions .variations th{
+.summary form.variations_form .dimensions .variations tbody tr{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.summary form.variations_form .dimensions .variations tbody tr th{
 	text-align: left;
+	flex: 8em 0 0;
 }
-.summary form.variations_form .dimensions .variations th label{
+.summary form.variations_form .dimensions .variations tbody tr th label{
 	font-weight: 300;
+}
+.summary form.variations_form .dimensions .variations tbody tr td{
+	flex: auto 1 1;
+	line-height: initial;
+}
+.summary form.variations_form .dimensions .variations tbody tr  td select{
+	width: 100%;
+}
+.summary form.variations_form .dimensions .variations a.reset_variations{
+	position: absolute;
+	bottom: -1em;
+	color: var(--store-color);
+	text-decoration: underline;
 }
 
 
@@ -1181,21 +1199,24 @@ body .image-popup .scroll-button:hover{
 	flex: 60% 1 0;
 	display: flex;
 	flex-wrap: wrap;
+	align-items: flex-start;
+    align-content: flex-start;
 }
 .summary form.variations_form .addons > *{
-	padding-left: 1em;
+	padding-left: 0.5em;
 }
 .summary form.variations_form .addons > h3{
 	flex: 100% 0 0;
 }
 .summary form.variations_form .addons .addon{
-	
 	display: grid;
 	grid-template-areas: "image dimensions-title"
 						 "image price"
 						 "image amount";
 	grid-template-columns: 0.5fr 1fr;
 	flex: 50% 0 0;
+	padding:  1em 0.5em;
+	column-gap: 0.5em;
 }
 .summary form.variations_form .addons .addon .addon-image{
 	grid-area: image;
@@ -1209,13 +1230,25 @@ body .image-popup .scroll-button:hover{
 }
 .summary form.variations_form .addons .addon input.addon-quantity{
 	grid-area: amount;
-	height: 2.5em;
     width: 5em;
-    padding-left: 1em;
-}
-.summary form.variations_form .single_variation_wrap{
-	width: 100%;
-	padding: 1em 0;
-	border-top: 1px dashed var(--store-color);
 }
 
+.summary form.variations_form .single_variation_wrap{
+	width: 100%;
+	border-top: 1px dashed var(--store-color);
+	padding: 1em 0;
+}
+.summary form.variations_form .single_variation_wrap  *{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.summary form.variations_form .single_variation_wrap .single_add_to_cart_button{
+	background: var(--store-color) url(images/svg/cart.svg) no-repeat left 1em center;
+	background-size: 1.5em auto;
+	border-radius: 5em;
+	padding-left: 3em;
+}
+.summary form.variations_form .single_variation_wrap .woocommerce-variation-price span{
+	color: var(--black);
+}
