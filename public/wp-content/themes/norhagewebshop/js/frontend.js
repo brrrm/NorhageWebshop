@@ -92,6 +92,41 @@
 			});
 		}
 
+		var variationPrice;
+		$( '.single_variation_wrap' ).on( 'show_variation', function( event, variation ) {
+			console.log('show_variation');
+			variationPrice = variation.display_regular_price;
+			add_addons_to_wc_variation_price();
+		});
+
+		$('.variations_form .addon-quantity').change(function(e){
+			e.preventDefault();
+			add_addons_to_wc_variation_price();
+		});
+
+		function add_addons_to_wc_variation_price(){
+			let newPrice = variationPrice;
+			$('.addon input.addon-quantity').each(function(){
+				let quantity = $(this).val();
+				let price = $(this).data('price');
+				newPrice += (price * quantity);
+			});
+			let currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi .woocommerce-Price-currencySymbol').clone();
+			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
+			formattedPrice = newPrice.toLocaleString(
+									wcSettings.locale.siteLocale.replace('_', '-'), 
+									{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
+								)
+								.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
+			$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').text(' ' + formattedPrice + ' ');
+			
+			if(wcSettings.currency.symbolPosition == 'left' || wcSettings.currency.symbolPosition == 'left_space'){
+				$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').prepend(currencySymbol);
+			}else if(wcSettings.currency.symbolPosition == 'right' || wcSettings.currency.symbolPosition == 'right_space'){
+				$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').append(currencySymbol);
+			}
+		}
+
 
 		/*
 		function gtag() { dataLayer.push(arguments); }

@@ -1,28 +1,66 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The Template for displaying all single products
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This template can be overridden by copying it to yourtheme/woocommerce/single-product.php.
  *
- * @package norhagewebshop
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see         https://woo.com/document/template-structure/
+ * @package     WooCommerce\Templates
+ * @version     1.6.4
  */
 
-get_header();
-?>
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+get_header( 'shop' ); ?>
+
+	<?php
+		/**
+		 * woocommerce_before_main_content hook.
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
+	?>
 
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+		<?php while ( have_posts() ) : ?>
+			<?php the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-		endwhile; // End of the loop.
-		?>
+		<?php endwhile; // end of the loop. ?>
 
-	</main><!-- #main -->
+	</main>
+
+	<?php
+		/**
+		 * woocommerce_after_main_content hook.
+		 *
+		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 */
+		do_action( 'woocommerce_after_main_content' );
+	?>
+
+	<?php
+		/**
+		 * woocommerce_sidebar hook.
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		do_action( 'woocommerce_sidebar' );
+	?>
 
 <?php
-get_sidebar();
-get_footer();
+get_footer( 'shop' );
+
+/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

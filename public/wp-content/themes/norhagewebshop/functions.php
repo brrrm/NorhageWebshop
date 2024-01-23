@@ -684,6 +684,92 @@ add_filter( 'post_thumbnail_id', function($thumbnail_id, $post ){
 
 
 
+/**
+ * Function for `woocommerce_add_cart_item_data` filter-hook.
+ * add the addons for variable products to the cart_item_data.
+ * 
+ * @param array   $cart_item_data Array of other cart item data.
+ * @param integer $product_id     ID of the product added to the cart.
+ * @param integer $variation_id   Variation ID of the product added to the cart.
+ * @param integer $quantity       Quantity of the item added to the cart.
+ *
+ * @return array
+ */
+function norhage_add_cart_item_data( $cart_item_data, $product_id, $variation_id, $quantity ){
+	if(isset($_POST['addons']) && !empty($_POST['addons'])){
+		$cart_item_data['addons'] = $_POST['addons'];
+	}
+	return $cart_item_data;
+}
+add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 4 );
+
+/**
+ * Display custom cart_item_data in the cart
+ */
+function norhage_get_item_data( $item_data, $cart_item_data ) {
+	if(isset($cart_item_data['addons']) && !empty($cart_item_data['addons'])) {
+		foreach($cart_item_data['addons'] as $product_id => $quantity){
+			if($quantity <= 0){
+				// don't show unselected extra's
+				continue;
+			}
+			$product = wc_get_product($product_id);
+			$item_data[] = [
+				'key' => $quantity . ' x ',
+				'value' => $product->get_name() . ' (' . wc_price($product->get_price()) . ')'
+			];
+		}
+	}
+	return $item_data;
+}
+add_filter( 'woocommerce_get_item_data', 'norhage_get_item_data', 10, 2 );
+
+/**
+ *  calculate the price of the items in the cart
+ */
+function norhage_before_calculate_totals($cart_object){
+	foreach ( $cart_object->get_cart() as $hash => $value ) {
+		if(isset($value['addons']) && !empty($value['addons'])){
+			$product = wc_get_product( $value['data']->get_id() );
+			$product_price = $product->get_price();
+			$extra_costs = 0;
+			foreach($value['addons'] as $product_id => $quantity){
+				if($quantity < 1){
+					continue;
+				}
+				$addon_product = wc_get_product($product_id);
+				$addon_price = $addon_product->get_price();
+				$extra_costs += $addon_price * $quantity;
+			}
+			$product_price += $extra_costs;
+			$value[ 'data' ]->set_price( $product_price );
+		}
+	}
+}
+add_action( 'woocommerce_before_calculate_totals', 'norhage_before_calculate_totals', 99 );
+
+
+function norhage_cart_calculate_fees($cart){
+
+}
+add_action('woocommerce_cart_calculate_fees', 'norhage_cart_calculate_fees', 20, 1);
+
+/**
+ * Remove the woocommerce template parts
+ */
+add_action( 'init', 'norhage_remove_wc_template_stuff' );
+function norhage_remove_wc_template_stuff() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+    remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+}
 
 /*
 // CORS HOT FIX BY NB:
