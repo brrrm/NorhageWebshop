@@ -8,16 +8,17 @@ Version: 0.1
 @import url("https://use.typekit.net/aus7nxi.css"); 
 
 :root{
-	--dark-blue: #0A4164;
+	--store-color: #66B73C;
 	--light-blue: #E9F2F8;
 	--white: #fff;
 	--black:#000;
 	--bright-orange: #FF7F00;
 	--bright-green: #0DFF86;
+	--light-green:#F1FFEA;
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
-	--header-gradient: linear-gradient(180deg, rgba(10,65,100,0.85) 0%, rgba(10,65,100,0) 122%);
+	--header-gradient: linear-gradient(180deg,  rgb(102 183 60 / 0.90) 0%, rgba(10,65,100,0) 122%);
 }
 body.small-height-header{
 	--header-nav-height: 5vw;
@@ -142,7 +143,7 @@ a{
 	padding: 0.13em 1em 0.133em 1em; 
   	border-radius: 200px;
   	background-color: var(--white);
-  	color: var(--dark-blue);
+  	color: var(--store-color);
 }
 @media all and (max-width:768px){
 	.button{
@@ -151,7 +152,7 @@ a{
 }
 .button.blue-button{
   	color: var(--white);
-  	background-color: var(--dark-blue);
+  	background-color: var(--store-color);
 }
 .cta-phone.button,
 .cta-email.button{
@@ -179,6 +180,10 @@ ul{}
 
 li{}
 
+
+select{
+	height: 2.5em;
+}
 /**
  * PAGE STRUCTURE
  */
@@ -268,20 +273,20 @@ header#masthead nav#site-navigation{
 	border-bottom: 1px solid var(--white);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container{
-	flex: 60% 0 0;
-	background: var(--dark-blue);
+	flex: 40% 0 0;
+	background: var(--store-color);
 	color: var(--white);
 	border-right: 1px solid var(--white);
-	border-bottom: 1px solid var(--dark-blue);
+	border-bottom: 1px solid var(--store-color);
 	transition: border-bottom-color 0.5s ease-out;
 	box-sizing: border-box;
 }
 
 header#masthead nav#site-navigation .menu-secondary-menu-container{
-	flex: 40% 0 0;
+	flex: 60% 0 0;
 	color: var(--white);
 	text-align: right;
-	background: var(--dark-blue);
+	background: var(--store-color);
 	transition: background 0.5s ease-out;
 	box-sizing: border-box;
 }
@@ -445,7 +450,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:link,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:visited{
-	color: var(--dark-blue);
+	color: var(--store-color);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu ul.products-sub-menu{
 	position: absolute;
@@ -484,7 +489,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover > a{
 	color: var(--white);
-	background: var(--dark-blue) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
+	background: var(--store-color) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover ul.products-sub-menu,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu:not(:hover) > li:first-child ul.products-sub-menu{
@@ -552,17 +557,17 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li a,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li a{
 	background: none;
-	color: var(--dark-blue);
+	color: var(--store-color);
 	white-space: nowrap;
 	display: block;
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li:hover{
-	background: var(--dark-blue);
+	background: var(--store-color);
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover a{
 	color: var(--white);
-	background: var(--dark-blue);
+	background: var(--store-color);
 }
 
 
@@ -577,7 +582,7 @@ header#masthead nav#site-navigation h2{
 }
 @media all and (max-width:768px){
 	header#masthead{
-		background: var(--dark-blue);
+		background: var(--store-color);
 		text-align: right;
 		border-bottom: 1px solid var(--white);
 	}
@@ -650,7 +655,7 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu a,
 	header#masthead nav#site-navigation .menu-container ul.menu ul.sub-menu a{
-		color: var(--dark-blue);
+		color: var(--store-color);
 		padding: 0.5em 0;
 		display: block;
 		background: none;
@@ -1125,3 +1130,92 @@ body .image-popup .close-button:hover,
 body .image-popup .scroll-button:hover{
 	background-color: #eee;
 }
+
+
+
+
+
+
+.woocommerce div.product form.cart::after, 
+.woocommerce div.product form.cart::before{
+	display: none;
+}
+
+.product .entry-content .summary.entry-summary{
+	float: unset;
+	width: unset;
+    background-color: var(--light-green);
+    padding: 2em;
+}
+
+
+.summary form.variations_form{
+	display: flex;
+	flex-wrap: wrap;
+}
+.summary form.variations_form > div > h3{
+	color: var(--store-color);
+	font-weight: 600;
+	border-bottom: 1px solid var(--store-color);
+	height: 1.5em;
+}
+
+
+.summary form.variations_form .dimensions{
+	flex: 30% 0 0;
+}
+.product .summary form.variations_form .dimensions .variations{
+	border-right: 1px dashed var(--store-color);
+	margin: 0;
+	padding: 1em 0;
+}
+.summary form.variations_form .dimensions .variations th{
+	text-align: left;
+}
+.summary form.variations_form .dimensions .variations th label{
+	font-weight: 300;
+}
+
+
+.summary form.variations_form .addons{
+	flex: 60% 1 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+.summary form.variations_form .addons > *{
+	padding-left: 1em;
+}
+.summary form.variations_form .addons > h3{
+	flex: 100% 0 0;
+}
+.summary form.variations_form .addons .addon{
+	
+	display: grid;
+	grid-template-areas: "image dimensions-title"
+						 "image price"
+						 "image amount";
+	grid-template-columns: 0.5fr 1fr;
+	flex: 50% 0 0;
+}
+.summary form.variations_form .addons .addon .addon-image{
+	grid-area: image;
+}
+.summary form.variations_form .addons .addon h3{
+	grid-area: dimensions-title;
+	font-size: 1em;
+}
+.summary form.variations_form .addons .addon .addon-price{
+	grid-area: price;
+}
+.summary form.variations_form .addons .addon input.addon-quantity{
+	grid-area: amount;
+	height: 2.5em;
+    width: 5em;
+    padding-left: 1em;
+}
+.summary form.variations_form .single_variation_wrap{
+	width: 100%;
+	padding: 1em 0;
+	border-top: 1px dashed var(--store-color);
+}
+
