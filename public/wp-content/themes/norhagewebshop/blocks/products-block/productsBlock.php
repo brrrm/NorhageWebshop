@@ -7,11 +7,11 @@
 
 // Load values and assign defaults.
 $title			= get_field( 'title' )?? get_sub_field( 'title' );
-$projects		= get_field( 'projects' )?? get_sub_field( 'projects' );
-$text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
+$products		= get_field( 'products' )?? get_sub_field( 'products' );
+$text			= get_field( 'text' )?? get_sub_field( 'text' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
-if(!$projects || empty($projects)){
+if(!$products || empty($products)){
 	global $post;
 
 	$projects = get_posts([
@@ -33,43 +33,33 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'projects-block norhage-block';
+$class_name = 'products-block norhage-block';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
 if ( ! empty( $block['align'] ) ) {
     $class_name .= ' align' . $block['align'];
 }
-if($text_snippet){
-	$class_name .= ' with-text-snippets';
-}
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
-	<div class="title-col">
+	<div class="text-col">
 		<h2><?php echo esc_html( $title ); ?></h2>
-		<ul class="slider-nav">
-			<li><button class="left"><?php _e('Left', 'norhagewebshop'); ?></button></li>
-			<li><button class="right"><?php _e('Right', 'norhagewebshop'); ?></button></li>
-		</ul>
+		<?php echo $text; ?>
 	</div>
-	<div class="projects-col">
-		<?php if($projects): ?>
+	<div class="products-col">
+		<?php if($products): ?>
 			<ul>
 
-			<?php foreach($projects as $project):
-				$permalink = get_permalink( $project->ID );
-        		$title = get_the_title( $project->ID );
-        		$thumb = get_the_post_thumbnail($project->ID);
+			<?php foreach($products as $product):
+				$permalink = get_permalink( $product->ID );
+        		$title = get_the_title( $product->ID );
+        		$thumb = wp_get_attachment_image(get_post_thumbnail_id($product->ID), [420,420]);
         	?>
 				<li class="image-button">
 					<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $thumb; ?></a>
 					<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></h3>
-					<?php if($text_snippet): ?>
-						<p class="excerpt"><?php echo wp_strip_all_tags(get_the_excerpt()); ?></p>
-						<p><a href="<?php echo esc_url( $permalink ); ?>"><?php echo __( 'Read more ->' ); ?></a></p>
-					<?php endif; ?>
 				</li>
 			<?php endforeach; ?>
 			</ul>

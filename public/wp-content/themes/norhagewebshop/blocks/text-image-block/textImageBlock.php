@@ -6,9 +6,9 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' );
-$text			= get_field( 'text_paragraph' );
-$image			= get_field( 'image' );
+$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
+$text			= get_field( 'text_paragraph' ) ?? get_sub_field( 'text_paragraph' );
+$image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 
 
 // Support custom "anchor" values.

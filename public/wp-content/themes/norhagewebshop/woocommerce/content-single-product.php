@@ -87,6 +87,27 @@ if ( post_password_required() ) {
 		</div>
 
 		<?php
+			$extra_content = get_field('extra_content');
+			if( have_rows('extra_content')):
+				while ( have_rows('extra_content') ) : the_row();
+
+					if(get_row_layout() == 'text_image_block'):
+						get_template_part('blocks/text-image-block/textImageBlock');
+					endif;
+
+					if(get_row_layout() == 'related_products'):
+						get_template_part('blocks/products-block/productsBlock');
+					endif;
+
+					if(get_row_layout() == 'projects_slider'):
+						get_template_part('blocks/projects-block/projectsBlock');
+					endif;
+
+				endwhile;
+			endif;
+		?>
+
+		<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
 		 *

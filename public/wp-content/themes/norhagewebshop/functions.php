@@ -128,6 +128,7 @@ function norhagewebshop_register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/cta-within-text-block' );
     register_block_type( __DIR__ . '/blocks/reviews-block' );
     register_block_type( __DIR__ . '/blocks/categories-block' );
+    register_block_type( __DIR__ . '/blocks/products-block' );
 }
 // Here we call our tt3child_register_acf_block() function on init.
 add_action( 'init', 'norhagewebshop_register_acf_blocks' );
