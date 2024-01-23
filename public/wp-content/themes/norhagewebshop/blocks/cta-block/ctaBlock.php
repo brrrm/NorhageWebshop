@@ -6,11 +6,11 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' );
-$text			= get_field( 'text' );
-$phone			= get_field( 'phone_number' );
-$email			= get_field( 'email' );
-$image			= get_field( 'image' );
+$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
+$text			= get_field( 'text' ) ?? get_sub_field( 'text' );
+$phone			= get_field( 'phone_number' ) ?? get_sub_field( 'phone_number' );
+$email			= get_field( 'email' ) ?? get_sub_field( 'email' );
+$image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 
 
 // Support custom "anchor" values.

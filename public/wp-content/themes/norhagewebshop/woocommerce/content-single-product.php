@@ -103,6 +103,10 @@ if ( post_password_required() ) {
 						get_template_part('blocks/projects-block/projectsBlock');
 					endif;
 
+					if(get_row_layout() == 'cta'):
+						get_template_part('blocks/cta-block/ctaBlock');
+					endif;
+
 				endwhile;
 			endif;
 		?>
