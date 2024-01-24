@@ -38,7 +38,10 @@ $class_name = 'projects-block norhage-block';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
-if ( ! empty( $block['align'] ) ) {
+
+if ( empty( $block['align'] ) ) {
+	$class_name .= ' alignfull';
+}else{
     $class_name .= ' align' . $block['align'];
 }
 if($text_snippet){
@@ -51,10 +54,6 @@ if($text_snippet){
 	<div class="title-col">
 		<h2><?php echo esc_html( $title ); ?></h2>
 		<?php echo $text; ?>
-		<ul class="slider-nav">
-			<li><button class="left"><?php _e('Left', 'norhagewebshop'); ?></button></li>
-			<li><button class="right"><?php _e('Right', 'norhagewebshop'); ?></button></li>
-		</ul>
 	</div>
 	<div class="projects-col">
 		<?php if($projects): ?>
