@@ -2,33 +2,17 @@
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: nowrap;
-	color: #646464;
 	gap: 1em;
-	width: 100%;
-	overflow: auto;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
 	padding: 4em 2em;
 	border-top: 1px solid var(--store-color);
 	border-bottom: 1px solid var(--store-color);
 	margin-top: -1px;
-	font-family: "kiro", sans-serif;
-	scroll-behavior: smooth;
 }
-.products-block::-webkit-scrollbar{
-	display: none;
-}
-
 .products-block .text-col{
-	flex: 40% 0 0;
+	flex: var(--small-flex) 0 0;
 }
-.products-block .text-col h2{
-	font-weight: 300;
-	font-style: italic;
-}
-
 .products-block .products-col{
-	flex: 60% 0 1;	
+	flex: var(--big-flex) 0 1;	
 }
 .products-block .products-col ul{
 	display: flex;
@@ -40,22 +24,20 @@
 .products-block .products-col ul li.image-button{
 	flex:calc(100% / 3 - 0.7rem) 0 1;
 }
-.products-block .image-button .title,
 .products-block .image-button .title a {
 	text-align: left;
 }
 
-
 @media screen and (max-width:768px){
 	.products-block{
-		padding: 2em ;
-		flex-wrap: wrap;
-	}	
-	.products-block .title-col{
-		flex: 100% 0 0;
-		padding: 0;
+		display: block;
+		padding: 2em;
 	}
-	.products-block .projects-col ul li{
-		flex: 70% 0 0;
+	.products-block .products-col ul{
+		flex-wrap: nowrap;
+		overflow: auto;
+	}
+	.products-block .products-col ul li.image-button{
+		flex: 60% 0 0;
 	}
 }
