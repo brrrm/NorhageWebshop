@@ -479,8 +479,6 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
     if( $args->menu_id == 'primary-menu' && $item->type == 'post_type' && $item->object == 'service') {
     	$thumb = get_the_post_thumbnail($item->object_id, [420,420]);
         $output = '<div class="image-button"><a href="' . esc_url( $item->url ) . '">' . $thumb . '</a><span class="title"><a href="' . esc_url( $item->url ) . '">' . $item->title . '</span></a></div>' ;
-    	error_log(print_r($item, true));
-    	error_log($output);
     }
     if( $args->menu_id == 'primary-menu' && in_array('menu-item-has-children', $item->classes) ){
 	    $output .= '<button class="expander">' . __('expand', 'norhagewebshop') . '</button>';
@@ -493,7 +491,6 @@ add_action( 'walker_nav_menu_start_el', 'norhage_menu_add_category_posts', 10, 4
 # filter_hook function to react on start_in argument
 function norhage_wp_nav_menu_objects_start_in( $sorted_menu_items, $args ) {
     if(isset($args->show_submenu) && $args->show_submenu) {
-    	error_log('YOYOYOYOYOYOOY' . $args->start_in . '-----' . print_r($sorted_menu_items, true));
         $root_id = 0;
         foreach( $sorted_menu_items as $key => $item ) {
         	if($item->current){
@@ -700,6 +697,9 @@ function norhage_add_cart_item_data( $cart_item_data, $product_id, $variation_id
 	if(isset($_POST['addons']) && !empty($_POST['addons'])){
 		$cart_item_data['addons'] = $_POST['addons'];
 	}
+	if(isset($_POST['cutting_variables'])){
+		$cart_item_data['cutting_variables'] = $_POST['cutting_variables'];
+	}
 	return $cart_item_data;
 }
 add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 4 );
@@ -708,6 +708,17 @@ add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 
  * Display custom cart_item_data in the cart
  */
 function norhage_get_item_data( $item_data, $cart_item_data ) {
+	if(isset($cart_item_data['cutting_variables'])){
+		$item_data[] = [
+			'key'	=> __('Cutting fee included', 'norhage'),
+			'value'	=> wc_price($cart_item_data['cutting_variables']['cutting_fee'])
+		];
+		$item_data[] = [
+			'key'	=> __('Size', 'norhage'),
+			'value'	=> $cart_item_data['cutting_variables']['width'] . 'm x ' . $cart_item_data['cutting_variables']['height'] . 'm'
+		];
+	}
+
 	if(isset($cart_item_data['addons']) && !empty($cart_item_data['addons'])) {
 		foreach($cart_item_data['addons'] as $product_id => $quantity){
 			if($quantity <= 0){
@@ -729,10 +740,20 @@ add_filter( 'woocommerce_get_item_data', 'norhage_get_item_data', 10, 2 );
  *  calculate the price of the items in the cart
  */
 function norhage_before_calculate_totals($cart_object){
+	
 	foreach ( $cart_object->get_cart() as $hash => $value ) {
+		$product = wc_get_product( $value['data']->get_id() );
+		$product_price = $product->get_price();
+		
+		if(isset($value['cutting_variables'])){
+			$cutting_fee = floatval($value['cutting_variables']['cutting_fee']);
+			$width = floatval($value['cutting_variables']['width']);
+			$height = floatval($value['cutting_variables']['height']);
+			$product_price = $cutting_fee + ($width * $height * $product_price);
+		}
+
 		if(isset($value['addons']) && !empty($value['addons'])){
-			$product = wc_get_product( $value['data']->get_id() );
-			$product_price = $product->get_price();
+			
 			$extra_costs = 0;
 			foreach($value['addons'] as $product_id => $quantity){
 				if($quantity < 1){
@@ -743,17 +764,75 @@ function norhage_before_calculate_totals($cart_object){
 				$extra_costs += $addon_price * $quantity;
 			}
 			$product_price += $extra_costs;
-			$value[ 'data' ]->set_price( $product_price );
 		}
+
+		$value[ 'data' ]->set_price( $product_price );
 	}
 }
 add_action( 'woocommerce_before_calculate_totals', 'norhage_before_calculate_totals', 99 );
 
+/**
+ * Add custom meta to order
+ */
+function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values, $order ) {
 
-function norhage_cart_calculate_fees($cart){
+	if(isset($values['cutting_variables'])){
+		$item->add_meta_data(
+			__('Cutting fee included', 'norhage'),
+			wc_price($values['cutting_variables']['cutting_fee'])
+		);
+		$item->add_meta_data(
+			__('Size', 'norhage'),
+			$values['cutting_variables']['width'] . 'm x ' . $values['cutting_variables']['height'] . 'm'
+		);
+	}
 
+	if( isset( $values['addons'] ) ) {
+		foreach($values['addons'] as $product_id => $quantity){
+			if($quantity < 1){
+				continue;
+			}
+			$product = wc_get_product( $product_id );
+			$item->add_meta_data(
+				$quantity . ' x ',
+				$product->get_name() . ' (' . wc_price($product->get_price()) . ')',
+				true
+			);
+		}
+	}
 }
-add_action('woocommerce_cart_calculate_fees', 'norhage_cart_calculate_fees', 20, 1);
+add_action( 'woocommerce_checkout_create_order_line_item', 'norhage_checkout_create_order_line_item', 10, 4 );
+
+
+/**
+ * Add custom cart item data to emails
+ */
+function norhage_order_item_name( $product_name, $item ) {
+
+	if(isset($item['cutting_variables'])){
+		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee included', 'norhage'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
+		$product_name .= sprintf(
+			'<br /> %s: %sm x %sm', 
+			__('Sizes', 'norhage'), 
+			$cart_item_data['cutting_variables']['width'],
+			$cart_item_data['cutting_variables']['height']
+		);
+	}
+
+	if(isset($item['addons']) && !empty($item['addons'])){
+		foreach($values['addons'] as $product_id => $quantity){
+			if($quantity < 1){
+				continue;
+			}
+			$product = wc_get_product( $product_id );
+			$addon_text = sprintf('<br /> %s x %s', $quantity, $product->get_name());
+			$product_name .= $addon_text;
+		}
+	}
+	return $product_name;
+}
+
+add_filter( 'woocommerce_order_item_name', 'norhage_order_item_name', 10, 2 );
 
 /**
  * Remove the woocommerce template parts

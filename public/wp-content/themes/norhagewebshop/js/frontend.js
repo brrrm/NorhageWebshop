@@ -104,20 +104,42 @@
 			add_addons_to_wc_variation_price();
 		});
 
+		$('.variations_form .sizes_input input').change(function(e){
+			e.preventDefault();
+			add_addons_to_wc_variation_price();
+		});
+
 		function add_addons_to_wc_variation_price(){
 			let newPrice = variationPrice;
+
+			// first we need to calculate the unit price
+			if($('.sizes_input').length){
+				let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val());
+				let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val());
+				let cutting_fee = parseFloat($('.sizes_input input[name="cutting_variables[cutting_fee]"]').val());
+				if(isNaN(width)){
+					width = 1;
+				}
+				if(isNaN(height)){
+					height = 1;
+				}
+				newPrice = cutting_fee + (width * height * variationPrice);
+			}
+
+			// then we add the addons
 			$('.addon input.addon-quantity').each(function(){
 				let quantity = $(this).val();
 				let price = $(this).data('price');
 				newPrice += (price * quantity);
 			});
+
 			let currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi .woocommerce-Price-currencySymbol').clone();
 			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
 			formattedPrice = newPrice.toLocaleString(
-									wcSettings.locale.siteLocale.replace('_', '-'), 
-									{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
-								)
-								.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
+					wcSettings.locale.siteLocale.replace('_', '-'), 
+					{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
+				)
+				.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
 			$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').text(' ' + formattedPrice + ' ');
 			
 			if(wcSettings.currency.symbolPosition == 'left' || wcSettings.currency.symbolPosition == 'left_space'){

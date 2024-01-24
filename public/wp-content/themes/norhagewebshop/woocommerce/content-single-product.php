@@ -43,7 +43,6 @@ if ( post_password_required() ) {
 			<div class="image-col">
 				<?php
 					$images = $product->get_gallery_image_ids();
-					error_log(print_r($images, true));
 
 					if(!in_array(get_post_thumbnail_id(), $images)){
 						array_unshift($images, get_post_thumbnail_id());
