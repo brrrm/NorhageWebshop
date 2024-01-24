@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 
 		<div class="dimensions">
-			<h3>Configure the dimensions</h3>
+			<h3>Configure product options</h3>
 			<table class="variations" cellspacing="0" role="presentation">
 				<tbody>
 					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
@@ -110,15 +110,13 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<?php endif; ?>
 
 		<div class="single_variation_wrap">
-			<div class="step3">
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.
 				 */
 				do_action( 'woocommerce_before_single_variation' );
 			?>
-			</div>
-			<div class="step4">
+			<div class="step3">
 			<?php
 
 				/**
