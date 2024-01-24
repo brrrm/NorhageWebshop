@@ -8,6 +8,7 @@
 // Load values and assign defaults.
 $title			= get_field( 'title' )?? get_sub_field( 'title' );
 $projects		= get_field( 'projects' )?? get_sub_field( 'projects' );
+$text			= get_field('text') ?? get_sub_field('text');
 $text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
@@ -49,6 +50,7 @@ if($text_snippet){
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="title-col">
 		<h2><?php echo esc_html( $title ); ?></h2>
+		<?php echo $text; ?>
 		<ul class="slider-nav">
 			<li><button class="left"><?php _e('Left', 'norhagewebshop'); ?></button></li>
 			<li><button class="right"><?php _e('Right', 'norhagewebshop'); ?></button></li>
