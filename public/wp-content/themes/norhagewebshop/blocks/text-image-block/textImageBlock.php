@@ -31,11 +31,9 @@ if ( empty( $block['align'] ) ) {
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
-	<div class="text-image-block--title-col">
-		<h2><?php echo esc_html( $title ); ?></h2>
-	</div>
-	<div class="text-image-block--text-col">
-		<?php echo $text; ?>
+	<div class="text-col">
+			<h2><?php echo esc_html( $title ); ?></h2>
+			<?php echo $text; ?>
 	</div>
 	<div class="text-image-block--image-col">
 		<?php if ( $image ) : ?>
