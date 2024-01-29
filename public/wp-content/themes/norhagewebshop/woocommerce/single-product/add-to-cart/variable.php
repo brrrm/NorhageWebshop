@@ -32,30 +32,30 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
 	<?php else : ?>
 
-
-		<h3>Configure the dimensions</h3>
-		<table class="variations" cellspacing="0" role="presentation">
-			<tbody>
-				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
-					<tr>
-						<th class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
-						<td class="value">
-							<?php
-								wc_dropdown_variation_attribute_options(
-									array(
-										'options'   => $options,
-										'attribute' => $attribute_name,
-										'product'   => $product,
-									)
-								);
-								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
-							?>
-						</td>
-					</tr>
-				<?php endforeach; ?>
-			</tbody>
-		</table>
-
+		<div class="dimensions">
+			<h3>Configure product options</h3>
+			<table class="variations" cellspacing="0" role="presentation">
+				<tbody>
+					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
+						<tr>
+							<th class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></th>
+							<td class="value">
+								<?php
+									wc_dropdown_variation_attribute_options(
+										array(
+											'options'   => $options,
+											'attribute' => $attribute_name,
+											'product'   => $product,
+										)
+									);
+									echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
+								?>
+							</td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
 		<?php do_action( 'woocommerce_after_variations_table' ); ?>
 
 		<?php
@@ -65,28 +65,28 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		?>
 		<div class="addons">
 			<h3>Select extra options</h3>
-
-			<?php if($extras):
-				foreach($extras as $addon):
-					//$product = $addon['product'];
-					$product_identifier = 'product-' . $addon['product']->ID;
-					$max_quantity = $addon['maximum_quantity'];
-					$addon_product = wc_get_product($addon['product']->ID);
-					$addon_price = $addon_product->get_price();
-			?>
-			<div class="addon">
-				<div class="addon-image">
-					<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
+			<div class="add-products">
+				<?php if($extras):
+					foreach($extras as $addon):
+						//$product = $addon['product'];
+						$product_identifier = 'product-' . $addon['product']->ID;
+						$max_quantity = $addon['maximum_quantity'];
+						$addon_product = wc_get_product($addon['product']->ID);
+						$addon_price = $addon_product->get_price();
+				?>
+				<div class="addon">
+					<div class="addon-image">
+						<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
+					</div>
+					<h3><?php echo $addon_product->get_name(); ?></h3>
+					<div class="addon-price">
+						<?php echo wc_price($addon_price); ?>
+					</div>
+					<input type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
 				</div>
-				<h3><?php echo $addon_product->get_name(); ?></h3>
-				<div class="addon-price">
-					<?php echo wc_price($addon_price); ?>
-				</div>
-				<input type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
-			</div>
-			<?php endforeach; ?>
-		<?php endif; ?>
-
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</div>	
 			<?php if($cutting_fee): ?>
 				<?php
 					$max_width = get_field('max_width') ?? 0;
@@ -110,15 +110,14 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<?php endif; ?>
 
 		<div class="single_variation_wrap">
-			<div class="step3">
+			<h3>Select the quantity</h3>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.
 				 */
 				do_action( 'woocommerce_before_single_variation' );
 			?>
-			</div>
-			<div class="step4">
+
 			<?php
 
 				/**
@@ -135,7 +134,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 */
 				do_action( 'woocommerce_after_single_variation' );
 			?>
-			</div>
 		</div>
 	<?php endif; ?>
 
