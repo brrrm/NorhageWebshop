@@ -10,7 +10,7 @@
 	border-bottom: 1px solid var(--dark-blue);
 }
 .productHeaderBlock .text-col{
-	flex: 40% 0 0;
+	flex: 35% 0 0;
 	height: 100vh;
 	padding: calc(var(--header-height) + 3em) 1em 0 2em;
 	box-sizing: border-box;
@@ -33,7 +33,7 @@
 	font-size: 2em;
 }
 .productHeaderBlock .image-col{
-	flex: 60% 0 0;
+	flex: 65% 0 0;
 	overflow: auto;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
