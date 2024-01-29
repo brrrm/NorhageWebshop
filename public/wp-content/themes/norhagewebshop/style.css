@@ -8,6 +8,7 @@ Version: 0.1
 @import url("https://use.typekit.net/aus7nxi.css"); 
 
 :root{
+	--dark-blue: #0A4164;
 	--store-color: #66B73C;
 	--light-blue: #E9F2F8;
 	--white: #fff;
@@ -18,7 +19,7 @@ Version: 0.1
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
-	--header-gradient: linear-gradient(180deg,  rgb(102 183 60 / 0.90) 0%, rgba(10,65,100,0) 122%);
+	--header-gradient: linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);
 	--big-flex:55%;
 	--small-flex:44%;
 }
@@ -266,6 +267,7 @@ header#masthead .site-branding > a{
 	transition: height 0.5s ease-out;
 	aspect-ratio: 1;
 	position: absolute;
+	z-index: 1;
 	top: 0;
 	left: 2em;
 }
@@ -313,25 +315,25 @@ header#masthead nav#site-navigation aside a{
 
 header#masthead nav#site-navigation .menu-main-navigation-container{
 	flex: 65% 0 0;
-	background: var(--dark-blue);
+	background: var(--store-color);
 	color: var(--white);
 	border-left: 1px solid var(--white);
-	border-bottom: 1px solid var(--dark-blue);
 	transition: border-bottom-color 0.5s ease-out;
 	box-sizing: border-box;
 	order: 2;
+	mix-blend-mode: multiply;
 }
 
 header#masthead nav#site-navigation .menu-secondary-menu-container{
 	flex: 35% 0 0;
 	color: var(--white);
 	text-align: right;
-	background: var(--dark-blue);
+	background: var(--store-color);
 	transition: background 0.5s ease-out;
 	box-sizing: border-box;
 	order: 1;
 }
-header#masthead.over-headerblock nav#site-navigation .menu-secondary-menu-container{
+header#masthead.over-headerblock nav#site-navigation .menu-main-navigation-container{
 	background: var(--header-gradient);
 }
 header#masthead nav#site-navigation ul.menu{
@@ -427,13 +429,13 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 	display: block;
 	padding: 3em 0;
 	margin: 0;
-	background-color: var(--light-blue);
+	background-color: var(--light-green);
 	transform: translate(0, 10px);
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0.3s;
 	opacity: 0;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu{
-	background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAZKbwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+	background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAGa3PAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
 	background-repeat: repeat-y;
 	background-position: 25% 0;
 }
@@ -449,7 +451,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:link,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:visited{
-	color: var(--dark-blue);
+	color: var(--black);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu ul.products-sub-menu{
 	position: absolute;
@@ -474,7 +476,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	display: block;
 	width: 25%;
 	line-height: 2.5em;
-	padding-left: 0.5em;
+	padding-left: 0;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child(6) ul.sub-menu > li{
 	flex: auto 0 0;
@@ -488,7 +490,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover > a{
 	color: var(--white);
-	background: var(--dark-blue) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
+	background: var(--store-color) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover ul.products-sub-menu,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu:not(:hover) > li:first-child ul.products-sub-menu{
@@ -556,17 +558,17 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li a,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li a{
 	background: none;
-	color: var(--dark-blue);
+	color: var(--store-color);
 	white-space: nowrap;
 	display: block;
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li:hover{
-	background: var(--dark-blue);
+	background: var(--store-color);
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover a{
 	color: var(--white);
-	background: var(--dark-blue);
+	background: var(--store-color);
 }
 
 
@@ -581,7 +583,7 @@ header#masthead nav#site-navigation h2{
 }
 @media all and (max-width:768px){
 	header#masthead{
-		background: var(--dark-blue);
+		background: var(--store-color);
 		text-align: right;
 		border-bottom: 1px solid var(--white);
 	}
@@ -616,7 +618,7 @@ header#masthead nav#site-navigation h2{
 		width: 100%;
 		text-align: left;
 		border-bottom: none;
-		background: var(--light-blue);
+		background: var(--light-green);
 		height: auto;
 		min-height: 100vh;
 		position: relative;
@@ -643,7 +645,7 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead nav#site-navigation .menu-container,
 	header#masthead.over-headerblock nav#site-navigation .menu-container{
-		background: var(--light-blue);
+		background: var(--light-green);
 		border-bottom: 0;
 		border-right: 0;
 	}
@@ -654,7 +656,7 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu a,
 	header#masthead nav#site-navigation .menu-container ul.menu ul.sub-menu a{
-		color: var(--dark-blue);
+		color: var(--store-color);
 		padding: 0.5em 0;
 		display: block;
 		background: none;
