@@ -268,22 +268,24 @@ header#masthead nav#site-navigation{
 	border-bottom: 1px solid var(--white);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container{
-	flex: 60% 0 0;
+	flex: 65% 0 0;
 	background: var(--dark-blue);
 	color: var(--white);
-	border-right: 1px solid var(--white);
+	border-left: 1px solid var(--white);
 	border-bottom: 1px solid var(--dark-blue);
 	transition: border-bottom-color 0.5s ease-out;
 	box-sizing: border-box;
+	order: 2;
 }
 
 header#masthead nav#site-navigation .menu-secondary-menu-container{
-	flex: 40% 0 0;
+	flex: 35% 0 0;
 	color: var(--white);
 	text-align: right;
 	background: var(--dark-blue);
 	transition: background 0.5s ease-out;
 	box-sizing: border-box;
+	order: 1;
 }
 header#masthead.over-headerblock nav#site-navigation .menu-secondary-menu-container{
 	background: var(--header-gradient);
@@ -370,10 +372,10 @@ header#masthead nav#site-navigation ul li button.expander{
 	display: none;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu{
-	padding: 0 1.5em 0 calc(2em + var(--header-height) + 2em );
+	padding: 0 1.5em 0 1.5em;
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu{
-	padding: 0 1em;
+	padding: 0 1em 0 calc(2em + var(--header-height) + 2em );
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li > a,
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu > li > a{
