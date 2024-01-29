@@ -1293,7 +1293,6 @@ body .image-popup .scroll-button:hover{
 }
 
 @media all and (max-width:1024px){
-
 	.summary form.variations_form{
 		display: block;
 	}
@@ -1335,6 +1334,12 @@ body .image-popup .scroll-button:hover{
 	}
 }
 @media all and (max-width:768px){
+	.product .entry-content .summary.entry-summary{
+		padding: 2em 1em;
+	}
+	.summary form.variations_form .addons h3{
+		padding-left: 0;
+	}
 	.summary form.variations_form .addons .add-products{
 		display: block;
 	}

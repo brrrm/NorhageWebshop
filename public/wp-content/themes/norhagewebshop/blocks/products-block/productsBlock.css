@@ -32,7 +32,7 @@
 @media screen and (max-width:768px){
 	.products-block{
 		display: block;
-		padding: 2em;
+		padding: 2em 1em;
 	}
 	.products-block .products-col ul{
 		flex-wrap: nowrap;

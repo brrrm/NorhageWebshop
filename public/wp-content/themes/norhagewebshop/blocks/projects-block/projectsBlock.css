@@ -27,8 +27,8 @@
 }
 @media screen and (max-width:768px){
 	.projects-block{
-		padding: 1em ;
 		display: block;
+		padding: 2em 1em;
 	}	
 	.projects-block .projects-col ul li{
 		flex: 50% 0 1;
