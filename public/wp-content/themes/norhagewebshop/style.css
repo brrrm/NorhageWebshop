@@ -281,28 +281,6 @@ header#masthead nav#site-navigation{
 	transition: height 0.5s ease-out;
 	border-bottom: 1px solid var(--white);
 }
-header#masthead nav#site-navigation .menu-main-navigation-container{
-	flex: 40% 0 0;
-	background: var(--store-color);
-	color: var(--white);
-	border-right: 1px solid var(--white);
-	border-bottom: 1px solid var(--store-color);
-	transition: border-bottom-color 0.5s ease-out;
-	box-sizing: border-box;
-}
-
-header#masthead nav#site-navigation .menu-secondary-menu-container{
-	flex: 60% 0 0;
-	color: var(--white);
-	text-align: right;
-	background: var(--store-color);
-	transition: background 0.5s ease-out;
-	box-sizing: border-box;
-}
-header#masthead.over-headerblock nav#site-navigation .menu-secondary-menu-container{
-	background: var(--header-gradient);
-}
-
 header#masthead nav#site-navigation aside{
 	position: absolute;
 	right: 1.416666667em;
@@ -310,12 +288,10 @@ header#masthead nav#site-navigation aside{
 	text-align: right;
 	line-height: 1.04em;
 	transition: opacity 0.5s ease-out 0s, z-index 0s linear 0.7s;
-
 }
 .small-height-header header#masthead nav#site-navigation aside{
 	z-index: -1;
 	opacity: 0;
-	background: red;
 }
 @media all and (max-width:768px){
 	header#masthead nav#site-navigation aside{
@@ -335,22 +311,48 @@ header#masthead nav#site-navigation aside a{
 	color: #ffffff;
 }
 
+header#masthead nav#site-navigation .menu-main-navigation-container{
+	flex: 65% 0 0;
+	background: var(--dark-blue);
+	color: var(--white);
+	border-left: 1px solid var(--white);
+	border-bottom: 1px solid var(--dark-blue);
+	transition: border-bottom-color 0.5s ease-out;
+	box-sizing: border-box;
+	order: 2;
+}
 
+header#masthead nav#site-navigation .menu-secondary-menu-container{
+	flex: 35% 0 0;
+	color: var(--white);
+	text-align: right;
+	background: var(--dark-blue);
+	transition: background 0.5s ease-out;
+	box-sizing: border-box;
+	order: 1;
+}
+header#masthead.over-headerblock nav#site-navigation .menu-secondary-menu-container{
+	background: var(--header-gradient);
+}
 header#masthead nav#site-navigation ul.menu{
 	list-style: none;
 	margin: 0;
 	height: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-around;
 	flex-wrap: nowrap;
 	box-sizing: border-box;
 	flex-direction: row;
 	align-items: flex-end;
 	font-size: 0.875em;
-	gap: 2em;
-}
-header#masthead nav#site-navigation .menu-secondary-menu-container ul{
 	gap: 1em;
+}
+header#masthead nav#site-navigation .menu-main-navigation-container ul.menu{
+	padding: 0 1.5em 0 1.5em;
+}
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu{
+	padding: 0 1em 0 calc(2em + var(--header-height) + 2em );
+	justify-content: flex-end;
 }
 @media screen and (max-width: 1280px){
 	header#masthead nav#site-navigation ul.menu{
@@ -363,14 +365,14 @@ header#masthead nav#site-navigation ul li{
 	display: block;
 	font-weight: bold;
 }
-header#masthead nav#site-navigation .menu-secondary-menu-container ul li{
-	font-weight: 300;
+header#masthead nav#site-navigation ul li:last-child{
+	margin-right: 0;
 }
 body.small-height-header header#masthead nav#site-navigation ul li{
 	line-height: calc(var(--header-nav-height) - 1.9vw);
 }
-header#masthead nav#site-navigation ul li:last-child{
-	margin-right: 0;
+header#masthead nav#site-navigation .menu-secondary-menu-container ul li{
+	font-weight: 300;
 }
 @media all and (max-width:1100px){
 	header#masthead nav#site-navigation ul li{
@@ -385,46 +387,35 @@ header#masthead nav#site-navigation ul li:last-child{
 header#masthead nav#site-navigation ul li button.expander{
 	display: none;
 }
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu{
-	padding: 0 1.5em 0 calc(2em + var(--header-height) + 2em );
-}
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu{
-	padding: 0 1em;
-}
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li > a,
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu > li > a{
+
+header#masthead nav#site-navigation ul.menu > li > a{
 	display: inline-block;
 	line-height: 1.3em;
 }
-
-
-header#masthead nav#site-navigation .menu-main-navigation-container a:link,
-header#masthead nav#site-navigation .menu-main-navigation-container a:visited,
-header#masthead nav#site-navigation .menu-secondary-menu-container a:link,
-header#masthead nav#site-navigation .menu-secondary-menu-container a:visited{
+header#masthead nav#site-navigation ul.menu a:link,
+header#masthead nav#site-navigation ul.menu a:visited{
 	color: #fff;
 	text-decoration: none;
 }
-
 header#masthead nav#site-navigation .menu-secondary-menu-container ul li a{
 	white-space: nowrap;
+}
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu > li:first-child > a{
+	background:  transparent url(images/svg/cart.svg) no-repeat left center;
+	padding-left: 1.5em;
+	background-size: auto 1em ;
 }
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container > ul > li:hover > a  {
 		color:#0DFF86;
 	}
 }
-header#masthead nav#site-navigation ul.menu li{
-	position: relative;
+@media all and (max-width:768px){
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li:first-child a{
+		background-image: url(images/svg/cart-blue.svg);
+	}
 }
-header#masthead nav#site-navigation ul.menu li ul.sub-menu{
-	position: absolute;
-	left: -999em;
-	top: 100%;
-}
-header#masthead nav#site-navigation ul.menu li:hover ul.sub-menu{
-	left: 0;
-}
+
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu,
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
 	position: absolute;
@@ -458,7 +449,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:link,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:visited{
-	color: var(--store-color);
+	color: var(--dark-blue);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu ul.products-sub-menu{
 	position: absolute;
@@ -485,7 +476,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	line-height: 2.5em;
 	padding-left: 0.5em;
 }
-header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child(4) ul.sub-menu > li{
+header#masthead nav#site-navigation .menu-main-navigation-container li:nth-child(6) ul.sub-menu > li{
 	flex: auto 0 0;
 	width: auto;
 	padding-left: 0;
@@ -497,7 +488,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover > a{
 	color: var(--white);
-	background: var(--store-color) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
+	background: var(--dark-blue) url(images/svg/arrow-white.svg) no-repeat right 0.5em center;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li:hover ul.products-sub-menu,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu:not(:hover) > li:first-child ul.products-sub-menu{
@@ -565,17 +556,17 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li a,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li a{
 	background: none;
-	color: var(--store-color);
+	color: var(--dark-blue);
 	white-space: nowrap;
 	display: block;
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li:hover{
-	background: var(--store-color);
+	background: var(--dark-blue);
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover a{
 	color: var(--white);
-	background: var(--store-color);
+	background: var(--dark-blue);
 }
 
 
@@ -590,7 +581,7 @@ header#masthead nav#site-navigation h2{
 }
 @media all and (max-width:768px){
 	header#masthead{
-		background: var(--store-color);
+		background: var(--dark-blue);
 		text-align: right;
 		border-bottom: 1px solid var(--white);
 	}
@@ -663,7 +654,7 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu a,
 	header#masthead nav#site-navigation .menu-container ul.menu ul.sub-menu a{
-		color: var(--store-color);
+		color: var(--dark-blue);
 		padding: 0.5em 0;
 		display: block;
 		background: none;
