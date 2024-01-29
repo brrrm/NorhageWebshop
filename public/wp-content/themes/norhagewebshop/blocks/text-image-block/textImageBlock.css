@@ -47,7 +47,7 @@
 @media all and (max-width:768px){
 	.text-image-block{
 		display: block;
-		padding: 2em;
+		padding: 2em 1em;
 	}
 	.text-image-block--image-col{
 		margin-top: 0;
