@@ -1215,7 +1215,9 @@ body .image-popup .scroll-button:hover{
 	float: none;
 	width: auto;
     background-color: var(--light-green);
-    padding: 2em;
+    padding: 2em 0;
+    border-top: 1px solid var(--store-color);
+    border-bottom: 1px solid var(--store-color);
 }
 .product .entry-content .summary.entry-summary h2.variations_form-title{
 	flex: 100% 0 0;
@@ -1245,9 +1247,7 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form{
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 65%;
-	margin-right: auto;
-	margin-left: auto;
+	margin-left: 20%;
 	font-size: 0.75em;
 }
 .summary form.variations_form > div > h3{
@@ -1257,7 +1257,7 @@ body .image-popup .scroll-button:hover{
 }
 .summary form.variations_form .dimensions{
 	flex: 30% 1 0;
-	border-top: 1px solid var(--store-color);
+	border-top: 1px dashed var(--store-color);
 	padding-right: 1em;
 	padding-bottom: 1em;
 }
@@ -1299,8 +1299,8 @@ body .image-popup .scroll-button:hover{
 
 .summary form.variations_form .addons{
 	flex: var(--big-flex) 1 0;
-	border-top: 1px solid var(--store-color);
-	border-left: 1px solid var(--store-color);
+	border-top: 1px dashed var(--store-color);
+	border-left: 1px dashed var(--store-color);
 	padding-left: 1em;
 	padding-bottom: 1em;
 }
@@ -1351,7 +1351,7 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form .single_variation_wrap{
 	flex: 100% 0 0;
 	padding: 0;
-	border-top: 1px solid var(--store-color);
+	border-top: 1px dashed var(--store-color);
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
 	margin: 1em 0 0.5em;
@@ -1367,6 +1367,17 @@ body .image-popup .scroll-button:hover{
 	display: flex;
 	align-items: center;
 	margin: 0.5em 0;
+}
+.summary form.variations_form .single_variation_wrap:before, 
+.summary form.variations_form .dimensions:before {
+	content: " ";
+	position: relative;
+	top: -1px;
+	left: -20vw;
+	width: 20vw;
+	height: 1px;
+	display: block;
+	border-top: 1px dashed var(--store-color);
 }
 
 @media all and (max-width:1024px){

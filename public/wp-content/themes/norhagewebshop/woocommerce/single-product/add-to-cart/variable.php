@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 		<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhage'), $product->get_title()); ?></h2>
 		<div class="dimensions">
-			<h3>Configure product options</h3>
+			<h3>1: <?php _e('Configure product options', 'norhage'); ?></h3>
 			<table class="variations" cellspacing="0" role="presentation">
 				<tbody>
 					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
@@ -85,7 +85,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			if($extras):
 		?>
 		<div class="addons">
-			<h3>Select extra options</h3>
+			<h3>2: <?php _e('Select extra options', 'norhage'); ?></h3>
 			<div class="add-products">
 				<?php if($extras):
 					foreach($extras as $addon):
@@ -114,7 +114,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<?php endif; ?>
 
 		<div class="single_variation_wrap">
-			<h3>Select the quantity</h3>
+			<h3><?php echo ($extras)? '3' : '2'; ?>: <?php _e('Select the quantity', 'norhage'); ?></h3>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.
