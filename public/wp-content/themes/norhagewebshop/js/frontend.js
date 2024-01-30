@@ -13,7 +13,7 @@
 				$('body.small-height-header').removeClass('small-height-header');
 			}
 		}, 100);
-		if($('header#masthead').length || $('.productHeaderBlock').length){
+		if($('.productHeaderBlock, .headerblock').length){
 			window.headerBlockScrollInterval = window.setInterval(function(){
 				if(window.scrollY <  window.innerHeight){
 					$('header#masthead:not(.over-headerblock)').addClass('over-headerblock');

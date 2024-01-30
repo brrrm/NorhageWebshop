@@ -19,7 +19,7 @@ Version: 0.1
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
-	--header-gradient: linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);
+	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
 	--big-flex:55%;
 	--small-flex:44%;
 }
@@ -1381,44 +1381,11 @@ body .image-popup .scroll-button:hover{
 }
 
 @media all and (max-width:1024px){
-	.summary form.variations_form{
-		display: block;
+	.summary form.variations_form .dimensions .variations tbody tr  td select{
+		font-size: 1em;
 	}
-	.product .summary form.variations_form .dimensions .variations{
-		padding-right: 0;
-	}
-	.summary form.variations_form .addons .add-products,
-	.summary form.variations_form .addons .sizes_input{
-		padding: 0.5em 0;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
-	}
-	.summary form.variations_form .single_variation_wrap{
-		border-top: none;
-	}
-	.summary form.variations_form .addons .addon{
-		margin-bottom: 1em;
-	}
-	.summary form.variations_form .single_variation_wrap .single_variation{
-		flex: 100% 0 0;
-		position: relative;
-		left: 0;
-		border-bottom: 1px dashed var(--store-color);
-		padding: 0.5em 0;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart{
-		flex-direction: column;
-		padding: 0;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity{
-		padding: 0.5em 0 ;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity:before{
-		float: left;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity input{
-		float: right;
+	.woocommerce div.product form.cart div.quantity{
+		font-size: 1em;
 	}
 }
 @media all and (max-width:768px){
