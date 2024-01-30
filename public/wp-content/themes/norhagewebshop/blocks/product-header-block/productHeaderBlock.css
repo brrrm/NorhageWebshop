@@ -12,12 +12,12 @@
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
 	height: 100vh;
-	padding: calc(var(--header-height) + 3em) 1em 0 2em;
+	padding: calc(var(--header-height) + 1em) 1em 1em 2em;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    font-size: min(2vw, 4vh, 1.5rem);
+    font-size: min(2vw, 3vh, 1.3rem);
     line-height: 1.5em;
 
 	position: -webkit-sticky;
@@ -31,6 +31,11 @@
 .productHeaderBlock .text-col h1{
 	margin: 0;
 	font-size: 2em;
+}
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .productHeaderBlock .text-col .price{
+	margin: 0.3em 0 1em;
+	color: var(--store-color);
+	font-weight: 600;
 }
 .productHeaderBlock .image-col{
 	flex: 65% 0 0;

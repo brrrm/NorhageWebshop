@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 		<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
 	<?php else : ?>
-
+		<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhage'), $product->get_title()); ?></h2>
 		<div class="dimensions">
 			<h3>Configure product options</h3>
 			<table class="variations" cellspacing="0" role="presentation">
@@ -55,13 +55,34 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
+			<?php 
+
+			$cutting_fee = get_field('cutting_fee');
+			if($cutting_fee): ?>
+				<?php
+					$max_width = get_field('max_width') ?? 0;
+					$min_width = get_field('min_width') ?? 0;
+					$max_height = get_field('max_height') ?? 0;
+					$min_height = get_field('min_height') ?? 0;
+				?>
+				<div class="sizes_input">
+					<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
+					<div class="width">
+						<label for="width"><?php _e('Width (m)', 'norhage'); ?></label>
+						<div class="quantity"><input class="qty" type="number" step="0.1" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
+					</div>
+					<div class="height">
+						<label for="height"><?php _e('Height (m)', 'norhage'); ?></label>
+						<div class="quantity"><input class="qty" type="number" step="0.1" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
+					</div>
+				</div>
+			<?php endif; ?>
 		</div>
 		<?php do_action( 'woocommerce_after_variations_table' ); ?>
 
 		<?php
 			$extras = get_field('product_extras');
-			$cutting_fee = get_field('cutting_fee');
-			if($extras || $cutting_fee):
+			if($extras):
 		?>
 		<div class="addons">
 			<h3>Select extra options</h3>
@@ -82,30 +103,13 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					<div class="addon-price">
 						<?php echo wc_price($addon_price); ?>
 					</div>
-					<input type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
+					<div class="quantity">
+						<input class="qty" type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
+					</div>
 				</div>
 				<?php endforeach; ?>
 			<?php endif; ?>
-		</div>	
-			<?php if($cutting_fee): ?>
-				<?php
-					$max_width = get_field('max_width') ?? 0;
-					$min_width = get_field('min_width') ?? 0;
-					$max_height = get_field('max_height') ?? 0;
-					$min_height = get_field('min_height') ?? 0;
-				?>
-				<div class="sizes_input">
-					<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
-					<p>
-						<label for="width"><?php _e('Width (m)', 'norhage'); ?></label>
-						<input type="number" step="0.1" name="cutting_variables[width]" value="" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" />
-					</p>
-					<p>
-						<label for="height"><?php _e('Height (m)', 'norhage'); ?></label>
-						<input type="number" step="0.1" name="cutting_variables[height]" value="" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" />
-					</p>
-				</div>
-			<?php endif; ?>
+			</div>	
 		</div>
 		<?php endif; ?>
 
