@@ -24,7 +24,9 @@ $class_name = 'cta-block norhage-block';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
-if ( ! empty( $block['align'] ) ) {
+if ( empty( $block['align'] ) ) {
+	$class_name .= ' alignfull';
+}else{
     $class_name .= ' align' . $block['align'];
 }
 ?>
