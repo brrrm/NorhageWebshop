@@ -2,11 +2,14 @@
 	display: flex;
     flex-wrap: nowrap;
     gap: 3em;
-	border-top:1px solid var(--store-color);
-	border-bottom:1px solid var(--store-color);
+	border-top:1px solid #C9C9C9;
+	border-bottom:1px solid #C9C9C9;
 	margin-top: -1px;
 	padding: 2em 0 2em 2em ;
 	color: var(--custom-text-color);
+}
+.text-image-block .text-col a{
+	text-decoration: underline;
 }
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 1;

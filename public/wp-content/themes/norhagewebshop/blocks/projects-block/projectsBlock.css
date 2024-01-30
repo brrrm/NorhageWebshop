@@ -1,4 +1,3 @@
-
 .projects-block{
 	display: flex;
 	flex-wrap: nowrap;
@@ -9,6 +8,9 @@
 }
 .projects-block .title-col{
 	flex: var(--small-flex) 0 1;
+}
+.projects-block .text-col a{
+	text-decoration: underline;
 }
 .projects-block .projects-col{
 	flex: var(--big-flex)  1 0;

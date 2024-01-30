@@ -15,7 +15,8 @@ Version: 0.1
 
 	--white: #fff;
 	--black:#000;
-	--store-color: #66B73C;	
+	--store-color: #66B73C;
+	--accent-color:#0A4164;	
 	--light-green:#F1FFEA;
 	--custom-text-color: #646464;
 	--header-height: 8vw;
@@ -142,43 +143,36 @@ p#breadcrumbs a{
 	color: #66B73C;
 }
 a{
-	color: var(--bright-orange);
+	color: var(--custom-text-color);
 	text-decoration: none;
+}
+
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button{
+	background-color: inherit;
 }
 .button{
 	font-size: 1.35rem;
 	line-height: 1.791em;
-	padding: 0.13em 1em 0.133em 1em; 
+	padding: 0.13em 1em 0.133em 2em; 
   	border-radius: 200px;
-  	background-color: var(--white);
-  	color: var(--store-color);
+  	background-repeat: no-repeat;
+  	background-position: 0.5em center;
+  	background-size: 1em;	
+  	background-color: var(--store-color);
+  	color: var(--white);
+  	font-weight: 400;
 }
+.button:hover{
+	color: var(--custom-text-color);
+}
+
 @media all and (max-width:768px){
 	.button{
 		font-size: 1em;
 	}
 }
-.button.blue-button{
-  	color: var(--white);
-  	background-color: var(--store-color);
-}
 
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button{
-  	background-image: url(images/svg/phone-icon-grey.svg);
-  	background-color: transparent;
-  	background-repeat: no-repeat;
-  	background-position: left center;
-  	background-size: 1em;	
-  	padding-left:1.5em;
-  	font-weight: 400;
-}
-.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover{
-	background-color: transparent;
-	color: var(--store-color);
-}
-a.button.cta-email{
-    background-image: url(images/svg/email-icon-grey.svg);
-}
 
 .has-small-font-size,
 .has-medium-font-size,

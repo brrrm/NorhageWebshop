@@ -1,15 +1,34 @@
+
 .cta-block{
 	display: flex;
 	width: 100%;
 	min-height: 60vh;
 	color: var(--custom-text-color);
-	border-top:1px solid var(--store-color);
-	border-bottom:1px solid var(--store-color);
+	border-top:1px solid #C9C9C9;
+	border-bottom:1px solid #C9C9C9;
 	margin-top: -1px;
 }
 .cta-block .text-col{
 	flex: var(--small-flex) 0 0;
 	padding: 2em;
+}
+
+
+.cta-block .text-col .button{
+	background-color: transparent;
+	color: var(--custom-text-color);
+	font-size: unset;
+	font-weight: 300;
+	padding: 0 0 0 2em;
+}
+.cta-block .text-col .button:hover{
+	color: var(--store-color);
+}
+.cta-block .text-col .button.cta-phone{
+	background-image: url(../../images/svg/phone-icon-grey.svg);
+}
+.cta-block .text-col .button.cta-email{
+    background-image: url(../../images/svg/email-icon-grey.svg);
 }
 .cta-block .image-col{
 	flex: var(--big-flex) 0 0;
@@ -36,4 +55,16 @@
 	.cta-block .text-col{
 		padding: 2em 1em;
 	}
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button:hover{
+	background-color: transparent !important;
+	color: var(--store-color) !important;
 }

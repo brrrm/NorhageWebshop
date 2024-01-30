@@ -1,10 +1,15 @@
 .cta-within-text-block{
 	width: 100%;
-	border-top:1px solid var(--dark-blue);
-	border-bottom:1px solid var(--dark-blue);
-	color: var(--dark-blue);
-	font-family: "kiro", sans-serif;
-	color: var(--custom-text-color);
+	border-top:1px solid #C9C9C9;
+	border-bottom:1px solid #C9C9C9;
+	color: var(--store-color);
+	margin-top: -1px;
+	margin-bottom: 0;
+}
+.cta-within-text-block h2{
+	font-size: 1.5em;
+	font-weight: 700;
+	font-style: normal;
 }
 .cta-within-text-block .wrapper{
 	display: flex;
@@ -13,20 +18,15 @@
 	padding: 3em 0;
 	align-items: center;
 }
-.cta-within-text-block h2{
-	font-size: 1.5em;
-	font-weight: 700;
-	font-style: normal;
-}
-.cta-within-text-block .text-col > *:first-child{
-	margin-top: 0;
-}
-.cta-within-text-block .text-col > *:last-child{
-	margin-bottom: 0;
-}
 .cta-within-text-block .text-col{
 	flex: 40% 0 0;
 	padding-left: 2em;
+}
+.cta-within-text-block .text-col a{
+	text-decoration: underline;
+}
+.cta-within-text-block .text-col > *:last-child{
+	margin-bottom: 0;
 }
 .cta-within-text-block .image-col{
 	flex: 20% 0 0;
@@ -35,14 +35,24 @@
     flex-direction: column;
     justify-content: center;
 }
+.cta-within-text-block .cta-phone.button{
+	background-image: url(../../images/svg/phone-icon-white.svg);
+}
 
+
+
+.is-style-damagerepair .image-col,
+.is-style-damagerepair .text-col{
+	transform: rotate(-1deg);
+}
 .cta-within-text-block.is-style-damagerepair{
-	border: none;
+	border-top:1px solid var(--white);
+	border-bottom:1px solid var(--white);
 	overflow: hidden;
 }
 .cta-within-text-block.is-style-damagerepair .wrapper{
-	background: var(--bright-orange);
-	color: #000;
+	background: var(--accent-color);
+	color: var(--white);
 	transform: rotate(1deg) scale(1);
 	--dash-size: 55px;
 	--gap-size: 90px;
@@ -53,18 +63,13 @@
 	border-image-width: 24px 0;
 	border-image-outset: 1px;
 }
-.cta-within-text-block:not(.is-style-damagerepair) .cta-phone.button{
-	color: var(--white); 
-	background-color: var(--dark-blue) ;
-	background-image: url(../../images/svg/phone-icon-white.svg);
+.cta-within-text-block.is-style-damagerepair .cta-phone.button{
+	background-image: url(../../images/svg/phone-icon-grey.svg);	
+	background-color: var(--white);
+	color: var(--custom-text-color);
 }
-.is-style-damagerepair .cta-phone.button{
-	color: #000;
-	background-image: url(../../images/svg/phone-icon-black.svg);
-}
-.is-style-damagerepair .image-col,
-.is-style-damagerepair .text-col{
-	transform: rotate(-1deg);
+.cta-within-text-block.is-style-damagerepair .cta-phone.button:hover{
+	color: var(--store-color);
 }
 @media screen and (max-width:768px){
 	.cta-within-text-block .wrapper,

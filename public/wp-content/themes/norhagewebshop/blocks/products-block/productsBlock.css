@@ -5,13 +5,16 @@
 	align-items: center;
 	gap: 3em;
 	padding: 2em 1em 2em 2em;
-	border-top: 1px solid var(--store-color);
-	border-bottom: 1px solid var(--store-color);
+	border-top: 1px solid #C9C9C9;
+	border-bottom: 1px solid #C9C9C9;
 	margin-top: -1px;
 	color: var(--custom-text-color);
 }
 .products-block .text-col{
 	flex: var(--small-flex) 0 1;
+}
+.products-block .text-col a{
+	text-decoration: underline;
 }
 .products-block .products-col{
 	flex: var(--big-flex) 0 0;	

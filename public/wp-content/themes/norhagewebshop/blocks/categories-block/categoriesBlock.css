@@ -6,6 +6,9 @@
 .categories-block.alignfull{
 	padding: 0 2em;
 }
+.categories-block .text-col a{
+	text-decoration: underline;
+}
 .categories-block ul.taxonomy-teasers{
 	display: flex;
 	flex-wrap: wrap;
