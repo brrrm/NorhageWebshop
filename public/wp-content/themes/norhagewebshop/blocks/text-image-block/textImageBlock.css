@@ -4,9 +4,9 @@
     gap: 3em;
 	border-top:1px solid var(--store-color);
 	border-bottom:1px solid var(--store-color);
-	padding: 2em 0 2em 2em ;
 	margin-top: -1px;
-	color: #646464;
+	padding: 2em 0 2em 2em ;
+	color: var(--custom-text-color);
 }
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 1;

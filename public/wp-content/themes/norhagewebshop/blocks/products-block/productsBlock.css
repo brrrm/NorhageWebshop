@@ -8,6 +8,7 @@
 	border-top: 1px solid var(--store-color);
 	border-bottom: 1px solid var(--store-color);
 	margin-top: -1px;
+	color: var(--custom-text-color);
 }
 .products-block .text-col{
 	flex: var(--small-flex) 0 1;

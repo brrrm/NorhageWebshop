@@ -1,6 +1,7 @@
 .categories-block{
 	font-family: "kiro", sans-serif;
 	padding-right: 2em;
+	color: var(--custom-text-color);
 }
 .categories-block.alignfull{
 	padding: 0 2em;

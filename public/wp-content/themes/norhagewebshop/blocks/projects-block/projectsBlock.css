@@ -5,7 +5,7 @@
 	align-items: center;
 	gap: 3em;
 	padding:2em 1em 2em 2em;
-	box-sizing: border-box;
+	color: var(--custom-text-color);
 }
 .projects-block .title-col{
 	flex: var(--small-flex) 0 1;

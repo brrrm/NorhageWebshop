@@ -4,6 +4,7 @@
 	border-bottom:1px solid var(--dark-blue);
 	color: var(--dark-blue);
 	font-family: "kiro", sans-serif;
+	color: var(--custom-text-color);
 }
 .cta-within-text-block .wrapper{
 	display: flex;

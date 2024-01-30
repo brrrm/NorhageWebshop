@@ -9,19 +9,22 @@ Version: 0.1
 
 :root{
 	--dark-blue: #0A4164;
-	--store-color: #66B73C;
+	--bright-orange: #FF7F00;
 	--light-blue: #E9F2F8;
+	--bright-green: #0DFF86;
+
 	--white: #fff;
 	--black:#000;
-	--bright-orange: #FF7F00;
-	--bright-green: #0DFF86;
+	--store-color: #66B73C;	
 	--light-green:#F1FFEA;
+	--custom-text-color: #646464;
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
 	--header-gradient: linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);
 	--big-flex:55%;
 	--small-flex:44%;
+
 }
 body.small-height-header{
 	--header-nav-height: 5vw;
@@ -159,17 +162,22 @@ a{
   	color: var(--white);
   	background-color: var(--store-color);
 }
-.cta-phone.button,
-.cta-email.button{
-  	background-image: url(images/svg/phone-icon.svg) ;
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button{
+  	background-image: url(images/svg/phone-icon-grey.svg);
+  	background-color: transparent;
   	background-repeat: no-repeat;
-  	background-position: 1.2em center;
+  	background-position: left center;
   	background-size: 1em;	
-  	padding-left:2.5em;
-  	font-weight: 700;
+  	padding-left:1.5em;
+  	font-weight: 400;
 }
-.cta-email.button{
-    background-image: url(images/svg/email-icon.svg);
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover{
+	background-color: transparent;
+	color: var(--store-color);
+}
+a.button.cta-email{
+    background-image: url(images/svg/email-icon-grey.svg);
 }
 
 .has-small-font-size,
@@ -177,13 +185,6 @@ a{
 .has-large-font-size,
 .has-x-large-font-size{
 	line-height: initial;
-}
-
-
-.norhage-block.products-block,
-.norhage-block.projects-block,
-.norhage-block.text-image-block{
-	color: #646464;
 }
 
 ul{}
