@@ -31,7 +31,6 @@
 	height: 100%;
 	margin: 0;
 	display: block;
-	position: relative;
 }
 .text-image-block--image-col figure.dummy{
 	background: #ccc;
@@ -41,7 +40,6 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-	position: absolute;
 }
 
 @media all and (max-width:768px){
