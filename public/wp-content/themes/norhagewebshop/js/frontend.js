@@ -150,6 +150,37 @@
 		}
 
 
+		$('.quantity').each(function(){
+			let plusBtn = $('<button />').text('+').appendTo($(this)).addClass(['qtyBtn', 'plus']);
+			let minBtn = $('<button />').text('-').prependTo($(this)).addClass(['qtyBtn', 'min']);
+			plusBtn.click(function(e){
+				e.preventDefault();
+				$(this).buttonPlusMin('plus');
+			});
+			minBtn.click(function(e){
+				e.preventDefault();
+				$(this).buttonPlusMin('min');
+			});
+		});
+
+		$.fn.buttonPlusMin = function(action){
+			let inputSibling = $(this).siblings('input');
+			let currentValue = inputSibling.val();
+			if(action == 'plus'){
+				currentValue++;
+				if(inputSibling[0].hasAttribute('max') && inputSibling.attr('max') !== '' && currentValue > inputSibling.attr('max')){
+					currentValue = inputSibling.attr('max');
+				}
+			}else{
+				currentValue--;
+				if(inputSibling[0].hasAttribute('min') && currentValue < inputSibling.attr('min')){
+					currentValue = inputSibling.attr('min');
+				}
+			}
+			inputSibling.val(currentValue);
+		}
+
+
 		/*
 		function gtag() { dataLayer.push(arguments); }
 		$('#cn-accept-cookie').click(function(e){

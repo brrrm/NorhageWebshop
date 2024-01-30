@@ -1135,7 +1135,57 @@ body .image-popup .scroll-button:hover{
 
 
 
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, 
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
+	color: var(--black);
+	font-weight: 600;
+}
+.woocommerce .quantity{
+	border: 1px solid var(--black);
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+}
+.woocommerce .quantity .qtyBtn{
+	font-size: 1em;
+	width: 2em;
+	height: 2em;
+	border: none;
+	background: transparent;
+	color: var(--black);
+}
+.woocommerce .quantity .qtyBtn.plus{
+	border-radius: 0 1em 1em 0;
+}
+.woocommerce .quantity .qtyBtn.min{
+	border-radius: 1em 0 0 1em;
+}
+.woocommerce .quantity .qtyBtn:hover{
+	background: var(--light-green);
+}
+.woocommerce .quantity .qty{
+	font-size: 1em;
+	height: 2em;
+	border:	none;
+	background: transparent;
+}
+.woocommerce .quantity .qty:focus-visible{
+	background: var(--light-green);
+	outline: none;
+}
+.woocommerce .quantity .qty::-webkit-inner-spin-button,
+.woocommerce .quantity .qty::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
 
+.woocommerce .quantity .qty{
+	-moz-appearance: textfield;
+}
+.woocommerce div.product form.cart .button{
+	border-radius: 2em;
+	font-size: 1em;
+}
 
 .woocommerce div.product form.cart::after, 
 .woocommerce div.product form.cart::before{
