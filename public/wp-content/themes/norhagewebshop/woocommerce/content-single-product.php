@@ -37,8 +37,11 @@ if ( post_password_required() ) {
 					 */
 					do_action( 'woocommerce_before_single_product' );
 				?>
-				<h1><?php the_title(); ?></h1>
+				<h1><?php the_title(); ?> <?php echo $product->get_type(); ?></h1>
 				<div><?php echo $product->get_short_description(); ?></div>
+				<?php if($product->get_type() == 'simple'):
+					do_action( 'woocommerce_single_product_summary' );
+				endif; ?>
 			</div>
 			<div class="image-col">
 				<?php
@@ -66,24 +69,25 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 
-
-		<div class="summary entry-summary alignfull">
-			<?php
-			/**
-			 * Hook: woocommerce_single_product_summary.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-			?>
-		</div>
+		<?php if($product->get_type() != 'simple'): ?>
+			<div class="summary entry-summary alignfull">
+				<?php
+				/**
+				 * Hook: woocommerce_single_product_summary.
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_rating - 10
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 * @hooked WC_Structured_Data::generate_product_data() - 60
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+				?>
+			</div>
+		<?php endif; ?>
 
 		<?php
 			$extra_content = get_field('extra_content');
