@@ -38,10 +38,13 @@ if ( post_password_required() ) {
 					do_action( 'woocommerce_before_single_product' );
 				?>
 				<h1><?php the_title(); ?> <?php echo $product->get_type(); ?></h1>
+				<?php wc_get_template( 'single-product/price.php' ); ?>
 				<div><?php echo $product->get_short_description(); ?></div>
-				<?php if($product->get_type() == 'simple'):
-					do_action( 'woocommerce_single_product_summary' );
-				endif; ?>
+				<?php if($product->is_type('simple')): ?>
+					<div class="summary entry-summary alignfull">
+					<?php do_action( 'woocommerce_single_product_summary' ); ?>
+					</div>
+				<?php endif; ?>
 			</div>
 			<div class="image-col">
 				<?php
@@ -69,7 +72,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 
-		<?php if($product->get_type() != 'simple'): ?>
+		<?php if(!$product->is_type('simple')): ?>
 			<div class="summary entry-summary alignfull">
 				<?php
 				/**
@@ -88,6 +91,10 @@ if ( post_password_required() ) {
 				?>
 			</div>
 		<?php endif; ?>
+
+		<div class="product-description">
+			<?php echo wpautop($product->get_description()); ?>
+		</div>
 
 		<?php
 			$extra_content = get_field('extra_content');

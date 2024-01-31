@@ -22,7 +22,7 @@ Version: 0.1
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
-	--header-gradient: linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);
+	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
 	--big-flex:55%;
 	--small-flex:44%;
 
@@ -50,16 +50,16 @@ html{
 	font-family: kiro, sans-serif;
 	font-weight: 300;
 	font-size: 150%; /* 24px!! */
-	line-height: 1.5em;
+	line-height: 1.5;
 }
 h1{
-	font-size: 3rem;
+	font-size: 3em;
 	line-height: 1em;
 	font-weight: 700;
 }
 
 h2{
-	font-size: 2.41667rem;
+	font-size: 2.41667em;
 	line-height: 1.2em;
 	font-weight: 200;
 	font-style: italic;
@@ -81,20 +81,20 @@ h2 i{
 }
 
 h3{
-	font-size: 1.333rem;
+	font-size: 1.333em;
 	line-height: 1.28em;
 	font-weight: 300;
 	margin: 0;
 }
 @media screen and (max-width: 1770px){
 	h1{
-		font-size: 2.5rem;
+		font-size: 2.5em;
 	}
 	h2{
-		font-size: 2rem;
+		font-size: 2em;
 	}
 	h3{
-		font-size: 1.33333333rem;
+		font-size: 1.33333333em;
 	}
 }
 @media all and (max-width:1280px){
@@ -188,6 +188,9 @@ li{}
 
 select{
 	height: 2.5em;
+	border-radius: 2em;
+	padding: 0 1em;
+	border: 1px solid var(--black);
 }
 /**
  * PAGE STRUCTURE
@@ -1135,16 +1138,21 @@ body .image-popup .scroll-button:hover{
 
 
 
-.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, 
-.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .summary.entry-summary div.product p.price, 
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .summary.entry-summary div.product span.price{
 	color: var(--black);
 	font-weight: 600;
 }
-.woocommerce .quantity{
+.woocommerce div.product form.cart div.quantity{
 	border: 1px solid var(--black);
     border-radius: 2em;
     display: flex;
     align-items: center;
+    margin-right: 1em;
+    background: #fff;
+    font-size: 0.75em;
+    height: 2em;
+    overflow: hidden;
 }
 .woocommerce .quantity .qtyBtn{
 	font-size: 1em;
@@ -1165,6 +1173,8 @@ body .image-popup .scroll-button:hover{
 }
 .woocommerce .quantity .qty{
 	font-size: 1em;
+	font-family: "kiro", sans-serif;
+	width: 2.2em;
 	height: 2em;
 	border:	none;
 	background: transparent;
@@ -1178,47 +1188,83 @@ body .image-popup .scroll-button:hover{
 	-webkit-appearance: none;
 	margin: 0;
 }
-
 .woocommerce .quantity .qty{
 	-moz-appearance: textfield;
 }
 .woocommerce div.product form.cart .button{
 	border-radius: 2em;
 	font-size: 1em;
+	font-family: "kiro", sans-serif;
+	background: var(--store-color) url(images/svg/cart.svg) 1em center no-repeat;
+	background-size: auto 60%;
+	color: #fff;
+	padding: 0.5em 1em 0.5em 3em;
 }
 
-.woocommerce div.product form.cart::after, 
-.woocommerce div.product form.cart::before{
-	display: none;
-}
 .woocommerce .product .summary,
 .woocommerce div.product form.cart,
 .product .entry-content .summary.entry-summary{
 	margin-bottom: 0;
 }
 .product .entry-content .summary.entry-summary{
-	float: unset;
-	width: unset;
+	float: none;
+	width: auto;
     background-color: var(--light-green);
-    padding: 2em;
+    padding: 2em 0;
+    border-top: 1px solid var(--store-color);
+    border-bottom: 1px solid var(--store-color);
+}
+.product .entry-content .summary.entry-summary h2.variations_form-title{
+	flex: 100% 0 0;
+	background: transparent url(images/svg/cart-black.svg) left center no-repeat;
+	background-size: 1em;
+	padding-left: 1.5em;
 }
 
+.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
+	margin: 2em 0 0 0;
+	padding: 1.5em 1em 1.5em 2em;
+	border-top: 1px solid var(--store-color);
+	border-bottom: 1px solid var(--store-color);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.productHeaderBlock .text-col .summary .price{
+	margin: 0 0 0.5em;
+}
+.productHeaderBlock .text-col .summary form{
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+}
 .summary form.variations_form{
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 20%;
+	font-size: 0.75em;
 }
 .summary form.variations_form > div > h3{
 	color: var(--store-color);
 	font-weight: 600;
-	border-bottom: 1px solid var(--store-color);
+	margin: 1em 0 0.5em;
 }
 .summary form.variations_form .dimensions{
-	flex: var(--small-flex) 0 0;
+	flex: 30% 1 0;
+	border-top: 1px dashed var(--store-color);
+	padding-right: 1em;
+	padding-bottom: 1em;
 }
-.summary form.variations_form .dimensions .variations{
-	padding:1em 1em 1.5em 0;
+.woocommerce div.product .summary form.variations_form .dimensions .variations{
+	padding:0 0 0;
+	margin: 0;
 	position: relative;
 	text-align: left;
+}
+.woocommerce div.product .summary form.variations_form .dimensions .variations th{
+	width: 50%;
+	padding-bottom: .5em; /* makkelijke manier om een marge tussen de rijen te maken omdat marge niet werkt voor tabelcellen */
 }
 .summary form.variations_form .dimensions .variations a.reset_variations{
 	position: absolute;
@@ -1231,144 +1277,110 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form .dimensions .variations tbody tr  td select{
 	width: 100%;
 }
+/* Verberg die achterlijke reset-link in de variations form */
+.summary form.variations_form .dimensions .variations a.reset_variations{
+	display: none !important;
+}
+.summary form.variations_form .dimensions .sizes_input > div{
+	margin: 0 1em 0.5em 0;
+	line-height: 2em;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.summary form.variations_form .dimensions .sizes_input > div label{
+	flex: 50% 0 0;
+}
 
 .summary form.variations_form .addons{
 	flex: var(--big-flex) 1 0;
-}
-.summary form.variations_form .addons h3{
-	padding-left: 1em;
-}
-.summary form.variations_form .addons > *:not(h3){
+	border-top: 1px dashed var(--store-color);
 	border-left: 1px dashed var(--store-color);
 	padding-left: 1em;
+	padding-bottom: 1em;
 }
 .summary form.variations_form .addons .add-products{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 1em;
-	align-items: flex-start;
-    align-content: flex-start;
-    padding: 1em;
+	row-gap: 1em;
 }
 .summary form.variations_form .addons .addon{
-	flex: calc(50% - 1em) 0 0;
+	flex: 50% 0 0;
 	display: grid;
-	grid-template-columns: 0.5fr 1fr;
-	grid-template-areas: "image dimensions-title"
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 1.7fr 1fr 1fr;
+	grid-template-areas: "image title"
 						 "image price"
 						 "image amount";
-	column-gap: 0.5em;
+	column-gap: 1em;
 }
 .summary form.variations_form .addons .addon h3{
-	grid-area: dimensions-title;
+	grid-area: title;
 	font-size: 1em;
+	font-weight: 600;
+	margin-right: 1em;
 }
 .summary form.variations_form .addons .addon .addon-image{
 	grid-area: image;
+	aspect-ratio: 1;
 }
 .summary form.variations_form .addons .addon .addon-image img{
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease-out;
+}
+.summary form.variations_form .addons .addon .addon-image img:hover{
+	transform: scale(2);
 }
 .summary form.variations_form .addons .addon .addon-price{
 	grid-area: price;
+	margin-right: 1em;
 }
-.summary form.variations_form .addons .addon input.addon-quantity{
+.summary form.variations_form .addons .addon .quantity{
 	grid-area: amount;
-    width: 5em;
-}
-.summary form.variations_form  .addons .sizes_input{
-	border-top: 1px dashed var(--store-color);
-}
-.summary form.variations_form  .addons .sizes_input p{
-	padding: 0.5em 0;
-    margin: 0;
+	width: fit-content;
 }
 .summary form.variations_form .single_variation_wrap{
 	flex: 100% 0 0;
+	padding: 0;
 	border-top: 1px dashed var(--store-color);
-	padding: 0.5em 0;
-	display: flex;
-	flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
 }
-.summary form.variations_form .single_variation_wrap h3{
-	flex: 100% 0 0;
+.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
+	margin: 1em 0 0.5em;
+}
+.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-description p{
+	margin: 0 0 0.5em;
+}
+.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price span{
+	color: var(--store-color);
+	font-weight: 600;
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart {
-	flex: 100% 1 0;
 	display: flex;
-	justify-content: space-between;
-	padding: 1em 0;
+	align-items: center;
+	margin: 0.5em 0;
+}
+.summary form.variations_form .single_variation_wrap:before, 
+.summary form.variations_form .dimensions:before {
+	content: " ";
 	position: relative;
-}
-.summary form.variations_form .single_variation_wrap .single_variation{
-	position: absolute;
-     top: 42%;
-    left: 42.5%;
-}
-.summary form.variations_form .single_variation_wrap .single_variation:before{
-	content: "Total:";
-	font-size: 0.8em;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-.summary form.variations_form .single_variation_wrap .single_add_to_cart_button{
-	background: var(--store-color) url(images/svg/cart.svg) no-repeat left 1em center;
-	background-size: 1.5em auto;
-	border-radius: 5em;
-	padding-left: 3em;
-}
-.summary form.variations_form .single_variation_wrap .woocommerce-variation-price span{
-	color: var(--black);
-}
-.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity:before{
-	content: "How many greenhouses";
-	display: block;	
+	top: -1px;
+	left: -20vw;
+	width: 20vw;
+	height: 1px;
+	display: block;
+	border-top: 1px dashed var(--store-color);
 }
 
 @media all and (max-width:1024px){
-	.summary form.variations_form{
-		display: block;
+	.summary form.variations_form .dimensions .variations tbody tr  td select{
+		font-size: 1em;
 	}
-	.product .summary form.variations_form .dimensions .variations{
-		padding-right: 0;
-	}
-	.summary form.variations_form .addons .add-products,
-	.summary form.variations_form .addons .sizes_input{
-		padding: 0.5em 0;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
-	}
-	.summary form.variations_form .single_variation_wrap{
-		border-top: none;
-	}
-	.summary form.variations_form .addons .addon{
-		margin-bottom: 1em;
-	}
-	.summary form.variations_form .single_variation_wrap .single_variation{
-		flex: 100% 0 0;
-		position: relative;
-		left: 0;
-		border-bottom: 1px dashed var(--store-color);
-		padding: 0.5em 0;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart{
-		flex-direction: column;
-		padding: 0;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity{
-		padding: 0.5em 0 ;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity:before{
-		float: left;
-	}
-	.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart .quantity input{
-		float: right;
+	.woocommerce div.product form.cart div.quantity{
+		font-size: 1em;
 	}
 }
 @media all and (max-width:768px){

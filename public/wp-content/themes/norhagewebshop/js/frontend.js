@@ -13,7 +13,7 @@
 				$('body.small-height-header').removeClass('small-height-header');
 			}
 		}, 100);
-		if($('header#masthead').length || $('.productHeaderBlock').length){
+		if($('.productHeaderBlock, .headerblock').length){
 			window.headerBlockScrollInterval = window.setInterval(function(){
 				if(window.scrollY <  window.innerHeight){
 					$('header#masthead:not(.over-headerblock)').addClass('over-headerblock');
@@ -72,7 +72,7 @@
 			let popup = $('<div />')
 				.addClass('image-popup')
 				.appendTo($('body'));
-			$('h1.wp-block-post-title').clone().appendTo(popup);
+			$('.productHeaderBlock h1').clone().appendTo(popup);
 			$('.productHeaderBlock .image-col').clone().appendTo(popup);
 			
 			let closeBtn = $('<button />').text('Close').addClass('close-button').click(function(e){
@@ -94,17 +94,11 @@
 
 		var variationPrice;
 		$( '.single_variation_wrap' ).on( 'show_variation', function( event, variation ) {
-			console.log('show_variation');
 			variationPrice = variation.display_regular_price;
 			add_addons_to_wc_variation_price();
 		});
 
-		$('.variations_form .addon-quantity').change(function(e){
-			e.preventDefault();
-			add_addons_to_wc_variation_price();
-		});
-
-		$('.variations_form .sizes_input input').change(function(e){
+		$('.variations_form .quantity input').change(function(e){
 			e.preventDefault();
 			add_addons_to_wc_variation_price();
 		});
@@ -127,7 +121,7 @@
 			}
 
 			// then we add the addons
-			$('.addon input.addon-quantity').each(function(){
+			$('.addon input.qty').each(function(){
 				let quantity = $(this).val();
 				let price = $(this).data('price');
 				newPrice += (price * quantity);
@@ -165,19 +159,25 @@
 
 		$.fn.buttonPlusMin = function(action){
 			let inputSibling = $(this).siblings('input');
-			let currentValue = inputSibling.val();
+			let currentValue = parseFloat(inputSibling.val());
+			let stepSize = 1;
+			if(inputSibling[0].hasAttribute('step')){
+				stepSize = parseFloat( inputSibling.attr('step'));
+			}
 			if(action == 'plus'){
-				currentValue++;
+				currentValue += stepSize;
 				if(inputSibling[0].hasAttribute('max') && inputSibling.attr('max') !== '' && currentValue > inputSibling.attr('max')){
-					currentValue = inputSibling.attr('max');
+					currentValue = parseFloat(inputSibling.attr('max'));
 				}
 			}else{
-				currentValue--;
+				currentValue -= stepSize;
 				if(inputSibling[0].hasAttribute('min') && currentValue < inputSibling.attr('min')){
-					currentValue = inputSibling.attr('min');
+					currentValue = parseFloat(inputSibling.attr('min'));
 				}
 			}
+			currentValue = Number(currentValue.toFixed(2));
 			inputSibling.val(currentValue);
+			inputSibling.trigger('change');
 		}
 
 
