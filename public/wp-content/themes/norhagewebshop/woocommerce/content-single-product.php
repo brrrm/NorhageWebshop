@@ -39,10 +39,19 @@ if ( post_password_required() ) {
 				?>
 				<h1><?php the_title(); ?> <?php echo $product->get_type(); ?></h1>
 				<?php wc_get_template( 'single-product/price.php' ); ?>
-				<div><?php echo $product->get_short_description(); ?></div>
+				<div><?php echo wpautop($product->get_short_description()); ?></div>
 				<?php if($product->is_type('simple')): ?>
 					<div class="summary entry-summary alignfull">
 					<?php do_action( 'woocommerce_single_product_summary' ); ?>
+					</div>
+				<?php endif; ?>
+				<?php if($product->is_type('variable')): ?>
+					<div class="summary entry-summary alignfull">
+					
+	
+					<a href="#product-config" class="button"><?php printf(__('Customize your %s'), $product->get_title()); ?></a>
+
+	
 					</div>
 				<?php endif; ?>
 			</div>
@@ -73,7 +82,7 @@ if ( post_password_required() ) {
 		</div>
 
 		<?php if(!$product->is_type('simple')): ?>
-			<div class="summary entry-summary alignfull">
+			<div class="summary entry-summary alignfull" id="product-config">
 				<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
