@@ -9,19 +9,23 @@ Version: 0.1
 
 :root{
 	--dark-blue: #0A4164;
-	--store-color: #66B73C;
+	--bright-orange: #FF7F00;
 	--light-blue: #E9F2F8;
+	--bright-green: #0DFF86;
+
 	--white: #fff;
 	--black:#000;
-	--bright-orange: #FF7F00;
-	--bright-green: #0DFF86;
+	--store-color: #66B73C;
+	--accent-color:#0A4164;	
 	--light-green:#F1FFEA;
+	--custom-text-color: #646464;
 	--header-height: 8vw;
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
 	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
 	--big-flex:55%;
 	--small-flex:44%;
+
 }
 body.small-height-header{
 	--header-nav-height: 5vw;
@@ -139,51 +143,42 @@ p#breadcrumbs a{
 	color: #66B73C;
 }
 a{
-	color: var(--bright-orange);
+	color: var(--custom-text-color);
 	text-decoration: none;
+}
+
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button{
+	background-color: inherit;
 }
 .button{
 	font-size: 1.35rem;
 	line-height: 1.791em;
-	padding: 0.13em 1em 0.133em 1em; 
+	padding: 0.13em 1em 0.133em 2em; 
   	border-radius: 200px;
-  	background-color: var(--white);
-  	color: var(--store-color);
+  	background-repeat: no-repeat;
+  	background-position: 0.5em center;
+  	background-size: 1em;	
+  	background-color: var(--store-color);
+  	color: var(--white);
+  	font-weight: 400;
 }
+.button:hover{
+	color: var(--custom-text-color);
+}
+
 @media all and (max-width:768px){
 	.button{
 		font-size: 1em;
 	}
 }
-.button.blue-button{
-  	color: var(--white);
-  	background-color: var(--store-color);
-}
-.cta-phone.button,
-.cta-email.button{
-  	background-image: url(images/svg/phone-icon.svg) ;
-  	background-repeat: no-repeat;
-  	background-position: 1.2em center;
-  	background-size: 1em;	
-  	padding-left:2.5em;
-  	font-weight: 700;
-}
-.cta-email.button{
-    background-image: url(images/svg/email-icon.svg);
-}
+
 
 .has-small-font-size,
 .has-medium-font-size,
 .has-large-font-size,
 .has-x-large-font-size{
 	line-height: initial;
-}
-
-
-.norhage-block.products-block,
-.norhage-block.projects-block,
-.norhage-block.text-image-block{
-	color: #646464;
 }
 
 ul{}

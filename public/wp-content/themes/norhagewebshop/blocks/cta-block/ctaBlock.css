@@ -1,32 +1,43 @@
+
 .cta-block{
-	box-sizing: border-box;
 	display: flex;
 	width: 100%;
-	min-height: 80vh;
-	font-family: "kiro", sans-serif;
+	min-height: 60vh;
+	color: var(--custom-text-color);
+	border-top:1px solid #C9C9C9;
+	border-bottom:1px solid #C9C9C9;
+	margin-top: -1px;
 }
 .cta-block .text-col{
-	flex: 40% 1 1;
-	background: var(--dark-blue);
-	color: var(--white);
-	padding:7.958rem 2.5rem 2.916rem 2.5rem;
-	box-sizing: border-box;
+	flex: var(--small-flex) 0 0;
+	padding: 2em;
 }
-.cta-block .text-col h2{
-  	font-size: 1.75rem;
-	line-height: 2.0833333rem;
-	font-style: normal;
-	font-weight: 800;
+
+
+.cta-block .text-col .button{
+	background-color: transparent;
+	color: var(--custom-text-color);
+	font-size: unset;
+	font-weight: 300;
+	padding: 0 0 0 2em;
+}
+.cta-block .text-col .button:hover{
+	color: var(--store-color);
+}
+.cta-block .text-col .button.cta-phone{
+	background-image: url(../../images/svg/phone-icon-grey.svg);
+}
+.cta-block .text-col .button.cta-email{
+    background-image: url(../../images/svg/email-icon-grey.svg);
 }
 .cta-block .image-col{
-	flex: 60% 1 1;
+	flex: var(--big-flex) 0 0;
+	aspect-ratio: 4/3;
 }
 .cta-block .image-col figure{
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	display: block;
-	position: relative;
 }
 .cta-block .image-col figure.dummy{
 	background: #ccc;
@@ -36,18 +47,24 @@
 	width: 100%;
 	height: 100%;
 	display: block;
-	position: absolute;
 }
 @media all and (max-width:768px){
 	.cta-block{
 		display: block;
 	}
-	.cta-block .image-col{
-		height: 50vh;
-		order: 2;
-	}
 	.cta-block .text-col{
-		padding:3em 2em 1em 2em;
-		order: 1;
+		padding: 2em 1em;
 	}
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button:hover{
+	background-color: transparent !important;
+	color: var(--store-color) !important;
 }

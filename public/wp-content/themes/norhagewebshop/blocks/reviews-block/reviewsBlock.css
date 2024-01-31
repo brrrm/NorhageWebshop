@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 50vh;
-	background: var(--dark-blue);
+	background: var(--store-color);
 	color: var(--white);
 	padding: 3em 0;
 	font-family: "kiro", sans-serif;
