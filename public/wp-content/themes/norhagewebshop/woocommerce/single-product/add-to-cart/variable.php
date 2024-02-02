@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<?php 
 
 			$cutting_fee = get_field('cutting_fee');
-			if($cutting_fee): ?>
+			if($cutting_fee && $cutting_fee > 0): ?>
 				<?php
 					$max_width = get_field('max_width') ?? 0;
 					$min_width = get_field('min_width') ?? 0;

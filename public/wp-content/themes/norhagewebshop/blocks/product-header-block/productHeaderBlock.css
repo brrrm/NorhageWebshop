@@ -1,25 +1,20 @@
 .productHeaderBlock{
-	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	height: auto;
-	margin-top: calc(-1 * var(--header-height) );
-	background: #fff;
-	font-family: "kiro", sans-serif;
-	border-bottom: 1px solid var(--dark-blue);
+	margin-top: calc(-1 * var(--header-height));
+	border-bottom: 2px solid var(--store-color);
 }
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
 	height: 100vh;
 	padding: calc(var(--header-height) + 1em) 1em 6em 2em;
-	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
     font-size: min(2vw, 3vh, 1.3rem);
     line-height: 1.5em;
-
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -32,6 +27,15 @@
 	margin: 0;
 	font-size: 2em;
 }
+.productHeaderBlock .text-col .summary a,
+.productHeaderBlock .text-col .summary a:hover{
+	background: transparent url(../../images/svg/customize.svg) no-repeat 1em center;
+	background-size: 1em auto;
+	padding-left: 2.5em;
+	color: var(--store-color);
+	border: 1px solid var(--store-color);
+	border-radius: 200px;
+}
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .productHeaderBlock .text-col .price{
 	margin: 0.3em 0 1em;
 	color: var(--store-color);
@@ -42,7 +46,6 @@
 	overflow: auto;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	background: #fff;
 	display: flex;
 	flex-wrap: wrap;
 	--flex-gap-headerblock: 0.25em;
