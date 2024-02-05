@@ -30,7 +30,7 @@ Version: 0.1
 body.small-height-header{
 	--header-nav-height: 5vw;
 }
-
+  
 html, body{
 	margin: 0;
 }

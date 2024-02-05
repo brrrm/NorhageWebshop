@@ -1,11 +1,9 @@
 .headerblock{
-	box-sizing: border-box;
 	width: 100%;
 	height: auto;
 	margin-top: calc(-1 * var(--header-height) );
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	font-family: "kiro", sans-serif;
 }
 .headerblock::-webkit-scrollbar{
 	display: none;
@@ -20,7 +18,7 @@
 	top: 0;
 }
 .headerblock .headerblock-image-col{
-	flex: 40% 0 0;
+	flex: 65% 0 0;
 	background: #ccc;
 	height: 100%;
 	z-index: 0;
@@ -36,24 +34,24 @@
 }
 
 .headerblock .headerblock-text-col{
-	flex: 60% 0 0;
+	flex: 35% 0 0;
 	position: relative;
-	background: var(--dark-blue);
+	background: var(--store-color);
 	color: var(--white);
-	box-sizing: border-box;
-	padding: var(--header-height) 10% 0 5rem;
+	padding: var(--header-height) 2em 0 2em;
 	height: 100%;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    font-size: min(2vw, 4vh, 1.5rem);
+    font-size: min(2vw, 3vh, 1.3rem);
     line-height: 1.5em;
 }
 .headerblock .headerblock-text-col p#breadcrumbs{
 	position: absolute;
 	top: var(--header-height);
 }
+
 .headerblock .headerblock-text-col .text{
 	padding: 0 0 5em;
 }
@@ -67,6 +65,7 @@
 	margin: 0 0 0.4em;
 	font-size: 2em;
 }
+
 .headerblock .headerblock-text-col ul.usps{
 	display: block;
 	margin: 0;
@@ -92,7 +91,7 @@
 	color: var(--bright-orange);
 }
 .headerblock .headerblock-text-col ul.usps li strong{
-	color: var(--dark-blue);
+	color: var(--store-color);
 	font-size: 0.6em;
 	line-height: 0.83333333em;
 	display: block;
@@ -105,13 +104,13 @@
 .headerblock .headerblock-usps{
 	position: relative;
 	z-index: 2;
-	color: var(--bright-green);
+	color: var(--bright-orange);
 	overscroll-behavior: auto;
 	list-style: none;
 	margin: 0;
-	padding: 0 10% 3em 5rem;
+	padding: 0px 10% 3em 2em;
 	display: flex;
-	width: 60%;
+	width: 35%;
 	font-size: 1.7vw;
 	line-height: 1.5em;
 	font-style: italic;
@@ -145,8 +144,8 @@
 @media screen and (min-width: 768px){
 	.headerblock .headerblock-text-col ul.usps{
 		position: absolute;
-		width: 15%;	
-		right: -3.5%;
+		width: 22%;
+    	right: -16.5%;
 		top: calc(var(--header-height) + (100vh - var(--header-height)) / 2);
 		transform: translate(0, -50%);
 		max-height: calc(100vh - var(--header-height));
