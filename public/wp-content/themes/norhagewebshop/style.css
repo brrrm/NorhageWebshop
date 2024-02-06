@@ -1730,27 +1730,3 @@ form.wc-block-components-form .wc-block-checkout__payment-method .wc-block-compo
  	border-radius: 3em;
  	background: var(--store-color);
  }
-
-
-
-
-
-
-
-/*
-
-.is-mobile table.wc-block-cart-items tbody tr.wc-block-cart-items__row{
-	grid-template-areas:	"title table"
-							"price table"
-							"counter table"
-							"x table";
-}	
-.is-mobile table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-components-product-name{
-	flex: 8em 0 0;
-}
-
-.is-mobile table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image{
-	background: red;
-}*/
-
-
