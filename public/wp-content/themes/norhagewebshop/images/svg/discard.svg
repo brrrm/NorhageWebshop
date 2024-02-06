@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="31.216" height="31.216" viewBox="0 0 31.216 31.216">
-  <g id="Group_507" data-name="Group 507" transform="translate(-1170.964 -467.964)">
-    <line id="Line_151" data-name="Line 151" x1="24.145" y1="24.145" transform="translate(1174.5 471.5)" fill="none" stroke="#cc6f6f" stroke-linecap="round" stroke-width="5"/>
-    <line id="Line_152" data-name="Line 152" x1="24.145" y2="24.145" transform="translate(1174.5 471.5)" fill="none" stroke="#cc6f6f" stroke-linecap="round" stroke-width="5"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 28.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 25.7 30.5" style="enable-background:new 0 0 25.7 30.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#CC6F6F;}
+</style>
+<path class="st0" d="M24.5,3.6h-4.8V1.2c0-0.6-0.5-1.2-1.2-1.2H7.2C6.5,0,6,0.5,6,1.2v2.4H1.2C0.5,3.6,0,4.1,0,4.8
+	c0,0.6,0.5,1.2,1.2,1.2h0.9v23.3c0,0.6,0.5,1.2,1.2,1.2h19.2c0.6,0,1.2-0.5,1.2-1.2V5.9h0.9c0.6,0,1.2-0.5,1.2-1.2
+	C25.7,4.1,25.2,3.6,24.5,3.6z M8.3,2.3h9v1.2h-9C8.3,3.6,8.3,2.3,8.3,2.3z M21.3,28.1H4.4V5.9h16.8V28.1z M9.4,10.8v12.6
+	c0,0.6-0.5,1.2-1.2,1.2C7.5,24.5,7,24,7,23.3V10.8c0-0.6,0.5-1.2,1.2-1.2C8.8,9.6,9.4,10.1,9.4,10.8z M14,10.8v12.6
+	c0,0.6-0.5,1.2-1.2,1.2c-0.6,0-1.2-0.5-1.2-1.2V10.8c0-0.6,0.5-1.2,1.2-1.2C13.5,9.6,14,10.1,14,10.8z M18.7,10.8v12.6
+	c0,0.6-0.5,1.2-1.2,1.2s-1.2-0.5-1.2-1.2V10.8c0-0.6,0.5-1.2,1.2-1.2C18.2,9.6,18.7,10.1,18.7,10.8z"/>
 </svg>
