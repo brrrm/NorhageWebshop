@@ -36,7 +36,9 @@
 .headerblock .headerblock-text-col{
 	flex: 35% 0 0;
 	position: relative;
-	background: var(--store-color) var(--header-gradient);
+	background: var(--store-color);
+	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
+	border-right: 1px solid #fff;
 	color: var(--white);
 	padding: var(--header-height) 2em 0 2em;
 	height: 100%;
