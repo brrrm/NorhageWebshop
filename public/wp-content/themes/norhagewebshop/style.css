@@ -1636,7 +1636,10 @@ form.wc-block-components-form .wc-block-checkout__payment-method .wc-block-compo
 	padding: 0;
 	font-weight: 300;
 }
-
+form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block button.wc-block-components-button{
+	border-radius: 3em;
+	background: var(--store-color);
+}
 
 .is-mobile table.wc-block-cart-items tbody tr{
 	margin-bottom: 2em;
@@ -1680,53 +1683,82 @@ form.wc-block-components-form .wc-block-checkout__payment-method .wc-block-compo
 	padding: 0;
 }
 
+
+
+
+
 /*rechter block beide pagina's*/
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-shipping-calculator, 
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-shipping-rates-control .wc-block-components-shipping-rates-control__package:not(.wc-block-components-panel),
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-panel, 
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-totals-wrapper,
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-panel, 
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-totals-coupon, 
+.is-large.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-totals-item{
+	padding: 0;
+}
 .wc-block-components-sidebar-layout .wc-block-components-sidebar{
 	background: var(--light-green);
 	border: 1px solid var(--store-color);
 	flex: 30% 0 0;
-	width: 30%; /*nodig om de default van woocommerce te overschrijden...*/
 	padding: 1em;
-	height: auto;
-	font-weight: 300;
-	font-style: italic;
+	height: max-content;
 }
-.wc-block-components-sidebar-layout.is-large .wc-block-components-sidebar .wc-block-components-panel,
-.wc-block-components-sidebar-layout.is-large .wc-block-components-sidebar .wc-block-components-totals-wrapper{
-	padding: 0;
-	display: block;
-	border: none;
+.wc-block-components-sidebar form.wc-block-components-totals-coupon__form{
+	gap: 0;
+	position: relative;
 }
-.wc-block-components-sidebar-layout .wc-block-components-sidebar .wp-block-woocommerce-checkout-order-summary-block .wc-block-components-order-summary-item{
-	display: block;
+.wc-block-components-sidebar form.wc-block-components-totals-coupon__form .wc-block-components-text-input input{
+	border-color: #ccc;
+}
+.wc-block-components-sidebar form.wc-block-components-totals-coupon__form button{
+	margin-left: 0;
+	background-color: #ccc;
 }
 
 
-
-
-/*rechter block chart pagina*/
-.wc-block-components-sidebar-layout .wc-block-components-sidebar span.wc-block-cart__totals-title{
+/*rechter block cart pagina*/
+.wc-block-components-sidebar .wp-block-woocommerce-cart-order-summary-block span.wc-block-cart__totals-title{
 	text-align: left;
 	text-transform: none;
 	font-size: 1.5em;
-	font-style: normal;
-	order: 1;
 }
-.wc-block-components-sidebar-layout .wc-block-components-sidebar .wc-block-components-totals-wrapper{
-	font-style: normal;
+.wc-block-components-sidebar .wc-block-components-totals-item a{
+	color: var(--bright-orange);
+	text-decoration: underline;
 }
-.wc-block-components-sidebar-layout .wc-block-components-order-summary .wc-block-components-order-summary-item__description{
+
+.wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-radio-control__option-layout{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-radio-control__option-layout span.wc-block-formatted-money-amount{
+	font-size: 1.33em;
+	color:var(--store-color);
+}
+.wc-block-components-sidebar .wc-block-cart__submit a{
+	background: var(--store-color);
+	border-radius: 2em;
+	margin-top: 1em;
+}
+.wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-shipping-calculator{
+	margin: 0.5em auto;
+}
+.wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-shipping-calculator button{
+	background: #ccc;
+	margin-top: 1em;
+}
+
+
+/*rechter blok checkout page*/
+.wc-block-components-sidebar .wc-block-components-order-summary .wc-block-components-order-summary-item{
+	display: block;
+}
+.wc-block-components-sidebar .wc-block-components-order-summary .wc-block-components-order-summary-item__description{
 	padding: 0;
 }
-.wc-block-components-order-summary-item__description .wc-block-components-product-metadata{
-/*	display: none;*/
+.wc-block-components-sidebar .wc-block-components-order-summary .wc-block-components-order-summary-item__image,
+.wc-block-components-sidebar .wc-block-components-order-summary .wc-block-components-order-summary-item__description .wc-block-components-product-metadata{
+	display: none;
 }
-
-
-
-
-
- button.wc-block-components-button{
- 	border-radius: 3em;
- 	background: var(--store-color);
- }
