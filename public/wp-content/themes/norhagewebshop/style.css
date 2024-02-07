@@ -323,7 +323,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container{
 	flex: 65% 0 0;
 	background: var(--store-color);
 	color: var(--white);
-	border-left: 1px solid var(--white);
+	
 	transition: border-bottom-color 0.5s ease-out;
 	box-sizing: border-box;
 	order: 2;
@@ -333,6 +333,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container{
 header#masthead nav#site-navigation .menu-secondary-menu-container{
 	flex: 35% 0 0;
 	color: var(--white);
+	border-right: 1px solid var(--white);
 	text-align: right;
 	background: var(--store-color);
 	transition: background 0.5s ease-out;
