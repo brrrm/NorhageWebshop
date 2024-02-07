@@ -1677,6 +1677,10 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 .is-mobile.wc-block-components-sidebar-layout .wc-block-components-sidebar{
 	order: 2;
 }
+
+.is-mobile.wc-block-components-sidebar-layout .wc-block-components-sidebar .wp-block-woocommerce-proceed-to-checkout-block{
+	padding: 0 1em;
+}
 .is-mobile.wc-block-components-sidebar-layout form.wc-block-components-form h2.wc-block-components-title:before{
 	padding: 0;
 }
