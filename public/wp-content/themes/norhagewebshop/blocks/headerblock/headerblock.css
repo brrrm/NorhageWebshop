@@ -1,11 +1,9 @@
 .headerblock{
-	box-sizing: border-box;
 	width: 100%;
 	height: auto;
 	margin-top: calc(-1 * var(--header-height) );
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	font-family: "kiro", sans-serif;
 }
 .headerblock::-webkit-scrollbar{
 	display: none;
@@ -20,7 +18,7 @@
 	top: 0;
 }
 .headerblock .headerblock-image-col{
-	flex: 40% 0 0;
+	flex: 65% 0 0;
 	background: #ccc;
 	height: 100%;
 	z-index: 0;
@@ -36,24 +34,26 @@
 }
 
 .headerblock .headerblock-text-col{
-	flex: 60% 0 0;
+	flex: 35% 0 0;
 	position: relative;
-	background: var(--dark-blue);
+	background: var(--store-color);
+	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
+	border-right: 1px solid #fff;
 	color: var(--white);
-	box-sizing: border-box;
-	padding: var(--header-height) 10% 0 5rem;
+	padding: var(--header-height) 2em 0 2em;
 	height: 100%;
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    font-size: min(2vw, 4vh, 1.5rem);
+    font-size: min(2vw, 3vh, 1.3rem);
     line-height: 1.5em;
 }
 .headerblock .headerblock-text-col p#breadcrumbs{
 	position: absolute;
 	top: var(--header-height);
 }
+
 .headerblock .headerblock-text-col .text{
 	padding: 0 0 5em;
 }
@@ -67,51 +67,17 @@
 	margin: 0 0 0.4em;
 	font-size: 2em;
 }
-.headerblock .headerblock-text-col ul.usps{
-	display: block;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-.headerblock .headerblock-text-col ul.usps li{
-	display: flex;
-	width: auto;
-	background: var(--white);
-	box-sizing: border-box;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-}
-.headerblock .headerblock-text-col ul.usps li a:link,
-.headerblock .headerblock-text-col ul.usps li a:visited{
-	text-decoration: none;
-	color: inherit;
-}
-.headerblock .headerblock-text-col ul.usps li a:hover{
-	color: var(--bright-orange);
-}
-.headerblock .headerblock-text-col ul.usps li strong{
-	color: var(--dark-blue);
-	font-size: 0.6em;
-	line-height: 0.83333333em;
-	display: block;
-}
-.headerblock .headerblock-text-col ul.usps li svg{
-	width: 70%;
-	margin-bottom: 0.3em;
-}
 
 .headerblock .headerblock-usps{
 	position: relative;
 	z-index: 2;
-	color: var(--bright-green);
+	color: var(--dark-blue);
 	overscroll-behavior: auto;
 	list-style: none;
 	margin: 0;
-	padding: 0 10% 3em 5rem;
+	padding: 0px 10% 3em 2em;
 	display: flex;
-	width: 60%;
+	width: 35%;
 	font-size: 1.7vw;
 	line-height: 1.5em;
 	font-style: italic;
@@ -131,7 +97,7 @@
 	padding-right: 0;
 }
 .headerblock .headerblock-usps li:not(:last-child){
-	border-right: 1px solid var(--bright-green);
+	border-right: 1px solid var(--dark-blue);
 }
 .headerblock .headerblock-usps li strong{
 	display: block;
@@ -139,31 +105,6 @@
 	font-weight: 900;
 	font-style: normal;
 	white-space: nowrap;
-}
-
-
-@media screen and (min-width: 768px){
-	.headerblock .headerblock-text-col ul.usps{
-		position: absolute;
-		width: 15%;	
-		right: -3.5%;
-		top: calc(var(--header-height) + (100vh - var(--header-height)) / 2);
-		transform: translate(0, -50%);
-		max-height: calc(100vh - var(--header-height));
-		overflow: hidden;
-	}
-	.headerblock .headerblock-text-col ul.usps li{
-		margin-bottom: 1em;
-		padding: 0.5em 0.3em;
-		flex-direction: column;
-		aspect-ratio: 1;
-		overflow: hidden;
-		justify-content: center;
-		max-height: calc((100vh - var(--header-height) - 3em) / 4);
-	}
-	.headerblock .headerblock-text-col ul.usps li:last-child{
-		margin-bottom: 0;
-	}
 }
 @media screen and (max-width:768px){
 	.headerblock .hero-wrap{
@@ -188,32 +129,6 @@
 		font-size: 2.125em;
 		line-height: 1.117em;
 	}
-	.headerblock .headerblock-text-col ul.usps {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5em;
-		padding: 0;
-		position: absolute;
-		top: -5em;
-		left: 1em;
-		right: 1em;
-	}
-	.headerblock .headerblock-text-col ul.usps li{
-		justify-content: flex-start;
-		flex: 45% 1 0;
-		padding: 0.5em;
-		gap: 0.5em; 
-		text-align: left;
-		box-sizing: border-box;
-	}
-	.headerblock .headerblock-text-col ul.usps li strong{
-		font-size: 0.75em;
-		line-height: 1;
-	}
-	.headerblock .headerblock-text-col ul.usps li svg{
-		width: 2.2em;
-		margin: 0;
-	}
 	.headerblock .headerblock-usps{
 		width: 100%;
 		padding: 0 2em 2em;
@@ -228,10 +143,5 @@
 	}
 	.headerblock .headerblock-usps li strong{
 		font-size: 1.3em;
-	}
-}
-@media screen and (max-width:300px){
-	.headerblock .headerblock-text-col ul.usps li strong{
-		font-size: 0.6em;
 	}
 }

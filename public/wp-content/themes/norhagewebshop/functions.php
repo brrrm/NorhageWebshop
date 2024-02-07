@@ -710,7 +710,7 @@ add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 
 function norhage_get_item_data( $item_data, $cart_item_data ) {
 	if(isset($cart_item_data['cutting_variables'])){
 		$item_data[] = [
-			'key'	=> __('Cutting fee included', 'norhage'),
+			'key'	=> __('Cutting fee', 'norhage'),
 			'value'	=> wc_price($cart_item_data['cutting_variables']['cutting_fee'])
 		];
 		$item_data[] = [
@@ -778,7 +778,7 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 
 	if(isset($values['cutting_variables'])){
 		$item->add_meta_data(
-			__('Cutting fee included', 'norhage'),
+			__('Cutting fee', 'norhage'),
 			wc_price($values['cutting_variables']['cutting_fee'])
 		);
 		$item->add_meta_data(
@@ -810,7 +810,7 @@ add_action( 'woocommerce_checkout_create_order_line_item', 'norhage_checkout_cre
 function norhage_order_item_name( $product_name, $item ) {
 
 	if(isset($item['cutting_variables'])){
-		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee included', 'norhage'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
+		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee', 'norhage'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
 		$product_name .= sprintf(
 			'<br /> %s: %sm x %sm', 
 			__('Sizes', 'norhage'), 
