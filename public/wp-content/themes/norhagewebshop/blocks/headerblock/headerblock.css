@@ -38,7 +38,7 @@
 	position: relative;
 	background: var(--store-color);
 	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
-	border-right: 1px solid #fff;
+	
 	color: var(--white);
 	padding: var(--header-height) 2em 0 2em;
 	height: 100%;
@@ -48,6 +48,8 @@
     justify-content: center;
     font-size: min(2vw, 3vh, 1.3rem);
     line-height: 1.5em;
+    border-right: 1px solid #fff;
+    margin-right: -1px;
 }
 .headerblock .headerblock-text-col p#breadcrumbs{
 	position: absolute;
