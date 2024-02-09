@@ -27,15 +27,6 @@
 	margin: 0;
 	font-size: 2em;
 }
-.productHeaderBlock .text-col .summary a,
-.productHeaderBlock .text-col .summary a:hover{
-	background: transparent url(../../images/svg/customize.svg) no-repeat 1em center;
-	background-size: 1em auto;
-	padding-left: 2.5em;
-	color: var(--store-color);
-	border: 1px solid var(--store-color);
-	border-radius: 200px;
-}
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .productHeaderBlock .text-col .price{
 	margin: 0.3em 0 1em;
 	color: var(--store-color);

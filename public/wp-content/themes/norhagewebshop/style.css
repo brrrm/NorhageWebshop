@@ -25,7 +25,7 @@ Version: 0.1
 	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
 	--big-flex:55%;
 	--small-flex:44%;
-
+	--gap: 1em;
 }
 body.small-height-header{
 	--header-nav-height: 5vw;
@@ -162,17 +162,55 @@ a{
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button{
 	font-size: 1em;
 	line-height: 1.5em;
-	padding: 0.13em 1em 0.133em 2em; 
-  	border-radius: 200px;
-  	background-repeat: no-repeat;
-  	background-position: 0.5em center;
-  	background-size: 1em;	
+	padding: 0.13em 1em 0.13em; 
+  	border-radius: 2em;
   	background-color: var(--store-color);
   	color: var(--white);
   	font-weight: 400;
 }
-.button:hover{
-	color: var(--custom-text-color);
+.button:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button:hover{
+  	background-color: var(--store-color);
+  	color: var(--white);
+}
+
+.button.disabled:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.disabled:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.disabled:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.disabled:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.disabled:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.disabled:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.disabled:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.disabled:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.disabled:hover,
+.button.disabled.alt:hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.disabled.alt:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.disabled.alt:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.disabled.alt:hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.disabled.alt:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.disabled.alt:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.disabled.alt:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.disabled.alt:hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.disabled.alt:hover{
+	background-color: #ccc;
+}
+.button:not(.disabled.alt):hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit:not(.disabled.alt):hover, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button:not(.disabled.alt):hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button:not(.disabled.alt):hover,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button:not(.disabled.alt):hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit:not(.disabled.alt):hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button:not(.disabled.alt):hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button:not(.disabled.alt):hover, 
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button:not(.disabled.alt):hover{
+  	transform: scale(1.05);
 }
 
 @media all and (max-width:768px){
@@ -507,8 +545,8 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu .image-button span a{
 	color: var(--white);
-    font-weight: 700;
-    text-shadow: 2px 2px 6px #000;
+	font-weight: 700;
+	text-shadow: 2px 2px 6px #000;
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu .image-button span{
 	top: 50%;
@@ -628,16 +666,16 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead .menu-toggle{
 		display: block;
-	    position: absolute;
-	    top: calc((var(--header-height) / 2) - 1.5em);
-	    right: 1em;
-	    width: 3em;
-	    height: 3em;
-	    border: none;
-	    background: transparent url(images/svg/hamburger.svg) center no-repeat;
-	    background-size: contain;
-	    overflow: hidden;
-	    text-indent: -9999em;
+		position: absolute;
+		top: calc((var(--header-height) / 2) - 1.5em);
+		right: 1em;
+		width: 3em;
+		height: 3em;
+		border: none;
+		background: transparent url(images/svg/hamburger.svg) center no-repeat;
+		background-size: contain;
+		overflow: hidden;
+		text-indent: -9999em;
 	}
 	header#masthead .site-branding{
 		height: var(--header-height);
@@ -795,7 +833,8 @@ footer.site-footer{
 	line-height: 1.1666rem;	
 	color: #ffffff;
 	padding: 2.208em 25%;
-	background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(60,60,60,1) 100%);
+	background: url(../norhagewebshop/images/svg/footer-bg.svg) no-repeat 110% 60%, linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(60,60,60,1) 100%);
+	background-size: 132% auto;
 	display: grid;
 	grid-template-areas: "info sitemap"
 						 "logo sitemap"
@@ -804,16 +843,6 @@ footer.site-footer{
 	gap: 2em;
 	position: relative;
 	overflow: hidden;
-}
-footer.site-footer:after{
-	content: " ";
-	background:  transparent url(../norhagewebshop/images/svg/logo-norhage-industri-boompje-klein.svg) no-repeat right bottom;
-	opacity: 0.1;
-	position: absolute;
-    height: 100%;
-    aspect-ratio: 1;
-    right: 10%;
-    bottom: -5em;
 }
 footer.site-footer h2{
 	font-size: 1.5rem;
@@ -830,7 +859,7 @@ footer.site-footer ul {
 @media all and (max-width: 768px){
 	footer.site-footer:after{
 		right: -7em;
-    	height: 50%;
+		height: 50%;
 	}
 }
 
@@ -969,24 +998,24 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 	aspect-ratio: 1;
 	background: var(--img-gradient);
 	mix-blend-mode: multiply;
-    opacity: 0.75;
+	opacity: 0.75;
 }
 .image-button .title{
 	position: absolute;
 	width: 100%;
 	bottom: 1em;
-    left: 0;
-    margin: 0;
-    z-index: 3;
-    text-align: center;
-    padding: 0 0.5em;
-    box-sizing: border-box;
-    font-size: 1em;
+	left: 0;
+	margin: 0;
+	z-index: 3;
+	text-align: center;
+	padding: 0 0.5em;
+	box-sizing: border-box;
+	font-size: 1em;
 }
 .image-button .title a{
-    display: block;
-    box-sizing: border-box;
-    color: var(--white);
+	display: block;
+	box-sizing: border-box;
+	color: var(--white);
 }
 
 
@@ -1017,36 +1046,36 @@ ul.product-teasers li.product a h2{
 /*404*/
 .error-404{
 	max-width: none;
-    width: auto;
-    margin-right: -25%;
+	width: auto;
+	margin-right: -25%;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-    gap: 3em;
+	gap: 3em;
 }
 .error-404 .page-content{
 	flex: 55% 0 1;
-    order: 2;
+	order: 2;
 }
 .error-404 .page-content .page-header h1{
 	margin: 0;
-    font-size: 5em;
+	font-size: 5em;
 }
 .error-404 .page-content p{
 	font-size: 2em;
-    line-height: 1.3;
-    margin-top: 0;
+	line-height: 1.3;
+	margin-top: 0;
 }
 .error-404 .gif{
-    flex: 30% 1 0;
-    order: 1;
-    position: relative;
+	flex: 30% 1 0;
+	order: 1;
+	position: relative;
 }
 .error-404 .gif iframe{
 	display: block;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+	width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
 }
 .error-404 .gif p{
 	position: absolute;
@@ -1095,12 +1124,12 @@ body .image-popup h1{
 }
 body .image-popup .image-col{
 	scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100%;
-    width: 100% ;
-    position: relative;
+	overflow-y: scroll;
+	height: 100%;
+	width: 100% ;
+	position: relative;
 	z-index: 1;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body .image-popup .scroll-button{
 	content: " ";
@@ -1133,11 +1162,11 @@ body .image-popup .scroll-button{
 }
 body .image-popup .image-col .header-image{
 	scroll-snap-align: start;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    padding: 5em 1em 1em;
-    position: relative;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	padding: 5em 1em 1em;
+	position: relative;
 }
 body .image-popup .image-col .header-image img{
 	height: 100%;
@@ -1185,14 +1214,14 @@ body .image-popup .scroll-button:hover{
 }
 .woocommerce div.product form.cart div.quantity{
 	border: 1px solid var(--black);
-    border-radius: 2em;
-    display: flex;
-    align-items: center;
-    margin-right: 1em;
-    background: #fff;
-    font-size: 0.75em;
-    height: 2em;
-    overflow: hidden;
+	border-radius: 2em;
+	display: flex;
+	align-items: center;
+	margin-right: 1em;
+	background: #fff;
+	font-size: 0.75em;
+	height: 2em;
+	overflow: hidden;
 }
 .woocommerce .quantity .qtyBtn{
 	font-size: 1em;
@@ -1231,6 +1260,7 @@ body .image-popup .scroll-button:hover{
 .woocommerce .quantity .qty{
 	-moz-appearance: textfield;
 }
+.woocommerce .product .button.add_to_cart_button,
 .woocommerce div.product form.cart .button{
 	border-radius: 2em;
 	font-size: 1em;
@@ -1239,6 +1269,11 @@ body .image-popup .scroll-button:hover{
 	background-size: auto 60%;
 	color: #fff;
 	padding: 0.5em 1em 0.5em 3em;
+	font-size: 0.75em;
+}
+.woocommerce .product .button.add_to_cart_button.product_type_variable,
+.woocommerce div.product form.cart .button.product_type_variable{
+	background-image: url(images/svg/projects-white.svg);
 }
 
 .woocommerce .product .summary,
@@ -1250,10 +1285,10 @@ body .image-popup .scroll-button:hover{
 .product .entry-content .summary.entry-summary{
 	float: none;
 	width: auto;
-    background-color: var(--light-green);
-    padding: var(--header-height) 0 2em 0;
-    border-top: 1px solid var(--store-color);
-    border-bottom: 1px solid var(--store-color);
+	background-color: var(--light-green);
+	padding: var(--header-height) 0 2em 0;
+	border-top: 1px solid var(--store-color);
+	border-bottom: 1px solid var(--store-color);
 }
 .product .entry-content .summary.entry-summary h2.variations_form-title{
 	flex: 100% 0 0;
@@ -1451,7 +1486,7 @@ body .image-popup .scroll-button:hover{
 @media all and (max-width:768px){
 	.site-main .entry-content .product-description{
 		margin-left: -1em;
-    	margin-right: -1em;
+		margin-right: -1em;
 	}
 }
 
@@ -1731,8 +1766,8 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 
 .wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-radio-control__option-layout{
 	display: flex;
-    align-items: center;
-    justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 }
 .wc-block-components-sidebar .wc-block-components-totals-shipping .wc-block-components-radio-control__option-layout span.wc-block-formatted-money-amount{
 	font-size: 1.33em;
@@ -1768,4 +1803,86 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 }
 .is-mobile.wc-block-components-sidebar-layout .wc-block-components-sidebar .wp-block-woocommerce-proceed-to-checkout-block{
 	padding: 0 1em;
+}
+
+
+
+/* product listing on category pages */
+.woocommerce .product-listing{
+	padding: 0 var(--gap) 0 0;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.woocommerce ul.products,.woocommerce-page ul.products {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: var(--gap);
+	margin: 0 auto;
+}
+.woocommerce ul.products::after,
+.woocommerce ul.products::before,
+.woocommerce-page ul.products::after,
+.woocommerce-page ul.products::before {
+	content: none;
+}
+
+.woocommerce ul.products::after,.woocommerce-page ul.products::after {
+	content: none;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+	float: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: unset;
+}
+.woocommerce ul.products li.first,.woocommerce-page ul.products li.first {
+	clear: none;
+}
+.woocommerce ul.products li.last,.woocommerce-page ul.products li.last {
+}
+.woocommerce ul.products.columns-1 li.product,
+.woocommerce-page ul.products.columns-1 li.product,
+.woocommerce-page.columns-1 ul.products li.product,
+.woocommerce.columns-1 ul.products li.product {
+	width: unset;
+	flex: 100% 0 0;
+}
+.woocommerce ul.products.columns-2 li.product,
+.woocommerce-page ul.products.columns-2 li.product,
+.woocommerce-page.columns-2 ul.products li.product,
+.woocommerce.columns-2 ul.products li.product {
+	flex: calc((100% - (1 * var(--gap))) / 2) 0 0;
+	width: unset;
+}
+.woocommerce ul.products.columns-3 li.product,
+.woocommerce-page ul.products.columns-3 li.product,
+.woocommerce-page.columns-3 ul.products li.product,
+.woocommerce.columns-3 ul.products li.product {
+	flex: calc((100% - (2 * var(--gap))) / 3) 0 0;
+	width: unset;
+}
+.woocommerce ul.products.columns-4 li.product,
+.woocommerce-page ul.products.columns-4 li.product,
+.woocommerce-page.columns-4 ul.products li.product,
+.woocommerce.columns-4 ul.products li.product {
+	flex: calc((100% - (3 * var(--gap))) / 4) 0 0;
+	width: unset;
+}
+.woocommerce ul.products.columns-5 li.product,
+.woocommerce-page ul.products.columns-5 li.product,
+.woocommerce-page.columns-5 ul.products li.product,
+.woocommerce.columns-5 ul.products li.product {
+	flex: calc((100% - (4 * var(--gap))) / 5) 0 0;
+	width: unset;
+}
+.woocommerce ul.products.columns-6 li.product,
+.woocommerce-page ul.products.columns-6 li.product,
+.woocommerce-page.columns-6 ul.products li.product,
+.woocommerce.columns-6 ul.products li.product {
+	flex: 13.5% 0 0;
+	width: unset;
 }

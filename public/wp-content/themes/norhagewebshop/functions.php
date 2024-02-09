@@ -103,6 +103,8 @@ function norhagewebshop_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	add_theme_support('woocommerce');
 }
 add_action( 'after_setup_theme', 'norhagewebshop_setup' );
 
@@ -598,7 +600,7 @@ function norhage_remove_wc_template_stuff() {
     remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
-    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+    //remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);

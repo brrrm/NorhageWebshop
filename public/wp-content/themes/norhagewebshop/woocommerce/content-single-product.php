@@ -47,11 +47,8 @@ if ( post_password_required() ) {
 				<?php endif; ?>
 				<?php if($product->is_type('variable')): ?>
 					<div class="summary entry-summary alignfull">
-					
-	
-					<a href="#product-config" class="button"><?php printf(__('Customize your %s'), $product->get_title()); ?></a>
-
-	
+						<?php wc_get_template( 'single-product/price.php' ); ?>
+						<a href="#product-config" class="button add_to_cart_button product_type_variable"><?php printf(__('Customize your %s'), $product->get_title()); ?></a>
 					</div>
 				<?php endif; ?>
 			</div>
