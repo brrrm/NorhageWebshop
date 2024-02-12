@@ -37,8 +37,11 @@
 }
 .cta-within-text-block .cta-phone.button{
 	background-image: url(../../images/svg/phone-icon-white.svg);
+	background-repeat: no-repeat;
+	background-size: 1em auto;
+	background-position: 0.5em center;
+	padding-left: 2em;
 }
-
 
 
 .is-style-damagerepair .image-col,
@@ -64,7 +67,7 @@
 	border-image-outset: 1px;
 }
 .cta-within-text-block.is-style-damagerepair .cta-phone.button{
-	background-image: url(../../images/svg/phone-icon-grey.svg);	
+	background-image: url(../../images/svg/phone-icon-black.svg);	
 	background-color: var(--white);
 	color: var(--custom-text-color);
 }
@@ -75,7 +78,7 @@
 	.cta-within-text-block .wrapper,
 	.cta-within-text-block.is-style-damagerepair .wrapper{
 		flex-wrap: wrap;
-		padding: 2em;
+		padding: 2em 1em;
 	}
 	.cta-within-text-block.is-style-damagerepair .wrapper,
 	.cta-within-text-block.is-style-damagerepair .wrapper > *{
@@ -85,6 +88,7 @@
 		flex: 100% 1 0;
 		order: 2;
 		align-items: flex-start;
+		gap: 1em;
 	}
 	.cta-within-text-block .image-col .image{
 		order: 2;
@@ -96,5 +100,11 @@
 		flex: 100% 0 0;
 		order: 1;
 		padding: 0;
+		margin-bottom: 1em;
+	}
+	.cta-within-text-block .cta-phone.button{
+		background-position: 1em center;
+		padding: 1em 2em 1em 3em;
+		background-size: 1.5em auto;
 	}
 }

@@ -14,6 +14,7 @@
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 1;
 	align-self: center;
+
 }
 
 .text-image-block .text-col > *:first-child{
@@ -54,6 +55,7 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		min-height: inherit;
+    	margin: 1em -1em -2em;
 	}
 	.text-image-block--image-col figure img{
 		position: relative;
