@@ -50,47 +50,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_651e6ce780c2f",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Lorem ipsum dolor sit amet",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_651e6dd880c30",
-            "label": "Text paragraph",
-            "name": "text_paragraph",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "<p>Quisque consectetur non nibh ac aliquam. Nam dignissim eu magna vel ultrices. Fusce semper nisl ante, vitae condimentum metus lobortis a. Sed nec elit orci. Cras volutpat, tortor et faucibus finibus, velit magna malesuada lorem, in feugiat nisi dui nec diam. Vivamus in finibus tortor, at pulvinar neque. Nunc efficitur nisl vel gravida mattis. Sed lacinia blandit diam, ac mollis quam pulvinar et. Sed accumsan libero id turpis facilisis aliquam. Maecenas feugiat justo sit amet posuere rhoncus.<\/p>",
-            "translations": "copy_once",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
             "key": "field_651e6e0180c31",
             "label": "Image",
             "name": "image",
@@ -134,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707754646
+    "modified": 1707778225
 }
