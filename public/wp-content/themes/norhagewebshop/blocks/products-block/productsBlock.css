@@ -27,7 +27,7 @@
 	padding: 0;
 }
 .products-block .products-col ul li.image-button{
-	flex:calc((100% - 2em) / 3) 1 0;
+	flex:calc((100% - 2em) / 3) 0 0;
 }
 .products-block .products-col ul li.image-button:nth-child(4n):not(:last-child),
 .products-block .products-col ul li.image-button:nth-child(5n):last-child{

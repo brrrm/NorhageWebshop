@@ -27,6 +27,36 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $class_name .= ' align' . $block['align'];
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need emergency damage repair?'
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		]
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'Call now',
+			'url' => 'tel:+4796759359'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
@@ -49,8 +79,9 @@ if ( ! empty( $block['align'] ) ) {
 			<?php endif; ?>
 		</div>
 		<div class="text-col">
-			<h2><?php echo esc_html( $title ); ?></h2>
-			<?php echo $text; ?>
+			<InnerBlocks 
+				allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+				template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 		</div>
 	</div>
 </figure>
