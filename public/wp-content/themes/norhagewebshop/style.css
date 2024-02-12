@@ -1288,7 +1288,6 @@ body .image-popup .scroll-button:hover{
 	background-color: var(--light-green);
 	padding: var(--header-height) 0 2em 0;
 	border-top: 1px solid var(--store-color);
-	border-bottom: 1px solid var(--store-color);
 }
 .product .entry-content .summary.entry-summary h2.variations_form-title{
 	flex: 100% 0 0;
