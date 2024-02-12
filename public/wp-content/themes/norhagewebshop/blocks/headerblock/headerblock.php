@@ -6,8 +6,6 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' );
-$text			= get_field( 'intro_text' );
 $image			= get_field( 'image' );
 $usps			= get_field('usps');
 

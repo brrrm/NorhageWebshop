@@ -6,10 +6,6 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
-$text			= get_field( 'text' ) ?? get_sub_field( 'text' );
-$phone			= get_field( 'phone_number' ) ?? get_sub_field( 'phone_number' );
-$email			= get_field( 'email' ) ?? get_sub_field( 'email' );
 $image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 
 
@@ -76,13 +72,6 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 	<div class="text-col">
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
-			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" 
-			 />
-		<?php if($phone):?>
-			<p><a href="tel:<?php echo trim(esc_html($phone)); ?>" class="cta-phone button"><?php echo esc_html($phone); ?></a></p>
-		<?php endif; ?>
-		<?php if($email):?>
-			<p><a href="mailto:<?php echo trim(esc_html($email)); ?>" class="cta-email button"><?php echo esc_html($email); ?></a></p>
-		<?php endif; ?>
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 </div>

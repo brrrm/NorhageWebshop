@@ -6,9 +6,7 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' )?? get_sub_field( 'title' );
 $projects		= get_field( 'projects' )?? get_sub_field( 'projects' );
-$text			= get_field('text') ?? get_sub_field('text');
 $text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
@@ -47,13 +45,25 @@ if ( empty( $block['align'] ) ) {
 if($text_snippet){
 	$class_name .= ' with-text-snippets';
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Our quality? Have a look for yourself!'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="title-col">
-		<h2><?php echo esc_html( $title ); ?></h2>
-		<?php echo $text; ?>
+		<InnerBlocks 
+			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 	<div class="projects-col">
 		<?php if($projects): ?>
@@ -77,6 +87,15 @@ if($text_snippet){
 			<?php 
 		    // Reset the global post object so that the rest of the page works correctly.
 		    wp_reset_postdata(); ?>
+		<?php else: ?>
+			<ul>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+			</ul>
 		<?php endif; ?>
 	</div>
 </div>

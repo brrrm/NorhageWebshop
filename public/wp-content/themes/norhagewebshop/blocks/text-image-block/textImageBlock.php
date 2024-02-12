@@ -6,8 +6,6 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
-$text			= get_field( 'text_paragraph' ) ?? get_sub_field( 'text_paragraph' );
 $image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 $text__image_order		= get_field( 'text__image_order' ) ?? get_sub_field('text__image_order');
 $green_bg 		= get_field('green_background') ?? get_sub_field('green_background');

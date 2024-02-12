@@ -6,9 +6,7 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' )?? get_sub_field( 'title' );
 $products		= get_field( 'products' )?? get_sub_field( 'products' );
-$text			= get_field( 'text' )?? get_sub_field( 'text' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
 if(!$products || empty($products)){

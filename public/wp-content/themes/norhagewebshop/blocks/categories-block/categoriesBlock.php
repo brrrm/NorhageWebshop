@@ -9,7 +9,6 @@
 //$catName		= get_field( 'categories' );
 //$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
 $terms			= get_field('categories');
-$title			= get_field('title');
 if(!$terms){
 	return;
 }
@@ -28,11 +27,24 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $class_name .= ' align' . $block['align'];
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need help with your choice?'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
-	<h2 class="blockTitle"><?php echo $title; ?></h2>
+	<InnerBlocks 
+		allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+		template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	<ul class="taxonomy-teasers">
 	<?php foreach($terms as $term): ?>
 		<?php 
