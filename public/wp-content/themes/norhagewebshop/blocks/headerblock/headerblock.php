@@ -33,18 +33,12 @@ $innerBlocksTemplate = [
 		[
 			'level'	=> 1
 		]
+	],
+	[
+		'core/paragraph'
 	]
 ];
-$allowedBlocks = ['core/post-title'];
-
-$post_id_greenhouses = 190;
-$post_id_services = 196;
-$post_id_plastics = 192;
-$post_id_materials = 194;
-$url_greenhouses = esc_url(get_permalink(pll_get_post($post_id_greenhouses)));
-$url_services = esc_url(get_permalink(pll_get_post($post_id_services)));
-$url_plastics = esc_url(get_permalink(pll_get_post($post_id_plastics)));
-$url_materials = esc_url(get_permalink(pll_get_post($post_id_materials)));
+$allowedBlocks = ['core/post-title', 'core/paragraph'];
 
 ?>
 
@@ -54,11 +48,7 @@ $url_materials = esc_url(get_permalink(pll_get_post($post_id_materials)));
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" 
-			templateLock="all" />
-
-		<div class="text">
-			<?php echo $text; ?>
-		</div>
+			 />
 	</div>
 
 	

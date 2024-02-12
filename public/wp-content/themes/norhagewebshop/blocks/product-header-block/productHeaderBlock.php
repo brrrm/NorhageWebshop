@@ -31,9 +31,12 @@ $innerBlocksTemplate = [
 		[
 			'level'	=> 1
 		]
+	],
+	[
+		'core/paragraph'
 	]
 ];
-$allowedBlocks = ['core/post-title'];
+$allowedBlocks = ['core/post-title', 'core/paragraph'];
 ?>
 
 
@@ -51,11 +54,8 @@ $allowedBlocks = ['core/post-title'];
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" 
-			templateLock="all" />
-		
-		<div class="text">
-			<?php echo $text; ?>
-		</div>
+			 />
+
 	</div>
 
 	<?php if ( $images ) : ?>

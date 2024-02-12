@@ -7,7 +7,7 @@
     "icon": "star-filled",
     "keywords": ["reviews"],
     "acf": {
-        "mode": "auto",
+        "mode": "preview",
         "renderTemplate": "reviewsBlock.php"
     },
     "supports": {

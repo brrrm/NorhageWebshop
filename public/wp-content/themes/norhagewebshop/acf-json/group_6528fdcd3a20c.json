@@ -3,26 +3,6 @@
     "title": "Block:product-header-block",
     "fields": [
         {
-            "key": "field_6528ff93c1533",
-            "label": "Intro text",
-            "name": "intro_text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
             "key": "field_6528ffc0c1534",
             "label": "Product images",
             "name": "images",
@@ -69,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702035163
+    "modified": 1707772209
 }

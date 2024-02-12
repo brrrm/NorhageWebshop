@@ -979,18 +979,20 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 /* image-buttin */
 .image-button{
 	display: block;
-	flex: 33.3333% 0 0;
 	aspect-ratio: 1;
 	position: relative;
 }
 .image-button a{
 	display: block;
 }
+.image-button > a{
+	height: 100%;
+}
 .image-button img{
 	width: 100%;
+	height: 100%;
 	display: block;
 	object-fit: cover;
-	aspect-ratio: 1;
 	z-index: 1;
 	position: relative;
 }
@@ -1003,7 +1005,7 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 	top: 0;
 	left: 0;
 	width: 100%;
-	aspect-ratio: 1;
+	height: 100%;
 	background: var(--img-gradient);
 	mix-blend-mode: multiply;
 	opacity: 0.75;

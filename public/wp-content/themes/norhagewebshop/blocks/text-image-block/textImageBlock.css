@@ -7,6 +7,10 @@
 	padding: 2em 0 2em 0 ;
 	color: var(--custom-text-color);
 }
+.text-image-block.green_bg{
+	background: var(--green-gradient);
+	color: #fff;
+}
 .text-image-block .text-col a{
 	text-decoration: underline;
 }
@@ -17,10 +21,6 @@
 }
 .text-image-block.text_right .text-col{
 	order: 2;
-}
-.text-image-block.green_bg .text-col{
-	background: var(--green-gradient);
-	color: #fff;
 }
 
 .text-image-block .text-col > *:first-child{
@@ -34,7 +34,6 @@
 	aspect-ratio: 1/1;
 	margin-bottom: -2em;
 	margin-top: -2em;
-	z-index: -1;
 }
 .text-image-block.text_right .text-image-block--image-col{
 	order: 1;

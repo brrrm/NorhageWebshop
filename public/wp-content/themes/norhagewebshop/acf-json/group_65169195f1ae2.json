@@ -3,26 +3,6 @@
     "title": "Block:Hompage headerblock",
     "fields": [
         {
-            "key": "field_65169931c72b9",
-            "label": "Intro text",
-            "name": "intro_text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lorem tempor nunc suscipit suscipit eu vel dui. Aliquam gravida ut lectus nec consequat. Nullam tempor euismod ligula. Proin at ultricies risus. Suspendisse mi turpis, pellentesque vel suscipit at, blandit sit amet massa. Proin neque odio, dictum ut felis a, dignissim interdum urna. Proin vitae turpis sem.<\/p>",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
             "key": "field_65169972c72ba",
             "label": "Big picture",
             "name": "image",
@@ -132,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702035384
+    "modified": 1707772121
 }
