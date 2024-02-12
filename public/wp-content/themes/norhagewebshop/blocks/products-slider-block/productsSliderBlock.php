@@ -85,6 +85,15 @@ if($text_snippet){
 				<?php 
 			    // Reset the global post object so that the rest of the page works correctly.
 			    wp_reset_postdata(); ?>
+			<?php else: ?>
+				<ul>
+					<li class="image-button"></li>
+					<li class="image-button"></li>
+					<li class="image-button"></li>
+					<li class="image-button"></li>
+					<li class="image-button"></li>
+					<li class="image-button"></li>
+				</ul>
 			<?php endif; ?>
 		</div>
 	</div>
