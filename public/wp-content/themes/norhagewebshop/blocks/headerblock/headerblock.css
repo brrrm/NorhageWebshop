@@ -1,4 +1,4 @@
-.headerblock{
+.norhage-block.headerblock{
 	width: 100%;
 	height: auto;
 	margin-top: calc(-1 * var(--header-height) );

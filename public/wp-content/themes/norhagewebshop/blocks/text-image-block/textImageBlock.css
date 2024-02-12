@@ -1,7 +1,6 @@
 .text-image-block{
 	display: flex;
     flex-wrap: nowrap;
-    gap: 3em;
 	border-top:1px solid #C9C9C9;
 	border-bottom:1px solid #C9C9C9;
 	margin-top: -1px;
@@ -12,7 +11,7 @@
 	text-decoration: underline;
 }
 .text-image-block .text-col{
-	flex:var(--big-flex) 0 1;
+	flex:var(--big-flex) 0 0;
 	align-self: center;
 	padding: 0 2em 0 0;
 }
@@ -31,7 +30,7 @@
 	margin-bottom: 0;
 }
 .text-image-block--image-col {
-	flex: var(--small-flex)  0 1;
+	flex: var(--small-flex)  0 0;
 	aspect-ratio: 1/1;
 	margin-bottom: -2em;
 	margin-top: -2em;

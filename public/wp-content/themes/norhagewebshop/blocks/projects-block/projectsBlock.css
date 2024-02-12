@@ -2,18 +2,17 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	gap: 3em;
-	padding:2em 1em 2em 2em;
+	padding:2em 0 2em 0;
 	color: var(--custom-text-color);
 }
 .projects-block .title-col{
-	flex: var(--small-flex) 0 1;
+	flex: var(--small-flex) 0 0;
 }
 .projects-block .text-col a{
 	text-decoration: underline;
 }
 .projects-block .projects-col{
-	flex: var(--big-flex)  1 0;
+	flex: var(--big-flex) 0 0;
 }
 .projects-block .projects-col ul{
 	display: flex;
@@ -33,6 +32,6 @@
 		padding: 2em 1em;
 	}	
 	.projects-block .projects-col ul li{
-		flex: 50% 0 1;
+		flex: 50% 0 ;
 	}
 }

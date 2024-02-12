@@ -5,7 +5,6 @@
 	color: var(--custom-text-color);
 	border-top:1px solid #C9C9C9;
 	border-bottom:1px solid #C9C9C9;
-	margin-top: -1px;
 }
 .cta-block .text-col{
 	flex: var(--small-flex) 0 0;
