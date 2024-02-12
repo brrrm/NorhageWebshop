@@ -23,32 +23,30 @@
             "append": ""
         },
         {
-            "key": "field_653fce73c34e7",
-            "label": "Select which categories to show",
+            "key": "field_65ca14efb675b",
+            "label": "Categories",
             "name": "categories",
             "aria-label": "",
-            "type": "select",
+            "type": "taxonomy",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "product-type": "Greenhouse types",
-                "plastic-type": "Plastic types",
-                "constr-mat-type": "Material types",
-                "service-type": "Service types"
-            },
-            "default_value": "product-type",
-            "return_format": "value",
+            "taxonomy": "product_cat",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "field_type": "checkbox",
+            "translations": "sync",
+            "bidirectional": 0,
             "multiple": 0,
             "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -69,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701076923
+    "modified": 1707749360
 }

@@ -126,6 +126,7 @@ function norhagewebshop_register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/product-header-block' );
     register_block_type( __DIR__ . '/blocks/text-image-block' );
     register_block_type( __DIR__ . '/blocks/projects-block' );
+    register_block_type( __DIR__ . '/blocks/products-slider-block' );
     register_block_type( __DIR__ . '/blocks/cta-block' );
     register_block_type( __DIR__ . '/blocks/cta-within-text-block' );
     register_block_type( __DIR__ . '/blocks/reviews-block' );

@@ -5,7 +5,7 @@
 	border-top:1px solid #C9C9C9;
 	border-bottom:1px solid #C9C9C9;
 	margin-top: -1px;
-	padding: 2em 0 2em 2em ;
+	padding: 2em 0 2em 0 ;
 	color: var(--custom-text-color);
 }
 .text-image-block .text-col a{
@@ -14,6 +14,14 @@
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 1;
 	align-self: center;
+	padding: 0 2em 0 0;
+}
+.text-image-block.text_right .text-col{
+	order: 2;
+}
+.text-image-block.green_bg .text-col{
+	background: var(--green-gradient);
+	color: #fff;
 }
 
 .text-image-block .text-col > *:first-child{
@@ -28,6 +36,9 @@
 	margin-bottom: -2em;
 	margin-top: -2em;
 	z-index: -1;
+}
+.text-image-block.text_right .text-image-block--image-col{
+	order: 1;
 }
 .text-image-block--image-col figure{
 	width: 100%;

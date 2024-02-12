@@ -6,23 +6,12 @@
  */
 
 // Load values and assign defaults.
-$catName		= get_field( 'categories' );
-$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
-
-// set the correct post-type for the fallback query to get the image
-switch($catName){
-	case 'greenhouse-type':
-		$post_type = 'greenhouse';
-		break;
-	case 'plastic-type':
-		$post_type = 'plastic';
-		break;
-	case 'service-type':
-		$post_type = 'service';
-		break;
-	case 'constr-mat-type':
-		$post_type = 'construction';
-		break;
+//$catName		= get_field( 'categories' );
+//$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
+$terms			= get_field('categories');
+$title			= get_field('title');
+if(!$terms){
+	return;
 }
 
 // Support custom "anchor" values.
@@ -43,6 +32,7 @@ if ( ! empty( $block['align'] ) ) {
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
+	<h2 class="blockTitle"><?php echo $title; ?></h2>
 	<ul class="taxonomy-teasers">
 	<?php foreach($terms as $term): ?>
 		<?php 
@@ -51,10 +41,10 @@ if ( ! empty( $block['align'] ) ) {
 			if(!$image){
 				$first_post = get_posts([
 					'numberposts'		=> 1,
-					'post_type'			=> $post_type,
+					'post_type'			=> 'product',
 					'tax_query'			=> [
 						[
-							'taxonomy' 			=> $catName,
+							'taxonomy' 			=> 'product_cat',
 							'terms'				=> $term->term_id,
 						]
 					]
