@@ -74,6 +74,16 @@
 .cta-within-text-block.is-style-damagerepair .cta-phone.button:hover{
 	color: var(--store-color);
 }
+@media screen and (max-width:1024px){
+	.cta-within-text-block .cta-phone.button{
+		background-position: 1em center;
+		padding: 1em 2em 1em 3em;
+		background-size: 1.5em auto;
+	}
+	.cta-within-text-block .image-col{	
+		gap: 1em;
+	}
+}
 @media screen and (max-width:768px){
 	.cta-within-text-block .wrapper,
 	.cta-within-text-block.is-style-damagerepair .wrapper{
@@ -88,7 +98,6 @@
 		flex: 100% 1 0;
 		order: 2;
 		align-items: flex-start;
-		gap: 1em;
 	}
 	.cta-within-text-block .image-col .image{
 		order: 2;
@@ -102,9 +111,5 @@
 		padding: 0;
 		margin-bottom: 1em;
 	}
-	.cta-within-text-block .cta-phone.button{
-		background-position: 1em center;
-		padding: 1em 2em 1em 3em;
-		background-size: 1.5em auto;
-	}
+
 }
