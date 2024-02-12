@@ -161,6 +161,7 @@ a{
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button, 
 :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button{
 	font-size: 1em;
+	font-family: "kiro", sans-serif;
 	line-height: 1.5em;
 	padding: 0.13em 1em 0.13em; 
   	border-radius: 2em;
@@ -836,6 +837,7 @@ footer.site-footer{
 	padding: 2.208em 25%;
 	background: url(../norhagewebshop/images/svg/footer-bg.svg) no-repeat 110% 60%, linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(60,60,60,1) 100%);
 	background-size: 132% auto;
+	background-blend-mode: pa;
 	display: grid;
 	grid-template-areas: "info sitemap"
 						 "logo sitemap"
@@ -1263,12 +1265,9 @@ body .image-popup .scroll-button:hover{
 }
 .woocommerce .product .button.add_to_cart_button,
 .woocommerce div.product form.cart .button{
-	border-radius: 2em;
 	font-size: 1em;
-	font-family: "kiro", sans-serif;
 	background: var(--store-color) url(images/svg/cart.svg) 1em center no-repeat;
 	background-size: auto 60%;
-	color: #fff;
 	padding: 0.5em 1em 0.5em 3em;
 	font-size: 0.75em;
 }

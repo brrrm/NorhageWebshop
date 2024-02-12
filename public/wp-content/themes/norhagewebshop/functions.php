@@ -535,11 +535,11 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 
 	if(isset($values['cutting_variables'])){
 		$item->add_meta_data(
-			__('Cutting fee', 'norhage'),
+			__('Cutting fee', 'norhagewebshop'),
 			wc_price($values['cutting_variables']['cutting_fee'])
 		);
 		$item->add_meta_data(
-			__('Size', 'norhage'),
+			__('Size', 'norhagewebshop'),
 			$values['cutting_variables']['width'] . 'm x ' . $values['cutting_variables']['height'] . 'm'
 		);
 	}
@@ -609,6 +609,44 @@ function norhage_remove_wc_template_stuff() {
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 }
 
+/**
+ * Allow HTML in term (category, tag) descriptions
+ * FIRST remove html filters from output
+ */
+remove_filter( 'pre_term_description', 'wp_filter_kses' );
+if ( ! current_user_can( 'unfiltered_html' ) ) {
+	add_filter( 'pre_term_description', 'wp_filter_post_kses' );
+}
+remove_filter( 'term_description', 'wp_kses_data' );
+
+// add extra css to display quicktags correctly
+add_action( 'admin_print_styles', 'categorytinymce_admin_head' );
+function categorytinymce_admin_head() { 
+	global $current_screen;
+	if ( $current_screen->id == 'edit-category' OR 'edit-tag' ):
+		echo '<style type="text/css">.quicktags-toolbar input{float:left !important; width:auto !important;}.term-description-wrap{display:none;}</style>';
+	endif;
+}
+
+// load tinymce
+add_filter('product_cat_edit_form_fields', 'add_rich_category_description');
+function add_rich_category_description($tag) {
+	//$tag_extra_fields = get_option('Category_Description_option');
+	?>
+		<tr class="form-field">
+			<th scope="row" valign="top"><label for="description"><?php _e('Description', 'categorytinymce'); ?></label></th>
+			<td>
+			<?php  
+				$settings = array('wpautop' => true, 'media_buttons' => true, 'quicktags' => true, 'textarea_rows' => '15', 'textarea_name' => 'description' );	
+				wp_editor(html_entity_decode($tag->description , ENT_QUOTES, 'UTF-8'), 'Category_Description_option', $settings); 
+			?>
+				<br />
+				<span class="description"><?php _e('The description is shown on the category overview page.', 'norhagewebshop'); ?></span>
+			</td>	
+		</tr>
+	<?php
+
+}
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
