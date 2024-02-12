@@ -1901,13 +1901,23 @@ ul.sub-categories li{
 	aspect-ratio: 3/2;
 }
 ul.sub-categories li.image-button:after{
-	mix-blend-mode: multiply;
+	mix-blend-mode: ;
 	aspect-ratio: 3/2;
-	background: ;
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(150 158 163 / 67%) 30%, rgb(163 163 163) 100%);
 }
 ul.sub-categories li.image-button a{
 	text-shadow: 3px 3px 3px black;
 }
 ul.sub-categories li.image-button a img{
 	aspect-ratio: 3/2;
+}
+@media all and (max-width:768px){
+	ul.sub-categories li{
+		flex: 40% 1 0;
+	}
+	ul.sub-categories li,
+	ul.sub-categories li.image-button a img,
+	ul.sub-categories li.image-button:after{
+		aspect-ratio: 3/1;
+	}
 }
