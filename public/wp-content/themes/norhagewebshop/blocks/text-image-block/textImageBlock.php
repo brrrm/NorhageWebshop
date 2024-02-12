@@ -36,13 +36,44 @@ if($text__image_order){
 if($green_bg){
 	$class_name .= ' green_bg';
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need help with your choice?'
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		]
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'Call now',
+			'url' => 'tel:+4796759359'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="text-col">
-			<h2><?php echo esc_html( $title ); ?></h2>
-			<?php echo $text; ?>
+		<InnerBlocks 
+			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 	<div class="text-image-block--image-col">
 		<?php if ( $image ) : ?>
