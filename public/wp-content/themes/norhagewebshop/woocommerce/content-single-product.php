@@ -93,6 +93,8 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
+				// the price is already show elsewhere
+				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 				do_action( 'woocommerce_single_product_summary' );
 				?>
 			</div>
