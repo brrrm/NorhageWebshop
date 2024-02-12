@@ -15,24 +15,33 @@
 
 .cta-block .text-col .button{
 	background-color: transparent;
-	color: var(--custom-text-color);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 1em auto;
+	border-radius: 0;
+	color: var(--black);
 	font-size: unset;
 	font-weight: 300;
-	padding: 0 0 0 2em;
+	padding-left: 1.5em;
 }
 .cta-block .text-col .button:hover{
-	color: var(--store-color);
+	background-color: unset;
+	color: var(--black);
 }
 .cta-block .text-col .button.cta-phone{
-	background-image: url(../../images/svg/phone-icon-grey.svg);
+	background-image: url(../../images/svg/phone-icon-black.svg);
 }
 .cta-block .text-col .button.cta-email{
-    background-image: url(../../images/svg/email-icon-grey.svg);
+    background-image: url(../../images/svg/email-icon-black.svg);
 }
+
+
 .cta-block .image-col{
 	flex: var(--big-flex) 0 0;
 	aspect-ratio: 4/3;
 }
+
+
 .cta-block .image-col figure{
 	width: 100%;
 	height: 100%;
