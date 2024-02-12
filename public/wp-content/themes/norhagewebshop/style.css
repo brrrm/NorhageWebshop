@@ -216,6 +216,7 @@ a{
 @media all and (max-width:768px){
 	.button{
 		font-size: 1em;
+
 	}
 }
 
@@ -1276,12 +1277,12 @@ body .image-popup .scroll-button:hover{
 	background-image: url(images/svg/projects-white.svg);
 }
 
+
 .woocommerce .product .summary,
 .woocommerce div.product form.cart,
 .product .entry-content .summary.entry-summary{
 	margin-bottom: 0;
 }
-
 .product .entry-content .summary.entry-summary{
 	float: none;
 	width: auto;
@@ -1463,6 +1464,7 @@ body .image-popup .scroll-button:hover{
 	}
 	.summary form.variations_form{
 		margin-left: 0;
+		display: block;
 	}
 	.summary form.variations_form .addons{
 		padding-left: 0;
