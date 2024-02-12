@@ -1886,3 +1886,28 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	flex: 13.5% 0 0;
 	width: unset;
 }
+
+
+
+
+ul.sub-categories{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	padding: 0;
+}
+ul.sub-categories li{
+	flex: 15% 0 0;
+	aspect-ratio: 3/2;
+}
+ul.sub-categories li.image-button:after{
+	mix-blend-mode: multiply;
+	aspect-ratio: 3/2;
+	background: ;
+}
+ul.sub-categories li.image-button a{
+	text-shadow: 3px 3px 3px black;
+}
+ul.sub-categories li.image-button a img{
+	aspect-ratio: 3/2;
+}
