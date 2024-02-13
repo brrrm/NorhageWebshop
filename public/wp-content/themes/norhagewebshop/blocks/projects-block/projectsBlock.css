@@ -2,17 +2,19 @@
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
-	padding:2em 0 2em 0;
+	padding:1em 0 1em 0;
 	color: var(--custom-text-color);
 }
 .projects-block .title-col{
 	flex: var(--small-flex) 0 0;
+	padding:0 2em 0 2em;
 }
 .projects-block .text-col a{
 	text-decoration: underline;
 }
 .projects-block .projects-col{
 	flex: var(--big-flex) 0 0;
+	padding-right:1em;
 }
 .projects-block .projects-col ul{
 	display: flex;
