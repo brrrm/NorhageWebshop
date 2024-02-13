@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 					 */
 					do_action( 'woocommerce_before_single_product' );
 				?>
-				<h1><?php the_title(); ?> <?php echo $product->get_type(); ?></h1>
+				<h1><?php the_title(); ?></h1>
 				<?php wc_get_template( 'single-product/price.php' ); ?>
 				<div><?php echo wpautop($product->get_short_description()); ?></div>
 				<?php if($product->is_type('simple')): ?>
