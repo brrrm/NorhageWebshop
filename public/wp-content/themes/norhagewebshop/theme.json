@@ -43,6 +43,6 @@
 				"left": "0px"
 			}
 		},
-		"css": "@import url(https://use.typekit.net/aus7nxi.css); html{font-family: kiro, sans-serif; font-weight:300;}*.alignfull{margin-right: -25%;}.block-editor-block-list__layout.is-root-container > *.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-right: -25% !important;}"
+		"css": "@import url(https://use.typekit.net/aus7nxi.css); html{font-family: kiro, sans-serif; font-weight:300;}*.alignfull:not(.alignfull .alignfull){margin-right: -25%;}.block-editor-block-list__layout.is-root-container > *.alignwide:where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-right: -25% !important;}"
 	}
 }
