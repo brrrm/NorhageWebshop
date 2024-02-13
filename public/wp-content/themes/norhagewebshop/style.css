@@ -1305,6 +1305,11 @@ body .image-popup .scroll-button:hover{
 	left: 0;
 	right: 0;
 }
+@media all and (max-width:768px){
+	.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
+		padding: 1.5em 1em 1.5em 1em;
+	}
+}
 .productHeaderBlock .text-col .summary .price{
 	margin: 0 0 0.5em;
 }
