@@ -3,26 +3,6 @@
     "title": "Block:product-types",
     "fields": [
         {
-            "key": "field_6531159709af4",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "We produce, deliver and install several different types of greenhouses for industrial companies",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_65ca14efb675b",
             "label": "Categories",
             "name": "categories",
@@ -67,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707749360
+    "modified": 1707825061
 }
