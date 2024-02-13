@@ -147,7 +147,18 @@ a{
 	color: var(--custom-text-color);
 	text-decoration: none;
 }
-
+.wp-block-button a.wp-element-button:hover{
+	transform: scale(1.05);
+}
+.wp-block-button a.wp-element-button{
+	border: 2px solid var(--store-color);
+	background: var(--store-color);
+	text-decoration: none ;
+	padding: 0.5em 1.5em;
+}
+.wp-block-button.is-style-outline a.wp-block-button__link.wp-element-button{
+	color: var(--store-color);
+}
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button{
 	background-color: inherit;
@@ -1899,8 +1910,6 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	flex: 13.5% 0 0;
 	width: unset;
 }
-
-
 
 
 ul.sub-categories{
