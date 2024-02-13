@@ -11,13 +11,14 @@
 }
 .products-block .text-col{
 	flex: var(--small-flex) 0 1;
-	padding-right: 2em;
+	padding: 0 2em 0 2em;
 }
 .products-block .text-col a{
 	text-decoration: underline;
 }
 .products-block .products-col{
 	flex: var(--big-flex) 0 0;
+	padding-right: 1em;
 }
 .products-block .products-col ul{
 	display: flex;

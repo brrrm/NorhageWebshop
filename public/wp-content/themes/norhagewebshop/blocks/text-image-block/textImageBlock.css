@@ -17,7 +17,7 @@
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 0;
 	align-self: center;
-	padding: 0 2em 0 0;
+	padding: 0 2em 0 2em;
 }
 .text-image-block.text_right .text-col{
 	order: 2;
@@ -52,6 +52,9 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+}
+.text-image-block .wp-block-button a{
+	
 }
 
 @media all and (max-width:768px){
