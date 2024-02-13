@@ -6,9 +6,7 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' )?? get_sub_field( 'title' );
 $products		= get_field( 'products' )?? get_sub_field( 'products' );
-$text			= get_field( 'text' )?? get_sub_field( 'text' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
 if(!$products || empty($products)){
@@ -42,13 +40,37 @@ if ( empty( $block['align'] ) ) {
 }else{
     $class_name .= ' align' . $block['align'];
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'You might be interested in these items'
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="text-col">
-		<h2><?php echo esc_html( $title ); ?></h2>
-		<?php echo $text; ?>
+		<InnerBlocks 
+			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 	<div class="products-col">
 		<?php if($products): ?>
@@ -68,6 +90,15 @@ if ( empty( $block['align'] ) ) {
 			<?php 
 		    // Reset the global post object so that the rest of the page works correctly.
 		    wp_reset_postdata(); ?>
+		<?php else: ?>
+			<ul>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+				<li class="image-button"></li>
+			</ul>
 		<?php endif; ?>
 	</div>
 </div>

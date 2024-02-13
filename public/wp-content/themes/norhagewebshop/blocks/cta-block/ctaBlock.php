@@ -6,10 +6,6 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
-$text			= get_field( 'text' ) ?? get_sub_field( 'text' );
-$phone			= get_field( 'phone_number' ) ?? get_sub_field( 'phone_number' );
-$email			= get_field( 'email' ) ?? get_sub_field( 'email' );
 $image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 
 
@@ -29,6 +25,36 @@ if ( empty( $block['align'] ) ) {
 }else{
     $class_name .= ' align' . $block['align'];
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need help with your choice?'
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		]
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'Call now',
+			'url' => 'tel:+4796759359'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
@@ -44,13 +70,8 @@ if ( empty( $block['align'] ) ) {
 		<?php endif; ?>
 	</div>
 	<div class="text-col">
-		<h2><?php echo esc_html( $title ); ?></h2>
-		<div class="text"><?php echo $text; ?></div>
-		<?php if($phone):?>
-			<p><a href="tel:<?php echo trim(esc_html($phone)); ?>" class="cta-phone button"><?php echo esc_html($phone); ?></a></p>
-		<?php endif; ?>
-		<?php if($email):?>
-			<p><a href="mailto:<?php echo trim(esc_html($email)); ?>" class="cta-email button"><?php echo esc_html($email); ?></a></p>
-		<?php endif; ?>
+		<InnerBlocks 
+			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 </div>

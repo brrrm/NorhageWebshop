@@ -6,10 +6,9 @@
  */
 
 // Load values and assign defaults.
-$title			= get_field( 'title' ) ?? get_sub_field( 'title' );
-$text			= get_field( 'text_paragraph' ) ?? get_sub_field( 'text_paragraph' );
 $image			= get_field( 'image' ) ?? get_sub_field( 'image' );
-
+$text__image_order		= get_field( 'text__image_order' ) ?? get_sub_field('text__image_order');
+$green_bg 		= get_field('green_background') ?? get_sub_field('green_background');
 
 // Support custom "anchor" values.
 $anchor = '';
@@ -27,13 +26,52 @@ if ( empty( $block['align'] ) ) {
 }else{
     $class_name .= ' align' . $block['align'];
 }
+if($text__image_order){
+	$class_name .= ' ' . $text__image_order;
+}else{
+	$class_name .= ' text_left';
+}
+if($green_bg){
+	$class_name .= ' green_bg';
+}
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need help with your choice?'
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		]
+	],
+	[
+		'core/paragraph',
+		[ 
+			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		]
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'Call now',
+			'url' => 'tel:+4796759359'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="text-col">
-			<h2><?php echo esc_html( $title ); ?></h2>
-			<?php echo $text; ?>
+		<InnerBlocks 
+			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	</div>
 	<div class="text-image-block--image-col">
 		<?php if ( $image ) : ?>

@@ -89,6 +89,7 @@
 	border-radius: 50%;
 	overflow: hidden;
 	aspect-ratio: 1;
+	background-color: var(--light-green);
 }
 .reviews-block .reviews footer{
 	font-style: italic;

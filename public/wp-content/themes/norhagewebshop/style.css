@@ -23,8 +23,9 @@ Version: 0.1
 	--header-nav-height: 8vw;
 	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
 	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
+	--green-gradient: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
 	--big-flex:55%;
-	--small-flex:44%;
+	--small-flex:45%;
 	--gap: 1em;
 }
 body.small-height-header{
@@ -825,6 +826,11 @@ p + .norhage-block{
 		margin-top: 2em;
 	}	
 }
+.norhage-block{
+	border-top: 1px solid #9dbb8e;
+	border-bottom: 1px solid #9dbb8e;
+	margin-top: -1px;
+}
 
 
 /* 
@@ -974,18 +980,20 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 /* image-buttin */
 .image-button{
 	display: block;
-	flex: 33.3333% 0 0;
 	aspect-ratio: 1;
 	position: relative;
 }
 .image-button a{
 	display: block;
 }
+.image-button > a{
+	height: 100%;
+}
 .image-button img{
 	width: 100%;
+	height: 100%;
 	display: block;
 	object-fit: cover;
-	aspect-ratio: 1;
 	z-index: 1;
 	position: relative;
 }
@@ -998,7 +1006,7 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 	top: 0;
 	left: 0;
 	width: 100%;
-	aspect-ratio: 1;
+	height: 100%;
 	background: var(--img-gradient);
 	mix-blend-mode: multiply;
 	opacity: 0.75;

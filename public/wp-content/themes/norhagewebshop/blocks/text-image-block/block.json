@@ -7,7 +7,7 @@
     "icon": "text",
     "keywords": ["image", "text", "title"],
     "acf": {
-        "mode": "auto",
+        "mode": "preview",
         "renderTemplate": "textImageBlock.php"
     },
     "supports": {

@@ -3,7 +3,6 @@
 	border-top:1px solid #C9C9C9;
 	border-bottom:1px solid #C9C9C9;
 	color: var(--store-color);
-	margin-top: -1px;
 	margin-bottom: 0;
 }
 .cta-within-text-block h2{

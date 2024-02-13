@@ -1,7 +1,29 @@
 :root{
-	--dark-blue: #0A4164;
-	--white: #fff;
 	--header-height: 170px;
+
+	--dark-blue: #0A4164;
+	--bright-orange: #FF7F00;
+	--light-blue: #E9F2F8;
+	--bright-green: #0DFF86;
+
+	--white: #fff;
+	--black:#000;
+	--store-color: #66B73C;
+	--accent-color:#0A4164;	
+	--light-green:#F1FFEA;
+	--custom-text-color: #000;
+	--header-height: 8vw;
+	--header-nav-height: 8vw;
+	--img-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(91, 127, 151, .67) 30%, rgba(10,65,100,1) 100%);
+	--header-gradient: linear-gradient(0deg, rgb(60 125 27 / 88%) 0%, rgb(102 183 60 / 31%) 100%); /*linear-gradient(0deg, rgba(51,92,30,0.75) 0%, rgba(102,183,60,0.17) 100%);*/
+	--green-gradient: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
+	--big-flex:55%;
+	--small-flex:44%;
+	--gap: 1em;
 }
 .edit-post-visual-editor__post-title-wrapper{
+}
+.norhage-block,
+.norhage-block *{
+	box-sizing: border-box;
 }

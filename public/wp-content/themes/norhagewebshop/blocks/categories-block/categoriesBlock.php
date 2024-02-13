@@ -6,23 +6,11 @@
  */
 
 // Load values and assign defaults.
-$catName		= get_field( 'categories' );
-$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
-
-// set the correct post-type for the fallback query to get the image
-switch($catName){
-	case 'greenhouse-type':
-		$post_type = 'greenhouse';
-		break;
-	case 'plastic-type':
-		$post_type = 'plastic';
-		break;
-	case 'service-type':
-		$post_type = 'service';
-		break;
-	case 'constr-mat-type':
-		$post_type = 'construction';
-		break;
+//$catName		= get_field( 'categories' );
+//$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
+$terms			= get_field('categories');
+if(!$terms){
+	return;
 }
 
 // Support custom "anchor" values.
@@ -39,10 +27,24 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $class_name .= ' align' . $block['align'];
 }
+
+$innerBlocksTemplate = [
+	[
+		'core/heading',
+		[
+			'level'	=> 2,
+			'placeholder' => 'Need help with your choice?'
+		]
+	]
+];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
 ?>
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
+	<InnerBlocks 
+		allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
+		template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
 	<ul class="taxonomy-teasers">
 	<?php foreach($terms as $term): ?>
 		<?php 
@@ -51,10 +53,10 @@ if ( ! empty( $block['align'] ) ) {
 			if(!$image){
 				$first_post = get_posts([
 					'numberposts'		=> 1,
-					'post_type'			=> $post_type,
+					'post_type'			=> 'product',
 					'tax_query'			=> [
 						[
-							'taxonomy' 			=> $catName,
+							'taxonomy' 			=> 'product_cat',
 							'terms'				=> $term->term_id,
 						]
 					]

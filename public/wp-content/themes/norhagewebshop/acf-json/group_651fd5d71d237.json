@@ -36,7 +36,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
+            "layout": "block",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -173,7 +173,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "",
+    "description": "Click \"Add review\" to publish a new review",
     "show_in_rest": 0,
-    "modified": 1696589006
+    "modified": 1707770752
 }

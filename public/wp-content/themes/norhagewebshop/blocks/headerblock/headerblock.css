@@ -1,4 +1,4 @@
-.headerblock{
+.norhage-block.headerblock{
 	width: 100%;
 	height: auto;
 	margin-top: calc(-1 * var(--header-height) );
@@ -40,7 +40,7 @@
 	flex: 35% 0 0;
 	position: relative;
 	background: var(--store-color);
-	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
+	background: var(--green-gradient);
 	
 	color: var(--white);
 	padding: var(--header-height) 2rem 0 2rem;

@@ -3,26 +3,6 @@
     "title": "Block:Project-slider",
     "fields": [
         {
-            "key": "field_651e7ed9142e6",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Lorem ipsum dolor sit amet",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_651feb01dbdf2",
             "label": "Show text snippet below project?",
             "name": "show_text_snippet",
@@ -56,11 +36,14 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
+            "post_type": [
+                "project"
+            ],
             "post_status": "",
             "taxonomy": "",
             "return_format": "object",
             "multiple": 1,
+            "translations": "copy_once",
             "allow_null": 0,
             "bidirectional": 0,
             "ui": 1,
@@ -85,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696591336
+    "modified": 1707778611
 }

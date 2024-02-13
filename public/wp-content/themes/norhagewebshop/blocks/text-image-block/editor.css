@@ -1,0 +1,12 @@
+.acf-block-body .acf-block-fields {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50vh;
+}
+.acf-block-body .acf-block-fields > div{
+	min-width: 10%;
+}
+.acf-block-body .acf-block-fields >  div[data-type="wysiwyg"]{
+	width: 40%;
+}

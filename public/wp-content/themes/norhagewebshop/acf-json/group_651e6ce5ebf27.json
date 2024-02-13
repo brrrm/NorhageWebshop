@@ -3,11 +3,11 @@
     "title": "Block:Text&image paragraph",
     "fields": [
         {
-            "key": "field_651e6ce780c2f",
-            "label": "Title",
-            "name": "title",
+            "key": "field_65ca42febd010",
+            "label": "Text \/ image order",
+            "name": "text__image_order",
             "aria-label": "",
-            "type": "text",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,18 +16,24 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Lorem ipsum dolor sit amet",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "choices": {
+                "text_left": "Text left, image right",
+                "text_right": "Text right, image left"
+            },
+            "default_value": "text_left",
+            "return_format": "value",
+            "translations": "copy_once",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
-            "key": "field_651e6dd880c30",
-            "label": "Text paragraph",
-            "name": "text_paragraph",
+            "key": "field_65ca446b600df",
+            "label": "Green background?",
+            "name": "green_background",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,11 +42,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "<p>Quisque consectetur non nibh ac aliquam. Nam dignissim eu magna vel ultrices. Fusce semper nisl ante, vitae condimentum metus lobortis a. Sed nec elit orci. Cras volutpat, tortor et faucibus finibus, velit magna malesuada lorem, in feugiat nisi dui nec diam. Vivamus in finibus tortor, at pulvinar neque. Nunc efficitur nisl vel gravida mattis. Sed lacinia blandit diam, ac mollis quam pulvinar et. Sed accumsan libero id turpis facilisis aliquam. Maecenas feugiat justo sit amet posuere rhoncus.<\/p>",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "message": "Should the text column have a green background?",
+            "default_value": 0,
+            "translations": "sync",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_651e6e0180c31",
@@ -86,5 +93,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699979281
+    "modified": 1707778225
 }

@@ -7,7 +7,7 @@
     "icon": "tag",
     "keywords": ["cta", "phone"],
     "acf": {
-        "mode": "auto",
+        "mode": "preview",
         "renderTemplate": "categoriesBlock.php"
     },
     "supports": {
