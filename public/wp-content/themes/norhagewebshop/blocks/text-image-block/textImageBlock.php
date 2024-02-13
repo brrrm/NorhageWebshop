@@ -40,19 +40,19 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'placeholder' => 'Need help with your choice?'
+			'content' => 'Need help with your choice?'
 		]
 	],
 	[
 		'core/paragraph',
 		[ 
-			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+			'content' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
 		]
 	],
 	[
 		'core/paragraph',
 		[ 
-			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+			'content' => 'Call us today and we’ll jumpstart your project!' 
 		]
 	],
 	[

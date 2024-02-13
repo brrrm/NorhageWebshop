@@ -30,7 +30,6 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'placeholder' => 'Is your garden big or small? <br />We have a matching greenhouse for you!',
 			'content' => 'Is your garden big or small? <br />We have a matching greenhouse for you!'
 		]
 	]
