@@ -1,6 +1,6 @@
 .categories-block{
 	font-family: "kiro", sans-serif;
-	color: var(--custom-text-color);
+	padding: 4em 0 4em 0;
 }
 .categories-block.alignfull{
 	padding: 0 2em;
@@ -8,18 +8,27 @@
 .categories-block .text-col a{
 	text-decoration: underline;
 }
+.categories-block h2{
+	color: #377417;
+}
 .categories-block ul.taxonomy-teasers{
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1em;
+	gap: 0.5em;
     list-style: none;
     padding: 0;
+    margin-right: 25%;
 }
 .categories-block ul.taxonomy-teasers li.taxonomy-term{
 	position: relative;
-	flex: calc((100% - 5 * 1em) / 6) 0 0;
+	flex: calc((100% - 2 * 0.5em) / 3) 0 0;
+	aspect-ratio: 3/2;
 }
-
+.categories-block ul.taxonomy-teasers li.taxonomy-term h3{
+	text-align: left;
+	bottom: 0.5em;
+	text-shadow: 1px 1px 4px #000;
+}
 @media screen and (max-width:768px){
 	.categories-block ul.taxonomy-teasers li.taxonomy-term{
 		flex: calc((100% - 1 * 1em) / 2) 0 0;
