@@ -9,9 +9,6 @@
 //$catName		= get_field( 'categories' );
 //$terms			= get_terms( ['taxonomy' => $catName, 'hide_empty' => false] );
 $terms			= get_field('categories');
-if(!$terms){
-	return;
-}
 
 // Support custom "anchor" values.
 $anchor = '';
@@ -33,7 +30,8 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'placeholder' => 'Need help with your choice?'
+			'placeholder' => 'Is your garden big or small? <br />We have a matching greenhouse for you!',
+			'content' => 'Is your garden big or small? <br />We have a matching greenhouse for you!'
 		]
 	]
 ];
@@ -42,48 +40,60 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 
 
 <div <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
+<div class="wrap">
 	<InnerBlocks 
 		allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 		template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
-	<ul class="taxonomy-teasers">
-	<?php foreach($terms as $term): ?>
-		<?php 
-			$image = get_field('image', $term);
-			// if no image has been set, let's try to get an image from the first post in this cat
-			if(!$image){
-				$first_post = get_posts([
-					'numberposts'		=> 1,
-					'post_type'			=> 'product',
-					'tax_query'			=> [
-						[
-							'taxonomy' 			=> 'product_cat',
-							'terms'				=> $term->term_id,
-						]
-					]
-				]);
 
-				if($first_post){
-					$image = get_the_post_thumbnail($first_post[0]->ID, 'medium');
+	
+	<ul class="taxonomy-teasers">
+	<?php if(!empty($terms)): ?>
+		<?php foreach($terms as $term): ?>
+			<?php 
+				$image = get_field('image', $term);
+				// if no image has been set, let's try to get an image from the first post in this cat
+				if(!$image){
+					$first_post = get_posts([
+						'numberposts'		=> 1,
+						'post_type'			=> 'product',
+						'tax_query'			=> [
+							[
+								'taxonomy' 			=> 'product_cat',
+								'terms'				=> $term->term_id,
+							]
+						]
+					]);
+
+					if($first_post){
+						$image = get_the_post_thumbnail($first_post[0]->ID, 'medium');
+					}
 				}
-			}
-		?>
-		<li class="taxonomy-term teaser image-button">
-			<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'norhagewebshop' ), $term->name ); ?>">
-				<?php 
-				if($image && is_array($image)){
-					echo wp_get_attachment_image( $image['ID'], 'medium', '', array( 'class' => 'header-image__img', 'alt' => $image['alt'] ) );
-				}elseif($image){
-					echo $image;
-				}
-				?>
-			</a>
-			<h3 class="title">
+			?>
+			<li class="taxonomy-term teaser image-button">
 				<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'norhagewebshop' ), $term->name ); ?>">
-					<?php echo $term->name; ?>
+					<?php 
+					if($image && is_array($image)){
+						echo wp_get_attachment_image( $image['ID'], 'medium', '', array( 'class' => 'header-image__img', 'alt' => $image['alt'] ) );
+					}elseif($image){
+						echo $image;
+					}
+					?>
 				</a>
-			</h3>
-			
-		</li>
-	<?php endforeach; ?>
-	</ul>	
+				<h3 class="title">
+					<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'norhagewebshop' ), $term->name ); ?>">
+						<?php echo $term->name; ?>
+					</a>
+				</h3>
+			</li>
+		<?php endforeach; ?>
+	<?php else: ?>
+		<li class="taxonomy-term teaser image-button"></li>
+		<li class="taxonomy-term teaser image-button"></li>
+		<li class="taxonomy-term teaser image-button"></li>
+		<li class="taxonomy-term teaser image-button"></li>
+		<li class="taxonomy-term teaser image-button"></li>
+		<li class="taxonomy-term teaser image-button"></li>
+	<?php endif; ?>
+	</ul>
+</div>
 </div>
