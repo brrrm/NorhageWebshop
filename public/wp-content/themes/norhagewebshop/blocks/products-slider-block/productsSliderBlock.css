@@ -3,7 +3,7 @@
 }
 .products-slider-block{
 	position: relative;
-	padding:4em 0 2em 0;
+	padding-top:2em;
 	color: #377417;
 	height: 95vh;
 }
@@ -28,11 +28,8 @@
 	z-index: -2;
 }
 .products-slider-block .title-col{
-	flex: 100% 0 0;
-	padding: 0 2em 0 2em;
-	max-width: 70%;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left:20%;
+	margin-right:20%;
 }
 .products-slider-block .title-col h2{
 	font-size: 3em;
