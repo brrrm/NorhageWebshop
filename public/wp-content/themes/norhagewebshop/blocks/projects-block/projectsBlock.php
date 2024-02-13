@@ -6,6 +6,8 @@
  */
 
 // Load values and assign defaults.
+$title			= get_sub_field( 'title' ) ?? false;
+$text			= get_sub_field('text') ?? '';
 $projects		= get_field( 'projects' )?? get_sub_field( 'projects' );
 $text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
 
@@ -51,7 +53,7 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'placeholder' => 'Our quality? Have a look for yourself!'
+			'content' => 'Our quality? Have a look for yourself!'
 		]
 	]
 ];
@@ -64,6 +66,11 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
+		<?php if($title): ?>
+			<h2><?php echo esc_html( $title ); ?></h2>
+			<?php echo $text; ?>
+		<?php endif; ?>
+
 	</div>
 	<div class="projects-col">
 		<?php if($projects): ?>

@@ -6,7 +6,9 @@
  */
 
 // Load values and assign defaults.
+$title			= get_sub_field( 'title' ) ?? false;
 $products		= get_field( 'products' )?? get_sub_field( 'products' );
+$text			= get_sub_field( 'text' ) ?? '';
 
 // If no posts have been selected, load all the posts from this project's post-type.
 if(!$products || empty($products)){
@@ -71,6 +73,11 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
+		<?php if($title): ?>
+			<h2><?php echo esc_html( $title ); ?></h2>
+			<?php echo $text; ?>
+		<?php endif; ?>
+
 	</div>
 	<div class="products-col">
 		<?php if($products): ?>
