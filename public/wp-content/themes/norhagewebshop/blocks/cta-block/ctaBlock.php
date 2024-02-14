@@ -6,7 +6,11 @@
  */
 
 // Load values and assign defaults.
-$image			= get_field( 'image' ) ?? get_sub_field( 'image' );
+$title			= get_sub_field( 'title' );
+$text			= get_sub_field( 'text' );
+$phone			= get_sub_field( 'phone_number' );
+$email			= get_sub_field( 'email' );
+$image			= get_sub_field( 'image' );
 
 
 // Support custom "anchor" values.
@@ -31,19 +35,19 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'placeholder' => 'Need help with your choice?'
+			'content' => 'Need help with your choice?'
 		]
 	],
 	[
 		'core/paragraph',
-		[ 
-			'placeholder' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+		[
+			'content' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
 		]
 	],
 	[
 		'core/paragraph',
-		[ 
-			'placeholder' => 'Call us today and we’ll jumpstart your project!' 
+		[
+			'content' => 'Call us today and we’ll jumpstart your project!' 
 		]
 	],
 	[
@@ -73,5 +77,17 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 		<InnerBlocks 
 			allowedBlocks="<?php echo esc_attr( wp_json_encode( $allowedBlocks ) ); ?>" 
 			template="<?php echo esc_attr( wp_json_encode( $innerBlocksTemplate ) ); ?>" />
+
+		<?php if($title): ?>
+			<h2 class="blockTitle"><?php echo $title; ?></h2>
+			<?php echo $text ?? ''; ?>
+			<?php if($phone):?>
+				<p><a href="tel:<?php echo trim(esc_html($phone)); ?>" class="cta-phone button"><?php echo esc_html($phone); ?></a></p>
+			<?php endif; ?>
+			<?php if($email):?>
+				<p><a href="mailto:<?php echo trim(esc_html($email)); ?>" class="cta-email button"><?php echo esc_html($email); ?></a></p>
+			<?php endif; ?>
+		<?php endif; ?>
+
 	</div>
 </div>
