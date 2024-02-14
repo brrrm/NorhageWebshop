@@ -1962,7 +1962,9 @@ ul.sub-categories li.image-button a img{
 article.project figure.wp-block-gallery .wp-block-image{
 	max-width: 50%;
 }
-
+article.project figure.wp-block-gallery{
+	padding-right: 1em;
+}
 
 nav.woocommerce-pagination{
 	margin-top: 1em;
