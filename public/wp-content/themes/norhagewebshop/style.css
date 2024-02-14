@@ -1792,9 +1792,6 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 
 
 /*rechter block cart pagina*/
-.is-mobile .wc-block-components-sidebar .wp-block-woocommerce-cart-order-summary-block{
-	padding: 1em;
-}
 .wc-block-components-sidebar .wp-block-woocommerce-cart-order-summary-block span.wc-block-cart__totals-title{
 	text-align: left;
 	text-transform: none;
@@ -1959,4 +1956,26 @@ ul.sub-categories li.image-button a img{
 	ul.sub-categories li.image-button:after{
 		aspect-ratio: 3/1;
 	}
+}
+
+
+article.project figure.wp-block-gallery .wp-block-image{
+	max-width: 50%;
+}
+
+
+nav.woocommerce-pagination{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+nav.woocommerce-pagination ul.page-numbers{
+	margin: 0;
+}
+nav.woocommerce-pagination ul.page-numbers,
+nav.woocommerce-pagination ul.page-numbers li{
+	border: none;
+}
+nav.woocommerce-pagination ul.page-numbers li span.current{
+	background-color: var(--store-color);
+	color: var(--white);
 }
