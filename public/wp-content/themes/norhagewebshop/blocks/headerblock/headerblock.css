@@ -41,7 +41,6 @@
 	position: relative;
 	background: var(--store-color);
 	background: var(--green-gradient);
-	
 	color: var(--white);
 	padding: var(--header-height) 2rem 0 2rem;
 	height: 100%;
@@ -125,7 +124,7 @@
 	.headerblock .headerblock-text-col{
 		flex: 100% 0 0;
 		order: 2;
-		padding: 4em 2em 1em 2em;
+		padding: 4em 1em 1em 1em;
 		font-size: 1em;
 	}
 	.headerblock .headerblock-text-col .text {
@@ -137,7 +136,7 @@
 	}
 	.headerblock .headerblock-usps{
 		width: 100%;
-		padding: 0 2em 2em;
+		padding: 0 1em 2em;
 		font-size: 1em;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;

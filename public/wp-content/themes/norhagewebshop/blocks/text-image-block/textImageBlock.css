@@ -14,6 +14,9 @@
 .text-image-block .text-col a{
 	text-decoration: underline;
 }
+.text-image-block.green_bg a{
+	color: #fff;
+}
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 0;
 	align-self: center;
@@ -62,10 +65,14 @@
 		display: block;
 		padding: 2em 1em;
 	}
+	.text-image-block .text-col{
+		padding: 0;
+	}
 	.text-image-block--image-col{
 		margin-top: 0;
 		margin-bottom: 0;
 		min-height: inherit;
+		padding-top: 1em;
 	}
 	.text-image-block--image-col figure img{
 		position: relative;

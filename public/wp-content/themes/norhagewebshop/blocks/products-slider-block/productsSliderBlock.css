@@ -35,6 +35,11 @@
 .products-slider-block .title-col h2{
 	font-size: 3em;
 }
+@media all and (max-width:1770px){
+	.products-slider-block .title-col h2{
+		font-size: 2.5em;
+	}
+}
 .products-slider-block .slider{
 	display: flex;
 	flex-wrap: nowrap;
@@ -88,8 +93,16 @@
 	.products-slider-block{
 		display: block;
 		padding: 2em 1em;
+	}
+	.products-slider-block .title-col{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.products-slider-block .slider{
+		padding: 0;
+		display: block;
 	}	
 	.products-slider-block .projects-col ul li{
-		flex: 50% 0 1;
+		flex: 50% 0 0;
 	}
 }

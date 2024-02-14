@@ -30,6 +30,9 @@
 	text-shadow: 1px 1px 4px #000;
 }
 @media screen and (max-width:768px){
+	.categories-block ul.taxonomy-teasers{
+		margin-right: 0;
+	}
 	.categories-block ul.taxonomy-teasers li.taxonomy-term{
 		flex: calc((100% - 1 * 1em) / 2) 0 0;
 	}

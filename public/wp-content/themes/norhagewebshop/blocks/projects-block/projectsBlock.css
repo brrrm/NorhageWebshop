@@ -33,7 +33,11 @@
 		display: block;
 		padding: 2em 1em;
 	}	
+	.projects-block .title-col{
+		padding: 0;
+	}
 	.projects-block .projects-col ul li{
-		flex: 50% 0 ;
+		flex: 50% 0 0;
+		padding-top: 1em;
 	}
 }
