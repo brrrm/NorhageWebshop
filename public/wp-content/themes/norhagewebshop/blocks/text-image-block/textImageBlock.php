@@ -54,15 +54,22 @@ $innerBlocksTemplate = [
 	[
 		'core/paragraph',
 		[ 
-			'content' => 'Call us today and we’ll jumpstart your project!' 
+			'content' => 'Please contact us:' 
 		]
 	],
 	[
 		'core/button',
 		[ 
-			'text' => 'Call now',
+			'text' => '+4796759359',
 			'url' => 'tel:+4796759359'
-		]
+		],
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'info@norhagewebshop.no',
+			'url' => 'mailto:info@norhagewebshop.no'
+		],
 	]
 ];
 $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
