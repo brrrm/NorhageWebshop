@@ -1965,7 +1965,11 @@ article.project figure.wp-block-gallery .wp-block-image{
 article.project figure.wp-block-gallery{
 	padding-right: 1em;
 }
-
+@media all and (max-width:768px){
+	article.project figure.wp-block-gallery{
+		padding: 0;
+	}
+}
 nav.woocommerce-pagination{
 	margin-top: 1em;
 	margin-bottom: 1em;
