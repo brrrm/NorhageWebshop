@@ -51,6 +51,11 @@
 	font-weight: 200;
 	font-style: italic;
 }
+@media all and (max-width:1770px){
+	.products-slider-block .slider-title-col strong{
+		font-size: 2em;
+	}
+}
 .products-slider-block .projects-col{
 	flex: 75% 0 0;
 }
