@@ -31,26 +31,13 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'content' => 'Need emergency damage repair?'
+			'content' => 'Need emergency damage repair? <br>Call us today!'
 		]
 	],
 	[
 		'core/paragraph',
 		[ 
 			'content' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
-		]
-	],
-	[
-		'core/paragraph',
-		[ 
-			'content' => 'Call us today and we’ll jumpstart your project!' 
-		]
-	],
-	[
-		'core/button',
-		[ 
-			'text' => 'Call now',
-			'url' => 'tel:+4796759359'
 		]
 	]
 ];

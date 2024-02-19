@@ -14,10 +14,13 @@
 .text-image-block .text-col a{
 	text-decoration: underline;
 }
+.text-image-block.green_bg a{
+	color: #fff;
+}
 .text-image-block .text-col{
 	flex:var(--big-flex) 0 0;
 	align-self: center;
-	padding: 0 2em 0 0;
+	padding: 0 2em 0 2em;
 }
 .text-image-block.text_right .text-col{
 	order: 2;
@@ -53,16 +56,23 @@
 	height: 100%;
 	display: block;
 }
+.text-image-block .wp-block-button a{
+	
+}
 
 @media all and (max-width:768px){
 	.text-image-block{
 		display: block;
 		padding: 2em 1em;
 	}
+	.text-image-block .text-col{
+		padding: 0;
+	}
 	.text-image-block--image-col{
 		margin-top: 0;
 		margin-bottom: 0;
 		min-height: inherit;
+		padding-top: 1em;
 	}
 	.text-image-block--image-col figure img{
 		position: relative;
