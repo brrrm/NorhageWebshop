@@ -60,6 +60,6 @@
 		overflow: auto;
 	}
 	.products-block .products-col ul li.image-button{
-		flex: 60% 0 0;
+		flex: 60% 1 0;
 	}
 }
