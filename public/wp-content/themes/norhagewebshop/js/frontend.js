@@ -92,14 +92,17 @@
 			});
 		}
 
-		var variationPrice;
-		$( '.single_variation_wrap' ).on( 'show_variation', function( event, variation ) {
+		var variationPrice = 0;
+		$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
 			variationPrice = variation.display_regular_price;
+			console.log('show_variation');
+			console.log(variation);
 			add_addons_to_wc_variation_price();
 		});
 
 		$('.variations_form .quantity input').change(function(e){
 			e.preventDefault();
+			console.log('quantity');
 			add_addons_to_wc_variation_price();
 		});
 
