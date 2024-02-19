@@ -283,7 +283,12 @@ add_filter("wp_nav_menu_objects",'norhage_wp_nav_menu_objects_start_in',10,2);
  */
 function norhagewebshop_scripts() {
 	wp_enqueue_style( 'norhagewebshop-style', get_stylesheet_uri(), array(), _G_VERSION );
-	wp_enqueue_script('reeleaf-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery'], _G_VERSION);
+	wp_enqueue_script('norhagewebshop-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery', 'wc-settings'], _G_VERSION);
+	/*$myThemeParams = [
+		'test1'	=> 'lalala'
+	];
+	wp_add_inline_script('norhagewebshop-misc', 'var myThemeParams = ' . wp_json_encode( $myThemeParams ), 'before');*/
+
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
