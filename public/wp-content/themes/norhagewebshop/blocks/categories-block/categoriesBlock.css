@@ -14,19 +14,19 @@
 .categories-block ul.taxonomy-teasers{
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.5em;
+	gap: 1em;
     list-style: none;
     padding: 0;
     margin-right: 25%;
 }
 .categories-block ul.taxonomy-teasers li.taxonomy-term{
 	position: relative;
-	flex: calc((100% - 2 * 0.5em) / 3) 1 0;
+	flex: calc((100% - 2 * 1em) / 3) 1 0;
 	aspect-ratio: 3/2;
 }
 .categories-block ul.taxonomy-teasers li.taxonomy-term:nth-child(3):has(+ li:last-child),
 .categories-block ul.taxonomy-teasers li.taxonomy-term:nth-child(4):last-child{
-	flex: calc((100% - 0.5em) / 2) 1 0;
+	flex: calc((100% - 1em) / 2) 1 0;
 }
 .categories-block ul.taxonomy-teasers li.taxonomy-term h3{
 	text-align: left;
