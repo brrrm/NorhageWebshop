@@ -71,12 +71,14 @@
 	margin: 0;
 	padding: 0;	
 	overflow-x: scroll;
+	overflow-y: hidden;
 }
 .products-slider-block .projects-col ul li{
 	display: block;
 	flex: 25% 0 0;
 	aspect-ratio: 1;
 }
+
 .products-slider-block .projects-col ul li.image-button .title{
 	text-align: left;
 	text-shadow: 1px 1px 1px #000;
@@ -102,6 +104,9 @@
 		padding: 0;
 		display: block;
 	}	
+	.products-slider-block .projects-col ul{
+		gap: 1em;
+	}
 	.products-slider-block .projects-col ul li{
 		flex: 50% 0 0;
 	}
