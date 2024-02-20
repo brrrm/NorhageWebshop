@@ -84,33 +84,34 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			$extras = get_field('product_extras');
 			if($extras):
 		?>
-		<div class="addons">
-			<h3>2: <?php _e('Select extra options', 'norhage'); ?></h3>
-			<div class="add-products">
-				<?php if($extras):
-					foreach($extras as $addon):
-						//$product = $addon['product'];
-						$product_identifier = 'product-' . $addon['product']->ID;
-						$max_quantity = $addon['maximum_quantity'];
-						$addon_product = wc_get_product($addon['product']->ID);
-						$addon_price = $addon_product->get_price();
-				?>
-				<div class="addon">
-					<div class="addon-image">
-						<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
+			<div class="addons">
+				<h3>2: <?php _e('Select extra options', 'norhage'); ?></h3>
+				<div class="add-products">
+					<?php
+						foreach($extras as $addon):
+							if(!$addon['product']){
+								continue; // soms is de import niet goed gelukt en dan is er geen product opgeslagen als addon.
+							}
+							$product_identifier = 'product-' . $addon['product']->ID;
+							$max_quantity = $addon['maximum_quantity'];
+							$addon_product = wc_get_product($addon['product']->ID);
+							$addon_price = $addon_product->get_price();
+					?>
+					<div class="addon">
+						<div class="addon-image">
+							<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
+						</div>
+						<h3><?php echo $addon_product->get_name(); ?></h3>
+						<div class="addon-price">
+							<?php echo wc_price($addon_price); ?>
+						</div>
+						<div class="quantity">
+							<input class="qty" type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
+						</div>
 					</div>
-					<h3><?php echo $addon_product->get_name(); ?></h3>
-					<div class="addon-price">
-						<?php echo wc_price($addon_price); ?>
-					</div>
-					<div class="quantity">
-						<input class="qty" type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
-					</div>
-				</div>
-				<?php endforeach; ?>
-			<?php endif; ?>
-			</div>	
-		</div>
+					<?php endforeach; ?>
+				</div>	
+			</div>
 		<?php endif; ?>
 
 		<div class="single_variation_wrap">
