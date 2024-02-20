@@ -43,11 +43,13 @@
 	--flex-gap-headerblock: 0.25em;
 	gap: var(--flex-gap-headerblock);
 	cursor: pointer;
+	background: #fff;
+}
+.productHeaderBlock .image-col:not(:has(img)){
 	background: #ccc;
 }
-.productHeaderBlock .image-col.empty{
-	background: #ccc;
-}
+
+
 .productHeaderBlock .image-col::-webkit-scrollbar{
 	display: none;
 }
