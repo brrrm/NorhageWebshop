@@ -30,7 +30,7 @@
                     "name": "product",
                     "aria-label": "",
                     "type": "post_object",
-                    "instructions": "",
+                    "instructions": "Here you can select extra products that can be selected to upgrade this variable product. Be aware: Only simple products are allowed. Variable products will not work!",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -44,7 +44,9 @@
                     "post_status": [
                         "publish"
                     ],
-                    "taxonomy": "",
+                    "taxonomy": [
+                        "product_type:simple"
+                    ],
                     "return_format": "object",
                     "multiple": 0,
                     "translations": "sync",
@@ -99,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705918195
+    "modified": 1708421224
 }
