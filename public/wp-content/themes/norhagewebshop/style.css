@@ -355,7 +355,7 @@ header#masthead nav#site-navigation{
 	transition: height 0.5s ease-out;
 	border-bottom: 1px solid var(--white);
 }
-header#masthead nav#site-navigation aside{
+header#masthead nav#site-navigation aside.contact{
 	position: absolute;
 	right: 1.416666667em;
 	top: 0.4em;
@@ -363,7 +363,7 @@ header#masthead nav#site-navigation aside{
 	line-height: 1.04em;
 	transition: opacity 0.5s ease-out 0s, z-index 0s linear 0.7s;
 }
-.small-height-header header#masthead nav#site-navigation aside{
+.small-height-header header#masthead nav#site-navigation aside.contact{
 	z-index: -1;
 	opacity: 0;
 }
@@ -371,21 +371,31 @@ header#masthead nav#site-navigation aside{
 	header#masthead .site-branding > a{
 		left: 1em;
 	}
-	header#masthead nav#site-navigation aside{
+	header#masthead nav#site-navigation aside.contact{
 		display: none;
 	}
 }
-header#masthead nav#site-navigation aside h3{
+header#masthead nav#site-navigation aside.contact h3{
 	font-size: 0.65em;
 	margin: 0;
 	font-style: italic;
 	font-size: 100;
 	color: #ffffff;
 }
-header#masthead nav#site-navigation aside a{
+header#masthead nav#site-navigation aside.contact a{
 	font-size: 1em;
 	font-weight: 700;
 	color: #ffffff;
+}
+
+/*
+ * search
+ */
+header#masthead nav#site-navigation aside.search{
+	position: absolute;
+	left: 35%;
+	z-index: 1;
+	padding: 0;
 }
 
 header#masthead nav#site-navigation .menu-main-navigation-container{

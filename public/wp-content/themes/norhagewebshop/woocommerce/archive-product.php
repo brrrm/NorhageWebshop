@@ -38,31 +38,32 @@ do_action( 'woocommerce_before_main_content' );
 
 	<?php
     $this_category = get_queried_object();
-
-    $args = [
-		'hierarchical' => 1,
-		'show_option_none' => '',
-		'hide_empty' => 0,
-		'parent' => $this_category->term_id,
-		'taxonomy' => 'product_cat'
-	];
-	if($subcats = get_categories($args)): ?>
-		<div class="alignwide">
-			<h2><?php _e('Subcategories', 'norhagewebshop'); ?></h2>
-			<ul class="sub-categories">
-		
-			<?php foreach($subcats as $cat): 
-				$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
-				$image = wp_get_attachment_image( $thumbnail_id, 'full' );
-				$permalink = get_permalink( $cat->term_id );
-			?>
-				<li class="subcategory image-button">
-					<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $image; ?></a>
-					<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo $cat->name; ?></a></h3>
-				</li> 
-			<?php endforeach; ?>
-			</ul>
-		</div>
+    if($this_category instanceof WP_Term):
+	    $args = [
+			'hierarchical' => 1,
+			'show_option_none' => '',
+			'hide_empty' => 0,
+			'parent' => $this_category->term_id,
+			'taxonomy' => 'product_cat'
+		];
+		if($subcats = get_categories($args)): ?>
+			<div class="alignwide">
+				<h2><?php _e('Subcategories', 'norhagewebshop'); ?></h2>
+				<ul class="sub-categories">
+			
+				<?php foreach($subcats as $cat): 
+					$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+					$image = wp_get_attachment_image( $thumbnail_id, 'full' );
+					$permalink = get_permalink( $cat->term_id );
+				?>
+					<li class="subcategory image-button">
+						<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $image; ?></a>
+						<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo $cat->name; ?></a></h3>
+					</li> 
+				<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php
