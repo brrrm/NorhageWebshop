@@ -963,9 +963,15 @@ footer.site-footer h2{
 footer.site-footer a{
 	color: #ffffff;
 }
-footer.site-footer ul {
+footer.site-footer ul.menu {
 	list-style: none;
 	padding-left: 0;
+	display: block;
+	columns: 2 auto;
+	gap: 2em;
+}
+footer.site-footer ul.menu > li{
+	break-inside: avoid;
 }
 @media all and (max-width: 768px){
 	footer.site-footer:after{

@@ -25,7 +25,7 @@
 				</dd>
 				
 				<dt><?php _e('Email', 'norhagewebshop'); ?></dt>
-				<dd><a href="mailto:info@norhagewebshop.no">info@norhagewebshop.no</a></dd>
+				<dd><a href="mailto:info@norhage.no">info@norhage.no</a></dd>
 				
 				<dt><?php _e('Phone', 'norhagewebshop'); ?></dt>
 				<dd>
