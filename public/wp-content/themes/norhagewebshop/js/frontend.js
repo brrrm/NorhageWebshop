@@ -34,15 +34,16 @@
 			$('#site-navigation').toggleClass('expanded');
 		});
 
-		$('.projects-block .slider-nav button').click(function(e){
+		$('.projects-block .slider-nav button, .products-slider-block .slider-nav button').click(function(e){
+			console.log('click');
 			e.preventDefault();
-			let s = $(this).parents('.projects-block').scrollLeft();
+			let s = $(this).parents('.slider').scrollLeft();
 			if($(this).hasClass('left')){
 				s -= $(window).width() / 3;
 			}else{
 				s += $(window).width() / 3;
 			}
-			$(this).parents('.projects-block').scrollLeft(s);
+			$(this).parents('.slider').scrollLeft(s);
 		});
 
 
