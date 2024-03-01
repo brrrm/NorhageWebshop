@@ -94,15 +94,12 @@
 
 		var variationPrice = 0;
 		$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
-			variationPrice = variation.display_regular_price;
-			console.log('show_variation');
-			console.log(variation);
+			variationPrice = variation.display_price;
 			add_addons_to_wc_variation_price();
 		});
 
 		$('.variations_form .quantity input').change(function(e){
 			e.preventDefault();
-			console.log('quantity');
 			add_addons_to_wc_variation_price();
 		});
 
@@ -130,19 +127,25 @@
 				newPrice += (price * quantity);
 			});
 
-			let currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi .woocommerce-Price-currencySymbol').clone();
+			let currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
 			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
 			formattedPrice = newPrice.toLocaleString(
 					wcSettings.locale.siteLocale.replace('_', '-'), 
 					{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
 				)
 				.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
-			$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').text(' ' + formattedPrice + ' ');
+
+			let priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
+			if($('.woocommerce-variation-price .price del').length){
+				priceNode = $('.woocommerce-variation-price .price ins .woocommerce-Price-amount bdi');
+			}
+			priceNode.html(' ' + formattedPrice + ' ');
+			
 			
 			if(wcSettings.currency.symbolPosition == 'left' || wcSettings.currency.symbolPosition == 'left_space'){
-				$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').prepend(currencySymbol);
+				priceNode.prepend(currencySymbol);
 			}else if(wcSettings.currency.symbolPosition == 'right' || wcSettings.currency.symbolPosition == 'right_space'){
-				$('.woocommerce-variation-price .price .woocommerce-Price-amount bdi').append(currencySymbol);
+				priceNode.append(currencySymbol);
 			}
 		}
 
