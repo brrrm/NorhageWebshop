@@ -394,8 +394,68 @@ header#masthead nav#site-navigation aside.contact a{
 header#masthead nav#site-navigation aside.search{
 	position: absolute;
 	left: 35%;
+	margin: 0 0 0 1.5em;
 	z-index: 1;
 	padding: 0;
+}
+header#masthead nav#site-navigation aside.search form{
+	display: flex;
+	width: 2em;
+	margin: 0;
+	padding: 0.15em 0;
+	font-size: 1em;
+	background: var(--store-color);
+	border: 1px solid var(--white);
+	border-top: none;
+	border-radius: 0 0 1em 1em;
+	overflow: hidden;
+	transition: width 0.3s ease, font-size 0.3s ease;
+}
+body.small-height-header header#masthead nav#site-navigation aside.search form{
+	font-size: 0.8em;
+}
+header#masthead nav#site-navigation aside.search form:hover,
+header#masthead nav#site-navigation aside.search form:focus-within,
+header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)){
+	width: 20em;
+	border-color: var(--store-color);
+	background-color: var(--white);
+}
+header#masthead nav#site-navigation aside.search form:focus-within{
+	background-color: #fafad8;
+}
+header#masthead nav#site-navigation aside.search form input,
+header#masthead nav#site-navigation aside.search form button{
+	font-size: 0.7em;
+	background-color: transparent;
+	border: none;
+	line-height: 2em;
+}
+header#masthead nav#site-navigation aside.search form input{
+	flex: calc(1/0.7 * 18em) 0 1;
+	min-width: 0;
+	padding: 0 0;
+	transition: padding 0.3s ease;
+}
+header#masthead nav#site-navigation aside.search form:hover input,
+header#masthead nav#site-navigation aside.search form:focus-within input,
+header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)) input{
+	padding: 0 1em;
+}
+header#masthead nav#site-navigation aside.search form input:focus{
+	outline: none;
+}
+header#masthead nav#site-navigation aside.search form button{
+	flex: calc(1/0.7 * 2em) 0 0;
+	background: transparent url(images/svg/search.svg) center no-repeat;
+	background-size: auto 70%;
+	text-indent: -99999em;
+	overflow: hidden;
+}
+header#masthead nav#site-navigation aside.search form:hover button,
+header#masthead nav#site-navigation aside.search form:focus-within button,
+header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)) button{
+	background-image: url(images/svg/search-black.svg);
 }
 
 header#masthead nav#site-navigation .menu-main-navigation-container{
@@ -427,7 +487,7 @@ header#masthead nav#site-navigation ul.menu{
 	margin: 0;
 	height: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: nowrap;
 	box-sizing: border-box;
 	flex-direction: row;
