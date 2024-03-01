@@ -40,10 +40,9 @@
 	scrollbar-width: none;  /* Firefox */
 	display: flex;
 	flex-wrap: wrap;
-	--flex-gap-headerblock: 0.25em;
-	gap: var(--flex-gap-headerblock);
+	gap: 0.25em;
 	cursor: pointer;
-	background: #ccc;
+	border-left: 1px solid var(--store-color);
 }
 .productHeaderBlock .image-col.empty{
 	background: #ccc;
