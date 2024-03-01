@@ -561,7 +561,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul li a{
 }
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container > ul > li:hover > a  {
-		color:#0DFF86;
+		color: var(--store-color);
 	}
 }
 
