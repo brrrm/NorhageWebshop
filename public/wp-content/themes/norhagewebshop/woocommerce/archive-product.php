@@ -47,7 +47,7 @@ do_action( 'woocommerce_before_main_content' );
 			'taxonomy' => 'product_cat'
 		];
 		if($subcats = get_categories($args)): ?>
-			<div class="alignwide">
+			<div class="alignwide subcategories">
 				<h2><?php _e('Subcategories', 'norhagewebshop'); ?></h2>
 				<ul class="sub-categories">
 			
@@ -65,16 +65,6 @@ do_action( 'woocommerce_before_main_content' );
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
 
 	<div class="before-products">
 	<?php
@@ -125,6 +115,16 @@ do_action( 'woocommerce_before_main_content' );
 		} 
 	?>
 	</div>
+
+	<?php
+	/**
+	 * Hook: woocommerce_archive_description.
+	 *
+	 * @hooked woocommerce_taxonomy_archive_description - 10
+	 * @hooked woocommerce_product_archive_description - 10
+	 */
+	do_action( 'woocommerce_archive_description' );
+	?>
 
 	<?php
 
