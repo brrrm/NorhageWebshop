@@ -48,7 +48,6 @@ do_action( 'woocommerce_before_main_content' );
 		];
 		if($subcats = get_categories($args)): ?>
 			<div class="alignwide subcategories">
-				<h2><?php _e('Subcategories', 'norhagewebshop'); ?></h2>
 				<ul class="sub-categories">
 			
 				<?php foreach($subcats as $cat): 

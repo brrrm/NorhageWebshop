@@ -1938,7 +1938,7 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
-	gap: var(--gap);
+	gap: 3em var(--gap);
 	margin: 0 auto;
 }
 .woocommerce ul.products::after,
@@ -2008,6 +2008,12 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	width: unset;
 }
 
+.woocommerce ul.products li.product a img{
+	margin: 0;
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: center;
+}
 
 ul.sub-categories{
 	display: flex;
@@ -2070,6 +2076,11 @@ nav.woocommerce-pagination ul.page-numbers li span.current{
 	color: var(--white);
 }
 
+
+
+/**
+ * contact forms
+ */
 form.wpcf7-form p{
 	display: block;
 	margin: 1em 0;
