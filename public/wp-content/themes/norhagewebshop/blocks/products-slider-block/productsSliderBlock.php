@@ -62,6 +62,11 @@ if($text_snippet){
 	<div class="slider">
 		<div class="slider-title-col">
 			<strong><?php echo esc_html( $text_next ); ?></strong>
+		
+			<ul class="slider-nav">
+				<li><button class="left"><?php _e('Left', 'norhageindustri'); ?></button></li>
+				<li><button class="right"><?php _e('Right', 'norhageindustri'); ?></button></li>
+			</ul>
 		</div>
 		<div class="projects-col">
 			<?php if($projects): ?>
