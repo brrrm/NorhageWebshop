@@ -47,18 +47,17 @@ $innerBlocksTemplate = [
 	[
 		'core/paragraph',
 		[
-			'content' => 'Call us today and we’ll jumpstart your project!' 
+			'content' => 'Contact us today and we’ll jumpstart your project!' 
 		]
 	],
 	[
-		'core/button',
-		[ 
-			'text' => 'Call now',
-			'url' => 'tel:+4796759359'
+		'contact-form-7/contact-form-selector',
+		[
+			'title'	=> 'Contact form 1'
 		]
 	]
 ];
-$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
+$allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button', 'contact-form-7/contact-form-selector'];
 ?>
 
 

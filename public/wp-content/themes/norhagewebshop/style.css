@@ -148,14 +148,18 @@ a{
 	color: var(--custom-text-color);
 	text-decoration: none;
 }
-.wp-block-button a.wp-element-button:hover{
-	transform: scale(1.05);
-}
-.wp-block-button a.wp-element-button{
+.wp-block-button a.wp-element-button,
+input[type="submit"]{
 	border: 2px solid var(--store-color);
 	background: var(--store-color);
 	text-decoration: none ;
 	padding: 0.5em 1.5em;
+	border-radius: 3em;
+	color: var(--white);
+}
+.wp-block-button a.wp-element-button:hover,
+input[type="submit"]:hover{
+	transform: scale(1.05);
 }
 .wp-block-button.is-style-outline a.wp-block-button__link.wp-element-button{
 	color: var(--store-color);
@@ -2067,4 +2071,57 @@ nav.woocommerce-pagination ul.page-numbers li{
 nav.woocommerce-pagination ul.page-numbers li span.current{
 	background-color: var(--store-color);
 	color: var(--white);
+}
+
+form.wpcf7-form p{
+	display: block;
+	margin: 1em 0;
+}
+form.wpcf7-form p br{
+	display: none;
+}
+form.wpcf7-form p span{
+	display: block;
+}
+form.wpcf7-form p label{
+	display: block;
+	margin: 0 0 0.3em;
+	font-weight: 600;
+	font-size: 0.667em;
+}
+form.wpcf7-form p .wpcf7-not-valid-tip{
+	font-size: 0.667em;
+	font-weight: 300;
+	font-style: italic;
+	display: block;
+	margin: 0.3em 0 0;
+}
+form.wpcf7-form p input,
+form.wpcf7-form p textarea{
+	display: block;
+	width: 100%;
+    line-height: 2em;
+    font-size: 1em;
+    font-family: 'kiro';
+    font-weight: 300;
+    padding: 0 0.5em;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+form.wpcf7-form p textarea{
+	line-height: 1.5em;
+	height: 9em;
+	padding: 0.5em;
+}
+form.wpcf7-form p input:focus,
+form.wpcf7-form p textarea:focus{
+	outline: none;
+	background-color: #fafad8;
+}
+form.wpcf7-form p input[type="submit"]{
+    padding: 0.5em 1.5em;
+    border-bottom: none;
+    width: auto;
+    line-height: 1.5em;
+    border:2px solid var(--store-color);
 }
