@@ -52,9 +52,10 @@ do_action( 'woocommerce_before_main_content' );
 				<ul class="sub-categories">
 			
 				<?php foreach($subcats as $cat): 
-					$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+					
+					$thumbnail_id = norhage_get_taxo_thumbnail($cat);
 					$image = wp_get_attachment_image( $thumbnail_id, 'full' );
-					$permalink = get_permalink( $cat->term_id );
+					$permalink = get_category_link( $cat );
 				?>
 					<li class="subcategory image-button">
 						<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $image; ?></a>

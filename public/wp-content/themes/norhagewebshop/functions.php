@@ -653,6 +653,36 @@ function add_rich_category_description($tag) {
 	<?php
 
 }
+
+
+/**
+ * gets the tumbnail of a (product) category
+ * if no thumbnail exists, it gets the thumbnail of one of the products
+ */
+function norhage_get_taxo_thumbnail($cat){
+	$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+	if(!$thumbnail_id){
+
+        $posts = get_posts([
+        	'post_type'		=> 'product',
+        	'numberposts'	=> 1,
+        	'tax_query'		=> [
+        		[
+	        		'taxonomy'		=> $cat->taxonomy,
+	        		'field'			=> 'term_id',
+	        		'terms'			=> $cat->term_id
+	        	]
+        	]
+        ]);
+        if(count($posts) > 0){
+        	$thumbnail_id = get_post_thumbnail_id($posts[0]->ID, [420, 420]);
+        }
+	}
+	return $thumbnail_id;
+}
+
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
