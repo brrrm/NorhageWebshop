@@ -34,7 +34,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'projects-block norhage-block';
+$class_name = 'projects-block norhage-block slider';
 if ( ! empty( $block['className'] ) ) {
     $class_name .= ' ' . $block['className'];
 }
@@ -55,6 +55,19 @@ $innerBlocksTemplate = [
 			'level'	=> 2,
 			'content' => 'Our quality? Have a look for yourself!'
 		]
+	],
+	[
+		'core/paragraph',
+		[
+			'content' => 'We take pride in the quality and durabillity of our products.' 
+		]
+	],
+	[
+		'core/button',
+		[ 
+			'text' => 'All showcases',
+			'url' => '/projects'
+		]
 	]
 ];
 $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item', 'core/button'];
@@ -70,6 +83,11 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 			<h2><?php echo esc_html( $title ); ?></h2>
 			<?php echo $text; ?>
 		<?php endif; ?>
+
+		<ul class="slider-nav">
+			<li><button class="left"><?php _e('Left', 'norhageindustri'); ?></button></li>
+			<li><button class="right"><?php _e('Right', 'norhageindustri'); ?></button></li>
+		</ul>
 
 	</div>
 	<div class="projects-col">
