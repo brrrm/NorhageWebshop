@@ -10,7 +10,7 @@ $title			= get_sub_field( 'title' );
 $text			= get_sub_field( 'text' );
 $phone			= get_sub_field( 'phone_number' );
 $email			= get_sub_field( 'email' );
-$image			= get_sub_field( 'image' );
+$image			= get_field( 'image' ) ?? get_sub_field( 'image' );
 
 
 // Support custom "anchor" values.
