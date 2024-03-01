@@ -51,7 +51,7 @@
 	display: none;
 }
 .productHeaderBlock .image-col figure{
-	flex: 23% 1 1;
+	flex: 18% 1 1;
 	width: auto;
 	aspect-ratio: 1;
 	display: block;
@@ -62,6 +62,7 @@
 	height: 100vh;
 	aspect-ratio: auto;
 }
+/*
 .productHeaderBlock .image-col figure:nth-child(5n):nth-last-child(2),
 .productHeaderBlock .image-col figure:nth-child(4n + 1):nth-last-child(2){
 	flex: 48% 1 1;
@@ -69,7 +70,7 @@
 .productHeaderBlock .image-col figure:nth-child(5n):nth-last-child(2) + *:last-child,
 .productHeaderBlock .image-col figure:nth-child(4n + 1):nth-last-child(2) + *:last-child{
 	flex: 48% 1 1;
-}
+}*/
 .productHeaderBlock .image-col figure img{
 	object-fit: cover;
 	display: block;
