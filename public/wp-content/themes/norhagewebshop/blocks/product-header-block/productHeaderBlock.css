@@ -4,7 +4,7 @@
 	width: 100%;
 	height: auto;
 	margin-top: calc(-1 * var(--header-height));
-	border-bottom: 2px solid var(--store-color);
+	border-bottom: 1px solid var(--store-color);
 	background: #fff;
 }
 .productHeaderBlock .text-col{
