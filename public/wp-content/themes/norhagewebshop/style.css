@@ -550,6 +550,7 @@ header#masthead nav#site-navigation ul li button.expander{
 header#masthead nav#site-navigation ul.menu > li > a{
 	display: inline-block;
 	line-height: 1.3em;
+	transition: transform 0.3s ease;
 }
 header#masthead nav#site-navigation ul.menu a:link,
 header#masthead nav#site-navigation ul.menu a:visited{
@@ -561,7 +562,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul li a{
 }
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container > ul > li:hover > a  {
-		color: var(--store-color);
+		transform: translate(0, -3px);
 	}
 }
 
