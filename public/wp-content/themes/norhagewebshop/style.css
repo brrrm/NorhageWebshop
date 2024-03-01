@@ -1423,21 +1423,34 @@ body .image-popup .scroll-button:hover{
 .productHeaderBlock .text-col .summary .price{
 	margin: 0 0 0.5em;
 }
-.productHeaderBlock .text-col .summary form{
-	font-size: 1rem;
-	display: flex;
-	align-items: center;
-}
-.summary form.variations_form{
+.summary form.cart{
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: 20%;
 	font-size: 0.75em;
 }
-.summary form.variations_form > div > h3{
+.productHeaderBlock .text-col .summary form{
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0;
+}
+.productHeaderBlock .text-col .summary form.simple_form .simple_product_wrap{
+	border-top: none;
+}
+.productHeaderBlock .text-col .summary form.simple_form .simple_product_wrap:before{
+	content: none;
+}
+.summary form.cart > div > h3{
 	color: var(--store-color);
 	font-weight: 600;
 	margin: 1em 0 0.5em;
+}
+.summary form.cart.simple_form .sizes_input{
+	flex: 100%;
+    border-top: 1px dashed var(--store-color);
+    margin: 0 0 1em 0;
 }
 .summary form.variations_form .dimensions{
 	flex: 30% 1 0;
@@ -1470,15 +1483,21 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form .dimensions .variations a.reset_variations{
 	display: none !important;
 }
-.summary form.variations_form .dimensions .sizes_input > div{
+.summary form.cart .sizes_input > div{
 	margin: 0 1em 0.5em 0;
 	line-height: 2em;
 	display: flex;
 	align-items: center;
 	width: 100%;
 }
-.summary form.variations_form .dimensions .sizes_input > div label{
+.summary form.cart .sizes_input > div label{
 	flex: 50% 0 0;
+}
+.summary form.cart.simple_form .sizes_input > div label{
+	flex: 10em 0 0;
+}
+.summary form.cart .sizes_input .quantity .qty{
+	width: 4em;
 }
 
 .summary form.variations_form .addons{
@@ -1532,7 +1551,8 @@ body .image-popup .scroll-button:hover{
 	grid-area: amount;
 	width: fit-content;
 }
-.summary form.variations_form .single_variation_wrap{
+.summary form.variations_form .single_variation_wrap,
+.summary form.simple_form .simple_product_wrap{
 	flex: 100% 0 0;
 	padding: 0;
 	border-top: 1px dashed var(--store-color);
@@ -1543,15 +1563,22 @@ body .image-popup .scroll-button:hover{
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-description p{
 	margin: 0 0 0.5em;
 }
-.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price span{
+.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price span,
+.summary form.simple_form .simple_product_wrap .price span{
 	color: var(--store-color);
 	font-weight: 600;
 }
-.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart {
+.summary form.simple_form .simple_product_wrap .price{
+	margin: 1em 0 0.5em;
+}
+.summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart,
+.summary form.simple_form .simple_product_wrap .woocommerce-simple-product-add-to-cart {
 	display: flex;
 	align-items: center;
 	margin: 0.5em 0;
 }
+.summary form.simple_form .sizes_input:before, 
+.summary form.simple_form .simple_product_wrap:before,
 .summary form.variations_form .single_variation_wrap:before, 
 .summary form.variations_form .dimensions:before {
 	content: " ";

@@ -38,19 +38,28 @@ if ( post_password_required() ) {
 					do_action( 'woocommerce_before_single_product' );
 				?>
 				<h1><?php the_title(); ?></h1>
+				
 				<?php wc_get_template( 'single-product/price.php' ); ?>
 				<div><?php echo wpautop($product->get_short_description()); ?></div>
-				<?php if($product->is_type('simple')): ?>
+
+				<?php
+					$cutting_fee = get_field('cutting_fee');
+					$has_cutting_fee = ($cutting_fee && $cutting_fee > 0)? true : false;
+				?>
+
+				<?php if($product->is_type('simple') && !$has_cutting_fee): ?>
 					<div class="summary entry-summary alignfull">
-					<?php do_action( 'woocommerce_single_product_summary' ); ?>
+						<?php do_action( 'woocommerce_single_product_summary' ); ?>
 					</div>
 				<?php endif; ?>
-				<?php if($product->is_type('variable')): ?>
+				
+				<?php if($product->is_type('variable') || $has_cutting_fee): ?>
 					<div class="summary entry-summary alignfull">
 						<?php wc_get_template( 'single-product/price.php' ); ?>
 						<a href="#product-config" class="button add_to_cart_button product_type_variable"><?php printf(__('Customize your %s'), $product->get_title()); ?></a>
 					</div>
 				<?php endif; ?>
+
 			</div>
 			<div class="image-col">
 				<?php
@@ -78,7 +87,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 
-		<?php if(!$product->is_type('simple')): ?>
+		<?php if(!$product->is_type('simple') || $has_cutting_fee): ?>
 			<div class="summary entry-summary alignfull" id="product-config">
 				<?php
 				/**

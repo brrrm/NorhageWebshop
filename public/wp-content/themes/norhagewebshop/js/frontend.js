@@ -93,13 +93,20 @@
 			});
 		}
 
+
+		/**
+		 * Add-to-cart customization
+		 */
 		var variationPrice = 0;
+		if(!variationPrice && typeof norhage_product_info !== 'undefined'){
+			variationPrice = norhage_product_info.price;
+		}
 		$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
 			variationPrice = variation.display_price;
 			add_addons_to_wc_variation_price();
 		});
 
-		$('.variations_form .quantity input').change(function(e){
+		$('form.cart .quantity input').change(function(e){
 			e.preventDefault();
 			add_addons_to_wc_variation_price();
 		});
@@ -128,7 +135,21 @@
 				newPrice += (price * quantity);
 			});
 
-			let currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
+			let currencySymbol;
+			let priceNode
+			if(typeof norhage_product_info !== 'undefined' && norhage_product_info.productType == 'simple'){
+				currencySymbol = $('.woocommerce-simple-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-simple-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
+				priceNode = $('.woocommerce-simple-price .price .woocommerce-Price-amount bdi');
+				if($('.woocommerce-simple-price .price del').length){
+					priceNode = $('.woocommerce-simple-price .price ins .woocommerce-Price-amount bdi');
+				}
+			}else{
+				currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
+				priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
+				if($('.woocommerce-variation-price .price del').length){
+					priceNode = $('.woocommerce-variation-price .price ins .woocommerce-Price-amount bdi');
+				}
+			}
 			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
 			formattedPrice = newPrice.toLocaleString(
 					wcSettings.locale.siteLocale.replace('_', '-'), 
@@ -136,10 +157,6 @@
 				)
 				.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
 
-			let priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
-			if($('.woocommerce-variation-price .price del').length){
-				priceNode = $('.woocommerce-variation-price .price ins .woocommerce-Price-amount bdi');
-			}
 			priceNode.html(' ' + formattedPrice + ' ');
 			
 			
@@ -151,6 +168,9 @@
 		}
 
 
+		/**
+		 * quantity stepper input
+		 */
 		$('.quantity').each(function(){
 			let plusBtn = $('<button />').text('+').appendTo($(this)).addClass(['qtyBtn', 'plus']);
 			let minBtn = $('<button />').text('-').prependTo($(this)).addClass(['qtyBtn', 'min']);
@@ -168,9 +188,11 @@
 			let inputSibling = $(this).siblings('input');
 			let currentValue = parseFloat(inputSibling.val());
 			let stepSize = 1;
+
 			if(inputSibling[0].hasAttribute('step')){
 				stepSize = parseFloat( inputSibling.attr('step'));
 			}
+
 			if(action == 'plus'){
 				currentValue += stepSize;
 				if(inputSibling[0].hasAttribute('max') && inputSibling.attr('max') !== '' && currentValue > inputSibling.attr('max')){
@@ -182,7 +204,11 @@
 					currentValue = parseFloat(inputSibling.attr('min'));
 				}
 			}
-			currentValue = Number(currentValue.toFixed(2));
+			
+			// to fix rounding errors with floating points
+			if(stepSize < 1){
+				currentValue = currentValue.toFixed(3); 
+			}
 			inputSibling.val(currentValue);
 			inputSibling.trigger('change');
 		}

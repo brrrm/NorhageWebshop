@@ -69,11 +69,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
 					<div class="width">
 						<label for="width"><?php _e('Width (m)', 'norhage'); ?></label>
-						<div class="quantity"><input class="qty" type="number" step="0.1" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
+						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
 					</div>
 					<div class="height">
 						<label for="height"><?php _e('Height (m)', 'norhage'); ?></label>
-						<div class="quantity"><input class="qty" type="number" step="0.1" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
+						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
 					</div>
 				</div>
 			<?php endif; ?>
