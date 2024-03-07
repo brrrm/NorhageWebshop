@@ -44,6 +44,11 @@
 				s += $(window).width() / 3;
 			}
 			$(this).parents('.slider').scrollLeft(s);
+			if(s > 0){
+				$(this).parents('.slider').addClass('scrolled');
+			}else{
+				$(this).parents('.slider').removeClass('scrolled')
+			}
 		});
 
 
