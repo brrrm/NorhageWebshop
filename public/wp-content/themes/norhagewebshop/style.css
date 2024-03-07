@@ -1087,7 +1087,7 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 /* image-button */
 .image-button{
 	display: block;
-	aspect-ratio: 1;
+	aspect-ratio: 4/3;
 	position: relative;
 }
 .image-button:hover{
