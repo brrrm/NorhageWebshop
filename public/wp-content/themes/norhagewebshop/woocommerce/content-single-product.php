@@ -67,11 +67,16 @@ if ( post_password_required() ) {
 					if(!in_array(get_post_thumbnail_id(), $images)){
 						array_unshift($images, get_post_thumbnail_id());
 					}
+					$counter = 0;
 					foreach($images as $image_id): ?>
+						<?php $counter++; ?>
 						<figure class="header-image">
 							<?php 
 								echo wp_get_attachment_image( $image_id, 'full', '', array( 'class' => 'header-image__img' ) ); 
 							?>
+							<?php if($counter == 5 && count($images) > 5): ?>
+								<span class="click-for-more-images">+<?php echo count($images) - 5; ?></span>
+							<?php endif; ?>
 						</figure>
 					<?php endforeach;?>
 				<?php
