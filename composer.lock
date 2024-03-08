@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e58484e9a941dc33d64f2bff19d26b50",
+    "content-hash": "fba532eb81b280c856635b0ee68d712b",
     "packages": [
         {
             "name": "composer/installers",
@@ -352,6 +352,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/post-types-order/"
+        },
+        {
+            "name": "wpackagist-plugin/webp-express",
+            "version": "0.25.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/webp-express/",
+                "reference": "tags/0.25.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/webp-express.0.25.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/webp-express/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
