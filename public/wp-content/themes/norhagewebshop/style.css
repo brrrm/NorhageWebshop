@@ -166,14 +166,15 @@ input[type="submit"]:hover{
 }
 .wp-block-button a[href^="tel:"] ,
 .wp-block-button a[href^="mailto:"]{
-	background: transparent url(images/svg/phone-icon.svg) no-repeat left center;
+	background: transparent url(images/svg/phone-icon-black.svg) no-repeat left center;
 	background-size: 1em auto;
-	background-position: 0.7em center;
-	color: var(--store-color);
-	padding-left: 2em;
+	color: var(--black);
+	border: unset;
+	border-radius: unset;
+	padding: 0.25em 0 0.25em 1.5em;
 }
 .wp-block-button a[href^="mailto:"]{
-	background-image: url(images/svg/email-icon.svg);
+	background-image: url(images/svg/email-icon-black.svg);
 }
 .green_bg .wp-block-button a[href^="tel:"],
 .green_bg .wp-block-button a[href^="mailto:"]{

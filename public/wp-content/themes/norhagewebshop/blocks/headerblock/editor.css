@@ -27,3 +27,41 @@
 .norhage-block *{
 	box-sizing: border-box;
 }
+
+.editor-styles-wrapper .wp-block-button .wp-element-button,
+.editor-styles-wrapper input[type="submit"]{
+	border: 2px solid var(--store-color);
+	background: var(--store-color);
+	text-decoration: none ;
+	padding: 0.5em 1.5em;
+	border-radius: 3em;
+	color: var(--white);
+}
+.editor-styles-wrapper .wp-block-button .wp-element-button:hover,
+.editor-styles-wrapper input[type="submit"]:hover{
+	transform: scale(1.05);
+}
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link.wp-element-button{
+	color: var(--store-color);
+}
+.editor-styles-wrapper .wp-block-button [href^="tel:"] ,
+.editor-styles-wrapper .wp-block-button [href^="mailto:"]{
+	background: transparent url(images/svg/phone-icon-black.svg) no-repeat left center;
+	background-size: 1em auto;
+	color: var(--black);
+	border: unset;
+	border-radius: unset;
+	padding: 0.25em 0 0.25em 1.5em;
+}
+.editor-styles-wrapper .wp-block-button [href^="mailto:"]{
+	background-image: url(images/svg/email-icon-black.svg);
+}
+.editor-styles-wrapper .green_bg .wp-block-button [href^="tel:"],
+.editor-styles-wrapper .green_bg .wp-block-button [href^="mailto:"]{
+	background-image: url(images/svg/phone-icon-white.svg);
+	color: #fff;
+	border-color: #fff;
+}
+.editor-styles-wrapper .green_bg .wp-block-button [href^="mailto:"]{
+	background-image: url(images/svg/email-icon-white.svg);
+}
