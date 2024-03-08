@@ -91,7 +91,7 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 	<div class="text-image-block--image-col">
 		<?php if ( $image ) : ?>
 			<figure class="image">
-				<?php echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'header-image__img', 'alt' => $image['alt'] ) ); ?>
+				<?php echo wp_get_attachment_image( $image['ID'], [1500,1500], '', array( 'class' => 'header-image__img', 'alt' => $image['alt'] ) ); ?>
 			</figure>
 		<?php else : ?>
 			<figure class="dummy">
