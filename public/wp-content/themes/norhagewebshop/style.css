@@ -1387,9 +1387,10 @@ body .image-popup .scroll-button:hover{
 .woocommerce div.product form.cart .button{
 	font-size: 1em;
 	background: var(--store-color) url(images/svg/cart.svg) 1em center no-repeat;
-	background-size: auto 60%;
-	padding: 0.5em 1em 0.5em 3em;
-	font-size: 0.75em;
+	background-size: auto 1.5em;
+	padding: 0.75em 1em 0.75em 3em;
+    font-size: 0.75em;
+    line-height: 1em;
 }
 .woocommerce .product .button.add_to_cart_button.product_type_variable,
 .woocommerce div.product form.cart .button.product_type_variable{
