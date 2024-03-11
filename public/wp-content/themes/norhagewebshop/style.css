@@ -525,34 +525,34 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu{
 		font-size: 1em;
 	}
 }
-header#masthead nav#site-navigation ul li{
+header#masthead nav#site-navigation ul.menu li{
 	flex: auto 0 1;
 	line-height: calc(var(--header-nav-height) - 3.2vw);
 	display: block;
 	font-weight: bold;
 }
-header#masthead nav#site-navigation ul li:last-child{
+header#masthead nav#site-navigation ul.menu li:last-child{
 	margin-right: 0;
 }
-body.small-height-header header#masthead nav#site-navigation ul li{
+body.small-height-header header#masthead nav#site-navigation ul.menu li{
 	line-height: calc(var(--header-nav-height) - 1.9vw);
 }
-header#masthead nav#site-navigation .menu-secondary-menu-container ul li{
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li{
 	font-weight: 300;
 }
 @media all and (max-width:1100px){
-	header#masthead nav#site-navigation ul li{
+	header#masthead nav#site-navigation ul.menu li{
 		line-height: calc(var(--header-nav-height) - 2.4vw);
 	}
 }
 @media all and (max-width:1024){
-	header#masthead nav#site-navigation ul li{
+	header#masthead nav#site-navigation ul.menu li{
 		line-height: calc(var(--header-nav-height) - 2.4vw);
 	}
 }
 
 
-header#masthead nav#site-navigation ul li button.expander{
+header#masthead nav#site-navigation ul.menu li button.expander{
 	display: none;
 }
 
@@ -2171,3 +2171,101 @@ form.wpcf7-form p input[type="submit"]{
     line-height: 1.5em;
     border:2px solid var(--store-color);
 }
+
+
+
+/**
+ * AJAX cart
+ * */
+ .cart-btn{
+
+ }
+.cart-popout{
+	position: absolute;
+	left: auto;
+	top: 100%;
+	width: 30em;
+	background: #fff;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+	border-radius: 1em;
+	font-size: 0.667em;
+	font-weight: 300;
+	color: #000;
+	text-align: left;
+}
+.cart-popout.open{
+	left: auto;
+}
+.cart-popout ul.cart-items{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style: none;
+}
+.cart-popout ul.cart-items > li,
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu .cart-popout ul.cart-items > li{
+	display: flex;
+	gap: 0.5em;
+	margin: 0.5em;
+	font-weight: 400;
+	line-height: 1.333;
+}
+.cart-popout li.cart-item .qty{
+
+}
+.cart-popout li.cart-item .item-thumb{
+	flex: 4em 0 0;
+}
+.cart-popout li.cart-item .item{
+	flex: auto 1 1;
+}
+.cart-popout li.cart-item .item .item-name{
+}
+.cart-popout li.cart-item .item .item-description dl{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.333em;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	font-weight: 300;
+}
+.cart-popout li.cart-item .item .item-description dl dt{
+	flex: calc(30% - 0.333em) 1 1;
+}
+.cart-popout li.cart-item .item .item-description dl dd{
+	flex: 70% 1 1;
+	margin: 0;
+	padding: 0;
+}
+.cart-popout li.cart-item .item .item-description dl dd *{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.cart-popout li.cart-item .item-subtotal{
+	flex: auto 0 1;
+}
+.cart-popout li.cart-item button.remove-item{
+	flex: 1.5em 0 0;
+	height: 1.5em;
+	padding: 0;
+	margin: 0;
+	border: none;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url(images/svg/discard.svg) center no-repeat;
+    background-size: 70% contain;
+    display: block;
+    text-decoration: none;
+}
+
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu .cart-popout a:link,
+header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu .cart-popout a:visited{
+	color: #000;
+}
+
+
+
+
+

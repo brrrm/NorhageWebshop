@@ -215,6 +215,11 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
 	    $output .= '<button class="expander">' . __('expand', 'norhagewebshop') . '</button>';
 	}
 
+	if( $args->menu_id == 'secondary-menu' && $item->type == 'custom' && $item->url == '/cart'){
+		
+		$output = norhage_ajax_cart();
+	}
+
     return $output;
 }
 add_action( 'walker_nav_menu_start_el', 'norhage_menu_add_category_posts', 10, 4 );
@@ -265,6 +270,11 @@ function norhagewebshop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
+
+/**
+ * Ajax cart.
+ */
+require get_template_directory() . '/inc/ajax-cart.php';
 
 /**
  * Implement the Custom Header feature.

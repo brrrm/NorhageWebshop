@@ -109,6 +109,7 @@
 			<?php
 			wp_nav_menu([
 				'theme_location' 	=> 'menu-2',
+				'menu_id'        	=> 'secondary-menu',
 				'container_class'	=> 'menu-secondary-menu-container menu-container'
 			]);
 			?>
