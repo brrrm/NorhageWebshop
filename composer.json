@@ -16,7 +16,9 @@
 		"wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "^3.7",
 		"wpackagist-theme/storefront": "^4.5",
 		"wpackagist-plugin/contact-form-7": "^5.8",
-		"wpackagist-plugin/webp-express": "^0.25.8"
+		"wpackagist-plugin/webp-express": "^0.25.8",
+		"wpackagist-plugin/woocommerce-gateway-stripe": "^8.0",
+		"wpackagist-plugin/svea-checkout-for-woocommerce": "^2.6"
 	},
 	"repositories": [
 		{

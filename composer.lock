@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fba532eb81b280c856635b0ee68d712b",
+    "content-hash": "43a1fefcd1724a5b9f9b8698fadf5b36",
     "packages": [
         {
             "name": "composer/installers",
@@ -354,6 +354,24 @@
             "homepage": "https://wordpress.org/plugins/post-types-order/"
         },
         {
+            "name": "wpackagist-plugin/svea-checkout-for-woocommerce",
+            "version": "2.6.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/svea-checkout-for-woocommerce/",
+                "reference": "tags/2.6.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/svea-checkout-for-woocommerce.2.6.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/svea-checkout-for-woocommerce/"
+        },
+        {
             "name": "wpackagist-plugin/webp-express",
             "version": "0.25.8",
             "source": {
@@ -388,6 +406,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
+            "version": "8.0.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
+                "reference": "tags/8.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.8.0.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips",
