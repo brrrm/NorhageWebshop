@@ -74,35 +74,8 @@ function norhagewebshop_setup() {
 
 	add_theme_support( 'align-wide' );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'norhagewebshop_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
-	/**
-	 * Add support for core custom logo.
-	 *
-	 * @link https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
 
 	add_theme_support('woocommerce');
 }
@@ -681,6 +654,27 @@ function norhage_get_taxo_thumbnail($cat){
 	return $thumbnail_id;
 }
 
+
+/**
+ * Sync currency values on product->save();
+ **/
+add_action('save_post_product', 'norhage_wpmc_sync_on_product_save', 10, 3);
+function norhage_wpmc_sync_on_product_save( $post_id, $post, $update ) {
+    $translations = pll_get_post_translations( $post_id );
+	$_regular_price_wmcp = get_post_meta($post_id, '_regular_price_wmcp');
+	$_sale_price_wmcp = get_post_meta($post_id, '_sale_price_wmcp');
+	if(!empty($_regular_price_wmcp)){
+	    foreach($translations as $lang => $id){
+	    	if($id == $post_id){
+	    		continue;
+	    	}
+    		$translation_product = wc_get_product( $id );
+    		$translation_product->update_meta_data('_regular_price_wmcp', json_encode( json_decode($_regular_price_wmcp[0]) ) );
+			$translation_product->update_meta_data('_sale_price_wmcp', json_encode( $_sale_price_wmcp[0] ) );
+			$translation_product->save_meta_data();
+    	}
+    }
+}
 
 
 /*
