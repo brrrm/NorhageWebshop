@@ -105,6 +105,7 @@ h3{
 		--header-nav-height: 6vw;
 	}
 	body.small-height-header{
+		--header-height: 4vw;
 		--header-nav-height: 4vw;
 	}
 	html{
@@ -334,10 +335,11 @@ footer.site-footer{
  * including navigation and subnav
  */
 header#masthead{
-	height: var(--header-height);
+	height: var(--header-nav-height);
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	transition: height 0.3s ease;
 }
 header#masthead .site-branding p{
 	width: 1px;
@@ -2190,6 +2192,7 @@ form.wpcf7-form p input[type="submit"]{
  }
  .cart-btn span{
  	position: absolute;
+ 	display: block;
  	font-size: 0.65em;
  	width: 1.333em;
  	height: 1.333em;
@@ -2200,6 +2203,9 @@ form.wpcf7-form p input[type="submit"]{
  	line-height: 1.333em;
  	right: -1em;
  	top: -0.5em;
+ }
+ .cart-btn span:empty{
+ 	display: none;
  }
 .widget_shopping_cart{
 	position: absolute;

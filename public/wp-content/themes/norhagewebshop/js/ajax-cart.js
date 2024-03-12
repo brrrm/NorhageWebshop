@@ -110,8 +110,12 @@
 					window.location = response.product_url;
 					return;
 				}
-				console.log(response);
-				$('.cart-btn .item-count').text(response.cart_count);
+				
+				if(parseInt(response.cart_count) === 0){
+					$('.cart-btn .item-count').text('')	;
+				}else{
+					$('.cart-btn .item-count').text(response.cart_count);
+				}
 
 			},
 		});
