@@ -261,10 +261,13 @@ function norhagewebshop_scripts() {
 		'test1'	=> 'lalala'
 	];
 	wp_add_inline_script('norhagewebshop-misc', 'var myThemeParams = ' . wp_json_encode( $myThemeParams ), 'before');*/
-
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
+/**
+ * Ajax cart.
+ */
+require get_template_directory() . '/inc/ajax-cart.php';
 
 /**
  * Implement the Custom Header feature.

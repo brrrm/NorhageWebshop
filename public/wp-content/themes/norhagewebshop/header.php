@@ -109,6 +109,7 @@
 			<?php
 			wp_nav_menu([
 				'theme_location' 	=> 'menu-2',
+				'menu_id'        	=> 'secondary-menu',
 				'container_class'	=> 'menu-secondary-menu-container menu-container'
 			]);
 			?>
@@ -121,5 +122,9 @@
 			<aside class="search">
 				<?php get_product_search_form(); ?>
 			</aside>
+
+			<?php //the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			<div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"><?php woocommerce_mini_cart();?></div></div>
+
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
