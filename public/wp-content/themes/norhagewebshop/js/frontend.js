@@ -35,7 +35,6 @@
 		});
 
 		$('.projects-block .slider-nav button, .products-slider-block .slider-nav button').click(function(e){
-			console.log('click');
 			e.preventDefault();
 			let s = $(this).parents('.slider').scrollLeft();
 			if($(this).hasClass('left')){
@@ -156,12 +155,11 @@
 				}
 			}
 			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
-			formattedPrice = newPrice.toLocaleString(
+			formattedPrice = Number(newPrice).toLocaleString(
 					wcSettings.locale.siteLocale.replace('_', '-'), 
 					{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
 				)
 				.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
-
 			priceNode.html(' ' + formattedPrice + ' ');
 			
 			
@@ -176,7 +174,7 @@
 		/**
 		 * quantity stepper input
 		 */
-		$('.quantity').each(function(){
+		$('.quantity:has(input)').each(function(){
 			let plusBtn = $('<button />').text('+').appendTo($(this)).addClass(['qtyBtn', 'plus']);
 			let minBtn = $('<button />').text('-').prependTo($(this)).addClass(['qtyBtn', 'min']);
 			plusBtn.click(function(e){

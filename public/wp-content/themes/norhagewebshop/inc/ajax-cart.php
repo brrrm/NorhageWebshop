@@ -1,55 +1,29 @@
 <?php
 
-function norhage_ajax_cart(){
-	$cart 				= WC()->cart;
-	$count 				= $cart->get_cart_contents_count();
-
+function norhage_cart(){
+	$cart = WC()->cart;
 	if($cart->is_empty()){
-		$output = '<button href="/cart" class="cart-btn">' . __('Cart', 'norhagewebshop') . '</button>';
-		$output .= '<div class="cart-popout">'
-				. '<p class="empty-msg">' . __('Your cart is empty.', 'norhagewebshop') . '</p>'
-				. '</div>';
-		return $output;
+		$output = '<button href="/cart" class="cart-btn">' . __('Cart', 'norhagewebshop') . '<span class="item-count">0</span></button>';
+	}else{
+		$count = $cart->get_cart_contents_count();
+		$output 	= '<button href="/cart" class="cart-btn">' 
+					. __('Cart', 'norhagewebshop') 
+					. ' <span class="item-count">'. $count . '</span>'
+					. '</button>';
 	}
-
-	$output 	= '<button href="/cart" class="cart-btn">' 
-				. __('Cart', 'norhagewebshop') 
-				. ' <span class="item-count">'. $count . '</span>'
-				. '</button>';
-
-	
-	$output 	.= '<div class="cart-popout">'
-				. '<ul class="cart-items">';
-	
-	// Loop over $cart items
-	foreach ( $cart->get_cart() as $cart_item_key => $cart_item ) {
-		$product 	= $cart_item['data'];
-		$link 		= $product->get_permalink( $cart_item );
-		$quantity 	= $cart_item['quantity'];
-		$subtotal 	= WC()->cart->get_product_subtotal( $product, $cart_item['quantity'] );
-		$meta 		= wc_get_formatted_cart_item_data( $cart_item );
-		$thumb 		= $product->get_image();
-		error_log('thumb:' . $thumb);
-
-		$output 	.= '<li class="cart-item">';
-		// quantity
-		$output 	.= '<span class="qty">' . $quantity . '</span> ';
-		// thumbnail
-		$output		.= '<a href="' . $link . '" class="item-thumb">' . $thumb . '</a>';
-		// item
-		$output 	.= '<span class="item"><span class="item-name"><a href="' . $link . '">' . $product->get_name() . '</a></span>'
-					. '<span class="item-description">' . $meta . '</span></span>';
-		// total price
-		$output 	.= '<span class="item-subtotal">' . $subtotal . '</span>';
-		// remove
-		$output 	.= '<button class="remove-item">' . __('Remove', 'norhagewebshop') . '</button>';
-		// close
-		$output 	.= '</li>';
-	}
-	
-	$output 	.= '</ul></div>';
 	return $output;
 }
+
+/**
+ * ADD THE CART TO THE MENU
+ * */
+function norhage_menu_add_cart( $output, $item, $depth, $args ) {
+	if( $args->menu_id == 'secondary-menu' && $item->type == 'custom' && $item->url == '/cart'){
+		$output = norhage_cart();
+	}
+    return $output;
+}
+add_action( 'walker_nav_menu_start_el', 'norhage_menu_add_cart', 10, 4 );
 
 /**
  * Enqueue scripts and styles.
@@ -58,3 +32,29 @@ function ajaxcart_scripts() {
 	wp_enqueue_script('norhagewebshop-ajaxcart', get_stylesheet_directory_uri() . '/js/ajax-cart.js', ['jquery', 'wc-settings'], _G_VERSION);
 }
 add_action( 'wp_enqueue_scripts', 'ajaxcart_scripts' );
+
+
+function norhage_add_ajax_cart_endpoints() {
+	add_action( 'wp_ajax_cart_count', 'norhage_cart_count' );
+	add_action( 'wp_ajax_nopriv_cart_count', 'norhage_cart_count' );
+}
+add_action( 'admin_init', 'norhage_add_ajax_cart_endpoints' );
+
+function norhage_cart_close_button(){
+	echo '<h2>' . __('Shopping cart', 'norhagewebshop') . '</h2>';
+	echo '<button class="close-btn">' . __('Close', 'norhagewebshop') .'</button>';
+}
+add_action( 'woocommerce_before_mini_cart', 'norhage_cart_close_button' );
+
+function norhage_cart_count(){
+	$cart = WC()->cart;
+	$count = $cart->get_cart_contents_count();
+
+	header('Content-type: application/json');
+    send_nosniff_header();
+    header('Cache-Control: no-cache');
+    header('Pragma: no-cache');
+    wp_send_json( ['cart_count' => $count] );
+    wp_die();
+}
+
