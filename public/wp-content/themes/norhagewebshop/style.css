@@ -2055,6 +2055,30 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	object-position: center;
 }
 
+@media all and (max-width:768px){
+	.woocommerce .product-listing{
+		padding: 0;
+	}
+	.woocommerce ul.products li.product .button{
+		width: 100%;
+		text-align: center;
+	}
+	.woocommerce ul.products[class*=columns-] li.product, 
+	.woocommerce-page ul.products[class*=columns-] li.product{
+		margin: 0;
+	}
+	.woocommerce ul.products.columns-3 li.product, 
+	.woocommerce-page ul.products.columns-3 li.product, 
+	.woocommerce-page.columns-3 ul.products li.product, 
+	.woocommerce.columns-3 ul.products li.product{
+		flex: calc(100% / 2 - 1em) 1 1;
+	}
+
+}
+
+
+
+
 ul.sub-categories{
 	display: flex;
 	flex-wrap: wrap;
