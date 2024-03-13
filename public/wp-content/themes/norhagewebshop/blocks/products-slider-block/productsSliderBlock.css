@@ -146,6 +146,9 @@ ul.slider-nav li button:hover{
 	.products-slider-block .title-col{
 		margin-left: 0;
 		margin-right: 0;
+	.products-slider-block .slider-title-col ul.slider-nav{
+		gap: 5em;
+	}
 	}
 	.products-slider-block .slider{
 		padding: 0;
