@@ -4,6 +4,7 @@
 	margin-top: calc(-1 * var(--header-height) );
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
+	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
 }
 .headerblock *{
 	box-sizing: border-box;
@@ -39,8 +40,6 @@
 .headerblock .headerblock-text-col{
 	flex: 35% 0 0;
 	position: relative;
-	background: var(--store-color);
-	background: var(--green-gradient);
 	color: var(--white);
 	padding: var(--header-height) 2rem 0 2rem;
 	height: 100%;
@@ -112,6 +111,9 @@
 	white-space: nowrap;
 }
 @media screen and (max-width:768px){
+	.norhage-block.headerblock{
+		background: linear-gradient(180deg, rgba(169,235,134,1) 50%, rgba(102,183,60,1) 65%, rgba(62,121,32,1) 100%);
+	}
 	.headerblock .hero-wrap{
 		height: unset;
 		position: relative;
@@ -140,7 +142,6 @@
 		font-size: 1em;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		background: var(--dark-blue);
 		gap: 0.5em;
 	}
 	.headerblock .headerblock-usps li{
