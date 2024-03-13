@@ -480,10 +480,14 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		margin: 0;
 	}
 	header#masthead nav#site-navigation aside.search form{
-		width: 100%;
+		width: unset;
 		overflow: visible;
-		background: white;
-		border-color: var(--store-color);
+		background: var(--white);
+		border: 1px solid var(--store-color);
+		border-radius: 1em;
+	}
+	header#masthead nav#site-navigation aside.search form:hover{
+		width: unset;
 	}
 	header#masthead nav#site-navigation aside.search form button{
 		background:transparent url(images/svg/search-black.svg) no-repeat center;
@@ -491,6 +495,8 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 	}
 	header#masthead nav#site-navigation aside.search form input{
 		padding-left: 1em;
+		flex: 90% 0 0;
+		transition: none;
 	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container{
