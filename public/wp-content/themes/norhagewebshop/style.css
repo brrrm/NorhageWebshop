@@ -426,34 +426,20 @@ header#masthead nav#site-navigation aside.search form{
 	overflow: hidden;
 	transition: width 0.3s ease, font-size 0.3s ease;
 }
+
 body.small-height-header header#masthead nav#site-navigation aside.search form{
 	font-size: 0.8em;
 }
-@media all and (min-width:768px){
-	header#masthead nav#site-navigation aside.search form:hover,
-	header#masthead nav#site-navigation aside.search form:focus-within,
-	header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)){
-		width: 20em;
-		border-color: var(--store-color);
-		background-color: var(--white);
-	}
-	header#masthead nav#site-navigation aside.search form:focus-within{
-		background-color: #fafad8;
-	}
+header#masthead nav#site-navigation aside.search form:hover,
+header#masthead nav#site-navigation aside.search form:focus-within,
+header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)){
+	width: 20em;
+	border-color: var(--store-color);
+	background-color: var(--white);
 }
-@media all and (max-width:768px){
-	header#masthead nav#site-navigation aside.search{
-		margin: 0;
-		left: 1em;
-	}
-	header#masthead nav#site-navigation aside.search form {
-    	width: 20em;
-    	border-color: var(--store-color);
-    	background-color: var(--white);
-    	left: 0;
-	}
+header#masthead nav#site-navigation aside.search form:focus-within{
+	background-color: #fafad8;
 }
-
 header#masthead nav#site-navigation aside.search form input,
 header#masthead nav#site-navigation aside.search form button{
 	font-size: 0.7em;
@@ -482,17 +468,29 @@ header#masthead nav#site-navigation aside.search form button{
 	text-indent: -99999em;
 	overflow: hidden;
 }
-@media all and (min-width:768px){
-	header#masthead nav#site-navigation aside.search form:hover button,
-	header#masthead nav#site-navigation aside.search form:focus-within button,
-	header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)) button{
-		background-image: url(images/svg/search-black.svg);
-	}
+header#masthead nav#site-navigation aside.search form:hover button,
+header#masthead nav#site-navigation aside.search form:focus-within button,
+header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)) button{
+	background-image: url(images/svg/search-black.svg);
 }
 @media all and (max-width:768px){
+	header#masthead nav#site-navigation aside.search {
+		position: relative;
+		left: 0;
+		margin: 0;
+	}
+	header#masthead nav#site-navigation aside.search form{
+		width: 100%;
+		overflow: visible;
+		background: white;
+		border-color: var(--store-color);
+	}
 	header#masthead nav#site-navigation aside.search form button{
-		background: transparent url(images/svg/search-black.svg) center no-repeat;
+		background:transparent url(images/svg/search-black.svg) no-repeat center;
 		background-size: auto 70%;
+	}
+	header#masthead nav#site-navigation aside.search form input{
+		padding-left: 1em;
 	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container{
