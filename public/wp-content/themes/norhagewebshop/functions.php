@@ -661,22 +661,26 @@ function norhage_get_taxo_thumbnail($cat){
 /**
  * Sync currency values on product->save();
  **/
-add_action('save_post_product', 'norhage_wpmc_sync_on_product_save', 10, 3);
-function norhage_wpmc_sync_on_product_save( $post_id, $post, $update ) {
-    $translations = pll_get_post_translations( $post_id );
-	$_regular_price_wmcp = get_post_meta($post_id, '_regular_price_wmcp');
-	$_sale_price_wmcp = get_post_meta($post_id, '_sale_price_wmcp');
-	if(!empty($_regular_price_wmcp)){
-	    foreach($translations as $lang => $id){
+//add_action('save_post_product', 'norhage_wpmc_sync_on_product_save', 10, 3);
+
+add_action( 'added_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
+add_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
+function norhage_wpmc_sync_on_product_save( $meta_id, $post_id, $meta_key, $meta_value ) {
+	if ( in_array($meta_key, ['_regular_price_wmcp', '_sale_price_wmcp'] )) {
+		remove_action( 'added_post_meta', 'norhage_wpmc_sync_on_product_save');
+		remove_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save');
+		$translations = pll_get_post_translations( $post_id );
+		foreach($translations as $lang => $id){
 	    	if($id == $post_id){
 	    		continue;
 	    	}
     		$translation_product = wc_get_product( $id );
-    		$translation_product->update_meta_data('_regular_price_wmcp', json_encode( json_decode($_regular_price_wmcp[0]) ) );
-			$translation_product->update_meta_data('_sale_price_wmcp', json_encode( $_sale_price_wmcp[0] ) );
+    		$translation_product->update_meta_data($meta_key, $meta_value );
 			$translation_product->save_meta_data();
     	}
-    }
+		add_action( 'added_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
+		add_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
+	}
 }
 
 
