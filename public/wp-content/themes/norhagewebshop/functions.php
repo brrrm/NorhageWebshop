@@ -675,8 +675,10 @@ function norhage_wpmc_sync_on_product_save( $meta_id, $post_id, $meta_key, $meta
 	    		continue;
 	    	}
     		$translation_product = wc_get_product( $id );
-    		$translation_product->update_meta_data($meta_key, $meta_value );
-			$translation_product->save_meta_data();
+    		if($translation_product){
+	    		$translation_product->update_meta_data($meta_key, $meta_value );
+				$translation_product->save_meta_data();
+			}
     	}
 		add_action( 'added_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
 		add_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
