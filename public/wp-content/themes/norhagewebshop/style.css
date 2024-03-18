@@ -482,13 +482,20 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		position: relative;
 		left: 0;
 		margin: 0;
+		z-index: 0;
 	}
-	header#masthead nav#site-navigation aside.search form{
+	header#masthead nav#site-navigation aside.search form:hover,
+	header#masthead nav#site-navigation aside.search form:focus-within,
+	header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)){
 		width: unset;
-		overflow: visible;
+	}
+	header#masthead nav#site-navigation aside.search form,
+	body.small-height-header header#masthead nav#site-navigation aside.search form{
+		width: 100%;
 		background: var(--white);
 		border: 1px solid var(--store-color);
 		border-radius: 1em;
+		font-size: 1em;
 	}
 	header#masthead nav#site-navigation aside.search form:hover{
 		width: unset;
@@ -497,10 +504,16 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		background:transparent url(images/svg/search-black.svg) no-repeat center;
 		background-size: auto 70%;
 	}
+	header#masthead nav#site-navigation aside.search form input,
+	header#masthead nav#site-navigation aside.search form button{
+		font-size: 1em;
+	}
 	header#masthead nav#site-navigation aside.search form input{
-		padding-left: 1em;
-		flex: 90% 0 0;
-		transition: none;
+		flex: calc(100% - 2em) 1 0;
+		padding: 0 1em;
+	}
+	header#masthead nav#site-navigation aside.search form button{
+		flex: 2em 0 0;
 	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container{
