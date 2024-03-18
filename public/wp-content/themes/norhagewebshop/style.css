@@ -1670,12 +1670,6 @@ body .image-popup .scroll-button:hover{
 .product-description{
 	margin-top: 2em;
 }
-@media all and (max-width:768px){
-	.site-main .entry-content .product-description{
-		margin-left: -1em;
-		margin-right: -1em;
-	}
-}
 
 
 
