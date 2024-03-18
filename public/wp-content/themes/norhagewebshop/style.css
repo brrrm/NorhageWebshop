@@ -1083,6 +1083,7 @@ footer.site-footer nav#socials-navigation h3{
 footer.site-footer nav#socials-navigation ul{
 	display: flex;
 	column-gap: 0.5em;
+	list-style: none;
 }
 footer.site-footer nav#socials-navigation ul li a{
 	background-image: url(images/facebook-icon.svg);
