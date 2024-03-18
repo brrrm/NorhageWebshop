@@ -1018,9 +1018,6 @@ header#masthead nav#site-navigation h2{
 		line-height: 1.5em;
 		position: relative;
 	}
-	header#masthead nav#site-navigation .menu-container ul.menu li:last-child{
-		border-bottom: none;
-	}
 	header#masthead nav#site-navigation .menu-container ul.menu li.menu-item-has-children .expander{
 		display: block;
 		font-size: 1em;
