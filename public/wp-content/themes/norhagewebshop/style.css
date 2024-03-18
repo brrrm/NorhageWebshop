@@ -2286,6 +2286,12 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 	text-indent: -999em;
 	overflow: hidden;
 }
+@media all and (max-width:1280px){
+	.widget_shopping_cart .close-btn{
+		top: 1em;
+		right: 1em;
+	}
+}
 .woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li{
 	border-bottom: 1px dashed var(--store-color);
 	margin: 1em 0 0;
