@@ -478,6 +478,7 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		position: relative;
 		left: 0;
 		margin: 0;
+		z-index: 0;
 	}
 	header#masthead nav#site-navigation aside.search form{
 		width: unset;
