@@ -127,6 +127,10 @@ h3{
 		--header-height: 10vh;
 		--header-nav-height: 10vh;
 	}
+	body.small-height-header{
+		--header-height: 6vh;
+		--header-nav-height: 6vh;
+	}
 	html{
 		font-size: 100%;
 	}
@@ -803,6 +807,9 @@ header#masthead nav#site-navigation h2{
 		background-size: contain;
 		overflow: hidden;
 		text-indent: -9999em;
+	}
+	body.small-height-header header#masthead .menu-toggle{
+		width: 2em;
 	}
 	header#masthead .site-branding{
 		height: var(--header-height);
