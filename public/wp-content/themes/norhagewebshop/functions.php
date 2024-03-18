@@ -211,7 +211,7 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
     	$thumb = get_the_post_thumbnail($item->object_id, [420,420]);
         $output = '<div class="image-button"><a href="' . esc_url( $item->url ) . '">' . $thumb . '</a><span class="title"><a href="' . esc_url( $item->url ) . '">' . $item->title . '</span></a></div>' ;
     }
-    if( $args->menu_id == 'primary-menu' && in_array('menu-item-has-children', $item->classes) ){
+    if( in_array($args->menu_id, ['primary-menu', 'secondary-menu']) && in_array('menu-item-has-children', $item->classes) ){
 	    $output .= '<button class="expander">' . __('expand', 'norhagewebshop') . '</button>';
 	}
 
