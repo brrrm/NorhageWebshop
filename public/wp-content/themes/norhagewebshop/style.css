@@ -2190,6 +2190,15 @@ form.wpcf7-form p input[type="submit"]{
  	font-family: inherit;
  	position: relative;
  }
+ @media all and (max-width: 768px){
+ 	.cart-btn{
+ 		color: var(--store-color);
+ 		padding: 0.5em 0 0.5em 2em;
+ 		background: transparent url(images/svg/cart-green.svg) left center no-repeat;
+ 		background-size: 1.5em auto;
+ 		font-weight: 700;
+	}
+ }
  .cart-btn span{
  	position: absolute;
  	display: block;
