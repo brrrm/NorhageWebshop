@@ -937,8 +937,8 @@ header#masthead nav#site-navigation h2{
 		width: 100%;
 		opacity:1;
 	}
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover{
-		left: 0;
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li{
+		padding-left: 1em;
 	}
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages > a{
 		background-image: url(images/svg/globe-green.svg);
