@@ -4,7 +4,9 @@
 	margin-top: calc(-1 * var(--header-height) );
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
-	background: linear-gradient(180deg, rgba(169,235,134,1) 0%, rgba(102,183,60,1) 30%, rgba(62,121,32,1) 100%);
+	
+	background: var(--store-color);
+	background: var(--green-gradient);
 }
 .headerblock *{
 	box-sizing: border-box;
