@@ -4,7 +4,6 @@
 	align-items: stretch;
 	padding:1em 0 1em 0;
 	color: var(--custom-text-color);
-
 	overflow: auto;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
@@ -54,6 +53,9 @@
 	}
 	.projects-block .projects-col{
 		padding-right: 0;
+	}
+	.projects-block .title-col ul{
+		justify-content: space-evenly;
 	}
 	.projects-block .projects-col ul{
 		padding-top: 1em;

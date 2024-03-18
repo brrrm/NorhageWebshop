@@ -127,6 +127,10 @@ h3{
 		--header-height: 10vh;
 		--header-nav-height: 10vh;
 	}
+	body.small-height-header{
+		--header-height: 6vh;
+		--header-nav-height: 6vh;
+	}
 	html{
 		font-size: 100%;
 	}
@@ -426,6 +430,7 @@ header#masthead nav#site-navigation aside.search form{
 	overflow: hidden;
 	transition: width 0.3s ease, font-size 0.3s ease;
 }
+
 body.small-height-header header#masthead nav#site-navigation aside.search form{
 	font-size: 0.8em;
 }
@@ -472,12 +477,49 @@ header#masthead nav#site-navigation aside.search form:focus-within button,
 header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)) button{
 	background-image: url(images/svg/search-black.svg);
 }
-
+@media all and (max-width:768px){
+	header#masthead nav#site-navigation aside.search {
+		position: relative;
+		left: 0;
+		margin: 0;
+		z-index: 0;
+	}
+	header#masthead nav#site-navigation aside.search form:hover,
+	header#masthead nav#site-navigation aside.search form:focus-within,
+	header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder-shown)){
+		width: unset;
+	}
+	header#masthead nav#site-navigation aside.search form,
+	body.small-height-header header#masthead nav#site-navigation aside.search form{
+		width: 100%;
+		background: var(--white);
+		border: 1px solid var(--store-color);
+		border-radius: 1em;
+		font-size: 1em;
+	}
+	header#masthead nav#site-navigation aside.search form:hover{
+		width: unset;
+	}
+	header#masthead nav#site-navigation aside.search form button{
+		background:transparent url(images/svg/search-black.svg) no-repeat center;
+		background-size: auto 70%;
+	}
+	header#masthead nav#site-navigation aside.search form input,
+	header#masthead nav#site-navigation aside.search form button{
+		font-size: 1em;
+	}
+	header#masthead nav#site-navigation aside.search form input{
+		flex: calc(100% - 2em) 1 0;
+		padding: 0 1em;
+	}
+	header#masthead nav#site-navigation aside.search form button{
+		flex: 2em 0 0;
+	}
+}
 header#masthead nav#site-navigation .menu-main-navigation-container{
 	flex: 65% 0 0;
 	background: var(--store-color);
 	color: var(--white);
-	
 	transition: border-bottom-color 0.5s ease;
 	box-sizing: border-box;
 	order: 2;
@@ -954,6 +996,9 @@ header#masthead nav#site-navigation h2{
 		overflow: hidden;
 		text-indent: -9999em;
 	}
+	body.small-height-header header#masthead .menu-toggle{
+		width: 2em;
+	}
 	header#masthead .site-branding{
 		height: var(--header-height);
 		width: 100%;
@@ -1210,6 +1255,7 @@ footer.site-footer nav#socials-navigation h3{
 footer.site-footer nav#socials-navigation ul{
 	display: flex;
 	column-gap: 0.5em;
+	list-style: none;
 }
 footer.site-footer nav#socials-navigation ul li a{
 	background-image: url(images/facebook-icon.svg);
@@ -1582,7 +1628,7 @@ body .image-popup .scroll-button:hover{
 	width: auto;
 	background-color: var(--light-green);
 	padding: var(--header-height) 0 2em 0;
-	bottom: 1px solid var(--store-color);
+	border-bottom: 1px solid var(--store-color);
 }
 .product .entry-content .summary.entry-summary h2.variations_form-title{
 	flex: 100% 0 0;
@@ -1809,12 +1855,6 @@ body .image-popup .scroll-button:hover{
 
 .product-description{
 	margin-top: 2em;
-}
-@media all and (max-width:768px){
-	.site-main .entry-content .product-description{
-		margin-left: -1em;
-		margin-right: -1em;
-	}
 }
 
 
@@ -2218,6 +2258,40 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 .woocommerce.columns-6 ul.products li.product {
 	flex: 13.5% 0 0;
 	width: unset;
+}
+@media all and (max-width:768px){
+	.woocommerce .product-listing{
+		padding-right: 0;
+	}
+	.woocommerce ul.products, .woocommerce-page ul.products{
+		gap: 1em var(--gap);
+	}
+	.woocommerce ul.products.columns-1 li.product,
+	.woocommerce-page ul.products.columns-1 li.product,
+	.woocommerce-page.columns-1 ul.products li.product,
+	.woocommerce.columns-1 ul.products li.product,
+	.woocommerce ul.products.columns-2 li.product,
+	.woocommerce-page ul.products.columns-2 li.product,
+	.woocommerce-page.columns-2 ul.products li.product,
+	.woocommerce.columns-2 ul.products li.product,
+	.woocommerce ul.products.columns-3 li.product,
+	.woocommerce-page ul.products.columns-3 li.product,
+	.woocommerce-page.columns-3 ul.products li.product,
+	.woocommerce.columns-3 ul.products li.product,
+	.woocommerce ul.products.columns-4 li.product,
+	.woocommerce-page ul.products.columns-4 li.product,
+	.woocommerce-page.columns-4 ul.products li.product,
+	.woocommerce.columns-4 ul.products li.product,
+	.woocommerce ul.products.columns-5 li.product,
+	.woocommerce-page ul.products.columns-5 li.product,
+	.woocommerce-page.columns-5 ul.products li.product,
+	.woocommerce.columns-5 ul.products li.product,
+	.woocommerce ul.products.columns-6 li.product,
+	.woocommerce-page ul.products.columns-6 li.product,
+	.woocommerce-page.columns-6 ul.products li.product,
+	.woocommerce.columns-6 ul.products li.product{
+		flex: calc((100% - (1 * var(--gap))) / 2) 0 0;
+	}
 }
 
 .woocommerce ul.products li.product a img{
