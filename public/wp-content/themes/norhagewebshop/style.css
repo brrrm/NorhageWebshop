@@ -681,24 +681,10 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 		background-size: 1.5em auto;
 	}	
 }
-/*
- * Cart icon 
- */
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.cart  a{
-	background:  transparent url(images/svg/cart.svg) no-repeat left center;
-	background-size: contain;
-	width: 1.5em;
 	text-align: left;
 	text-indent: -99999em;
 	overflow: hidden;
 }
-@media all and (max-width:768px){
-	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.cart  a{
-		background-image: url(images/svg/cart-green.svg);	
-		text-indent: 0;
-		overflow: visible;
-		padding-left:2em;
-		background-size: 1.5em auto;
 	}
 }
 
