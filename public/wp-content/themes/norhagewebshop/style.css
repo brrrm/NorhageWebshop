@@ -2204,6 +2204,20 @@ form.wpcf7-form p input[type="submit"]{
  	right: -1em;
  	top: -0.5em;
  }
+  @media all and (max-width: 768px){
+ 	.cart-btn{
+ 		display: block;
+ 		color: var(--store-color);
+ 		padding: 0.5em 0 0.5em 2em;
+ 		background: transparent url(images/svg/cart-green.svg) left center no-repeat;
+ 		background-size: 1.5em auto;
+ 		font-weight: 700;
+}
+ 	}
+ 	.cart-btn span{
+
+ 	}
+ }
  .cart-btn span:empty{
  	display: none;
  }
@@ -2232,6 +2246,16 @@ form.wpcf7-form p input[type="submit"]{
 	transform: translate(0, 0);
 	opacity: 1;
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+}
+@media all and (max-width: 768px){
+	.widget_shopping_cart.open{
+    	background: pink;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	z-index: 0;
+    	
+	}
 }
 header#masthead nav#site-navigation .widget_shopping_cart h2{
 	display: block;
