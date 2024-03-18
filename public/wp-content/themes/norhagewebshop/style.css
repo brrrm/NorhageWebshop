@@ -2257,8 +2257,8 @@ form.wpcf7-form p input[type="submit"]{
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
 }
 @media all and (max-width: 768px){
+	.cart-popout.open,
 	.widget_shopping_cart.open{
-    	background: pink;
     	top: 0;
     	left: 0;
     	width: 100%;
