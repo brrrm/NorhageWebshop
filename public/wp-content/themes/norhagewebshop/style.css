@@ -930,9 +930,11 @@ header#masthead nav#site-navigation h2{
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages{
 		position: relative;
 	}
+	
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu, 
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
-		max-height: unset;
 		left: 0;
+		width: 100%;
 		opacity:1;
 	}
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li:hover{
