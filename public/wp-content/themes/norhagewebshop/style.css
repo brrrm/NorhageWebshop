@@ -699,14 +699,6 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
  	font-family: inherit;
  	position: relative;
  }
- @media all and (max-width: 768px){
- 	.cart-btn{
- 		color: var(--store-color);
- 		padding: 0.5em 0 0.5em 2em;
- 		font-weight: 700;
- 		background-image:url(images/svg/cart-green.svg);
-	}
- }
  .cart-btn span{
  	position: absolute;
  	display: block;
@@ -724,6 +716,18 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
  }
  .cart-btn span:empty{
  	display: none;
+ }
+ @media all and (max-width: 768px){
+ 	.cart-btn{
+ 		color: var(--store-color);
+ 		padding: 0.5em 0 0.5em 2em;
+ 		font-weight: 700;
+ 		background-image:url(images/svg/cart-green.svg);
+ 		text-indent: 0;
+	}
+	.cart-btn span{
+		right: -0.5em;
+	}
  }
 .widget_shopping_cart{
 	position: absolute;
