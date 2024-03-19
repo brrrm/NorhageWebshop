@@ -910,7 +910,10 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 }
 .woocommerce .widget_shopping_cart .total, .woocommerce.widget_shopping_cart .total{
 	border-top: 1px solid hsla(0,0%,7%,.11);
-	padding: 1em 0 0 2em;
+	padding: 1em 0 0 0;
+}
+.woocommerce .widget_shopping_cart .total, .woocommerce.widget_shopping_cart .total > *{
+	font-size: 2em;
 }
 .cart-popout li.cart-item .item-subtotal{
 	flex: auto 0 1;
