@@ -130,6 +130,7 @@
 		order: 2;
 		padding: 4em 1em 1em 1em;
 		font-size: 1em;
+		border: none;
 	}
 	.headerblock .headerblock-text-col .text {
 		padding: 0 0 0;
