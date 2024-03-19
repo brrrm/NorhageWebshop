@@ -840,6 +840,7 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 }
 .woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list{
 	border-top: 1px solid hsla(0,0%,7%,.11);
+	font-size: 1.25em;
 }
 .woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li{
 	border-bottom: 1px dashed var(--store-color);
