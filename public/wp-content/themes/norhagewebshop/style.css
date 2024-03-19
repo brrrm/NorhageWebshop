@@ -714,15 +714,10 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 	overflow: hidden;
 	vertical-align: text-bottom;
 }
-@media all and (max-width:768px){
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages > a{
-		background-image: url(images/svg/globe-green.svg);
-		text-indent: 0;
-		overflow: visible;
-		padding-left:2em;
-		background-size: 1.5em auto;
-	}	
-}
+
+
+
+
 /*
  * Cart icon 
  */
@@ -944,7 +939,29 @@ header#masthead nav#site-navigation h2{
 	}
 }
 
+@media all and (max-width:768px){
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages{
+		position: relative;
+	}
+	
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu, 
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
+		left: 0;
+		width: 100%;
+		opacity:1;
+	}
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li{
+		padding-left: 1em;
+	}
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages > a{
+		background-image: url(images/svg/globe-green.svg);
+		text-indent: 0;
+		overflow: visible;
+		padding-left:2em;
+		background-size: 1.5em auto;
+	}	
 
+}
 
 /*
  * BLOCK ZAKEN
