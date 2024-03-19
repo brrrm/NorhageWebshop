@@ -786,6 +786,11 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 	font-size: 0.667em;
 	font-weight: 300;
 	color: #000;
+	text-align: left;
+	transform: translate(-10px, 0);
+	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0.3s;
+	opacity: 0;
+	padding: 2em;
 }
 .cart-popout.open,
 .widget_shopping_cart.open{
