@@ -1803,6 +1803,9 @@ table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart
 	grid-area: table;
 	margin: 0;
 }
+table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-components-product-metadata .wc-block-components-product-metadata__description{
+	display: none;
+}
 .is-mobile table.wc-block-cart-items .wc-block-components-product-metadata{
 	
 }
