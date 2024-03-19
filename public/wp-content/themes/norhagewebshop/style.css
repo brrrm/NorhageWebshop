@@ -866,9 +866,8 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 	background: #cc6f6f !important;
 	color: #fff !important;
 }
-.woocommerce .widget_shopping_cart .buttons a, 
-.woocommerce.widget_shopping_cart .buttons a{
-	padding: 1em 3em;
+.woocommerce .widget_shopping_cart .buttons a{
+	font-size: 1.5em;
 	margin-right: 2em;
 }
 @media all and (max-width:768px){
