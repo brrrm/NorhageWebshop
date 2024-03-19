@@ -843,7 +843,6 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 	font-size: 1.25em;
 }
 .woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li{
-	border-bottom: 1px dashed var(--store-color);
 	margin: 1em 0 0;
 	padding: 0 0 1em 2em;
 	border-bottom: 1px solid hsla(0,0%,7%,.11);
@@ -860,6 +859,10 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 .woocommerce.widget_shopping_cart .cart_list li a.remove:hover{
 	background: #cc6f6f !important;
 	color: #fff !important;
+}
+.woocommerce .widget_shopping_cart .buttons a, 
+.woocommerce.widget_shopping_cart .buttons a{
+	padding: 1em 3em;
 }
 .woocommerce ul.product_list_widget li img{
 	width: 5em;
