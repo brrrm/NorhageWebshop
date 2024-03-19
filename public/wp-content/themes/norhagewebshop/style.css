@@ -812,10 +812,12 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 }
 header#masthead nav#site-navigation .widget_shopping_cart h2{
 	display: block;
-	color: var(--store-color);
-	background: transparent url(images/svg/cart-green.svg) left center no-repeat;
-	background-size: contain;
+	color: var(--black);
+	background: transparent url(images/svg/cart-black.svg) left center no-repeat;
+	background-size: auto 1em ;
 	padding-left: 1.5em;
+	font-weight: 700;
+	font-style: normal;
 }
 .widget_shopping_cart .close-btn{
 	position: absolute;
