@@ -851,6 +851,15 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 	border-bottom: none;
 	padding-bottom: 0;
 }
+.woocommerce .widget_shopping_cart .cart_list li a.remove, 
+.woocommerce.widget_shopping_cart .cart_list li a.remove{
+	color: #cc6f6f !important;
+}
+.woocommerce .widget_shopping_cart .cart_list li a.remove:hover, 
+.woocommerce.widget_shopping_cart .cart_list li a.remove:hover{
+	background: #cc6f6f !important;
+	color: #fff !important;
+}
 .woocommerce ul.product_list_widget li img{
 	width: 5em;
 	transition: transform 0.3s ease;
