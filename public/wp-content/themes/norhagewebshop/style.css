@@ -863,6 +863,7 @@ header#masthead nav#site-navigation .widget_shopping_cart h2{
 .woocommerce .widget_shopping_cart .buttons a, 
 .woocommerce.widget_shopping_cart .buttons a{
 	padding: 1em 3em;
+	margin-right: 2em;
 }
 .woocommerce ul.product_list_widget li img{
 	width: 5em;
