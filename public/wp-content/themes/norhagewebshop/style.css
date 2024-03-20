@@ -366,33 +366,25 @@ header#masthead .site-branding #logo{
 	width: 100%;
 }
 
-
-header#masthead nav#site-navigation{
-	width: 100%;
-	display: flex;
-	height: var(--header-nav-height);
-	transition: height 0.5s ease;
-	border-bottom: 1px solid var(--white);
-}
-header#masthead nav#site-navigation aside.contact{
-	position: absolute;
-	right: 1.416666667em;
-	top: 0.4em;
-	text-align: right;
-	line-height: 1.04em;
-	transition: opacity 0.5s ease 0s, z-index 0s linear 0.7s;
-}
-.small-height-header header#masthead nav#site-navigation aside.contact{
-	z-index: -1;
-	opacity: 0;
-}
-@media all and (max-width:768px){
-	header#masthead .site-branding > a{
-		left: 1em;
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation{
+		width: 100%;
+		display: flex;
+		height: var(--header-nav-height);
+		transition: height 0.5s ease;
+		border-bottom: 1px solid var(--white);
 	}
 	header#masthead nav#site-navigation aside.contact{
-		display: none;
-		order: 4;
+		position: absolute;
+		right: 1.416666667em;
+		top: 0.4em;
+		text-align: right;
+		line-height: 1.04em;
+		transition: opacity 0.5s ease 0s, z-index 0s linear 0.7s;
+	}
+	.small-height-header header#masthead nav#site-navigation aside.contact{
+		z-index: -1;
+		opacity: 0;
 	}
 }
 header#masthead nav#site-navigation aside.contact h3{
@@ -406,6 +398,18 @@ header#masthead nav#site-navigation aside.contact a{
 	font-size: 1em;
 	font-weight: 700;
 	color: #ffffff;
+}
+@media all and (max-width:768px){
+	header#masthead .site-branding > a{
+		left: 1em;
+	}
+	header#masthead nav#site-navigation aside.contact{
+		order: 4;
+	}
+	header#masthead nav#site-navigation aside.contact h3,
+	header#masthead nav#site-navigation aside.contact a{
+		color: var(--black);
+	}
 }
 
 /*
