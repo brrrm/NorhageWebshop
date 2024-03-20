@@ -667,12 +667,14 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	gap: 1em;
 	align-content: flex-start;
 }
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu{
-	left: 0;
-	transform: translate(0, 0);
-	opacity: 1;
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu{
+		left: 0;
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li{
 	display: block;
@@ -764,11 +766,13 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li
 	right: 120vw;
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0.3s ;
 }
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu,
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item:hover ul.sub-menu{
-	left: auto;
-	right: -1em;
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0s;
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu,
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item:hover ul.sub-menu{
+		left: auto;
+		right: -1em;
+		transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0s;
+	}
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li{
@@ -943,6 +947,7 @@ header#masthead nav#site-navigation h2{
 	}
 	header#masthead nav#site-navigation .menu-container ul.sub-menu,
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.languages ul.sub-menu,
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu,
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu{
 		position: static;
 		height: auto;
@@ -966,12 +971,12 @@ header#masthead nav#site-navigation h2{
 		position: relative;
 	}
 	
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu, 
+/*	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu, 
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
 		left: 0;
 		width: 100%;
 		opacity:1;
-	}
+	}*/
 	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li{
 		padding-left: 1em;
 	}
