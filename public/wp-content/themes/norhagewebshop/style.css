@@ -767,9 +767,12 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
  		height: auto;
  		text-indent: 0;
  		line-height: 1.5;
+ 		width: 100%;
+ 		display: block;
+ 		text-align: left;
 	}
 	.cart-btn span{
-		right: 0.2em;
+		left: 1.8em;
 		top: 0.3em;
 	}
  }
