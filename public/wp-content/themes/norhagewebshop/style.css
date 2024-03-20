@@ -859,7 +859,6 @@ header#masthead nav#site-navigation h2{
 	}
 	body:has(header#masthead nav#site-navigation.expanded){
 		overflow: hidden;
-		height: 100vh;
 	}
 	header#masthead nav#site-navigation.expanded{
 		left: 0;
