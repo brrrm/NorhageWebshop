@@ -392,6 +392,7 @@ header#masthead nav#site-navigation aside.contact{
 	}
 	header#masthead nav#site-navigation aside.contact{
 		display: none;
+		order: 4;
 	}
 }
 header#masthead nav#site-navigation aside.contact h3{
@@ -483,6 +484,7 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		left: 0;
 		margin: 0;
 		z-index: 0;
+		order: 1;
 	}
 	header#masthead nav#site-navigation aside.search form:hover,
 	header#masthead nav#site-navigation aside.search form:focus-within,
@@ -846,6 +848,10 @@ header#masthead nav#site-navigation h2{
 		transform: translate(0, 10px);
 		opacity: 0;
 		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0s linear 0.3s;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		gap: 1em;
 	}
 	header#masthead nav#site-navigation.expanded{
 		left: 0;
@@ -858,12 +864,19 @@ header#masthead nav#site-navigation h2{
 		font-size: 1.125em;
 		font-style: normal;
 		font-weight: 400;
+		order: 0;
 	}
 	header#masthead nav#site-navigation .menu-container,
 	header#masthead.over-headerblock nav#site-navigation .menu-container{
 		background: transparent;
 		border-bottom: 0;
 		border-right: 0;
+	}
+	header#masthead nav#site-navigation .menu-container.menu-main-navigation-container{
+		order: 2;
+	}
+	header#masthead nav#site-navigation .menu-container.menu-secondary-menu-container{
+		order: 3;
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu{
 		display: block;
