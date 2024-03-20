@@ -362,10 +362,29 @@ header#masthead .site-branding > a{
 	top: 0;
 	left: 2em;
 }
+@media all and (max-width:768px){
+	header#masthead .site-branding > a{
+		left: 1em;
+	}
+}
 header#masthead .site-branding #logo{
 	width: 100%;
 }
 
+
+
+header#masthead nav#site-navigation aside.contact h3{
+	font-size: 0.65em;
+	margin: 0;
+	font-style: italic;
+	font-size: 100;
+	color: #ffffff;
+}
+header#masthead nav#site-navigation aside.contact a{
+	font-size: 1em;
+	font-weight: 700;
+	color: #ffffff;
+}
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation{
 		width: 100%;
@@ -387,22 +406,8 @@ header#masthead .site-branding #logo{
 		opacity: 0;
 	}
 }
-header#masthead nav#site-navigation aside.contact h3{
-	font-size: 0.65em;
-	margin: 0;
-	font-style: italic;
-	font-size: 100;
-	color: #ffffff;
-}
-header#masthead nav#site-navigation aside.contact a{
-	font-size: 1em;
-	font-weight: 700;
-	color: #ffffff;
-}
+
 @media all and (max-width:768px){
-	header#masthead .site-branding > a{
-		left: 1em;
-	}
 	header#masthead nav#site-navigation aside.contact{
 		order: 4;
 	}
