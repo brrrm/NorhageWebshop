@@ -857,11 +857,17 @@ header#masthead nav#site-navigation h2{
 		flex-direction: column;
 		gap: 1em;
 	}
+	body:has(header#masthead nav#site-navigation.expanded){
+		overflow: hidden;
+		height: 100vh;
+	}
 	header#masthead nav#site-navigation.expanded{
 		left: 0;
 		transform: translate(0, 0);
 		opacity: 1;
 		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0s linear 0s;
+		overflow: scroll;
+		height: 100%;
 	}
 	header#masthead nav#site-navigation h2{
 		display: block;
@@ -876,10 +882,12 @@ header#masthead nav#site-navigation h2{
 		border-bottom: 0;
 		border-right: 0;
 	}
-	header#masthead nav#site-navigation .menu-container.menu-main-navigation-container{
+	header#masthead nav#site-navigation .menu-main-navigation-container {
+		flex: auto 0 0;
 		order: 2;
 	}
-	header#masthead nav#site-navigation .menu-container.menu-secondary-menu-container{
+	header#masthead nav#site-navigation .menu-secondary-menu-container {
+		flex: auto 0 0;
 		order: 3;
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu{
