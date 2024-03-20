@@ -1173,6 +1173,8 @@ header#masthead nav#site-navigation h2{
 		overflow: visible;
 		padding-left:2em;
 		background-size: 1.5em auto;
+		display: block;
+		width: auto;
 	}	
 }
 
