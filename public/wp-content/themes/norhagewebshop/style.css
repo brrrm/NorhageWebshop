@@ -362,38 +362,17 @@ header#masthead .site-branding > a{
 	top: 0;
 	left: 2em;
 }
+@media all and (max-width:768px){
+	header#masthead .site-branding > a{
+		left: 1em;
+	}
+}
 header#masthead .site-branding #logo{
 	width: 100%;
 }
 
 
-header#masthead nav#site-navigation{
-	width: 100%;
-	display: flex;
-	height: var(--header-nav-height);
-	transition: height 0.5s ease;
-	border-bottom: 1px solid var(--white);
-}
-header#masthead nav#site-navigation aside.contact{
-	position: absolute;
-	right: 1.416666667em;
-	top: 0.4em;
-	text-align: right;
-	line-height: 1.04em;
-	transition: opacity 0.5s ease 0s, z-index 0s linear 0.7s;
-}
-.small-height-header header#masthead nav#site-navigation aside.contact{
-	z-index: -1;
-	opacity: 0;
-}
-@media all and (max-width:768px){
-	header#masthead .site-branding > a{
-		left: 1em;
-	}
-	header#masthead nav#site-navigation aside.contact{
-		display: none;
-	}
-}
+
 header#masthead nav#site-navigation aside.contact h3{
 	font-size: 0.65em;
 	margin: 0;
@@ -405,6 +384,37 @@ header#masthead nav#site-navigation aside.contact a{
 	font-size: 1em;
 	font-weight: 700;
 	color: #ffffff;
+}
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation{
+		width: 100%;
+		display: flex;
+		height: var(--header-nav-height);
+		transition: height 0.5s ease;
+		border-bottom: 1px solid var(--white);
+	}
+	header#masthead nav#site-navigation aside.contact{
+		position: absolute;
+		right: 1.416666667em;
+		top: 0.4em;
+		text-align: right;
+		line-height: 1.04em;
+		transition: opacity 0.5s ease 0s, z-index 0s linear 0.7s;
+	}
+	.small-height-header header#masthead nav#site-navigation aside.contact{
+		z-index: -1;
+		opacity: 0;
+	}
+}
+
+@media all and (max-width:768px){
+	header#masthead nav#site-navigation aside.contact{
+		order: 4;
+	}
+	header#masthead nav#site-navigation aside.contact h3,
+	header#masthead nav#site-navigation aside.contact a{
+		color: var(--black);
+	}
 }
 
 /*
@@ -483,6 +493,7 @@ header#masthead nav#site-navigation aside.search form:not(:has(input:placeholder
 		left: 0;
 		margin: 0;
 		z-index: 0;
+		order: 1;
 	}
 	header#masthead nav#site-navigation aside.search form:hover,
 	header#masthead nav#site-navigation aside.search form:focus-within,
@@ -656,12 +667,14 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	gap: 1em;
 	align-content: flex-start;
 }
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu{
-	left: 0;
-	transform: translate(0, 0);
-	opacity: 1;
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu{
+		left: 0;
+		transform: translate(0, 0);
+		opacity: 1;
+		transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li{
 	display: block;
@@ -697,17 +710,9 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	bottom: inherit;
 	transform: translate(0,-50%);
 }
-@media all and (max-width:768px){
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu > li:last-child{
-		border-bottom: none;
-		margin-bottom: 1em;
-	}	
-}
 
 
-/*
- * Translate switch
- */
+
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item{
 	position: relative;
@@ -808,8 +813,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
     	top: 0;
     	left: 0;
     	width: 100%;
-    	z-index: 0;
-    	
+    	z-index: 1;
 	}
 }
 header#masthead nav#site-navigation .widget_shopping_cart h2{
@@ -955,9 +959,6 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu .cart
 	color: #000;
 }
 
-
-
-
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu{
 	min-width: max-content;
@@ -970,11 +971,13 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li
 	right: 120vw;
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0.3s ;
 }
-header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu,
-header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item:hover ul.sub-menu{
-	left: auto;
-	right: -1em;
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0s;
+@media all and (min-width:768px){
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu,
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item:hover ul.sub-menu{
+		left: auto;
+		right: -1em;
+		transition: transform 0.3s ease-out, opacity 0.3s ease-out, right 0s linear 0s;
+	}
 }
 header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu li{
@@ -1001,7 +1004,27 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 	background: var(--store-color);
 }
 
-
+/*
+ * Cart icon 
+ */
+header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.cart  a{
+	background:  transparent url(images/svg/cart.svg) no-repeat left center;
+	background-size: contain;
+	width: 1.5em;
+	text-align: left;
+	text-indent: -99999em;
+	overflow: hidden;
+}
+@media all and (max-width:768px){
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.cart  a{
+		background-image: url(images/svg/cart-green.svg);	
+		text-indent: 0;
+		overflow: visible;
+		padding-left:2em;
+		background-size: 1.5em auto;
+	}
+}
+ 
 /*
  * MOBILE MEU
  */
@@ -1063,24 +1086,43 @@ header#masthead nav#site-navigation h2{
 		transform: translate(0, 10px);
 		opacity: 0;
 		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0s linear 0.3s;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		gap: 1em;
+	}
+	body:has(header#masthead nav#site-navigation.expanded){
+		overflow: hidden;
 	}
 	header#masthead nav#site-navigation.expanded{
 		left: 0;
 		transform: translate(0, 0);
 		opacity: 1;
 		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, left 0s linear 0s;
+		overflow: auto;
+		height: calc(100vh - var(--header-nav-height));
+		min-height: unset;
 	}
 	header#masthead nav#site-navigation h2{
 		display: block;
 		font-size: 1.125em;
 		font-style: normal;
 		font-weight: 400;
+		order: 0;
 	}
 	header#masthead nav#site-navigation .menu-container,
 	header#masthead.over-headerblock nav#site-navigation .menu-container{
 		background: transparent;
 		border-bottom: 0;
 		border-right: 0;
+	}
+	header#masthead nav#site-navigation .menu-main-navigation-container {
+		flex: auto 0 0;
+		order: 2;
+	}
+	header#masthead nav#site-navigation .menu-secondary-menu-container {
+		flex: auto 0 0;
+		order: 3;
 	}
 	header#masthead nav#site-navigation .menu-container ul.menu{
 		display: block;
@@ -1100,7 +1142,13 @@ header#masthead nav#site-navigation h2{
 		border-bottom: 1px solid #c7f5b0;
 		line-height: 1.5em;
 		position: relative;
+		flex: auto 0 0;
 	}
+	header#masthead nav#site-navigation .menu-container ul.menu li:last-child{
+		border-bottom: none;
+	}
+	
+
 	header#masthead nav#site-navigation .menu-container ul.menu li.menu-item-has-children .expander{
 		display: block;
 		font-size: 1em;
@@ -1117,6 +1165,13 @@ header#masthead nav#site-navigation h2{
 		text-indent: -99999em;
 		transition: transform 0.5s ease-in-out;
 	}
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages > a{
+		background-image: url(images/svg/globe-green.svg);
+		text-indent: 0;
+		overflow: visible;
+		padding-left:2em;
+		background-size: 1.5em auto;
+	}	
 	header#masthead nav#site-navigation .menu-container ul.menu li.menu-item-has-children.expanded .expander{
 		transform: rotate(90deg);
 	}
@@ -1130,11 +1185,16 @@ header#masthead nav#site-navigation h2{
 		max-height: 100vh;
 		transition: max-height 1s ease-in;
 	}
+	header#masthead nav#site-navigation .menu-container.menu-secondary-menu-container ul.menu li ul.sub-menu li{
+		margin: 0;
+		padding-left: 1em;
+	}
 	header#masthead nav#site-navigation .menu-container ul.menu ul.sub-menu li:first-child{
 		border-top: 1px solid #c7f5b0;
 	}
 	header#masthead nav#site-navigation .menu-container ul.sub-menu,
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li.languages ul.sub-menu,
+	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu,
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu > li.pll-parent-menu-item ul.sub-menu{
 		position: static;
 		height: auto;
@@ -1153,30 +1213,6 @@ header#masthead nav#site-navigation h2{
 	}
 }
 
-@media all and (max-width:768px){
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages{
-		position: relative;
-	}
-	
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages:hover ul.sub-menu, 
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu{
-		left: 0;
-		width: 100%;
-		opacity:1;
-	}
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages ul.sub-menu li{
-		padding-left: 1em;
-	}
-	header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.languages > a{
-		background-image: url(images/svg/globe-green.svg);
-		text-indent: 0;
-		overflow: visible;
-		padding-left:2em;
-		background-size: 1.5em auto;
-		display: block;
-		width: auto;
-	}	
-}
 
 /*
  * BLOCK ZAKEN
