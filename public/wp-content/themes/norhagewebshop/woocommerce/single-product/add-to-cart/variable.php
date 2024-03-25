@@ -31,9 +31,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 		<p class="stock out-of-stock"><?php echo esc_html( apply_filters( 'woocommerce_out_of_stock_message', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ) ) ); ?></p>
 	<?php else : ?>
-		<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhage'), $product->get_title()); ?></h2>
+		<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhagewebshop'), $product->get_title()); ?></h2>
 		<div class="dimensions">
-			<h3>1: <?php _e('Configure product options', 'norhage'); ?></h3>
+			<h3>1: <?php _e('Configure product options', 'norhagewebshop'); ?></h3>
 			<table class="variations" cellspacing="0" role="presentation">
 				<tbody>
 					<?php foreach ( $attributes as $attribute_name => $options ) : ?>
@@ -68,11 +68,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				<div class="sizes_input">
 					<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
 					<div class="width">
-						<label for="width"><?php _e('Width (m)', 'norhage'); ?></label>
+						<label for="width"><?php _e('Width (m)', 'norhagewebshop'); ?></label>
 						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
 					</div>
 					<div class="height">
-						<label for="height"><?php _e('Height (m)', 'norhage'); ?></label>
+						<label for="height"><?php _e('Height (m)', 'norhagewebshop'); ?></label>
 						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			if($extras):
 		?>
 			<div class="addons">
-				<h3>2: <?php _e('Select extra options', 'norhage'); ?></h3>
+				<h3>2: <?php _e('Select extra options', 'norhagewebshop'); ?></h3>
 				<div class="add-products">
 					<?php
 						foreach($extras as $addon):
@@ -115,7 +115,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<?php endif; ?>
 
 		<div class="single_variation_wrap">
-			<h3><?php echo ($extras)? '3' : '2'; ?>: <?php _e('Select the quantity', 'norhage'); ?></h3>
+			<h3><?php echo ($extras)? '3' : '2'; ?>: <?php _e('Select the quantity', 'norhagewebshop'); ?></h3>
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_variation.

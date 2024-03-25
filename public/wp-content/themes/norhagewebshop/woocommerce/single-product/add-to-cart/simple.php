@@ -53,16 +53,16 @@ if ( $product->is_in_stock() ) : ?>
 				$max_height = get_field('max_height') ?? 0;
 				$min_height = get_field('min_height') ?? 0;
 			?>
-			<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhage'), $product->get_title()); ?></h2>
+			<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhagewebshop'), $product->get_title()); ?></h2>
 			<div class="sizes_input">
-				<h3>1: <?php _e('Configure the size', 'norhage'); ?></h3>
+				<h3>1: <?php _e('Configure the size', 'norhagewebshop'); ?></h3>
 				<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
 				<div class="width">
-					<label for="width"><?php _e('Width (m)', 'norhage'); ?></label>
+					<label for="width"><?php _e('Width (m)', 'norhagewebshop'); ?></label>
 					<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
 				</div>
 				<div class="height">
-					<label for="height"><?php _e('Height (m)', 'norhage'); ?></label>
+					<label for="height"><?php _e('Height (m)', 'norhagewebshop'); ?></label>
 					<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
 				</div>
 			</div>
