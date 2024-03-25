@@ -92,10 +92,9 @@
 				popup.find('.image-col').scrollTop(currScroll + imageHeight);
 			}).appendTo(popup);
 
-			popup.find('.image-col').click(function(e){
-				$(this).toggleClass('contain');
-			});
 		}
+
+
 
 
 		/**

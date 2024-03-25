@@ -1608,9 +1608,9 @@ body .image-popup .image-col .header-image{
 	position: relative;
 }
 body .image-popup .image-col .header-image img{
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 	display: block;
 }
 
