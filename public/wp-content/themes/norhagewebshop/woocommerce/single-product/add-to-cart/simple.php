@@ -71,7 +71,7 @@ if ( $product->is_in_stock() ) : ?>
 		<div class="simple_product_wrap">
 			<?php if($has_cutting_fee): ?>
 
-				<h3>2: <?php _e('Select the quantity', 'norhage'); ?></h3>
+				<h3>2: <?php _e('Select the quantity', 'norhagewebshop'); ?></h3>
 				
 				<?php wc_get_template( 'single-product/price.php' ); ?>
 			<?php endif; ?>
