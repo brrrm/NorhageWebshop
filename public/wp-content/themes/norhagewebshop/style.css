@@ -1606,17 +1606,17 @@ body .image-popup .image-col .header-image{
 	height: 100%;
 	padding: 5em 1em 1em;
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
 }
 body .image-popup .image-col .header-image img{
 	max-height: 100%;
 	max-width: 100%;
 	object-fit: contain;
 	display: block;
+	flex: 100% 0 0;
 }
 
-body .image-popup .image-col.contain .header-image img{
-	object-fit: contain;
-}
 
 body .image-popup .close-button{
 	width: 3em;
