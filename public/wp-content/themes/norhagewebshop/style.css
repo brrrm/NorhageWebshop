@@ -1617,7 +1617,10 @@ body .image-popup .image-col .header-image img{
 	display: block;
 	flex: auto 0 0;
 }
-
+body .image-popup .image-col.cover .header-image img{
+	object-fit: cover;
+	width: 100%;
+}
 
 body .image-popup .close-button{
 	width: 3em;
