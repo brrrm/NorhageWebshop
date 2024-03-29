@@ -14,7 +14,6 @@
 	<footer id="colophon" class="site-footer">
 		<div class="company-info">
 			<h2><?php _e('Norhage Webshop', 'norhagewebshop'); ?></h2>
-			<p>Quisque sed vestibulum dui, ut ullamcorper felis. Phasellus convallis congue dolor, vitae auctor nulla sodales nec. Vestibulum mollis sapien eget congue luctus.</p>
 			<dl>
 				<dt><?php _e('Address', 'norhagewebshop'); ?></dt>
 				<dd>

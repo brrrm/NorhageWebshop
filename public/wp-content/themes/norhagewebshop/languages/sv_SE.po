@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: norhage Industri\n"
-"POT-Creation-Date: 2023-12-08 13:35+0100\n"
-"PO-Revision-Date: 2023-12-08 13:51+0100\n"
+"Project-Id-Version: Norhage webshop\n"
+"POT-Creation-Date: 2024-03-29 13:19+0100\n"
+"PO-Revision-Date: 2024-03-29 14:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -25,49 +25,33 @@ msgid "404"
 msgstr "404"
 
 #: 404.php:20
-#, fuzzy
 msgid "oh dear, we had to short on material.."
 msgstr "Oj oj, vi var tvungna att ha ont om material."
 
-#: blocks/categories-block/categoriesBlock.php:35
-#: blocks/categories-block/categoriesBlock.php:43
-#, fuzzy, php-format
+#: blocks/categories-block/categoriesBlock.php:72
+#: blocks/categories-block/categoriesBlock.php:82
+#, php-format
 msgid "View all post filed under %s"
 msgstr "Visa alla inlägg arkiverat under %s"
 
-#: blocks/headerblock/headerblock.php:65
-msgid "Industrial greenhouse projects"
-msgstr "Industrielle växthus"
-
-#: blocks/headerblock/headerblock.php:79
-msgid "Installation services"
-msgstr "Installations"
-
-#: blocks/headerblock/headerblock.php:86
-msgid "Maintenance & restoration"
-msgstr "Underhåll & renovering"
-
-#: blocks/headerblock/headerblock.php:95
-msgid "Roofing & facade, PVC curtains"
-msgstr "Tak och fasad, PVC-gardiner"
-
-#: blocks/projects-block/projectsBlock.php:53
+#: blocks/products-slider-block/productsSliderBlock.php:67
+#: blocks/projects-block/projectsBlock.php:88
 msgid "Left"
 msgstr "Vänster"
 
-#: blocks/projects-block/projectsBlock.php:54
+#: blocks/products-slider-block/productsSliderBlock.php:68
+#: blocks/projects-block/projectsBlock.php:89
 msgid "Right"
 msgstr "Höger"
 
-#: blocks/projects-block/projectsBlock.php:71
-#, fuzzy
+#: blocks/products-slider-block/productsSliderBlock.php:85
+#: blocks/projects-block/projectsBlock.php:107
 msgid "Read more ->"
 msgstr "Läs mer ->"
 
 #: footer.php:16
-#, fuzzy
-msgid "Norhage Industri"
-msgstr "Norhage Industri"
+msgid "Norhage Webshop"
+msgstr "Norhage Webshop"
 
 #: footer.php:19
 msgid "Address"
@@ -82,7 +66,6 @@ msgid "Phone"
 msgstr "Telefon"
 
 #: footer.php:36
-#, fuzzy
 msgid "B2C webshop"
 msgstr "B2C webbshop"
 
@@ -91,7 +74,6 @@ msgid "Sitemap"
 msgstr "Webbplatskarta"
 
 #: footer.php:51
-#, fuzzy
 msgid "Norhage can also be found on:"
 msgstr "Norhage finns också på:"
 
@@ -100,7 +82,6 @@ msgid "Primary"
 msgstr "Primär"
 
 #: functions.php:53
-#, fuzzy
 msgid "Secondary navigation"
 msgstr "Sekundär navigering"
 
@@ -108,469 +89,93 @@ msgstr "Sekundär navigering"
 msgid "Footer navigation"
 msgstr "Sidfotsnavigering"
 
-#: functions.php:142
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Greenhouse type"
-msgstr "Typ av växthus"
-
-#: functions.php:143
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Greenhouse types"
-msgstr "Typer av växthus"
-
-#: functions.php:144
-#, fuzzy
-msgid "Search greenhouse types"
-msgstr "Sök växthustyper"
-
-#: functions.php:145
-#, fuzzy
-msgid "All greenhouse types"
-msgstr "Alla typer av växthus"
-
-#: functions.php:146
-#, fuzzy
-msgid "Parent greenhouse type"
-msgstr "Typ av föräldraväxthus"
-
-#: functions.php:147
-#, fuzzy
-msgid "Parent greenhouse type:"
-msgstr "Typ av föräldraväxthus:"
-
-#: functions.php:148
-#, fuzzy
-msgid "Edit greenhouse type"
-msgstr "Redigera växthustyp"
-
-#: functions.php:149
-#, fuzzy
-msgid "Update greenhouse type"
-msgstr "Uppdatera växthustyp"
-
-#: functions.php:150
-#, fuzzy
-msgid "Save greenhouse type"
-msgstr "Spara växthustyp"
-
-#: functions.php:151
-#, fuzzy
-msgid "New greenhouse type name"
-msgstr "Nytt namn på växthustyp"
-
-#: functions.php:152
-#, fuzzy
-msgid "Greenhouse types"
-msgstr "Typer av växthus"
-
-#: functions.php:159
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Plastic type"
-msgstr "Typ av plast"
-
-#: functions.php:160
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Plastic types"
-msgstr "Typer av plast"
-
-#: functions.php:161
-#, fuzzy
-msgid "Search plastic types"
-msgstr "Sök plasttyper"
-
-#: functions.php:162
-#, fuzzy
-msgid "All plastic types"
-msgstr "Alla typer av plast"
-
-#: functions.php:163
-#, fuzzy
-msgid "Parent plastic type"
-msgstr "Förälder plast typ"
-
-#: functions.php:164
-#, fuzzy
-msgid "Parent plastic type:"
-msgstr "Förälder plast typ:"
-
-#: functions.php:165
-#, fuzzy
-msgid "Edit plastic type"
-msgstr "Redigera plasttyp"
-
-#: functions.php:166
-#, fuzzy
-msgid "Update plastic type"
-msgstr "Uppdatera plasttyp"
-
-#: functions.php:167
-#, fuzzy
-msgid "Save plastic type"
-msgstr "Spara plasttyp"
-
-#: functions.php:168
-#, fuzzy
-msgid "New plastic type name"
-msgstr "Nytt namn på plasttyp"
-
-#: functions.php:169
-#, fuzzy
-msgid "Plastic types"
-msgstr "Typer av plast"
-
-#: functions.php:176
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Material type"
-msgstr "Typ av material"
-
-#: functions.php:177
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Material types"
-msgstr "Typer av material"
-
-#: functions.php:178
-#, fuzzy
-msgid "Search material types"
-msgstr "Sök materialtyper"
-
-#: functions.php:179
-#, fuzzy
-msgid "All Material types"
-msgstr "Alla materialtyper"
-
-#: functions.php:180
-#, fuzzy
-msgid "Parent Material type"
-msgstr "Typ av överordnat material"
-
-#: functions.php:181
-#, fuzzy
-msgid "Parent Material type:"
-msgstr "Överordnad materialtyp:"
-
-#: functions.php:182
-#, fuzzy
-msgid "Edit Material type"
-msgstr "Redigera materialtyp"
-
-#: functions.php:183
-#, fuzzy
-msgid "Update Material type"
-msgstr "Uppdatera materialtyp"
-
-#: functions.php:184
-#, fuzzy
-msgid "Save Material type"
-msgstr "Spara materialtyp"
-
-#: functions.php:185
-#, fuzzy
-msgid "New Material type name"
-msgstr "Nytt namn på materialtyp"
-
-#: functions.php:186
-#, fuzzy
-msgid "Material types"
-msgstr "Typer av material"
-
-#: functions.php:193
-msgctxt "taxonomy general name"
-msgid "Service type"
-msgstr "Servicetyp"
-
-#: functions.php:194
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Service types"
-msgstr "Typer av tjänster"
-
-#: functions.php:195
-#, fuzzy
-msgid "Search service types"
-msgstr "Typer av söktjänster"
-
-#: functions.php:196
-#, fuzzy
-msgid "All Service types"
-msgstr "Alla typer av tjänster"
-
-#: functions.php:197
-#, fuzzy
-msgid "Parent Service type"
-msgstr "Överordnad tjänsttyp"
-
-#: functions.php:198
-#, fuzzy
-msgid "Parent Service type:"
-msgstr "Överordnad tjänsttyp:"
-
-#: functions.php:199
-#, fuzzy
-msgid "Edit Service type"
-msgstr "Redigera tjänsttyp"
-
-#: functions.php:200
-#, fuzzy
-msgid "Update Service type"
-msgstr "Uppdatera tjänsttyp"
-
-#: functions.php:201
-#, fuzzy
-msgid "Save Service type"
-msgstr "Spara tjänsttyp"
-
-#: functions.php:202
-#, fuzzy
-msgid "New Service type name"
-msgstr "Nytt namn på tjänsttyp"
-
-#: functions.php:203
-#, fuzzy
-msgid "Service types"
-msgstr "Typer av tjänster"
-
-#: functions.php:233
-#, fuzzy
-msgid "Greenhouses"
-msgstr "Växthus"
-
-#: functions.php:234
-#, fuzzy
-msgid "Greenhouse"
-msgstr "Växthus"
-
-#: functions.php:235 functions.php:238
-#, fuzzy
-msgid "New greenhouse"
-msgstr "Nytt växthus"
-
-#: functions.php:236
-#, fuzzy
-msgid "Add new greenhouse"
-msgstr "Lägg till nytt växthus"
-
-#: functions.php:237
-#, fuzzy
-msgid "Edit greenhouse"
-msgstr "Redigera växthus"
-
-#: functions.php:239
-#, fuzzy
-msgid "View greenhouse"
-msgstr "Visa växthus"
-
-#: functions.php:240
-#, fuzzy
-msgid "Search greenhouse"
-msgstr "Sök växthus"
-
-#: functions.php:241
-#, fuzzy
-msgid "No greenhouses found"
-msgstr "Inga växthus hittades"
-
-#: functions.php:242
-#, fuzzy
-msgid "No greenhouses found in trash"
-msgstr "Inga växthus hittades i soporna"
-
-#: functions.php:249
-#, fuzzy
-msgid "Plastics"
-msgstr "Plast"
-
-#: functions.php:250
-#, fuzzy
-msgid "Plastic"
-msgstr "Plast"
-
-#: functions.php:251 functions.php:254
-#, fuzzy
-msgid "New plastic"
-msgstr "Ny plast"
-
-#: functions.php:252
-#, fuzzy
-msgid "Add new plastic"
-msgstr "Lägg till ny plast"
-
-#: functions.php:253
-#, fuzzy
-msgid "Edit plastic"
-msgstr "Redigera plast"
-
-#: functions.php:255
-#, fuzzy
-msgid "View plastics"
-msgstr "Visa plast"
-
-#: functions.php:256
-#, fuzzy
-msgid "Search plastics"
-msgstr "Sök plast"
-
-#: functions.php:257
-#, fuzzy
-msgid "No plastics found"
-msgstr "Ingen plast hittades"
-
-#: functions.php:258
-#, fuzzy
-msgid "No plastics found in trash"
-msgstr "Ingen plast hittades i soporna"
-
-#: functions.php:265
-msgid "Services"
-msgstr "Tjänster"
-
-#: functions.php:266
-msgid "Service"
-msgstr "Tjänst"
-
-#: functions.php:267 functions.php:270
-msgid "New service"
-msgstr "Ny underhåll"
-
-#: functions.php:268
-msgid "Add new service"
-msgstr "Lägga till ny tjänst"
-
-#: functions.php:269
-msgid "Edit service"
-msgstr "Redigera tjänst"
-
-#: functions.php:271
-msgid "View service"
-msgstr "Visa tjänst"
-
-#: functions.php:272
-#, fuzzy
-msgid "Search services"
-msgstr "Söktjänster"
-
-#: functions.php:273
-msgid "No services found"
-msgstr "Ingen tjänst funnen"
-
-#: functions.php:274
-#, fuzzy
-msgid "No services found in trash"
-msgstr "Inga tjänster hittades i papperskorgen"
-
-#: functions.php:281
-#, fuzzy
-msgid "Construction materials"
-msgstr "Byggmaterial"
-
-#: functions.php:282
-#, fuzzy
-msgid "Construction material"
-msgstr "Byggmaterial"
-
-#: functions.php:283 functions.php:286
-#, fuzzy
-msgid "New construction material"
-msgstr "Nytt byggmaterial"
-
-#: functions.php:284
-#, fuzzy
-msgid "Add new construction material"
-msgstr "Lägg till nytt byggmaterial"
-
-#: functions.php:285
-#, fuzzy
-msgid "Edit construction material"
-msgstr "Redigera byggmaterial"
-
-#: functions.php:287
-#, fuzzy
-msgid "View construction material"
-msgstr "Visa byggmaterial"
-
-#: functions.php:288
-#, fuzzy
-msgid "Search construction materials"
-msgstr "Sök byggmaterial"
-
-#: functions.php:289
-#, fuzzy
-msgid "No construction materials found"
-msgstr "Inget byggmaterial hittades"
-
-#: functions.php:290
-#, fuzzy
-msgid "No construction materials found in trash"
-msgstr "Inget byggmaterial hittades i soporna"
-
-#: functions.php:326
-#, fuzzy
-msgid "You should know that"
-msgstr "Det borde du veta"
-
-#: functions.php:384
+#: functions.php:116
 msgid "Projects"
 msgstr "Projekt"
 
-#: functions.php:385
+#: functions.php:117
 msgid "Project"
 msgstr "Projekt"
 
-#: functions.php:386 functions.php:389
+#: functions.php:118 functions.php:121
 msgid "New project"
 msgstr "Nytt projekt"
 
-#: functions.php:387
+#: functions.php:119
 msgid "Add new project"
 msgstr "Lägg till nytt projekt"
 
-#: functions.php:388
+#: functions.php:120
 msgid "Edit project"
 msgstr "Ändra projekt"
 
-#: functions.php:390
+#: functions.php:122
 msgid "View project"
 msgstr "Visa projekt"
 
-#: functions.php:391
+#: functions.php:123
 msgid "Search project"
 msgstr "Sök projekt"
 
-#: functions.php:392
+#: functions.php:124
 msgid "No projects found"
 msgstr "Inga projekt hittades"
 
-#: functions.php:393
+#: functions.php:125
 msgid "No projects found in trash"
 msgstr "Inga projekt hittades i papperskorgen"
 
-#: functions.php:465
+#: functions.php:201
 msgid "expand"
 msgstr "Expandera"
 
-#: header.php:25
-#, fuzzy
+#: functions.php:438 functions.php:506 functions.php:538
+msgid "Cutting fee"
+msgstr "Avgift för sänkning"
+
+#: functions.php:442 functions.php:510
+msgid "Size"
+msgstr "Storlek"
+
+#: functions.php:541
+msgid "Sizes"
+msgstr "Storlekar"
+
+#: functions.php:605
+msgid "Description"
+msgstr "Beskrivning"
+
+#: functions.php:612
+msgid "The description is shown on the category overview page."
+msgstr "Beskrivningen visas på kategoriöversiktssidan."
+
+#: header.php:35
 msgid "Skip to content"
-msgstr "Fortsätt till innehållet"
+msgstr "Hoppa till innehåll"
 
-#: header.php:109
-#, fuzzy
+#: header.php:96
 msgid "Primary Menu"
-msgstr "Huvudmeny"
+msgstr "Primär meny"
 
-#: header.php:113
+#: header.php:100
 msgid "Navigation"
 msgstr "Navigering"
 
-#: header.php:130
-#, fuzzy
+#: header.php:118
 msgid "Contact us today"
 msgstr "Kontakta oss idag"
+
+#: inc/ajax-cart.php:6 inc/ajax-cart.php:10
+msgid "Cart"
+msgstr "Varukorg"
+
+#: inc/ajax-cart.php:44
+msgid "Shopping cart"
+msgstr "Varukorg"
+
+#: inc/ajax-cart.php:45
+msgid "Close"
+msgstr "Stäng"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -662,17 +267,60 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Fortsätt läsa<span class=\"screen-reader-text\"> ”%s”</span>"
 
+#: woocommerce/content-single-product.php:58
+#, php-format
+msgid "Customize your %s"
+msgstr "Anpassa din %s"
+
+#: woocommerce/single-product/add-to-cart/simple.php:56
+#: woocommerce/single-product/add-to-cart/variable.php:34
+#, php-format
+msgid "Customize and order your %s"
+msgstr "Anpassa och beställ din %s"
+
+#: woocommerce/single-product/add-to-cart/simple.php:58
+msgid "Configure the size"
+msgstr "Konfigurera storleken"
+
+#: woocommerce/single-product/add-to-cart/simple.php:61
+#: woocommerce/single-product/add-to-cart/variable.php:71
+msgid "Width (m)"
+msgstr "Bredd (m)"
+
+#: woocommerce/single-product/add-to-cart/simple.php:65
+#: woocommerce/single-product/add-to-cart/variable.php:75
+msgid "Height (m)"
+msgstr "Höjd (m)"
+
+#: woocommerce/single-product/add-to-cart/simple.php:74
+#: woocommerce/single-product/add-to-cart/variable.php:118
+msgid "Select the quantity"
+msgstr "Välj kvantitet"
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr "Produkten finns ej i lager."
+
+#: woocommerce/single-product/add-to-cart/variable.php:36
+msgid "Configure product options"
+msgstr "Konfigurera produktalternativ"
+
+#: woocommerce/single-product/add-to-cart/variable.php:51
+msgid "Clear"
+msgstr "Rensa"
+
+#: woocommerce/single-product/add-to-cart/variable.php:88
+msgid "Select extra options"
+msgstr "Välj extra alternativ"
+
 #. Theme Name of the plugin/theme
-#, fuzzy
-msgid "norhage Industri"
-msgstr "norhage Industri"
+msgid "Norhage webshop"
+msgstr "Norhage webbshop"
 
 #. Author of the plugin/theme
-#, fuzzy
 msgid "Garbo"
 msgstr "Garbo"
 
 #. Author URI of the plugin/theme
-#, fuzzy
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"

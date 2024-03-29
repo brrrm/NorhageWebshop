@@ -1,241 +1,241 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-03-29 14:04+0100\n"
+"PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:18
 msgid "404"
-msgstr "404"
+msgstr ""
 
 #: 404.php:20
 msgid "oh dear, we had to short on material.."
-msgstr "Å kjære, vi måtte kort på materiale .."
+msgstr ""
 
 #: blocks/categories-block/categoriesBlock.php:72
 #: blocks/categories-block/categoriesBlock.php:82
 #, php-format
 msgid "View all post filed under %s"
-msgstr "Se alle innlegg arkivert under %s"
+msgstr ""
 
 #: blocks/products-slider-block/productsSliderBlock.php:67
 #: blocks/projects-block/projectsBlock.php:88
 msgid "Left"
-msgstr "Venstre"
+msgstr ""
 
 #: blocks/products-slider-block/productsSliderBlock.php:68
 #: blocks/projects-block/projectsBlock.php:89
 msgid "Right"
-msgstr "Høyre"
+msgstr ""
 
 #: blocks/products-slider-block/productsSliderBlock.php:85
 #: blocks/projects-block/projectsBlock.php:107
 msgid "Read more ->"
-msgstr "Les mer ->"
+msgstr ""
 
 #: footer.php:16
 msgid "Norhage Webshop"
-msgstr "Norhage Nettbutikk"
+msgstr ""
 
 #: footer.php:19
 msgid "Address"
-msgstr "Adresse"
+msgstr ""
 
 #: footer.php:27
 msgid "Email"
-msgstr "E-post"
+msgstr ""
 
 #: footer.php:30
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: footer.php:36
 msgid "B2C webshop"
-msgstr "B2C nettbutikk"
+msgstr ""
 
 #: footer.php:41 footer.php:42
 msgid "Sitemap"
-msgstr "Sidekart"
+msgstr ""
 
 #: footer.php:51
 msgid "Norhage can also be found on:"
-msgstr "Norhage finnes også på:"
+msgstr ""
 
 #: functions.php:52
 msgid "Primary"
-msgstr "Primær"
+msgstr ""
 
 #: functions.php:53
 msgid "Secondary navigation"
-msgstr "Sekundær navigasjon"
+msgstr ""
 
 #: functions.php:54
 msgid "Footer navigation"
-msgstr "Navigasjon i bunntekst"
+msgstr ""
 
 #: functions.php:116
 msgid "Projects"
-msgstr "Prosjekter"
+msgstr ""
 
 #: functions.php:117
 msgid "Project"
-msgstr "Prosjekt"
+msgstr ""
 
 #: functions.php:118 functions.php:121
 msgid "New project"
-msgstr "Nytt prosjekt"
+msgstr ""
 
 #: functions.php:119
 msgid "Add new project"
-msgstr "Nytt prosjekt"
+msgstr ""
 
 #: functions.php:120
 msgid "Edit project"
-msgstr "Rediger prosjekt"
+msgstr ""
 
 #: functions.php:122
 msgid "View project"
-msgstr "Vis prosjekt"
+msgstr ""
 
 #: functions.php:123
 msgid "Search project"
-msgstr "Søk prosjekt"
+msgstr ""
 
 #: functions.php:124
 msgid "No projects found"
-msgstr "Ingen prosjekter funnet"
+msgstr ""
 
 #: functions.php:125
 msgid "No projects found in trash"
-msgstr "Ingen prosjekter funnet i papirkurven"
+msgstr ""
 
 #: functions.php:201
 msgid "expand"
-msgstr "utvide"
+msgstr ""
 
 #: functions.php:438 functions.php:506 functions.php:538
 msgid "Cutting fee"
-msgstr "Kutter gebyr"
+msgstr ""
 
 #: functions.php:442 functions.php:510
 msgid "Size"
-msgstr "Størrelse"
+msgstr ""
 
 #: functions.php:541
 msgid "Sizes"
-msgstr "Størrelser"
+msgstr ""
 
 #: functions.php:605
 msgid "Description"
-msgstr "Beskrivelse"
+msgstr ""
 
 #: functions.php:612
 msgid "The description is shown on the category overview page."
-msgstr "Beskrivelsen vises på siden for kategorioversikt."
+msgstr ""
 
 #: header.php:35
 msgid "Skip to content"
-msgstr "Gå til innhold"
+msgstr ""
 
 #: header.php:96
 msgid "Primary Menu"
-msgstr "Hovedmeny"
+msgstr ""
 
 #: header.php:100
 msgid "Navigation"
-msgstr "Navigasjon"
+msgstr ""
 
 #: header.php:118
 msgid "Contact us today"
-msgstr "Kontakt oss i dag"
+msgstr ""
 
 #: inc/ajax-cart.php:6 inc/ajax-cart.php:10
 msgid "Cart"
-msgstr "Handlekurv"
+msgstr ""
 
 #: inc/ajax-cart.php:44
 msgid "Shopping cart"
-msgstr "Handlevogn"
+msgstr ""
 
 #: inc/ajax-cart.php:45
 msgid "Close"
-msgstr "Lukk"
+msgstr ""
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr "Publisert %s"
+msgstr ""
 
 #. translators: %s: post author.
 #: inc/template-tags.php:46
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr "av %s"
+msgstr ""
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:63
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:66
 #, php-format
 msgid "Posted in %1$s"
-msgstr "Publisert i %1$s"
+msgstr ""
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:70
 msgctxt "list item separator"
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:73
 #, php-format
 msgid "Tagged %1$s"
-msgstr "Merket %1$s"
+msgstr ""
 
 #. translators: %s: post title
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
-"Legg igjen en kommentar <span class=\"screen-reader-text\">på %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Rediger <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
 
 #. translators: %s: search query.
 #: search.php:21
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Søkeresultater for: %s"
+msgstr ""
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr "Ingenting funnet"
+msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
@@ -243,83 +243,79 @@ msgstr "Ingenting funnet"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Klar for å publisere din første artikkel? <a href=“%1$s”>Kom i gang her</"
-"a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Beklager, men ingenting samsvarer med søkeordene dine. Vennligst prøv "
-"igjen med noen andre søkeord."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr "Vi kan dessverre ikke finne det du leter etter, prøv søkefeltet."
+msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "Fortsett å lese<span class=\"screen-reader-text\"> “%s”</span>"
+msgstr ""
 
 #: woocommerce/content-single-product.php:58
 #, php-format
 msgid "Customize your %s"
-msgstr "Tilpass %s"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:56
 #: woocommerce/single-product/add-to-cart/variable.php:34
 #, php-format
 msgid "Customize and order your %s"
-msgstr "Tilpass og bestill %s dine"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:58
 msgid "Configure the size"
-msgstr "Konfigurer størrelsen"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:61
 #: woocommerce/single-product/add-to-cart/variable.php:71
 msgid "Width (m)"
-msgstr "Bredde (m)"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:65
 #: woocommerce/single-product/add-to-cart/variable.php:75
 msgid "Height (m)"
-msgstr "Høyde (m)"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:74
 #: woocommerce/single-product/add-to-cart/variable.php:118
 msgid "Select the quantity"
-msgstr "Velg antall"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:32
 msgid "This product is currently out of stock and unavailable."
-msgstr "Dette produktet er for tiden utsolgt og utilgjengelig."
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:36
 msgid "Configure product options"
-msgstr "Konfigurere produktalternativer"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:51
 msgid "Clear"
-msgstr "Tøm"
+msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:88
 msgid "Select extra options"
-msgstr "Velg ekstra alternativer"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
-msgstr "Norhage nettbutikk"
+msgstr ""
 
 #. Author of the plugin/theme
 msgid "Garbo"
-msgstr "Garbo"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
-msgstr "https://garbo.nl"
+msgstr ""

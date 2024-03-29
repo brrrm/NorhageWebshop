@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: norhage Industri\n"
-"POT-Creation-Date: 2023-12-08 13:35+0100\n"
-"PO-Revision-Date: 2023-12-08 13:57+0100\n"
+"Project-Id-Version: Norhage webshop\n"
+"POT-Creation-Date: 2024-03-29 13:19+0100\n"
+"PO-Revision-Date: 2024-03-29 14:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -25,49 +25,33 @@ msgid "404"
 msgstr "404"
 
 #: 404.php:20
-#, fuzzy
 msgid "oh dear, we had to short on material.."
 msgstr "Voi rakas, meillä oli pulaa materiaalista.."
 
-#: blocks/categories-block/categoriesBlock.php:35
-#: blocks/categories-block/categoriesBlock.php:43
+#: blocks/categories-block/categoriesBlock.php:72
+#: blocks/categories-block/categoriesBlock.php:82
 #, php-format
 msgid "View all post filed under %s"
 msgstr "Syöte kaikille kategorian %s artikkeleille"
 
-#: blocks/headerblock/headerblock.php:65
-msgid "Industrial greenhouse projects"
-msgstr "Teollisuuden kasvihuone"
-
-#: blocks/headerblock/headerblock.php:79
-msgid "Installation services"
-msgstr "Asennuspalvelut"
-
-#: blocks/headerblock/headerblock.php:86
-msgid "Maintenance & restoration"
-msgstr "Huolto & saneeraus"
-
-#: blocks/headerblock/headerblock.php:95
-msgid "Roofing & facade, PVC curtains"
-msgstr "Katto ja julkisivu, PVC-verhot"
-
-#: blocks/projects-block/projectsBlock.php:53
+#: blocks/products-slider-block/productsSliderBlock.php:67
+#: blocks/projects-block/projectsBlock.php:88
 msgid "Left"
 msgstr "Vasen"
 
-#: blocks/projects-block/projectsBlock.php:54
+#: blocks/products-slider-block/productsSliderBlock.php:68
+#: blocks/projects-block/projectsBlock.php:89
 msgid "Right"
 msgstr "Oikea"
 
-#: blocks/projects-block/projectsBlock.php:71
-#, fuzzy
+#: blocks/products-slider-block/productsSliderBlock.php:85
+#: blocks/projects-block/projectsBlock.php:107
 msgid "Read more ->"
 msgstr "Lue lisää ->"
 
 #: footer.php:16
-#, fuzzy
-msgid "Norhage Industri"
-msgstr "Norhage Industri"
+msgid "Norhage Webshop"
+msgstr "Norhagen verkkokauppa"
 
 #: footer.php:19
 msgid "Address"
@@ -82,7 +66,6 @@ msgid "Phone"
 msgstr "Puhelin"
 
 #: footer.php:36
-#, fuzzy
 msgid "B2C webshop"
 msgstr "B2C-verkkokauppa"
 
@@ -91,7 +74,6 @@ msgid "Sitemap"
 msgstr "Sivukartta"
 
 #: footer.php:51
-#, fuzzy
 msgid "Norhage can also be found on:"
 msgstr "Norhage löytyy myös:"
 
@@ -100,7 +82,6 @@ msgid "Primary"
 msgstr "Ensisijainen"
 
 #: functions.php:53
-#, fuzzy
 msgid "Secondary navigation"
 msgstr "Toissijainen navigointi"
 
@@ -108,473 +89,93 @@ msgstr "Toissijainen navigointi"
 msgid "Footer navigation"
 msgstr "Alatunnisteen navigointi"
 
-#: functions.php:142
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Greenhouse type"
-msgstr "Kasvihuoneen tyyppi"
-
-#: functions.php:143
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Greenhouse types"
-msgstr "Kasvihuoneen tyypit"
-
-#: functions.php:144
-#, fuzzy
-msgid "Search greenhouse types"
-msgstr "Etsi kasvihuonetyyppejä"
-
-#: functions.php:145
-#, fuzzy
-msgid "All greenhouse types"
-msgstr "Kaikki kasvihuonetyypit"
-
-#: functions.php:146
-#, fuzzy
-msgid "Parent greenhouse type"
-msgstr "Vanhempi kasvihuonetyyppi"
-
-#: functions.php:147
-#, fuzzy
-msgid "Parent greenhouse type:"
-msgstr "Vanhempi kasvihuonetyyppi:"
-
-#: functions.php:148
-#, fuzzy
-msgid "Edit greenhouse type"
-msgstr "Muokkaa kasvihuonetyyppiä"
-
-#: functions.php:149
-#, fuzzy
-msgid "Update greenhouse type"
-msgstr "Päivitä kasvihuonetyyppi"
-
-#: functions.php:150
-#, fuzzy
-msgid "Save greenhouse type"
-msgstr "Tallenna kasvihuonetyyppi"
-
-#: functions.php:151
-#, fuzzy
-msgid "New greenhouse type name"
-msgstr "Uusi kasvihuonetyypin nimi"
-
-#: functions.php:152
-#, fuzzy
-msgid "Greenhouse types"
-msgstr "Kasvihuoneen tyypit"
-
-#: functions.php:159
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Plastic type"
-msgstr "Muovinen tyyppi"
-
-#: functions.php:160
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Plastic types"
-msgstr "Muoviset tyypit"
-
-#: functions.php:161
-#, fuzzy
-msgid "Search plastic types"
-msgstr "Hae muovityyppejä"
-
-#: functions.php:162
-#, fuzzy
-msgid "All plastic types"
-msgstr "Kaikki muovityypit"
-
-#: functions.php:163
-#, fuzzy
-msgid "Parent plastic type"
-msgstr "Vanhempi muovityyppi"
-
-#: functions.php:164
-#, fuzzy
-msgid "Parent plastic type:"
-msgstr "Vanhempi muovityyppi:"
-
-#: functions.php:165
-#, fuzzy
-msgid "Edit plastic type"
-msgstr "Muokkaa muovityyppiä"
-
-#: functions.php:166
-#, fuzzy
-msgid "Update plastic type"
-msgstr "Päivitä muovityyppi"
-
-#: functions.php:167
-#, fuzzy
-msgid "Save plastic type"
-msgstr "Säästä muovityyppiä"
-
-#: functions.php:168
-#, fuzzy
-msgid "New plastic type name"
-msgstr "Uusi muovityypin nimi"
-
-#: functions.php:169
-#, fuzzy
-msgid "Plastic types"
-msgstr "Muoviset tyypit"
-
-#: functions.php:176
-#, fuzzy
-msgctxt "taxonomy general name"
-msgid "Material type"
-msgstr "Materiaalin tyyppi"
-
-#: functions.php:177
-#, fuzzy
-msgctxt "taxonomy singular name"
-msgid "Material types"
-msgstr "Materiaalityypit"
-
-#: functions.php:178
-#, fuzzy
-msgid "Search material types"
-msgstr "Hae materiaalityyppejä"
-
-#: functions.php:179
-#, fuzzy
-msgid "All Material types"
-msgstr "Kaikki materiaalityypit"
-
-#: functions.php:180
-#, fuzzy
-msgid "Parent Material type"
-msgstr "Päämateriaalin tyyppi"
-
-#: functions.php:181
-#, fuzzy
-msgid "Parent Material type:"
-msgstr "Päämateriaalin tyyppi:"
-
-#: functions.php:182
-#, fuzzy
-msgid "Edit Material type"
-msgstr "Muokkaa materiaalityyppiä"
-
-#: functions.php:183
-#, fuzzy
-msgid "Update Material type"
-msgstr "Päivitä materiaalityyppi"
-
-#: functions.php:184
-#, fuzzy
-msgid "Save Material type"
-msgstr "Tallenna materiaalityyppi"
-
-#: functions.php:185
-#, fuzzy
-msgid "New Material type name"
-msgstr "Uusi materiaalityypin nimi"
-
-#: functions.php:186
-#, fuzzy
-msgid "Material types"
-msgstr "Materiaalityypit"
-
-#: functions.php:193
-msgctxt "taxonomy general name"
-msgid "Service type"
-msgstr "Palvelun tyyppi"
-
-#: functions.php:194
-msgctxt "taxonomy singular name"
-msgid "Service types"
-msgstr "Palvelutyypit"
-
-#: functions.php:195
-#, fuzzy
-msgid "Search service types"
-msgstr "Hakupalvelutyypit"
-
-#: functions.php:196
-#, fuzzy
-msgid "All Service types"
-msgstr "Kaikki palvelutyypit"
-
-#: functions.php:197
-#, fuzzy
-msgid "Parent Service type"
-msgstr "Pääpalvelun tyyppi"
-
-#: functions.php:198
-#, fuzzy
-msgid "Parent Service type:"
-msgstr "Pääpalvelun tyyppi:"
-
-#: functions.php:199
-#, fuzzy
-msgid "Edit Service type"
-msgstr "Muokkaa palvelutyyppiä"
-
-#: functions.php:200
-#, fuzzy
-msgid "Update Service type"
-msgstr "Päivitä palvelun tyyppi"
-
-#: functions.php:201
-#, fuzzy
-msgid "Save Service type"
-msgstr "Tallenna palvelun tyyppi"
-
-#: functions.php:202
-#, fuzzy
-msgid "New Service type name"
-msgstr "Uuden palvelutyypin nimi"
-
-#: functions.php:203
-msgid "Service types"
-msgstr "Palvelutyypit"
-
-#: functions.php:233
-#, fuzzy
-msgid "Greenhouses"
-msgstr "Kasvihuoneet"
-
-#: functions.php:234
-#, fuzzy
-msgid "Greenhouse"
-msgstr "Kasvihuone"
-
-#: functions.php:235 functions.php:238
-#, fuzzy
-msgid "New greenhouse"
-msgstr "Uusi kasvihuone"
-
-#: functions.php:236
-#, fuzzy
-msgid "Add new greenhouse"
-msgstr "Lisää uusi kasvihuone"
-
-#: functions.php:237
-#, fuzzy
-msgid "Edit greenhouse"
-msgstr "Muokkaa kasvihuonetta"
-
-#: functions.php:239
-#, fuzzy
-msgid "View greenhouse"
-msgstr "Näytä kasvihuone"
-
-#: functions.php:240
-#, fuzzy
-msgid "Search greenhouse"
-msgstr "Etsi kasvihuoneesta"
-
-#: functions.php:241
-#, fuzzy
-msgid "No greenhouses found"
-msgstr "Kasvihuoneita ei löytynyt"
-
-#: functions.php:242
-#, fuzzy
-msgid "No greenhouses found in trash"
-msgstr "Roskista ei löytynyt kasvihuoneita"
-
-#: functions.php:249
-#, fuzzy
-msgid "Plastics"
-msgstr "Muovit"
-
-#: functions.php:250
-msgid "Plastic"
-msgstr "Muovi"
-
-#: functions.php:251 functions.php:254
-#, fuzzy
-msgid "New plastic"
-msgstr "Uusi muovi"
-
-#: functions.php:252
-#, fuzzy
-msgid "Add new plastic"
-msgstr "Lisää uutta muovia"
-
-#: functions.php:253
-#, fuzzy
-msgid "Edit plastic"
-msgstr "Muokkaa muovia"
-
-#: functions.php:255
-#, fuzzy
-msgid "View plastics"
-msgstr "Näytä muovit"
-
-#: functions.php:256
-#, fuzzy
-msgid "Search plastics"
-msgstr "Hae muoveja"
-
-#: functions.php:257
-#, fuzzy
-msgid "No plastics found"
-msgstr "Muoveja ei löytynyt"
-
-#: functions.php:258
-#, fuzzy
-msgid "No plastics found in trash"
-msgstr "Roskista ei löydy muoveja"
-
-#: functions.php:265
-msgid "Services"
-msgstr "Palvelut"
-
-#: functions.php:266
-msgid "Service"
-msgstr "Palvelu"
-
-#: functions.php:267 functions.php:270
-msgid "New service"
-msgstr "Uusi palvelu"
-
-#: functions.php:268
-msgid "Add new service"
-msgstr "Lisää uusi palvelu"
-
-#: functions.php:269
-msgid "Edit service"
-msgstr "Muokkaa palvelua"
-
-#: functions.php:271
-msgid "View service"
-msgstr "Katso palvelu"
-
-#: functions.php:272
-#, fuzzy
-msgid "Search services"
-msgstr "Hakupalvelut"
-
-#: functions.php:273
-#, fuzzy
-msgid "No services found"
-msgstr "Palveluita ei löytynyt"
-
-#: functions.php:274
-#, fuzzy
-msgid "No services found in trash"
-msgstr "Palveluita ei löytynyt roskista"
-
-#: functions.php:281
-#, fuzzy
-msgid "Construction materials"
-msgstr "Rakennusmateriaalit"
-
-#: functions.php:282
-#, fuzzy
-msgid "Construction material"
-msgstr "Rakennusmateriaali"
-
-#: functions.php:283 functions.php:286
-#, fuzzy
-msgid "New construction material"
-msgstr "Uusi rakennusmateriaali"
-
-#: functions.php:284
-#, fuzzy
-msgid "Add new construction material"
-msgstr "Lisää uutta rakennusmateriaalia"
-
-#: functions.php:285
-#, fuzzy
-msgid "Edit construction material"
-msgstr "Muokkaa rakennusmateriaalia"
-
-#: functions.php:287
-#, fuzzy
-msgid "View construction material"
-msgstr "Näytä rakennusmateriaali"
-
-#: functions.php:288
-#, fuzzy
-msgid "Search construction materials"
-msgstr "Hae rakennusmateriaaleja"
-
-#: functions.php:289
-#, fuzzy
-msgid "No construction materials found"
-msgstr "Rakennusmateriaaleja ei löytynyt"
-
-#: functions.php:290
-#, fuzzy
-msgid "No construction materials found in trash"
-msgstr "Roskista ei löydy rakennusmateriaaleja"
-
-#: functions.php:326
-#, fuzzy
-msgid "You should know that"
-msgstr "Sinun pitäisi tietää se"
-
-#: functions.php:384
+#: functions.php:116
 msgid "Projects"
 msgstr "Projektit"
 
-#: functions.php:385
+#: functions.php:117
 msgid "Project"
 msgstr "Projekti"
 
-#: functions.php:386 functions.php:389
-#, fuzzy
+#: functions.php:118 functions.php:121
 msgid "New project"
 msgstr "Uusi projekti"
 
-#: functions.php:387
-#, fuzzy
+#: functions.php:119
 msgid "Add new project"
 msgstr "Lisää uusi projekti"
 
-#: functions.php:388
-#, fuzzy
+#: functions.php:120
 msgid "Edit project"
 msgstr "Muokkaa projektia"
 
-#: functions.php:390
-#, fuzzy
+#: functions.php:122
 msgid "View project"
 msgstr "Näytä projekti"
 
-#: functions.php:391
-#, fuzzy
+#: functions.php:123
 msgid "Search project"
 msgstr "Etsi projekti"
 
-#: functions.php:392
-#, fuzzy
+#: functions.php:124
 msgid "No projects found"
 msgstr "Projekteja ei löytynyt"
 
-#: functions.php:393
-#, fuzzy
+#: functions.php:125
 msgid "No projects found in trash"
 msgstr "Projekteja ei löytynyt roskakorista"
 
-#: functions.php:465
-#, fuzzy
+#: functions.php:201
 msgid "expand"
 msgstr "laajentaa"
 
-#: header.php:25
+#: functions.php:438 functions.php:506 functions.php:538
+msgid "Cutting fee"
+msgstr "Leikkausmaksu"
+
+#: functions.php:442 functions.php:510
+msgid "Size"
+msgstr "Koko"
+
+#: functions.php:541
+msgid "Sizes"
+msgstr "Koot"
+
+#: functions.php:605
+msgid "Description"
+msgstr "Kuvaus"
+
+#: functions.php:612
+msgid "The description is shown on the category overview page."
+msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
+
+#: header.php:35
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: header.php:109
+#: header.php:96
 msgid "Primary Menu"
 msgstr "Päävalikko"
 
-#: header.php:113
+#: header.php:100
 msgid "Navigation"
 msgstr "Navigaatio"
 
-#: header.php:130
-#, fuzzy
+#: header.php:118
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
+
+#: inc/ajax-cart.php:6 inc/ajax-cart.php:10
+msgid "Cart"
+msgstr "Ostoskori"
+
+#: inc/ajax-cart.php:44
+msgid "Shopping cart"
+msgstr "Ostoskori"
+
+#: inc/ajax-cart.php:45
+msgid "Close"
+msgstr "Sulje"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -665,17 +266,60 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Jatka lukemista<span class=\"screen-reader-text\">%s</span>"
 
+#: woocommerce/content-single-product.php:58
+#, php-format
+msgid "Customize your %s"
+msgstr "Mukauta %s"
+
+#: woocommerce/single-product/add-to-cart/simple.php:56
+#: woocommerce/single-product/add-to-cart/variable.php:34
+#, php-format
+msgid "Customize and order your %s"
+msgstr "Mukauta ja tilaa %s"
+
+#: woocommerce/single-product/add-to-cart/simple.php:58
+msgid "Configure the size"
+msgstr "Määritä koko"
+
+#: woocommerce/single-product/add-to-cart/simple.php:61
+#: woocommerce/single-product/add-to-cart/variable.php:71
+msgid "Width (m)"
+msgstr "Leveys (m)"
+
+#: woocommerce/single-product/add-to-cart/simple.php:65
+#: woocommerce/single-product/add-to-cart/variable.php:75
+msgid "Height (m)"
+msgstr "Korkeus (m)"
+
+#: woocommerce/single-product/add-to-cart/simple.php:74
+#: woocommerce/single-product/add-to-cart/variable.php:118
+msgid "Select the quantity"
+msgstr "Valitse määrä"
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr "Palvelu ei ole myytävänä."
+
+#: woocommerce/single-product/add-to-cart/variable.php:36
+msgid "Configure product options"
+msgstr "Määritä tuoteasetukset"
+
+#: woocommerce/single-product/add-to-cart/variable.php:51
+msgid "Clear"
+msgstr "Tyhjennä"
+
+#: woocommerce/single-product/add-to-cart/variable.php:88
+msgid "Select extra options"
+msgstr "Valitse lisäasetukset"
+
 #. Theme Name of the plugin/theme
-#, fuzzy
-msgid "norhage Industri"
-msgstr "norhage Industri"
+msgid "Norhage webshop"
+msgstr "Norhagen verkkokauppa"
 
 #. Author of the plugin/theme
-#, fuzzy
 msgid "Garbo"
 msgstr "Garbo"
 
 #. Author URI of the plugin/theme
-#, fuzzy
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
