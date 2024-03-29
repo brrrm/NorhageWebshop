@@ -93,7 +93,7 @@
 			}).appendTo(popup);
 
 			popup.find('.image-col').click(function(e){
-				$(this).toggleClass('contain');
+				$(this).toggleClass('cover');
 			});
 		}
 

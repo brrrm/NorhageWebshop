@@ -1605,17 +1605,20 @@ body .image-popup .image-col .header-image{
 	width: 100%;
 	height: 100%;
 	padding: 5em 1em 1em;
-	position: relative;
+	display: flex;
+	justify-content: center;
 }
 body .image-popup .image-col .header-image img{
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 	display: block;
 }
 
-body .image-popup .image-col.contain .header-image img{
-	object-fit: contain;
+body .image-popup .image-col.cover .header-image img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 body .image-popup .close-button{
