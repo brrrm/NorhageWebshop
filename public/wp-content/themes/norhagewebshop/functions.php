@@ -170,20 +170,6 @@ add_action( 'init', 'norhagewebshop_create_posttypes' );
 function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
     // Check if the item is a Category or Custom Taxonomy
     if( $args->menu_id == 'primary-menu' && $item->type == 'taxonomy' && $depth == 1 ) {
-        switch($item->object){
-        	case 'greenhouse-type':
-        		$post_type = 'greenhouse';
-        		break;
-        	case 'plastic-type':
-        		$post_type = 'plastic';
-        		break;
-        	case 'constr-mat-type':
-        		$post_type = 'construction';
-        		break;
-        	case 'service-type':
-        		$post_type = 'service';
-        		break;
-        }
         $posts = get_posts([
         	'post_type'		=> 'product',
         	'numberposts'	=> -1,
