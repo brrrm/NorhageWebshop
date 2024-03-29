@@ -85,8 +85,8 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 		<?php endif; ?>
 
 		<ul class="slider-nav">
-			<li><button class="left"><?php _e('Left', 'norhageindustri'); ?></button></li>
-			<li><button class="right"><?php _e('Right', 'norhageindustri'); ?></button></li>
+			<li><button class="left"><?php _e('Left', 'norhagewebshop'); ?></button></li>
+			<li><button class="right"><?php _e('Right', 'norhagewebshop'); ?></button></li>
 		</ul>
 
 	</div>

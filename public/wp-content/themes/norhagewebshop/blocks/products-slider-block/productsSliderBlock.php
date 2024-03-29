@@ -64,8 +64,8 @@ if($text_snippet){
 			<strong><?php echo esc_html( $text_next ); ?></strong>
 		
 			<ul class="slider-nav">
-				<li><button class="left"><?php _e('Left', 'norhageindustri'); ?></button></li>
-				<li><button class="right"><?php _e('Right', 'norhageindustri'); ?></button></li>
+				<li><button class="left"><?php _e('Left', 'norhagewebshop'); ?></button></li>
+				<li><button class="right"><?php _e('Right', 'norhagewebshop'); ?></button></li>
 			</ul>
 		</div>
 		<div class="projects-col">
