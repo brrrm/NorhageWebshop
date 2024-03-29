@@ -394,15 +394,18 @@ add_action('init', function () {
  * better then nothing
  */
 add_filter( 'post_thumbnail_id', function($thumbnail_id, $post ){
+	if(!$thumbnail_id && $post->post_type == 'product_variation'){
+		$thumbnail_id = get_post_thumbnail_id($post->post_parent);
+	}
 	if(!$thumbnail_id){
 		$content = get_post_field('post_content', $post->ID);
 		preg_match('/(wp:image {"id":|"images":\[")(\d+)/', $content, $matches);
 		if(isset($matches[2]) && is_numeric($matches[2]) ){
-			return $matches[2];
+			$thumbnail_id = $matches[2];
 		}
-	}else{
-		return $thumbnail_id;
 	}
+	return $thumbnail_id;
+	
 }, 10, 2);
 
 

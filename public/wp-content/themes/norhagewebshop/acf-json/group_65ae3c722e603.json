@@ -39,14 +39,13 @@
                         "id": ""
                     },
                     "post_type": [
-                        "product"
+                        "product",
+                        "product_variation"
                     ],
                     "post_status": [
                         "publish"
                     ],
-                    "taxonomy": [
-                        "product_type:simple"
-                    ],
+                    "taxonomy": "",
                     "return_format": "object",
                     "multiple": 0,
                     "translations": "sync",
@@ -101,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708421224
+    "modified": 1711721986
 }
