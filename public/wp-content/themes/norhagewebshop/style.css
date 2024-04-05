@@ -637,7 +637,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 	top: var(--header-nav-height);
 	left: -200vw;
 	width: 100%;
-	height: calc(100vh - var(--header-nav-height));
+	height: calc(70vh - var(--header-nav-height));
 	display: block;
 	padding: 3em 0;
 	margin: 0;
@@ -650,6 +650,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu{
 	background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAGa3PAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
 	background-repeat: repeat-y;
 	background-position: 25% 0;
+	border-bottom: 1px solid var(--store-color);
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:link,
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu a:visited{
@@ -666,6 +667,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	flex-wrap: wrap;
 	gap: 1em;
 	align-content: flex-start;
+	overflow: auto;
 }
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
@@ -1181,6 +1183,9 @@ header#masthead nav#site-navigation h2{
 		transition: max-height .5s ease-out;
 		overflow: hidden;
 	}
+	header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu{
+		border-bottom: none;
+	}
 	header#masthead nav#site-navigation .menu-container ul.menu li.expanded > ul.sub-menu{
 		max-height: 100vh;
 		transition: max-height 1s ease-in;
@@ -1253,7 +1258,7 @@ footer.site-footer{
 	line-height: 1.1666rem;	
 	color: #ffffff;
 	padding: 2.208em 25%;
-	background: url(../norhagewebshop/images/svg/footer-bg.svg) no-repeat 110% 60%, linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(60,60,60,1) 100%);
+	background: url(images/svg/footer-bg.svg) no-repeat 110% 60%, linear-gradient(180deg, rgba(21,21,21,1) 0%, rgba(60,60,60,1) 100%);
 	background-size: 132% auto;
 	background-blend-mode: pa;
 	display: grid;
