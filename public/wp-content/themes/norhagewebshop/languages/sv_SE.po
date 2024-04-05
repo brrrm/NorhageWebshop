@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-03-29 14:10+0100\n"
+"PO-Revision-Date: 2024-04-05 11:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -26,7 +26,7 @@ msgstr "404"
 
 #: 404.php:20
 msgid "oh dear, we had to short on material.."
-msgstr "Oj oj, vi var tvungna att ha ont om material."
+msgstr "oj oj, vi var tvungna att ha ont om material..."
 
 #: blocks/categories-block/categoriesBlock.php:72
 #: blocks/categories-block/categoriesBlock.php:82
@@ -127,7 +127,7 @@ msgstr "Inga projekt hittades i papperskorgen"
 
 #: functions.php:201
 msgid "expand"
-msgstr "Expandera"
+msgstr "expandera"
 
 #: functions.php:438 functions.php:506 functions.php:538
 msgid "Cutting fee"

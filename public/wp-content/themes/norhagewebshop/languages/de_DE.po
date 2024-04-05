@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-03-29 14:11+0100\n"
+"PO-Revision-Date: 2024-04-05 11:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -26,7 +26,7 @@ msgstr "404"
 
 #: 404.php:20
 msgid "oh dear, we had to short on material.."
-msgstr "Oh je, wir mussten an Material mangeln."
+msgstr "oh je, wir mussten an Material mangeln..."
 
 #: blocks/categories-block/categoriesBlock.php:72
 #: blocks/categories-block/categoriesBlock.php:82
@@ -321,7 +321,7 @@ msgstr "Norhage Webshop"
 
 #. Author of the plugin/theme
 msgid "Garbo"
-msgstr "Müllmann"
+msgstr "Garbo"
 
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-03-29 14:04+0100\n"
+"PO-Revision-Date: 2024-04-05 11:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -26,7 +26,7 @@ msgstr "404"
 
 #: 404.php:20
 msgid "oh dear, we had to short on material.."
-msgstr "Å kjære, vi måtte kort på materiale .."
+msgstr "å kjære, vi måtte kort på materiale..."
 
 #: blocks/categories-block/categoriesBlock.php:72
 #: blocks/categories-block/categoriesBlock.php:82
