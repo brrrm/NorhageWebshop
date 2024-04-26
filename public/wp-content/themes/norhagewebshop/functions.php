@@ -675,6 +675,24 @@ function norhage_wpmc_sync_on_product_save( $meta_id, $post_id, $meta_key, $meta
 }
 
 
+
+
+
+/**
+ * !! SECURITY !!
+ * Disable /users rest routes
+ */
+add_filter('rest_endpoints', function( $endpoints ) {
+    if ( isset( $endpoints['/wp/v2/users'] ) ) {
+        unset( $endpoints['/wp/v2/users'] );
+    }
+    if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+        unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+    }
+    return $endpoints;
+});
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
