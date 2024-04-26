@@ -693,6 +693,62 @@ add_filter('rest_endpoints', function( $endpoints ) {
 });
 
 
+
+/**
+ * Change the default state and country on the checkout page
+ */
+add_filter( 'default_checkout_billing_country', 'change_default_checkout_country' );
+add_filter( 'woocommerce_customer_default_location', 'norhage_customer_default_location', 9999, 1 );
+
+function norhage_customer_default_location($default){
+	if(!function_exists('pll_current_language')){
+		return 'NO';
+	}
+	switch(pll_current_language()){
+		case 'sv':
+			return 'SE';
+			break;
+		case 'fi':
+			return 'FI';
+			break;
+		case 'de':
+			return 'DE';
+			break;
+		case 'da':
+			return 'DK';
+			break;
+		case 'nb':
+		default:
+			return 'NO';
+	}
+}
+//add_filter( 'default_checkout_billing_state', 'change_default_checkout_state' );
+
+function change_default_checkout_country() {
+	if(!function_exists('pll_current_language')){
+		return 'NO';
+	}
+	switch(pll_current_language()){
+		case 'sv':
+			return 'SE';
+			break;
+		case 'fi':
+			return 'FI';
+			break;
+		case 'de':
+			return 'DE';
+			break;
+		case 'da':
+			return 'DK';
+			break;
+		case 'nb':
+		default:
+			return 'NO';
+	}
+}
+
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
