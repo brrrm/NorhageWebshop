@@ -35,6 +35,13 @@
 				<dt><?php _e('B2C webshop', 'norhagewebshop'); ?></dt>
 				<dd><a href="https://norhage.no" target="_blank">norhage.no</a></dd>
 			</dl>
+
+			<h2><?php _e('Find the Norhage shop for your country', 'norhagewebshop'); ?></h2>
+			<?php if(function_exists('pll_the_languages')){ ?>
+				<ul class="languages">
+				<?php pll_the_languages( ['show_flags' => true, 'hide_if_empty' => true, 'hide_if_no_translation' => true] ); ?>
+				</ul>
+			<?php } ?>
 		</div>
 		<nav id="footer-navigation" class="sitemap">
 			<h2><?php _e('Sitemap', 'norhagewebshop'); ?></h2>

@@ -1275,6 +1275,9 @@ footer.site-footer h2{
 	font-style: normal;
 	font-weight: 700;
 }
+footer.site-footer h2:not(:first-child){
+	margin-top: 1em;
+}
 footer.site-footer a{
 	color: #ffffff;
 }
@@ -1315,6 +1318,17 @@ footer.site-footer .company-info dd{
 } 
 footer.site-footer .company-info dt{
 	text-transform: uppercase;
+}
+
+footer.site-footer ul.languages{
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+footer.site-footer ul.languages li{
+	margin: 0;
+	padding: 0;
 }
 
 
