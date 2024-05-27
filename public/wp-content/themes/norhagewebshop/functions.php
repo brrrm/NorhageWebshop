@@ -699,6 +699,7 @@ add_filter('rest_endpoints', function( $endpoints ) {
  */
 add_filter( 'default_checkout_billing_country', 'change_default_checkout_country' );
 add_filter( 'woocommerce_customer_default_location', 'norhage_customer_default_location', 9999, 1 );
+add_filter('woocommerce_countries_allowed_countries', 'norhage_countries_allowed_countries', 10, 1);
 
 function norhage_customer_default_location($default){
 	if(!function_exists('pll_current_language')){
@@ -745,6 +746,11 @@ function change_default_checkout_country() {
 		default:
 			return 'NO';
 	}
+}
+
+function norhage_countries_allowed_countries($countries){
+	$country = change_default_checkout_country();
+	return [$country => $countries[$country]];
 }
 
 
