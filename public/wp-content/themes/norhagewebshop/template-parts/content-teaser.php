@@ -9,13 +9,32 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(['teaser']); ?>>
-	<a href="<?php echo esc_url( get_permalink() ); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(['teaser', 'alignwide']); ?>>
+	
 		<?php
 			$title = get_the_title( );
 		    $thumb = get_the_post_thumbnail();
+		    $categories = get_the_category();
 	    ?>
-	    <h2 class="title"><?php echo esc_html( $title ); ?></h2>
-		<?php echo $thumb; ?>
-    </a>
+	    
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="post-thumbnail" ><?php echo $thumb; ?></a>
+
+		<div class="column-wrap" >
+			<h2 class="title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( $title ); ?></a></h2>
+			
+			<div class="entry-meta">
+				<?php norhagewebshop_posted_on();  ?>
+				<?php if(!empty($categories)){ ?>
+					<ul class="categories">
+					<?php foreach($categories as $cat){
+						printf('<li><a href="%s">%s</a></li>', esc_url( get_category_link( $cat->term_id ) ), $cat->name);
+					} ?>
+					</ul> 
+				<?php } ?>
+			</div>
+
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-summary -->
+		</div>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -109,60 +109,6 @@ function norhagewebshop_register_acf_blocks() {
 // Here we call our tt3child_register_acf_block() function on init.
 add_action( 'init', 'norhagewebshop_register_acf_blocks' );
 
-// Our custom post type function
-function norhagewebshop_create_posttypes() {
-	$projects = [
-		'labels'	=> [
-			'name' 						=> __( 'Projects', 'norhagewebshop' ),
-			'singular_name' 			=> __( 'Project', 'norhagewebshop' ),
-			'add_new' 					=> __( 'New project', 'norhagewebshop' ),
-			'add_new_item' 				=> __( 'Add new project', 'norhagewebshop' ),
-			'edit_item' 				=> __( 'Edit project', 'norhagewebshop' ),
-			'new_item'					=> __( 'New project', 'norhagewebshop' ),
-			'view_item' 				=> __( 'View project', 'norhagewebshop' ),
-			'search_items'				=> __( 'Search project', 'norhagewebshop' ),
-			'not_found' 				=>  __( 'No projects found', 'norhagewebshop' ),
-			'not_found_in_trash' 		=> __( 'No projects found in trash', 'norhagewebshop'),
-		],
-		'public' 				=> true,
-		'exclude_from_search'	=> false,
-		'has_archive' 			=> false,
-		'rewrite' 				=> array('slug' => 'project'),
-		'show_in_rest' 			=> true,
-		'show_in_menu'			=> true,
-		'show_in_nav_menus'		=> true,
-		'menu_position'			=> 4,
-		'menu_icon'				=> 'dashicons-images-alt2',
-		'supports'				=> [
-			'title',
-			'editor',
-			'revisions',
-			'thumbnail',
-		],
-		'template'				=> [
-			[
-				'core/paragraph',
-				[
-					'placeholder'	=> 'Aenean ac nisi nisi. Praesent eget bibendum orci. Vivamus ac nisl aliquam, varius leo eu, dictum risus. Cras malesuada posuere enim, sit amet tincidunt dolor lobortis sit amet. Sed et urna consequat, tincidunt nibh nec, aliquet neque. Fusce imperdiet dictum odio sit amet iaculis. Curabitur tempus vestibulum urna, et varius nunc maximus at. Ut vulputate nulla erat, gravida consectetur sem dignissim et.',
-					'lock'		=> [
-						'move'		=> false,
-						'remove'	=> false
-					]
-				]
-			],
-			[
-				'core/gallery',
-				[
-					'align'		=> 'wide',
-
-				]
-			]
-		]
-	];
-	register_post_type('project', $projects);
-}
-add_action( 'init', 'norhagewebshop_create_posttypes' );
-
 
 /**
  * ADD THE PRODUCTS TO THE CATEGORY MENU ITEMS
@@ -322,41 +268,15 @@ add_filter( 'block_categories_all' , function( $categories ) {
 
 
 /**
- * REMOVE POSTS
- */
-function remove_default_post_type() {
-    remove_menu_page( 'edit.php' );
+ * Read more link on excerpts
+ * */
+function wpdocs_excerpt_more( $more ) {
+	return sprintf( ' <a class="read-more" href="%1$s">%2$s...</a>',
+			get_permalink( get_the_ID() ),
+			__( 'Read More', 'norhagewebshop' )
+		);
 }
-add_action( 'admin_menu', 'remove_default_post_type' );
-
-function remove_default_post_type_menu_bar( $wp_admin_bar ) {
-    $wp_admin_bar->remove_node( 'new-post' );
-}
-add_action( 'admin_bar_menu', 'remove_default_post_type_menu_bar', 999 );
-
-function remove_add_new_post_href_in_admin_bar() {
-    ?>
-    <script type="text/javascript">
-        function remove_add_new_post_href_in_admin_bar() {
-            var add_new = document.getElementById('wp-admin-bar-new-content');
-            if(!add_new) return;
-            var add_new_a = add_new.getElementsByTagName('a')[0];
-            if(add_new_a) add_new_a.setAttribute('href','#!');
-        }
-        remove_add_new_post_href_in_admin_bar();
-    </script>
-    <?php
-}
-add_action( 'admin_footer', 'remove_add_new_post_href_in_admin_bar' );
-
-function remove_frontend_post_href(){
-    if( is_user_logged_in() ) {
-        add_action( 'wp_footer', 'remove_add_new_post_href_in_admin_bar' );
-    }
-}
-add_action( 'init', 'remove_frontend_post_href' );
-
-
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 
 
@@ -627,9 +547,8 @@ function add_rich_category_description($tag) {
 function norhage_get_taxo_thumbnail($cat){
 	$thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
 	if(!$thumbnail_id){
-
         $posts = get_posts([
-        	'post_type'		=> 'product',
+        	'post_type'		=> ['product', 'post'],
         	'numberposts'	=> 1,
         	'tax_query'		=> [
         		[

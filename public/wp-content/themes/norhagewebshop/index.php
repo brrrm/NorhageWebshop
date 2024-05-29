@@ -16,38 +16,58 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<?php
-		if ( have_posts() ) :
+		<div class="entry-content">
+		<?php if ( have_posts() ) : ?>
+			<header>
+				<h1 class="page-title"><?php single_post_title(); ?></h1>
+			</header>
 
-			if ( is_home() && ! is_front_page() ) :
+			<div class="alignwide subcategories">
+				<ul class="sub-categories">
+		<?php
+			$cats = get_categories();
+			//error_log(print_r($cats, true));
+		?>
+			
+				<?php foreach($cats as $cat): 
+					
+					$thumbnail_id = norhage_get_taxo_thumbnail($cat);
+					$image = wp_get_attachment_image( $thumbnail_id, 'full' );
+					$permalink = get_category_link( $cat );
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+					<li class="subcategory image-button">
+						<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $image; ?></a>
+						<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo $cat->name; ?></a></h3>
+					</li> 
+				<?php endforeach; ?>
+				</ul>
+			</div>
+
+		<?php
 
 			/* Start the Loop */
 			while ( have_posts() ) :
+
+				echo '<hr class="alignfull">';
+
 				the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content-teaser', get_post_type() );
 
 			endwhile;
-
-			the_posts_navigation();
-
-		else :
+		?>
+				
+			<div class="pagination alignwide">
+				<?php echo paginate_links(['mid_size' => 10, 'show_all' => true, 'type' => 'list']); ?>
+			</div>
+		
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
+		</div>
 
 	</main><!-- #main -->
 

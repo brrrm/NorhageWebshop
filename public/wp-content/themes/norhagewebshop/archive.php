@@ -11,6 +11,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="entry-content">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -25,6 +26,8 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
+
+				echo '<hr class="alignfull">';
 
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -43,6 +46,7 @@ get_header();
 
 		endif;
 		?>
+		</div>
 
 	</main><!-- #main -->
 
