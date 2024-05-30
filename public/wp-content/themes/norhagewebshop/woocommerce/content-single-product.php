@@ -120,7 +120,7 @@ if ( post_password_required() ) {
 		<?php endif; ?>
 
 		<div class="product-description">
-			<?php echo wpautop($product->get_description()); ?>
+			<?php the_content(); ?>
 		</div>
 
 		<?php
