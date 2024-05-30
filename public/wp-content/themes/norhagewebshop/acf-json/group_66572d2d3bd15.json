@@ -1,0 +1,46 @@
+{
+    "key": "group_66572d2d3bd15",
+    "title": "Product Delivery time",
+    "fields": [
+        {
+            "key": "field_66572d2dbf0cd",
+            "label": "Delivery time",
+            "name": "delivery_time",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Leverings tid: 1-2 uker. Vær oppmerksom på at i høysesonger kan behandlingen ta lengre tid på grunn av økt etterspørsel.",
+            "translations": "translate",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 1000,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717062338
+}

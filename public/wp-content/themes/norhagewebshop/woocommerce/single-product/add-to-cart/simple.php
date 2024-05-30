@@ -100,6 +100,12 @@ if ( $product->is_in_stock() ) : ?>
 
 				<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 			</div>
+			<?php
+				$delivery_time = get_field('delivery_time');
+				if(isset($delivery_time)){
+					printf('<p class="delivery-time">Delivery time: %s</p>', $delivery_time);
+				}
+			?>
 		</div>
 	</form>
 

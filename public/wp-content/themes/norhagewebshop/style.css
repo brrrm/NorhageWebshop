@@ -1880,6 +1880,7 @@ body .image-popup .scroll-button:hover{
 	margin: 0;
 	position: relative;
 	text-align: left;
+	max-width: 30em;
 }
 .woocommerce div.product .summary form.variations_form .dimensions .variations th{
 	width: 50%;
@@ -2006,6 +2007,15 @@ body .image-popup .scroll-button:hover{
 	height: 1px;
 	display: block;
 	border-top: 1px dashed var(--store-color);
+}
+
+.single_variation_wrap .delivery-time,
+.simple_product_wrap .delivery-time{
+	margin: 0;
+	padding: 0 0 0 2em;
+	background: transparent url(images/svg/delivery-time.svg) left top no-repeat;
+	background-size: 1.5em;
+	color: var(--store-color);
 }
 
 @media all and (max-width:1024px){

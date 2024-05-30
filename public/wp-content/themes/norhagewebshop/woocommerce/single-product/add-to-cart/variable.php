@@ -138,7 +138,13 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 * Hook: woocommerce_after_single_variation.
 				 */
 				do_action( 'woocommerce_after_single_variation' );
+
+				$delivery_time = get_field('delivery_time');
+
+				if(isset($delivery_time)):
 			?>
+				<p class="delivery-time">Delivery time: <?php echo $delivery_time; ?></p>
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
