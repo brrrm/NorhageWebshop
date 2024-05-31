@@ -683,6 +683,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 		transform: translate(0, 0);
 		opacity: 1;
 		transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+		overflow: auto;
 	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li{
