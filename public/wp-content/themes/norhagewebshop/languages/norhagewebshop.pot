@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-03-29 13:19+0100\n"
+"POT-Creation-Date: 2024-05-31 14:52+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -54,27 +54,31 @@ msgstr ""
 msgid "Norhage Webshop"
 msgstr ""
 
-#: footer.php:19
+#: footer.php:18
 msgid "Address"
 msgstr ""
 
-#: footer.php:27
+#: footer.php:26
 msgid "Email"
 msgstr ""
 
-#: footer.php:30
+#: footer.php:29
 msgid "Phone"
 msgstr ""
 
-#: footer.php:36
+#: footer.php:35
 msgid "B2C webshop"
 msgstr ""
 
-#: footer.php:41 footer.php:42
+#: footer.php:39
+msgid "Find the Norhage shop for your country"
+msgstr ""
+
+#: footer.php:47 footer.php:48
 msgid "Sitemap"
 msgstr ""
 
-#: footer.php:51
+#: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr ""
 
@@ -90,79 +94,47 @@ msgstr ""
 msgid "Footer navigation"
 msgstr ""
 
-#: functions.php:116
-msgid "Projects"
-msgstr ""
-
-#: functions.php:117
-msgid "Project"
-msgstr ""
-
-#: functions.php:118 functions.php:121
-msgid "New project"
-msgstr ""
-
-#: functions.php:119
-msgid "Add new project"
-msgstr ""
-
-#: functions.php:120
-msgid "Edit project"
-msgstr ""
-
-#: functions.php:122
-msgid "View project"
-msgstr ""
-
-#: functions.php:123
-msgid "Search project"
-msgstr ""
-
-#: functions.php:124
-msgid "No projects found"
-msgstr ""
-
-#: functions.php:125
-msgid "No projects found in trash"
-msgstr ""
-
-#: functions.php:201
+#: functions.php:147
 msgid "expand"
 msgstr ""
 
-#: functions.php:438 functions.php:506 functions.php:538
+#: functions.php:276
+msgid "Read More"
+msgstr ""
+
+#: functions.php:361 functions.php:429 functions.php:461
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:442 functions.php:510
+#: functions.php:365 functions.php:433
 msgid "Size"
 msgstr ""
 
-#: functions.php:541
+#: functions.php:464
 msgid "Sizes"
 msgstr ""
 
-#: functions.php:605
+#: functions.php:528
 msgid "Description"
 msgstr ""
 
-#: functions.php:612
+#: functions.php:535
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: header.php:35
+#: header.php:52
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:96
+#: header.php:113
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:100
+#: header.php:117
 msgid "Navigation"
 msgstr ""
 
-#: header.php:118
+#: header.php:135
 msgid "Contact us today"
 msgstr ""
 
@@ -233,6 +205,10 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
+#: single-post.php:23
+msgid "Continue reading:"
+msgstr ""
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -257,7 +233,7 @@ msgid ""
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:36
+#: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -265,6 +241,12 @@ msgstr ""
 #: woocommerce/content-single-product.php:58
 #, php-format
 msgid "Customize your %s"
+msgstr ""
+
+#: woocommerce/content-single-product.php:62
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:146
+msgid "Delivery time"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:56

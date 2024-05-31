@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-04-05 11:15+0200\n"
+"POT-Creation-Date: 2024-05-31 14:52+0200\n"
+"PO-Revision-Date: 2024-05-31 14:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -53,27 +53,31 @@ msgstr "Læs mere ->"
 msgid "Norhage Webshop"
 msgstr "Norhage Webshop"
 
-#: footer.php:19
+#: footer.php:18
 msgid "Address"
 msgstr "Adresse"
 
-#: footer.php:27
+#: footer.php:26
 msgid "Email"
 msgstr "E-mail"
 
-#: footer.php:30
+#: footer.php:29
 msgid "Phone"
 msgstr "Telefon"
 
-#: footer.php:36
+#: footer.php:35
 msgid "B2C webshop"
 msgstr "B2C webshop"
 
-#: footer.php:41 footer.php:42
+#: footer.php:39
+msgid "Find the Norhage shop for your country"
+msgstr "Find Norhage shoppen for dit land"
+
+#: footer.php:47 footer.php:48
 msgid "Sitemap"
 msgstr "Sitemap"
 
-#: footer.php:51
+#: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage kan også findes på:"
 
@@ -89,79 +93,49 @@ msgstr "Sekundær navigation"
 msgid "Footer navigation"
 msgstr "Sidefod navigation"
 
-#: functions.php:116
-msgid "Projects"
-msgstr "Projekter"
-
-#: functions.php:117
-msgid "Project"
-msgstr "Projekt"
-
-#: functions.php:118 functions.php:121
-msgid "New project"
-msgstr "Nyt projekt"
-
-#: functions.php:119
-msgid "Add new project"
-msgstr "Tilføj nyt projekt"
-
-#: functions.php:120
-msgid "Edit project"
-msgstr "Redigér projekt"
-
-#: functions.php:122
-msgid "View project"
-msgstr "Se projekt"
-
-#: functions.php:123
-msgid "Search project"
-msgstr "Find projekt"
-
-#: functions.php:124
-msgid "No projects found"
-msgstr "Ingen Projekter Fundet"
-
-#: functions.php:125
-msgid "No projects found in trash"
-msgstr "Ingen Projekter Fundet I Papirkurv"
-
-#: functions.php:201
+#: functions.php:147
 msgid "expand"
 msgstr "udvide"
 
-#: functions.php:438 functions.php:506 functions.php:538
+#: functions.php:276
+#, fuzzy
+#| msgid "Read more ->"
+msgid "Read More"
+msgstr "Læs mere ->"
+
+#: functions.php:361 functions.php:429 functions.php:461
 msgid "Cutting fee"
 msgstr "Nedsættelse af gebyr"
 
-#: functions.php:442 functions.php:510
+#: functions.php:365 functions.php:433
 msgid "Size"
 msgstr "Størrelse"
 
-#: functions.php:541
+#: functions.php:464
 msgid "Sizes"
 msgstr "Størrelser"
 
-#: functions.php:605
+#: functions.php:528
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:612
+#: functions.php:535
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på kategorioversigtssiden."
 
-#: header.php:35
+#: header.php:52
 msgid "Skip to content"
 msgstr "Fortsæt til indhold"
 
-#: header.php:96
+#: header.php:113
 msgid "Primary Menu"
 msgstr "Primær Menu"
 
-#: header.php:100
+#: header.php:117
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:118
+#: header.php:135
 msgid "Contact us today"
 msgstr "Kontakt os i dag"
 
@@ -218,8 +192,7 @@ msgstr "Tagget %1$s"
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-"Skriv en kommentar<span class=\"screen-reader-text\"> til %s</span>"
+msgstr "Skriv en kommentar<span class=\"screen-reader-text\"> til %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
@@ -233,6 +206,10 @@ msgstr "Redigér <span class=\"screen-reader-text\" >%s</span>"
 msgid "Search Results for: %s"
 msgstr "Søgeresultater for: %s"
 
+#: single-post.php:23
+msgid "Continue reading:"
+msgstr "Fortsæt læsning:"
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Intet fundet"
@@ -242,27 +219,26 @@ msgstr "Intet fundet"
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Klar til at udgive dit første indlæg <a href=\"%1$s\">Start her</a>."
+msgstr "Klar til at udgive dit første indlæg <a href=\"%1$s\">Start her</a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Beklager, men din søgning gav ingen resultater. Prøv igen med nogle "
-"andre søgeord."
+"Beklager, men din søgning gav ingen resultater. Prøv igen med nogle andre "
+"søgeord."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Det lader til at vi ikke kan finde siden, du leder efter. Prøv en "
-"søgning i stedet."
+"Det lader til at vi ikke kan finde siden, du leder efter. Prøv en søgning i "
+"stedet."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:36
+#: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Læs mere<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -271,6 +247,12 @@ msgstr "Læs mere<span class=\"screen-reader-text\"> \"%s\"</span>"
 #, php-format
 msgid "Customize your %s"
 msgstr "Tilpas din %s"
+
+#: woocommerce/content-single-product.php:62
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:146
+msgid "Delivery time"
+msgstr "Leveringstid"
 
 #: woocommerce/single-product/add-to-cart/simple.php:56
 #: woocommerce/single-product/add-to-cart/variable.php:34
@@ -324,3 +306,30 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Projects"
+#~ msgstr "Projekter"
+
+#~ msgid "Project"
+#~ msgstr "Projekt"
+
+#~ msgid "New project"
+#~ msgstr "Nyt projekt"
+
+#~ msgid "Add new project"
+#~ msgstr "Tilføj nyt projekt"
+
+#~ msgid "Edit project"
+#~ msgstr "Redigér projekt"
+
+#~ msgid "View project"
+#~ msgstr "Se projekt"
+
+#~ msgid "Search project"
+#~ msgstr "Find projekt"
+
+#~ msgid "No projects found"
+#~ msgstr "Ingen Projekter Fundet"
+
+#~ msgid "No projects found in trash"
+#~ msgstr "Ingen Projekter Fundet I Papirkurv"

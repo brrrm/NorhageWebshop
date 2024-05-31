@@ -143,7 +143,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 				if(isset($delivery_time)):
 			?>
-				<p class="delivery-time">Delivery time: <?php echo $delivery_time; ?></p>
+				<p class="delivery-time"><?php _e('Delivery time', 'norhagewebshop'); ?>: <?php echo $delivery_time; ?></p>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>

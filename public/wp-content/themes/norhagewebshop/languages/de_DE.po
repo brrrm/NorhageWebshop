@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-04-05 11:18+0200\n"
+"POT-Creation-Date: 2024-05-31 14:52+0200\n"
+"PO-Revision-Date: 2024-05-31 14:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -53,27 +53,31 @@ msgstr "Weiterlesen ->"
 msgid "Norhage Webshop"
 msgstr "Norhage Webshop"
 
-#: footer.php:19
+#: footer.php:18
 msgid "Address"
 msgstr "Adresse"
 
-#: footer.php:27
+#: footer.php:26
 msgid "Email"
 msgstr "E-Mail"
 
-#: footer.php:30
+#: footer.php:29
 msgid "Phone"
 msgstr "Telefonnummer"
 
-#: footer.php:36
+#: footer.php:35
 msgid "B2C webshop"
 msgstr "B2C-Webshop"
 
-#: footer.php:41 footer.php:42
+#: footer.php:39
+msgid "Find the Norhage shop for your country"
+msgstr "Finden Sie den Norhage Shop für Ihr Land"
+
+#: footer.php:47 footer.php:48
 msgid "Sitemap"
 msgstr "Sitemap"
 
-#: footer.php:51
+#: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage ist auch zu finden auf:"
 
@@ -89,79 +93,47 @@ msgstr "Sekundärnavigation"
 msgid "Footer navigation"
 msgstr "Footernavigation"
 
-#: functions.php:116
-msgid "Projects"
-msgstr "Projekte"
-
-#: functions.php:117
-msgid "Project"
-msgstr "Projekt"
-
-#: functions.php:118 functions.php:121
-msgid "New project"
-msgstr "Neues Projekt"
-
-#: functions.php:119
-msgid "Add new project"
-msgstr "Neues Projekt hinzufügen"
-
-#: functions.php:120
-msgid "Edit project"
-msgstr "Projekt bearbeiten"
-
-#: functions.php:122
-msgid "View project"
-msgstr "Projekt ansehen"
-
-#: functions.php:123
-msgid "Search project"
-msgstr "Projekt suchen"
-
-#: functions.php:124
-msgid "No projects found"
-msgstr "Keine Projekte gefunden"
-
-#: functions.php:125
-msgid "No projects found in trash"
-msgstr "Keine Porojekte im Papierkorb gefunden"
-
-#: functions.php:201
+#: functions.php:147
 msgid "expand"
 msgstr "aufklappen"
 
-#: functions.php:438 functions.php:506 functions.php:538
+#: functions.php:276
+msgid "Read More"
+msgstr "Weiterlesen ->"
+
+#: functions.php:361 functions.php:429 functions.php:461
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:442 functions.php:510
+#: functions.php:365 functions.php:433
 msgid "Size"
 msgstr "Größe"
 
-#: functions.php:541
+#: functions.php:464
 msgid "Sizes"
 msgstr "Größen"
 
-#: functions.php:605
+#: functions.php:528
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:612
+#: functions.php:535
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: header.php:35
+#: header.php:52
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: header.php:96
+#: header.php:113
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: header.php:100
+#: header.php:117
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:118
+#: header.php:135
 msgid "Contact us today"
 msgstr "Kontaktieren Sie uns noch heute"
 
@@ -219,8 +191,7 @@ msgstr "Verschlagwortet mit %1$s"
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
-"Hinterlasse einen Kommentar <span class=\"screen-reader-text\"> zu %s</"
-"span>"
+"Hinterlasse einen Kommentar <span class=\"screen-reader-text\"> zu %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
@@ -233,6 +204,10 @@ msgstr "Bearbeiten <span class=\"screen-reader-text\">%s</span>"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
+
+#: single-post.php:23
+msgid "Continue reading:"
+msgstr "Weiterlesen:"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
@@ -252,19 +227,19 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Es tut uns leid. Ihre Suche ergab keinen Treffer. Bitte versuchen Sie es "
-"mit einem anderen Begriff."
+"Es tut uns leid. Ihre Suche ergab keinen Treffer. Bitte versuchen Sie es mit "
+"einem anderen Begriff."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Es scheint, dass wir nicht finden können, was du suchst. Vielleicht kann "
-"die Suche helfen."
+"Es scheint, dass wir nicht finden können, was du suchst. Vielleicht kann die "
+"Suche helfen."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:36
+#: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Weiterlesen<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -273,6 +248,12 @@ msgstr "Weiterlesen<span class=\"screen-reader-text\"> \"%s\"</span>"
 #, php-format
 msgid "Customize your %s"
 msgstr "Passen Sie Ihre %s an"
+
+#: woocommerce/content-single-product.php:62
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:146
+msgid "Delivery time"
+msgstr "Lieferzeit"
 
 #: woocommerce/single-product/add-to-cart/simple.php:56
 #: woocommerce/single-product/add-to-cart/variable.php:34
@@ -326,3 +307,30 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Projects"
+#~ msgstr "Projekte"
+
+#~ msgid "Project"
+#~ msgstr "Projekt"
+
+#~ msgid "New project"
+#~ msgstr "Neues Projekt"
+
+#~ msgid "Add new project"
+#~ msgstr "Neues Projekt hinzufügen"
+
+#~ msgid "Edit project"
+#~ msgstr "Projekt bearbeiten"
+
+#~ msgid "View project"
+#~ msgstr "Projekt ansehen"
+
+#~ msgid "Search project"
+#~ msgstr "Projekt suchen"
+
+#~ msgid "No projects found"
+#~ msgstr "Keine Projekte gefunden"
+
+#~ msgid "No projects found in trash"
+#~ msgstr "Keine Porojekte im Papierkorb gefunden"

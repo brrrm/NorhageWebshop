@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-04-05 11:19+0200\n"
+"POT-Creation-Date: 2024-05-31 14:52+0200\n"
+"PO-Revision-Date: 2024-05-31 14:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -53,27 +53,31 @@ msgstr "Läs mer ->"
 msgid "Norhage Webshop"
 msgstr "Norhage Webshop"
 
-#: footer.php:19
+#: footer.php:18
 msgid "Address"
 msgstr "Adress"
 
-#: footer.php:27
+#: footer.php:26
 msgid "Email"
 msgstr "E-post"
 
-#: footer.php:30
+#: footer.php:29
 msgid "Phone"
 msgstr "Telefon"
 
-#: footer.php:36
+#: footer.php:35
 msgid "B2C webshop"
 msgstr "B2C webbshop"
 
-#: footer.php:41 footer.php:42
+#: footer.php:39
+msgid "Find the Norhage shop for your country"
+msgstr "Hitta Norhage-butiken för ditt land"
+
+#: footer.php:47 footer.php:48
 msgid "Sitemap"
 msgstr "Webbplatskarta"
 
-#: footer.php:51
+#: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage finns också på:"
 
@@ -89,79 +93,49 @@ msgstr "Sekundär navigering"
 msgid "Footer navigation"
 msgstr "Sidfotsnavigering"
 
-#: functions.php:116
-msgid "Projects"
-msgstr "Projekt"
-
-#: functions.php:117
-msgid "Project"
-msgstr "Projekt"
-
-#: functions.php:118 functions.php:121
-msgid "New project"
-msgstr "Nytt projekt"
-
-#: functions.php:119
-msgid "Add new project"
-msgstr "Lägg till nytt projekt"
-
-#: functions.php:120
-msgid "Edit project"
-msgstr "Ändra projekt"
-
-#: functions.php:122
-msgid "View project"
-msgstr "Visa projekt"
-
-#: functions.php:123
-msgid "Search project"
-msgstr "Sök projekt"
-
-#: functions.php:124
-msgid "No projects found"
-msgstr "Inga projekt hittades"
-
-#: functions.php:125
-msgid "No projects found in trash"
-msgstr "Inga projekt hittades i papperskorgen"
-
-#: functions.php:201
+#: functions.php:147
 msgid "expand"
 msgstr "expandera"
 
-#: functions.php:438 functions.php:506 functions.php:538
+#: functions.php:276
+#, fuzzy
+#| msgid "Read more ->"
+msgid "Read More"
+msgstr "Läs mer ->"
+
+#: functions.php:361 functions.php:429 functions.php:461
 msgid "Cutting fee"
 msgstr "Avgift för sänkning"
 
-#: functions.php:442 functions.php:510
+#: functions.php:365 functions.php:433
 msgid "Size"
 msgstr "Storlek"
 
-#: functions.php:541
+#: functions.php:464
 msgid "Sizes"
 msgstr "Storlekar"
 
-#: functions.php:605
+#: functions.php:528
 msgid "Description"
 msgstr "Beskrivning"
 
-#: functions.php:612
+#: functions.php:535
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivningen visas på kategoriöversiktssidan."
 
-#: header.php:35
+#: header.php:52
 msgid "Skip to content"
 msgstr "Hoppa till innehåll"
 
-#: header.php:96
+#: header.php:113
 msgid "Primary Menu"
 msgstr "Primär meny"
 
-#: header.php:100
+#: header.php:117
 msgid "Navigation"
 msgstr "Navigering"
 
-#: header.php:118
+#: header.php:135
 msgid "Contact us today"
 msgstr "Kontakta oss idag"
 
@@ -218,8 +192,7 @@ msgstr "Taggad %1$s"
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-"Lämna en kommentar<span class=\"screen-reader-text\"> till %s</span>"
+msgstr "Lämna en kommentar<span class=\"screen-reader-text\"> till %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
@@ -233,6 +206,10 @@ msgstr "Redigera <span class=\"screen-reader-text\">%s</span>"
 msgid "Search Results for: %s"
 msgstr "Sökresultat för: %s"
 
+#: single-post.php:23
+msgid "Continue reading:"
+msgstr "Läs mer:"
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Inget hittades"
@@ -242,8 +219,7 @@ msgstr "Inget hittades"
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Redo att publicera ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
+msgstr "Redo att publicera ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
 
 #: template-parts/content-none.php:37
 msgid ""
@@ -262,7 +238,7 @@ msgstr ""
 "sökfunktionen."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:36
+#: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Fortsätt läsa<span class=\"screen-reader-text\"> ”%s”</span>"
@@ -271,6 +247,12 @@ msgstr "Fortsätt läsa<span class=\"screen-reader-text\"> ”%s”</span>"
 #, php-format
 msgid "Customize your %s"
 msgstr "Anpassa din %s"
+
+#: woocommerce/content-single-product.php:62
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:146
+msgid "Delivery time"
+msgstr "Leveranstid"
 
 #: woocommerce/single-product/add-to-cart/simple.php:56
 #: woocommerce/single-product/add-to-cart/variable.php:34
@@ -324,3 +306,30 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Projects"
+#~ msgstr "Projekt"
+
+#~ msgid "Project"
+#~ msgstr "Projekt"
+
+#~ msgid "New project"
+#~ msgstr "Nytt projekt"
+
+#~ msgid "Add new project"
+#~ msgstr "Lägg till nytt projekt"
+
+#~ msgid "Edit project"
+#~ msgstr "Ändra projekt"
+
+#~ msgid "View project"
+#~ msgstr "Visa projekt"
+
+#~ msgid "Search project"
+#~ msgstr "Sök projekt"
+
+#~ msgid "No projects found"
+#~ msgstr "Inga projekt hittades"
+
+#~ msgid "No projects found in trash"
+#~ msgstr "Inga projekt hittades i papperskorgen"

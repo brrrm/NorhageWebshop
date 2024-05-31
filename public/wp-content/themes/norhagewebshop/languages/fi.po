@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-03-29 13:19+0100\n"
-"PO-Revision-Date: 2024-04-05 11:18+0200\n"
+"POT-Creation-Date: 2024-05-31 14:52+0200\n"
+"PO-Revision-Date: 2024-05-31 14:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -53,27 +53,31 @@ msgstr "Lue lisää ->"
 msgid "Norhage Webshop"
 msgstr "Norhagen verkkokauppa"
 
-#: footer.php:19
+#: footer.php:18
 msgid "Address"
 msgstr "Osoite"
 
-#: footer.php:27
+#: footer.php:26
 msgid "Email"
 msgstr "Sähköposti"
 
-#: footer.php:30
+#: footer.php:29
 msgid "Phone"
 msgstr "Puhelin"
 
-#: footer.php:36
+#: footer.php:35
 msgid "B2C webshop"
 msgstr "B2C-verkkokauppa"
 
-#: footer.php:41 footer.php:42
+#: footer.php:39
+msgid "Find the Norhage shop for your country"
+msgstr "Etsi maasi Norhage-kauppa"
+
+#: footer.php:47 footer.php:48
 msgid "Sitemap"
 msgstr "Sivukartta"
 
-#: footer.php:51
+#: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage löytyy myös:"
 
@@ -89,79 +93,49 @@ msgstr "Toissijainen navigointi"
 msgid "Footer navigation"
 msgstr "Alatunnisteen navigointi"
 
-#: functions.php:116
-msgid "Projects"
-msgstr "Projektit"
-
-#: functions.php:117
-msgid "Project"
-msgstr "Projekti"
-
-#: functions.php:118 functions.php:121
-msgid "New project"
-msgstr "Uusi projekti"
-
-#: functions.php:119
-msgid "Add new project"
-msgstr "Lisää uusi projekti"
-
-#: functions.php:120
-msgid "Edit project"
-msgstr "Muokkaa projektia"
-
-#: functions.php:122
-msgid "View project"
-msgstr "Näytä projekti"
-
-#: functions.php:123
-msgid "Search project"
-msgstr "Etsi projekti"
-
-#: functions.php:124
-msgid "No projects found"
-msgstr "Projekteja ei löytynyt"
-
-#: functions.php:125
-msgid "No projects found in trash"
-msgstr "Projekteja ei löytynyt roskakorista"
-
-#: functions.php:201
+#: functions.php:147
 msgid "expand"
 msgstr "laajentaa"
 
-#: functions.php:438 functions.php:506 functions.php:538
+#: functions.php:276
+#, fuzzy
+#| msgid "Read more ->"
+msgid "Read More"
+msgstr "Lue lisää ->"
+
+#: functions.php:361 functions.php:429 functions.php:461
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:442 functions.php:510
+#: functions.php:365 functions.php:433
 msgid "Size"
 msgstr "Koko"
 
-#: functions.php:541
+#: functions.php:464
 msgid "Sizes"
 msgstr "Koot"
 
-#: functions.php:605
+#: functions.php:528
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:612
+#: functions.php:535
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: header.php:35
+#: header.php:52
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: header.php:96
+#: header.php:113
 msgid "Primary Menu"
 msgstr "Päävalikko"
 
-#: header.php:100
+#: header.php:117
 msgid "Navigation"
 msgstr "Navigaatio"
 
-#: header.php:118
+#: header.php:135
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
 
@@ -232,6 +206,10 @@ msgstr "Muokkaa<span class=\"screen-reader-text\">%s</span>"
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
 
+#: single-post.php:23
+msgid "Continue reading:"
+msgstr "Lue lisää:"
+
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Mitään ei löytynyt"
@@ -242,26 +220,24 @@ msgstr "Mitään ei löytynyt"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Oletko valmis julkaisemaan ensimmäisen artikkelisi? <a "
-"href=“%1$s”>Aloita tästä</a>."
+"Oletko valmis julkaisemaan ensimmäisen artikkelisi? <a href=“%1$s”>Aloita "
+"tästä</a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Valitettavasti haulla ei löytynyt mitään. Kokeile uudelleen eri "
-"hakusanoilla."
+"Valitettavasti haulla ei löytynyt mitään. Kokeile uudelleen eri hakusanoilla."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-"Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
+msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:36
+#: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Jatka lukemista<span class=\"screen-reader-text\">%s</span>"
@@ -270,6 +246,12 @@ msgstr "Jatka lukemista<span class=\"screen-reader-text\">%s</span>"
 #, php-format
 msgid "Customize your %s"
 msgstr "Mukauta %s"
+
+#: woocommerce/content-single-product.php:62
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:146
+msgid "Delivery time"
+msgstr "Toimitusaika"
 
 #: woocommerce/single-product/add-to-cart/simple.php:56
 #: woocommerce/single-product/add-to-cart/variable.php:34
@@ -323,3 +305,30 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Projects"
+#~ msgstr "Projektit"
+
+#~ msgid "Project"
+#~ msgstr "Projekti"
+
+#~ msgid "New project"
+#~ msgstr "Uusi projekti"
+
+#~ msgid "Add new project"
+#~ msgstr "Lisää uusi projekti"
+
+#~ msgid "Edit project"
+#~ msgstr "Muokkaa projektia"
+
+#~ msgid "View project"
+#~ msgstr "Näytä projekti"
+
+#~ msgid "Search project"
+#~ msgstr "Etsi projekti"
+
+#~ msgid "No projects found"
+#~ msgstr "Projekteja ei löytynyt"
+
+#~ msgid "No projects found in trash"
+#~ msgstr "Projekteja ei löytynyt roskakorista"
