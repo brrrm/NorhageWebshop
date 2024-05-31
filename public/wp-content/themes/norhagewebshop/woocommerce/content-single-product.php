@@ -55,7 +55,7 @@ if ( post_password_required() ) {
 				<?php if($product->is_type('variable') || $has_cutting_fee): ?>
 					<div class="summary entry-summary alignfull">
 						<?php wc_get_template( 'single-product/price.php' ); ?>
-						<a href="#product-config" class="button add_to_cart_button product_type_variable"><?php printf(__('Customize your %s'), $product->get_title()); ?></a>
+						<a href="#product-config" class="button add_to_cart_button product_type_variable"><?php printf(__('Customize your %s', 'norhagewebshop'), $product->get_title()); ?></a>
 						<?php
 							$delivery_time = get_field('delivery_time');
 							if(isset($delivery_time)){
