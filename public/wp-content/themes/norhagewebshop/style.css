@@ -742,7 +742,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.ac
  	background-size: 1.5em auto;
  	font-size: inherit;
  	display: block;
-    line-height: calc(var(--header-nav-height) - 3.2vw);
+    line-height: inherit;
     text-indent: -9999em;
  	text-align: left;
     overflow: hidden;
