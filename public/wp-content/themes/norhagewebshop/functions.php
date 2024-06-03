@@ -401,7 +401,6 @@ function norhage_before_calculate_totals($cart_object){
 		}
 
 		if(isset($value['addons']) && !empty($value['addons'])){
-			
 			$extra_costs = 0;
 			foreach($value['addons'] as $product_id => $quantity){
 				if($quantity < 1){
@@ -414,7 +413,15 @@ function norhage_before_calculate_totals($cart_object){
 			$product_price += $extra_costs;
 		}
 
-		$value[ 'data' ]->set_price( $product_price );
+		// IDIOCY:
+		// For some reason, ::set_price() uses the default currency (NKK) and then converts the price to the current currency
+		// so prices need to be converted default currency before they are used in ::set_price().
+		// see woocommerce-multi-currency/includes/functions.php
+		if(function_exists('wmc_revert_price')) {
+			$value[ 'data' ]->set_price( wmc_revert_price($product_price) );
+		}else{
+			$value[ 'data' ]->set_price( $product_price );
+		}
 	}
 }
 add_action( 'woocommerce_before_calculate_totals', 'norhage_before_calculate_totals', 99 );
@@ -481,6 +488,13 @@ function norhage_order_item_name( $product_name, $item ) {
 }
 
 add_filter( 'woocommerce_order_item_name', 'norhage_order_item_name', 10, 2 );
+
+
+
+/**
+ * Filters dealing with multi-currency
+ * */
+add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
 
 /**
  * Remove the woocommerce template parts
