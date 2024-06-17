@@ -630,6 +630,7 @@ header#masthead nav#site-navigation ul.menu > li > a{
 	display: inline-block;
 	line-height: 1.3em;
 	transition: transform 0.3s ease;
+	position: relative;
 }
 header#masthead nav#site-navigation ul.menu a:link,
 header#masthead nav#site-navigation ul.menu a:visited{
@@ -642,6 +643,20 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul li a{
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container > ul > li:hover > a  {
 		transform: translate(0, -3px);
+	}
+	header#masthead nav#site-navigation ul.menu > li:has(.sub-menu) > a:after{
+		content: " ";
+		display: block;
+		position: absolute;
+		top: 110%;
+		background: #fff;
+		width: 0;
+		height: 1px;
+		transition: width 0.4s ease;
+		opacity: 0.7;
+	}
+	header#masthead nav#site-navigation ul.menu > li:has(.sub-menu):hover > a:after{
+		width: 100%;
 	}
 }
 
@@ -690,7 +705,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 		left: 0;
 		transform: translate(0, 0);
 		opacity: 1;
-		transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
+		transition: transform 0.3s ease-out 0.4s, opacity 0.3s ease-out 0.4s, left 0s linear 0.4s;
 		overflow: auto;
 	}
 }
