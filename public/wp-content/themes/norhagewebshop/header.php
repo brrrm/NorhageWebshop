@@ -133,7 +133,7 @@
 
 			<aside class="contact">
 				<h3><?php _e('Contact us today', 'norhagewebshop'); ?></h3>
-				<a href="mailto:info@norhage.no">info@norhage.no</a>
+				<?php printf('<a href="mailto:%s">%s</a>', __('info@norhage.com', 'norhagewebshop'), __('info@norhage.com', 'norhagewebshop')); ?>
 			</aside>
 
 			<aside class="search">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-05-31 14:52+0200\n"
-"PO-Revision-Date: 2024-05-31 14:53+0200\n"
+"POT-Creation-Date: 2024-06-17 12:25+0200\n"
+"PO-Revision-Date: 2024-06-17 12:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -57,17 +57,47 @@ msgstr "Norhage Webshop"
 msgid "Address"
 msgstr "Adresse"
 
+#: footer.php:20
+msgid ""
+"TEHI AS <br />\n"
+"\t\t\t\t\t\t\tPostboks 195 <br />\n"
+"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
+"\t\t\t\t\t\t\tNorge"
+msgstr ""
+"TEHI UG <br />\n"
+"\t\t\t\t\t\t\tAdolfstraße 1 <br />\n"
+"\t\t\t\t\t\t\t65185 Wiesbaden <br />\n"
+"\t\t\t\t\t\t\tDeutschland"
+
 #: footer.php:26
 msgid "Email"
 msgstr "E-Mail"
+
+#: footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr "info@norhage.de"
 
 #: footer.php:29
 msgid "Phone"
 msgstr "Telefonnummer"
 
+#: footer.php:31
+msgid ""
+"<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
+"\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
+msgstr "<a href=\"tel:+4961176039000\">+49 611 76 03 90 00</a>"
+
 #: footer.php:35
-msgid "B2C webshop"
-msgstr "B2C-Webshop"
+msgid "B2B website"
+msgstr "B2B-Website"
+
+#: footer.php:36
+msgid "https://norhageindustri.com"
+msgstr "https://norhageindustri.de"
+
+#: footer.php:36
+msgid "norhageindustri.com"
+msgstr "norhageindustri.de"
 
 #: footer.php:39
 msgid "Find the Norhage shop for your country"
@@ -80,6 +110,14 @@ msgstr "Sitemap"
 #: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage ist auch zu finden auf:"
+
+#: footer.php:60
+msgid "https://www.facebook.com/norhage.no"
+msgstr "https://www.facebook.com/people/Norhagede/100082998775516/"
+
+#: footer.php:63
+msgid "https://www.instagram.com/norhage.no/"
+msgstr "https://www.instagram.com/norhage.no/"
 
 #: functions.php:52
 msgid "Primary"
@@ -101,23 +139,23 @@ msgstr "aufklappen"
 msgid "Read More"
 msgstr "Weiterlesen ->"
 
-#: functions.php:361 functions.php:429 functions.php:461
+#: functions.php:361 functions.php:436 functions.php:468
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:365 functions.php:433
+#: functions.php:365 functions.php:440
 msgid "Size"
 msgstr "Größe"
 
-#: functions.php:464
+#: functions.php:471
 msgid "Sizes"
 msgstr "Größen"
 
-#: functions.php:528
+#: functions.php:542
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:535
+#: functions.php:549
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
@@ -243,6 +281,67 @@ msgstr ""
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Weiterlesen<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: woocommerce/cart/cart-totals.php:25
+msgid "Cart totals"
+msgstr "Summe"
+
+#: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
+msgid "Subtotal"
+msgstr "Zwischensumme "
+
+#: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr "Versand (optional)"
+
+#. translators: %s location.
+#: woocommerce/cart/cart-totals.php:72
+#, php-format
+msgid "(estimated for %s)"
+msgstr "(geschätzt für %s)"
+
+#: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
+msgid "Total"
+msgstr "Summe"
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:68
+msgid "Product"
+msgstr "Produkt"
+
+#. translators: %s is the product name
+#: woocommerce/cart/cart.php:123
+#, php-format
+msgid "Remove %s from cart"
+msgstr "%s aus dem Warenkorb entfernen"
+
+#: woocommerce/cart/cart.php:139
+msgid "Available on backorder"
+msgstr "Verfügbar auf Nachbestellung"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon:"
+msgstr "Gutschein:"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon code"
+msgstr "Gutscheincode"
+
+#: woocommerce/cart/cart.php:163
+msgid "Apply coupon"
+msgstr "Gutschein anwenden"
+
+#: woocommerce/cart/cart.php:168
+msgid "Update cart"
+msgstr "Warenkorb aktualisieren"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Bitte melden Sie sich an, um die Bestellung abzuschließen."
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
+msgstr "Ihre Bestellung"
 
 #: woocommerce/content-single-product.php:58
 #, php-format

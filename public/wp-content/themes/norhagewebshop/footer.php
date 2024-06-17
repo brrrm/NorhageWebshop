@@ -17,23 +17,23 @@
 			<dl>
 				<dt><?php _e('Address', 'norhagewebshop'); ?></dt>
 				<dd>
-					TEHI AS <br />
-					Postboks 195 <br />
-					4350 Kleppe <br />
-					Norge
+					<?php _e('TEHI AS <br />
+							Postboks 195 <br />
+							4350 Kleppe <br />
+							Norge', 'norhagewebshop'); ?>
 				</dd>
 				
 				<dt><?php _e('Email', 'norhagewebshop'); ?></dt>
-				<dd><a href="mailto:info@norhage.no">info@norhage.no</a></dd>
+				<dd><?php printf('<a href="mailto:%s">%s</a>', __('info@norhage.com', 'norhagewebshop'), __('info@norhage.com', 'norhagewebshop')); ?></dd>
 				
 				<dt><?php _e('Phone', 'norhagewebshop'); ?></dt>
 				<dd>
-					<a href="tel:+4796759359">+47 967 59 359</a> <br />
-					<a href="tel:+4798367181">+47 983 67 181</a>
+					<?php _e('<a href="tel:+4796759359">+47 967 59 359</a> <br />
+							<a href="tel:+4798367181">+47 983 67 181</a>', 'norhagewebshop'); ?>
 				</dd>
 
-				<dt><?php _e('B2C webshop', 'norhagewebshop'); ?></dt>
-				<dd><a href="https://norhage.no" target="_blank">norhage.no</a></dd>
+				<dt><?php _e('B2B website', 'norhagewebshop'); ?></dt>
+				<dd><?php printf('<a href="%s" target="_blank">%s</a>', __('https://norhageindustri.com', 'norhagewebshop'), __('norhageindustri.com', 'norhagewebshop')); ?></dd>
 			</dl>
 
 			<h2><?php _e('Find the Norhage shop for your country', 'norhagewebshop'); ?></h2>
@@ -57,10 +57,10 @@
 			<h3><?php _e('Norhage can also be found on:', 'norhagewebshop'); ?></h3>
 			<ul>
 				<li class="facebook">
-					<a href="https://www.facebook.com/norhage.no" target="_blank" rel="nofollow">Facebook</a>
+					<a href="<?php _e('https://www.facebook.com/norhage.no', 'norhagewebshop'); ?>" target="_blank" rel="nofollow">Facebook</a>
 				</li>
 				<li class="instagram">
-					<a href="https://www.instagram.com/norhage.no/" target="_blank" rel="nofollow">Instagram</a>
+					<a href="<?php _e('https://www.instagram.com/norhage.no/', 'norhagewebshop'); ?>" target="_blank" rel="nofollow">Instagram</a>
 				</li>
 				<li class="youtube">
 					<a href="https://www.youtube.com/channel/UCLJoLfGJShJfbZefhUlAs4Q" target="_blank" rel="nofollow">Youtube</a>

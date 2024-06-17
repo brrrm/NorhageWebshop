@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-05-31 14:52+0200\n"
-"PO-Revision-Date: 2024-05-31 14:52+0200\n"
+"POT-Creation-Date: 2024-06-17 12:13+0200\n"
+"PO-Revision-Date: 2024-06-17 12:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
@@ -57,17 +57,43 @@ msgstr "Norhage Webshop"
 msgid "Address"
 msgstr "Adresse"
 
+#: footer.php:20
+msgid ""
+"TEHI AS <br />\n"
+"\t\t\t\t\t\t\tPostboks 195 <br />\n"
+"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
+"\t\t\t\t\t\t\tNorge"
+msgstr ""
+
 #: footer.php:26
 msgid "Email"
 msgstr "E-mail"
+
+#: footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr ""
 
 #: footer.php:29
 msgid "Phone"
 msgstr "Telefon"
 
+#: footer.php:31
+msgid ""
+"<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
+"\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
+msgstr ""
+
 #: footer.php:35
-msgid "B2C webshop"
-msgstr "B2C webshop"
+msgid "B2B website"
+msgstr "B2B-websted"
+
+#: footer.php:36
+msgid "https://norhageindustri.com"
+msgstr "https://norhageindustri.dk"
+
+#: footer.php:36
+msgid "norhageindustri.com"
+msgstr "norhageindustri.dk"
 
 #: footer.php:39
 msgid "Find the Norhage shop for your country"
@@ -80,6 +106,14 @@ msgstr "Sitemap"
 #: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage kan også findes på:"
+
+#: footer.php:60
+msgid "https://www.facebook.com/norhage.no"
+msgstr ""
+
+#: footer.php:63
+msgid "https://www.instagram.com/norhage.no/"
+msgstr ""
 
 #: functions.php:52
 msgid "Primary"
@@ -98,28 +132,26 @@ msgid "expand"
 msgstr "udvide"
 
 #: functions.php:276
-#, fuzzy
-#| msgid "Read more ->"
 msgid "Read More"
-msgstr "Læs mere ->"
+msgstr "Læs mere"
 
-#: functions.php:361 functions.php:429 functions.php:461
+#: functions.php:361 functions.php:436 functions.php:468
 msgid "Cutting fee"
 msgstr "Nedsættelse af gebyr"
 
-#: functions.php:365 functions.php:433
+#: functions.php:365 functions.php:440
 msgid "Size"
 msgstr "Størrelse"
 
-#: functions.php:464
+#: functions.php:471
 msgid "Sizes"
 msgstr "Størrelser"
 
-#: functions.php:528
+#: functions.php:542
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:535
+#: functions.php:549
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på kategorioversigtssiden."
 
@@ -242,6 +274,67 @@ msgstr ""
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Læs mere<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: woocommerce/cart/cart-totals.php:25
+msgid "Cart totals"
+msgstr "Samlet beløb"
+
+#: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr "Forsendelse"
+
+#. translators: %s location.
+#: woocommerce/cart/cart-totals.php:72
+#, php-format
+msgid "(estimated for %s)"
+msgstr "(estimeret til %s)"
+
+#: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
+msgid "Total"
+msgstr "Total"
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:68
+msgid "Product"
+msgstr "Produkt"
+
+#. translators: %s is the product name
+#: woocommerce/cart/cart.php:123
+#, php-format
+msgid "Remove %s from cart"
+msgstr "Fjern %s fra kurven"
+
+#: woocommerce/cart/cart.php:139
+msgid "Available on backorder"
+msgstr "Tilgængelig i restordre"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon:"
+msgstr "Rabatkode:"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon code"
+msgstr "Rabatkode"
+
+#: woocommerce/cart/cart.php:163
+msgid "Apply coupon"
+msgstr "Anvend rabatkode"
+
+#: woocommerce/cart/cart.php:168
+msgid "Update cart"
+msgstr "Opdater kurv"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Du skal være logget ind for at gå til kassen."
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
+msgstr "Din ordre"
 
 #: woocommerce/content-single-product.php:58
 #, php-format

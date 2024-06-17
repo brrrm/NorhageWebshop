@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-05-31 14:52+0200\n"
-"PO-Revision-Date: 2024-05-31 14:53+0200\n"
+"POT-Creation-Date: 2024-06-17 12:31+0200\n"
+"PO-Revision-Date: 2024-06-17 12:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -57,17 +57,43 @@ msgstr "Norhagen verkkokauppa"
 msgid "Address"
 msgstr "Osoite"
 
+#: footer.php:20
+msgid ""
+"TEHI AS <br />\n"
+"\t\t\t\t\t\t\tPostboks 195 <br />\n"
+"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
+"\t\t\t\t\t\t\tNorge"
+msgstr ""
+
 #: footer.php:26
 msgid "Email"
 msgstr "Sähköposti"
+
+#: footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr ""
 
 #: footer.php:29
 msgid "Phone"
 msgstr "Puhelin"
 
+#: footer.php:31
+msgid ""
+"<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
+"\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
+msgstr ""
+
 #: footer.php:35
-msgid "B2C webshop"
-msgstr "B2C-verkkokauppa"
+msgid "B2B website"
+msgstr "B2B-verkkosivusto"
+
+#: footer.php:36
+msgid "https://norhageindustri.com"
+msgstr "https://norhageindustri.fi"
+
+#: footer.php:36
+msgid "norhageindustri.com"
+msgstr "norhageindustri.fi"
 
 #: footer.php:39
 msgid "Find the Norhage shop for your country"
@@ -80,6 +106,14 @@ msgstr "Sivukartta"
 #: footer.php:57
 msgid "Norhage can also be found on:"
 msgstr "Norhage löytyy myös:"
+
+#: footer.php:60
+msgid "https://www.facebook.com/norhage.no"
+msgstr ""
+
+#: footer.php:63
+msgid "https://www.instagram.com/norhage.no/"
+msgstr ""
 
 #: functions.php:52
 msgid "Primary"
@@ -98,28 +132,26 @@ msgid "expand"
 msgstr "laajentaa"
 
 #: functions.php:276
-#, fuzzy
-#| msgid "Read more ->"
 msgid "Read More"
-msgstr "Lue lisää ->"
+msgstr "Lue lisää"
 
-#: functions.php:361 functions.php:429 functions.php:461
+#: functions.php:361 functions.php:436 functions.php:468
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:365 functions.php:433
+#: functions.php:365 functions.php:440
 msgid "Size"
 msgstr "Koko"
 
-#: functions.php:464
+#: functions.php:471
 msgid "Sizes"
 msgstr "Koot"
 
-#: functions.php:528
+#: functions.php:542
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:535
+#: functions.php:549
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
@@ -241,6 +273,67 @@ msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on ap
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Jatka lukemista<span class=\"screen-reader-text\">%s</span>"
+
+#: woocommerce/cart/cart-totals.php:25
+msgid "Cart totals"
+msgstr "Yhteenveto"
+
+#: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
+msgid "Subtotal"
+msgstr "Välisumma"
+
+#: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr "Toimitus"
+
+#. translators: %s location.
+#: woocommerce/cart/cart-totals.php:72
+#, php-format
+msgid "(estimated for %s)"
+msgstr "(arvioitu %s)"
+
+#: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
+msgid "Total"
+msgstr "Yhteensä"
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:68
+msgid "Product"
+msgstr "Tuote"
+
+#. translators: %s is the product name
+#: woocommerce/cart/cart.php:123
+#, php-format
+msgid "Remove %s from cart"
+msgstr "Poista %s ostoskorista"
+
+#: woocommerce/cart/cart.php:139
+msgid "Available on backorder"
+msgstr "Tilattavissa ennakkoon"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon:"
+msgstr "Kuponki:"
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon code"
+msgstr "Alennuskoodi"
+
+#: woocommerce/cart/cart.php:163
+msgid "Apply coupon"
+msgstr "Lisää kuponki"
+
+#: woocommerce/cart/cart.php:168
+msgid "Update cart"
+msgstr "Päivitä ostoskori"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Sinun täytyy olla kirjautunut sisään, kun aiot siirtyä kassalle."
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
+msgstr "Tilauksesi"
 
 #: woocommerce/content-single-product.php:58
 #, php-format

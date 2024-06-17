@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-05-31 14:52+0200\n"
+"POT-Creation-Date: 2024-06-17 12:13+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -58,16 +58,42 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
+#: footer.php:20
+msgid ""
+"TEHI AS <br />\n"
+"\t\t\t\t\t\t\tPostboks 195 <br />\n"
+"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
+"\t\t\t\t\t\t\tNorge"
+msgstr ""
+
 #: footer.php:26
 msgid "Email"
+msgstr ""
+
+#: footer.php:27 header.php:136
+msgid "info@norhage.com"
 msgstr ""
 
 #: footer.php:29
 msgid "Phone"
 msgstr ""
 
+#: footer.php:31
+msgid ""
+"<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
+"\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
+msgstr ""
+
 #: footer.php:35
-msgid "B2C webshop"
+msgid "B2B website"
+msgstr ""
+
+#: footer.php:36
+msgid "https://norhageindustri.com"
+msgstr ""
+
+#: footer.php:36
+msgid "norhageindustri.com"
 msgstr ""
 
 #: footer.php:39
@@ -80,6 +106,14 @@ msgstr ""
 
 #: footer.php:57
 msgid "Norhage can also be found on:"
+msgstr ""
+
+#: footer.php:60
+msgid "https://www.facebook.com/norhage.no"
+msgstr ""
+
+#: footer.php:63
+msgid "https://www.instagram.com/norhage.no/"
 msgstr ""
 
 #: functions.php:52
@@ -102,23 +136,23 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: functions.php:361 functions.php:429 functions.php:461
+#: functions.php:361 functions.php:436 functions.php:468
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:365 functions.php:433
+#: functions.php:365 functions.php:440
 msgid "Size"
 msgstr ""
 
-#: functions.php:464
+#: functions.php:471
 msgid "Sizes"
 msgstr ""
 
-#: functions.php:528
+#: functions.php:542
 msgid "Description"
 msgstr ""
 
-#: functions.php:535
+#: functions.php:549
 msgid "The description is shown on the category overview page."
 msgstr ""
 
@@ -236,6 +270,67 @@ msgstr ""
 #: template-parts/content-post.php:48 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:25
+msgid "Cart totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr ""
+
+#. translators: %s location.
+#: woocommerce/cart/cart-totals.php:72
+#, php-format
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:68
+msgid "Product"
+msgstr ""
+
+#. translators: %s is the product name
+#: woocommerce/cart/cart.php:123
+#, php-format
+msgid "Remove %s from cart"
+msgstr ""
+
+#: woocommerce/cart/cart.php:139
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon:"
+msgstr ""
+
+#: woocommerce/cart/cart.php:163
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:163
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:168
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:56
+msgid "Your order"
 msgstr ""
 
 #: woocommerce/content-single-product.php:58
