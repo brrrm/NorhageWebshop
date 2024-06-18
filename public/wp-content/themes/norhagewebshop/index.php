@@ -19,6 +19,11 @@ get_header();
 		<div class="entry-content">
 		<?php if ( have_posts() ) : ?>
 			<header>
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+					}
+				?>
 				<h1 class="page-title"><?php single_post_title(); ?></h1>
 			</header>
 

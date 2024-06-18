@@ -17,6 +17,11 @@ get_header();
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+						}
+					?>
+					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'norhagewebshop' ), '<span>' . get_search_query() . '</span>' );
 					?>
