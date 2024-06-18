@@ -30,6 +30,11 @@ if ( post_password_required() ) {
 		<div class="productHeaderBlock norhage-block alignfull">
 			<div class="text-col">
 				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+					}
+				?>
+				<?php
 					/**
 					 * Hook: woocommerce_before_single_product.
 					 *
