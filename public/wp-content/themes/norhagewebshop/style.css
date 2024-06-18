@@ -144,11 +144,12 @@ h3{
 }
 
 p#breadcrumbs{
-	font-size: 1rem;	
+	font-size: 0.816667rem;	
 	margin: 1em 0;
+	line-height: 1.1667;
 }
 p#breadcrumbs span{
-	padding: 0 0.5em;
+	padding: 0 0.3em;
 }
 p#breadcrumbs span:first-child{
 	padding-left: 0;
@@ -698,6 +699,8 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 	gap: 1em;
 	align-content: flex-start;
 	overflow: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 }
 @media all and (min-width:768px){
 	header#masthead nav#site-navigation .menu-main-navigation-container ul.menu li:hover ul.sub-menu,
@@ -707,6 +710,7 @@ header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu 
 		opacity: 1;
 		transition: transform 0.3s ease-out 0.4s, opacity 0.3s ease-out 0.4s, left 0s linear 0.4s;
 		overflow: auto;
+		scrollbar-width: none;  /* Firefox */
 	}
 }
 header#masthead nav#site-navigation .menu-main-navigation-container ul.sub-menu > li{
