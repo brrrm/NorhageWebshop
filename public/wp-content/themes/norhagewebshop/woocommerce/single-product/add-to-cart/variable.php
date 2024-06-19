@@ -101,7 +101,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 						<div class="addon-image">
 							<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
 						</div>
-						<h3><?php echo $addon_product->get_name(); ?></h3>
+						<h3><a href="<?php echo get_permalink( $addon_product->get_id() ); ?>" title="<?php printf('%s: %s', __('View', 'norhagewebshop'), $addon_product->get_name()); ?>" target="_blank"><?php echo $addon_product->get_name(); ?></a></h3>
 						<div class="addon-price">
 							<?php echo wc_price($addon_price); ?>
 						</div>
