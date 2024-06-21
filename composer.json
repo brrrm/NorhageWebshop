@@ -19,7 +19,8 @@
 		"wpackagist-plugin/webp-express": "^0.25.8",
 		"wpackagist-plugin/woocommerce-gateway-stripe": "^8.0",
 		"wpackagist-plugin/svea-checkout-for-woocommerce": "^2.6",
-		"wpackagist-plugin/redirection": "^5.4"
+		"wpackagist-plugin/redirection": "^5.4",
+		"wpackagist-plugin/woocommerce-ajax-filters": "1.6.4.6"
 	},
 	"repositories": [
 		{

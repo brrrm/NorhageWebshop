@@ -75,11 +75,35 @@ function norhagewebshop_setup() {
 	add_theme_support( 'align-wide' );
 
 	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'widgets' );
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	add_theme_support('woocommerce');
 }
 add_action( 'after_setup_theme', 'norhagewebshop_setup' );
+
+
+
+/**
+ * Create a widget area for filters
+ * */
+add_action( 'widgets_init', 'norhage_register_sidebars' );
+function norhage_register_sidebars() {
+	register_sidebar([
+		'id'            => 'before_shop_loop',
+		'name'          => __( 'Above products listing' ),
+		'description'   => __( 'A widget area above the products listing' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	]);
+}
+
+add_action('woocommerce_before_shop_loop', 'norhage_sidebar_before_shop_loop', 10);
+function norhage_sidebar_before_shop_loop(){
+	get_sidebar('before_shop_loop');
+}
 
 /**
  * We use WordPress's init hook to make sure
@@ -698,6 +722,12 @@ function norhage_remove_breadcrumb_link( $link_output , $link ){
 
 	return $link_output;
 }
+
+
+/**
+ * Remove annoying admin notices from brocket
+ * */
+remove_action('admin_notices', array('berocket_admin_notices', 'display_admin_notice'));
 
 
 

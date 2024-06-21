@@ -216,6 +216,16 @@
 			inputSibling.trigger('change');
 		}
 
+		/**
+		 * filters open and close btns
+		 * */
+		$(document).on('click', 'button.open-filters', function (e) {
+			$('#filters-sidebar').toggleClass('open');
+		});
+		$(document).on('click', '#filters-sidebar .close-btn', function (e) {
+			$('#filters-sidebar').removeClass('open');
+		});
+
 
 		/*
 		function gtag() { dataLayer.push(arguments); }
