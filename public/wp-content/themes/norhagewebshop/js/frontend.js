@@ -142,11 +142,8 @@
 			let currencySymbol;
 			let priceNode
 			if(typeof norhage_product_info !== 'undefined' && norhage_product_info.productType == 'simple'){
-				currencySymbol = $('.woocommerce-simple-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-simple-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
-				priceNode = $('.woocommerce-simple-price .price .woocommerce-Price-amount bdi');
-				if($('.woocommerce-simple-price .price del').length){
-					priceNode = $('.woocommerce-simple-price .price ins .woocommerce-Price-amount bdi');
-				}
+				currencySymbol = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol').first().clone();
+				priceNode = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi');
 			}else{
 				currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
 				priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
