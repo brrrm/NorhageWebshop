@@ -9,7 +9,6 @@
 $title			= get_sub_field( 'title' ) ?? false;
 $text			= get_sub_field('text') ?? '';
 $projects		= get_field( 'projects' )?? get_sub_field( 'projects' );
-$text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
 
 // If no posts have been selected, load all the posts from this project's post-type.
 if(!$projects || empty($projects)){
@@ -43,9 +42,6 @@ if ( empty( $block['align'] ) ) {
 	$class_name .= ' alignfull';
 }else{
     $class_name .= ' align' . $block['align'];
-}
-if($text_snippet){
-	$class_name .= ' with-text-snippets';
 }
 
 $innerBlocksTemplate = [
@@ -94,20 +90,10 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 		<?php if($projects): ?>
 			<ul>
 
-			<?php foreach($projects as $project):
-				$permalink = get_permalink( $project->ID );
-        		$title = get_the_title( $project->ID );
-        		$thumb = get_the_post_thumbnail($project->ID, [500,500]);
-        	?>
-				<li class="image-button">
-					<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $thumb; ?></a>
-					<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></h3>
-					<?php if($text_snippet): ?>
-						<p class="excerpt"><?php echo wp_strip_all_tags(get_the_excerpt()); ?></p>
-						<p><a href="<?php echo esc_url( $permalink ); ?>"><?php echo __( 'Read more ->' ); ?></a></p>
-					<?php endif; ?>
-				</li>
-			<?php endforeach; ?>
+			<?php foreach($projects as $post):
+				setup_postdata($post);
+				get_template_part( 'template-parts/content', 'imagebutton' );
+			endforeach; ?>
 			</ul>
 			<?php 
 		    // Reset the global post object so that the rest of the page works correctly.

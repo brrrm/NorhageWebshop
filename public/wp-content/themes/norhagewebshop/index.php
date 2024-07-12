@@ -29,22 +29,13 @@ get_header();
 
 			<div class="alignwide subcategories">
 				<ul class="sub-categories">
-		<?php
-			$cats = get_categories();
-			//error_log(print_r($cats, true));
-		?>
+				<?php
+					$cats = get_categories();
 			
-				<?php foreach($cats as $cat): 
-					
-					$thumbnail_id = norhage_get_taxo_thumbnail($cat);
-					$image = wp_get_attachment_image( $thumbnail_id, 'full' );
-					$permalink = get_category_link( $cat );
+					foreach($cats as $cat): 
+						get_template_part( 'template-parts/content', 'imagebutton', ['category' => $cat] );
+					endforeach; 
 				?>
-					<li class="subcategory image-button">
-						<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $image; ?></a>
-						<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo $cat->name; ?></a></h3>
-					</li> 
-				<?php endforeach; ?>
 				</ul>
 			</div>
 

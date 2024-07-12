@@ -10,7 +10,6 @@ $title			= get_field( 'title' )?? get_sub_field( 'title' );
 $text_next		= get_field( 'text_next_to_slider' )?? get_sub_field( 'text_next_to_slider' );
 $projects		= get_field( 'products' )?? get_sub_field( 'products' );
 $text			= get_field('text') ?? get_sub_field('text');
-$text_snippet	= get_field( 'show_text_snippet' )?? get_sub_field( 'show_text_snippet' );
 $image			= get_field('background_image') ?? get_sub_field('background_image');
 
 // If no posts have been selected, load all the posts from this project's post-type.
@@ -46,9 +45,6 @@ if ( empty( $block['align'] ) ) {
 }else{
     $class_name .= ' align' . $block['align'];
 }
-if($text_snippet){
-	$class_name .= ' with-text-snippets';
-}
 ?>
 
 
@@ -70,22 +66,13 @@ if($text_snippet){
 		</div>
 		<div class="projects-col">
 			<?php if($projects): ?>
+				<?php global $post; ?>
 				<ul>
 
-				<?php foreach($projects as $project):
-					$permalink = get_permalink( $project->ID );
-	        		$title = get_the_title( $project->ID );
-	        		$thumb = get_the_post_thumbnail($project->ID);
-	        	?>
-					<li class="image-button">
-						<a href="<?php echo esc_url( $permalink ); ?>"><?php echo $thumb; ?></a>
-						<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></h3>
-						<?php if($text_snippet): ?>
-							<p class="excerpt"><?php echo wp_strip_all_tags(get_the_excerpt()); ?></p>
-							<p><a href="<?php echo esc_url( $permalink ); ?>"><?php echo __( 'Read more ->' ); ?></a></p>
-						<?php endif; ?>
-					</li>
-				<?php endforeach; ?>
+				<?php foreach($projects as $post):
+					setup_postdata($post);
+					get_template_part( 'template-parts/content', 'imagebutton');
+	        	endforeach; ?>
 				</ul>
 				<?php 
 			    // Reset the global post object so that the rest of the page works correctly.

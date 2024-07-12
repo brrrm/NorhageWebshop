@@ -157,7 +157,7 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
         	$output .= '<ul class="products-sub-menu">';
         	foreach($posts as $post){
         		$thumb = get_the_post_thumbnail($post->ID, [420, 420]);
-        		$output .= '<li class="image-button"><a href="' . esc_url( get_permalink($post) ) . '">' . $thumb . '</a><span class="title"><a href="' . esc_url( get_permalink($post) ) . '">' . get_the_title($post) . '</span></a></li>' ;
+        		$output .= '<li class="image-button"><a href="' . esc_url( get_permalink($post) ) . '">' . $thumb . '</a><div class="title-price"><span class="title"><a href="' . esc_url( get_permalink($post) ) . '">' . get_the_title($post) . '</a></span></div></li>' ;
         	}
         	$output .= '</ul>';
         }
@@ -165,7 +165,7 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
 
     if( $args->menu_id == 'primary-menu' && $item->type == 'post_type' && $item->object == 'service') {
     	$thumb = get_the_post_thumbnail($item->object_id, [420,420]);
-        $output = '<div class="image-button"><a href="' . esc_url( $item->url ) . '">' . $thumb . '</a><span class="title"><a href="' . esc_url( $item->url ) . '">' . $item->title . '</span></a></div>' ;
+        $output = '<div class="image-button"><a href="' . esc_url( $item->url ) . '">' . $thumb . '</a><div class="title-price"><span class="title"><a href="' . esc_url( $item->url ) . '">' . $item->title . '</a></span></div></div>' ;
     }
     if( in_array($args->menu_id, ['primary-menu', 'secondary-menu']) && in_array('menu-item-has-children', $item->classes) ){
 	    $output .= '<button class="expander">' . __('expand', 'norhagewebshop') . '</button>';
