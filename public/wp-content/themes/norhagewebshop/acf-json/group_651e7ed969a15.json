@@ -3,26 +3,6 @@
     "title": "Block:Project-slider",
     "fields": [
         {
-            "key": "field_651feb01dbdf2",
-            "label": "Show text snippet below project?",
-            "name": "show_text_snippet",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Should there be a text snippet below the project image?",
-            "default_value": 0,
-            "ui_on_text": "Yes",
-            "ui_off_text": "No",
-            "ui": 1
-        },
-        {
             "key": "field_651e7efc142e7",
             "label": "Projects",
             "name": "projects",
@@ -68,5 +48,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716980081
+    "modified": 1720792174
 }

@@ -120,6 +120,7 @@ function norhagewebshop_register_acf_blocks() {
      * @link https://developer.wordpress.org/reference/functions/register_block_type/
      */
     register_block_type( __DIR__ . '/blocks/headerblock' );
+    register_block_type( __DIR__ . '/blocks/header-slider-block' );
     register_block_type( __DIR__ . '/blocks/product-header-block' );
     register_block_type( __DIR__ . '/blocks/text-image-block' );
     register_block_type( __DIR__ . '/blocks/projects-block' );
@@ -211,7 +212,9 @@ add_filter("wp_nav_menu_objects",'norhage_wp_nav_menu_objects_start_in',10,2);
  * Enqueue scripts and styles.
  */
 function norhagewebshop_scripts() {
-	wp_enqueue_style( 'norhagewebshop-style', get_stylesheet_uri(), array(), _G_VERSION );
+	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.css', [], _G_VERSION );
+	wp_enqueue_style( 'norhagewebshop-style', get_stylesheet_uri(), [], _G_VERSION );
+	wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', ['jquery'], _G_VERSION, ['in_footer' => true] );
 	wp_enqueue_script('norhagewebshop-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true]);
 	/*$myThemeParams = [
 		'test1'	=> 'lalala'
@@ -728,7 +731,9 @@ function norhage_remove_breadcrumb_link( $link_output , $link ){
  * Remove annoying admin notices from brocket
  * */
 remove_action('admin_notices', array('berocket_admin_notices', 'display_admin_notice'));
-
+remove_action('admin_notices', array('berocket_admin_notices_rate_stars', 'admin_notices'));
+remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'notice' ) );
+remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'form_ads' ) );
 
 
 /*

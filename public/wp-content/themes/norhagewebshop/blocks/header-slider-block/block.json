@@ -1,0 +1,25 @@
+{
+    "name": "norhagewebshop/headersliderblock",
+    "title": "Page header slider block",
+    "description": "A page header block as a slider.",
+    "style": [ "file:./headersliderblock.css" ],
+    "category": "norhage",
+    "icon": "layout",
+    "keywords": ["header"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "headersliderblock.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": [ "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        }
+    },
+    "editorStyle": "file:./editor.css"
+}

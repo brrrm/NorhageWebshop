@@ -44,26 +44,6 @@
             "append": ""
         },
         {
-            "key": "field_65ca31ce354ef",
-            "label": "Show text snippet below project?",
-            "name": "show_text_snippet",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Should there be a text snippet below the project image?",
-            "default_value": 0,
-            "ui_on_text": "Yes",
-            "ui_off_text": "No",
-            "ui": 1
-        },
-        {
             "key": "field_65ca31ce354f6",
             "label": "Products",
             "name": "products",
@@ -135,5 +115,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1707751843
+    "modified": 1720792125
 }
