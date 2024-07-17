@@ -21,7 +21,7 @@ if(isset($args['category'])){
 	<div class="title-price">
 		<h3 class="title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></h3>
 		<?php if(isset($product) && $product !== false): ?>
-			<span class="price"><?php echo $product->get_price_html(); //will give raw price ?></span>
+			<span class="norhage-price"><?php echo $product->get_price_html(); //will give raw price ?></span>
 		<?php endif; ?>
 	</div>
 </li>

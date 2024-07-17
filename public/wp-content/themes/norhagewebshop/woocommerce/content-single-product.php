@@ -23,6 +23,9 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
+$max_shown = 4;
+
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
@@ -44,6 +47,15 @@ if ( post_password_required() ) {
 				?>
 				<h1><?php the_title(); ?></h1>
 				
+				<?php wc_get_template( 'single-product/price.php' ); ?>
+				
+				<?php
+					$delivery_time = get_field('delivery_time');
+					if(isset($delivery_time)){
+						printf('<p class="delivery-time">'.__('Delivery time', 'norhagewebshop').': %s</p>', $delivery_time);
+					}
+				?>
+
 				<div><?php echo wpautop($product->get_short_description()); ?></div>
 
 				<?php
@@ -54,19 +66,6 @@ if ( post_password_required() ) {
 				<?php if($product->is_type('simple') && !$has_cutting_fee): ?>
 					<div class="summary entry-summary alignfull">
 						<?php do_action( 'woocommerce_single_product_summary' ); ?>
-					</div>
-				<?php endif; ?>
-				
-				<?php if($product->is_type('variable') || $has_cutting_fee): ?>
-					<div class="summary entry-summary alignfull">
-						<?php wc_get_template( 'single-product/price.php' ); ?>
-						<a href="#product-config" class="button add_to_cart_button product_type_variable"><?php printf(__('Customize your %s', 'norhagewebshop'), $product->get_title()); ?></a>
-						<?php
-							$delivery_time = get_field('delivery_time');
-							if(isset($delivery_time)){
-								printf('<p class="delivery-time">'.__('Delivery time', 'norhagewebshop').': %s</p>', $delivery_time);
-							}
-						?>
 					</div>
 				<?php endif; ?>
 
@@ -85,8 +84,8 @@ if ( post_password_required() ) {
 							<?php 
 								echo wp_get_attachment_image( $image_id, 'full', '', array( 'class' => 'header-image__img' ) ); 
 							?>
-							<?php if($counter == 5 && count($images) > 5): ?>
-								<span class="click-for-more-images">+<?php echo count($images) - 5; ?></span>
+							<?php if($counter == $max_shown && count($images) > $max_shown): ?>
+								<span class="click-for-more-images">+<?php echo count($images) - $max_shown; ?></span>
 							<?php endif; ?>
 						</figure>
 					<?php endforeach;?>

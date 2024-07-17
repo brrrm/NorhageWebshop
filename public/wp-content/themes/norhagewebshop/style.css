@@ -1600,6 +1600,7 @@ footer.site-footer nav#socials-navigation ul li.youtube a{
 	box-sizing: border-box;
 	color: var(--white);
 }
+.image-button .title-price .norhage-price,
 .image-button .title-price .price{
 	text-align: left;
 	color: #fff;
@@ -1884,7 +1885,7 @@ div.quantity,
 	float: none;
 	width: auto;
 	background-color: var(--light-green);
-	padding: var(--header-height) 0 2em 0;
+	padding: 2em 0;
 	border-bottom: 1px solid var(--store-color);
 }
 .product .entry-content .summary.entry-summary h2.variations_form-title{

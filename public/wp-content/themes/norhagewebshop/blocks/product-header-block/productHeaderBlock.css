@@ -9,12 +9,12 @@
 }
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
-	height: 100vh;
+	height: 70vh;
 	padding: calc(var(--header-height) + 1em) 1em 6em 2em;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    font-size: min(2vw, 3vh, 1.3rem);
+    font-size: 1em; /*min(2vw, 3vh, 1.3rem);*/
     line-height: 1.5em;
 	position: -webkit-sticky;
 	position: sticky;
@@ -36,11 +36,15 @@
 .productHeaderBlock .delivery-time{
 	font-size: 0.7rem;
 	line-height: 1.1667em;
-	margin: 1em 0 0;
+	margin: 0 0 0;
 	padding: 0 0 0 2em;
-	background: transparent url(../../images/svg/delivery-time.svg) left top no-repeat;
+	background: transparent url(../../images/svg/delivery-time.svg) left center no-repeat;
 	background-size: 1.5em;
 	color: var(--store-color);
+	position: absolute;
+	bottom: 1rem;
+	left: 2rem;
+	right: 1rem;
 }
 .productHeaderBlock .image-col{
 	flex: 65% 0 0;
@@ -49,7 +53,11 @@
 	scrollbar-width: none;  /* Firefox */
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.25em;
+	flex-direction: column;
+	--headerblockheight: 70vh;
+	--gap: 0.25em;
+	height: var(--headerblockheight);
+	gap: var(--gap);
 	cursor: pointer;
 	border-left: 1px solid var(--store-color);
 }
@@ -60,24 +68,26 @@
 	display: none;
 }
 .productHeaderBlock .image-col figure{
-	flex: 18% 1 1;
+	flex: calc(33.333% - (var(--gap) * 2/3)) 0 0 ;
 	width: auto;
+	height: 1px; /* we need some value. doesn't matter what. I don't know why???? */
 	aspect-ratio: 1;
 	display: block;
 	margin: 0;
 }
 .productHeaderBlock .image-col figure:first-child{
 	flex: 100% 0 0;
-	height: 100vh;
+	height: 100%;
 	aspect-ratio: auto;
+	width: calc(100% - (var(--headerblockheight) / 3) - var(--gap));
 }
-.productHeaderBlock .image-col figure:nth-child(5) ~ figure{
+.productHeaderBlock .image-col figure:nth-child(4) ~ figure{
 	display: none;
 }
-.productHeaderBlock .image-col figure:nth-child(5){
+.productHeaderBlock .image-col figure:nth-child(4){
 	position: relative;
 }
-.productHeaderBlock .image-col figure:nth-child(5) .click-for-more-images{
+.productHeaderBlock .image-col figure:nth-child(4) .click-for-more-images{
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -154,8 +164,13 @@
 	}
 	.productHeaderBlock .image-col{
 		flex: 100% 0 0;
+		flex-direction: row;
 		height: auto;
 		order: 1;
+
+	}
+	.productHeaderBlock .image-col figure{
+		height: auto;
 	}
 	.productHeaderBlock .image-col figure:first-child{
 		height: 50vh;

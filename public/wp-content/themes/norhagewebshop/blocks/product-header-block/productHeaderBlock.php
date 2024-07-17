@@ -7,6 +7,7 @@
 
 // Load values and assign defaults.
 $images			= get_field( 'images' );
+$max_shown		= 4;
 
 
 // Support custom "anchor" values.
@@ -68,8 +69,8 @@ $allowedBlocks = ['core/post-title', 'core/paragraph'];
 					echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'header-image__img', 'alt' => $image['alt'] ) ); 
 				endif; 
 				
-				if($counter == 5 && count($images) > 5): ?>
-					<span class="click-for-more-images">+<?php echo count($images) - 5; ?></span>
+				if($counter == $max_shown && count($images) > $max_shown): ?>
+					<span class="click-for-more-images">+<?php echo count($images) - $max_shown; ?></span>
 				<?php endif; ?>
 			</figure>
 			<?php endforeach; ?>
@@ -79,11 +80,5 @@ $allowedBlocks = ['core/post-title', 'core/paragraph'];
 		<div class="image-col empty">
 		</div>
 	<?php endif; ?>
-
-	
-
-
-
-
 
 </div>
