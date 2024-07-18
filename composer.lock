@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80defc87a910923670461579e3d52d5d",
+    "content-hash": "ac3b08740de5c855a5611bacbbdd0401",
     "packages": [
         {
             "name": "composer/installers",
@@ -336,6 +336,42 @@
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
         },
         {
+            "name": "wpackagist-plugin/insta-gallery",
+            "version": "4.4.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/insta-gallery/",
+                "reference": "tags/4.4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/insta-gallery.4.4.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/insta-gallery/"
+        },
+        {
+            "name": "wpackagist-plugin/klarna-checkout-for-woocommerce",
+            "version": "2.12.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/klarna-checkout-for-woocommerce/",
+                "reference": "tags/2.12.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/klarna-checkout-for-woocommerce.2.12.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/klarna-checkout-for-woocommerce/"
+        },
+        {
             "name": "wpackagist-plugin/post-types-order",
             "version": "2.1.2",
             "source": {
@@ -445,21 +481,39 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-gateway-stripe",
-            "version": "8.0.0",
+            "version": "8.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
-                "reference": "tags/8.0.0"
+                "reference": "tags/8.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.8.0.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.8.5.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-paypal-payments",
+            "version": "2.8.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce-paypal-payments/",
+                "reference": "tags/2.8.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-paypal-payments.2.8.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-paypal-payments/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips",
@@ -496,24 +550,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
-        },
-        {
-            "name": "wpackagist-theme/storefront",
-            "version": "4.5.4",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/storefront/",
-                "reference": "4.5.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/storefront.4.5.4.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/storefront/"
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",

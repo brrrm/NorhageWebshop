@@ -14,13 +14,15 @@
 		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^3.1",
 		"wpackagist-plugin/woocommerce": "^8.5",
 		"wpackagist-plugin/woocommerce-pdf-invoices-packing-slips": "^3.7",
-		"wpackagist-theme/storefront": "^4.5",
 		"wpackagist-plugin/contact-form-7": "^5.8",
 		"wpackagist-plugin/webp-express": "^0.25.8",
-		"wpackagist-plugin/woocommerce-gateway-stripe": "^8.0",
+		"wpackagist-plugin/woocommerce-gateway-stripe": "^8.5",
 		"wpackagist-plugin/svea-checkout-for-woocommerce": "^2.6",
 		"wpackagist-plugin/redirection": "^5.4",
-		"wpackagist-plugin/woocommerce-ajax-filters": "1.6.4.6"
+		"wpackagist-plugin/woocommerce-ajax-filters": "1.6.4.6",
+		"wpackagist-plugin/insta-gallery": "^4.4",
+		"wpackagist-plugin/klarna-checkout-for-woocommerce": "^2.12",
+		"wpackagist-plugin/woocommerce-paypal-payments": "^2.8"
 	},
 	"repositories": [
 		{
