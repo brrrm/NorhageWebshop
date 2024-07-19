@@ -1983,10 +1983,10 @@ div.quantity,
 	width: 100%;
 }
 .summary form.cart .sizes_input > div label{
-	flex: 50% 0 0;
+	flex: 15em 0 1;
 }
 .summary form.cart.simple_form .sizes_input > div label{
-	flex: 10em 0 0;
+	flex: 10em 0 1;
 }
 .summary form.cart .sizes_input .quantity .qty{
 	width: 4em;
