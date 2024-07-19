@@ -840,7 +840,7 @@ function norhage_wt_order_number_sequence_prefix($prefix,$order_id){
 		default:
 			return 'NO-';
 	}
-	error_log($order_id);
+	
 	return 'XX-';
 }
 /*

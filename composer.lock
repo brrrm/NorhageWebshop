@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a7d37dda66fb5f0e8a47cedb9647c1e",
+    "content-hash": "8c06e6a725bc175a6cffa4433e92551d",
     "packages": [
         {
             "name": "composer/installers",
@@ -604,6 +604,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wt-woocommerce-sequential-order-numbers",
+            "version": "1.6.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wt-woocommerce-sequential-order-numbers/",
+                "reference": "tags/1.6.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wt-woocommerce-sequential-order-numbers.1.6.5.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wt-woocommerce-sequential-order-numbers/"
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
