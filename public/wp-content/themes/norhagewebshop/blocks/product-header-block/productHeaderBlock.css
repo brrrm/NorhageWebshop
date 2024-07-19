@@ -81,6 +81,15 @@
 	aspect-ratio: auto;
 	width: calc(100% - (var(--headerblockheight) / 3) - var(--gap));
 }
+.productHeaderBlock .image-col figure:first-child:last-child{
+	width: 100%;
+}
+.productHeaderBlock .image-col figure:nth-child(2):last-child{
+	flex: 100% 1 1;
+}
+.productHeaderBlock .image-col figure:nth-child(3):last-child{
+	flex: calc(66.66% - (var(--gap) * 2/3)) 0 0 ;
+}
 .productHeaderBlock .image-col figure:nth-child(4) ~ figure{
 	display: none;
 }
