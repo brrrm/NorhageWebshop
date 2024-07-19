@@ -736,6 +736,113 @@ remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'notice' ) );
 remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'form_ads' ) );
 
 
+/**
+ * EMAIL CUSTOMIZATIONS
+ * */
+// - fix email reply-to addresses
+add_filter( 'woocommerce_email_headers', 'norhage_woocommerce_email_headers', 10, 4 );
+function norhage_woocommerce_email_headers($header, $subject, $order, $email){
+	if(!function_exists('pll_get_post_language')){
+		return $header;
+	}
+
+	$lang = pll_get_post_language($order->get_id());
+	switch($lang){
+		case 'sv':
+			$tld = 'se';
+			break;
+		case 'fi':
+			$tld = 'fi';
+			break;
+		case 'de':
+			$tld = 'de';
+			break;
+		case 'da':
+			$tld = 'dk';
+			break;
+		case 'nb':
+		default:
+			$tld = 'no';
+	}
+	$reply_to_name  = 'Norhage.' . $tld;
+	$reply_to_email = 'info@norhage.' . $tld;
+
+	$header  = 'Content-Type: ' . $email->get_content_type() . "\r\n";
+	$header .= 'Reply-to: ' . utf8_decode($reply_to_name) . ' <' . sanitize_email($reply_to_email) . ">\r\n";
+
+	return $header;
+}
+
+// - fix email domain
+add_filter( 'woocommerce_email_from_name', 'norhage_woocommerce_email_from_name', 10, 3);
+function norhage_woocommerce_email_from_name($default_from_name, $email, $from_name){
+	if(!function_exists('pll_get_post_language')){
+		return $default_from_name;
+	}
+
+	$lang = pll_get_post_language($email->object->get_id());
+	switch($lang){
+		case 'sv':
+			return 'Norhage.se';
+		case 'fi':
+			return 'Norhage.fi';
+		case 'de':
+			return 'Norhage.de';
+		case 'da':
+			return 'Norhage.dk';
+		case 'nb':
+		default:
+			return 'Norhage.no';
+	}
+}
+
+// - fix email from address
+add_filter( 'woocommerce_email_from_address', 'norhage_woocommerce_email_from_address', 10, 3);
+function norhage_woocommerce_email_from_address($default_from_address, $email, $from_address ){
+	if(!function_exists('pll_get_post_language')){
+		return $default_from_address;
+	}
+
+	$lang = pll_get_post_language($email->object->get_id());
+	switch($lang){
+		case 'sv':
+			return 'info@norhage.se';
+		case 'fi':
+			return 'info@norhage.fi';
+		case 'de':
+			return 'info@norhage.de';
+		case 'da':
+			return 'info@norhage.dk';
+		case 'nb':
+		default:
+			return 'info@norhage.no';
+	}
+}
+
+
+add_filter('wt_order_number_sequence_prefix', 'norhage_wt_order_number_sequence_prefix', 10, 2); 
+function norhage_wt_order_number_sequence_prefix($prefix,$order_id){
+	if(!function_exists('pll_get_post_language')){
+		return $prefix;
+	}
+
+	$lang = pll_get_post_language($order_id);
+	switch($lang){
+		case 'sv':
+			return 'SE-';
+		case 'fi':
+			return 'FI-';
+		case 'de':
+			return 'DE-';
+		case 'da':
+			return 'DK-';
+		case 'nb':
+		default:
+			return 'NO-';
+	}
+	error_log($order_id);
+	return 'XX-';
+}
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
@@ -781,21 +888,4 @@ function add_allowed_origins($origins) {
     return $origins;
 }
 
-// change the edit and elementor-edit links in post table
-function ElementorLinksFix($actions, $post)
-{
-    if(empty($actions['edit_with_elementor'])) return $actions;
-    if(!function_exists("pll_get_post_language")) return $actions;
-
-    if ( pll_get_post_language($post->ID) === 'de'){
-        $actions['edit'] = str_replace(array('norhagewebshop.com'), array('norhagewebshop.no'), $actions['edit']);
-        $actions['edit_with_elementor'] = str_replace('norhagewebshop.com/', 'norhagewebshop.no/', $actions['edit_with_elementor']);
-    }
-
-
-    return $actions;
-}
-
-add_filter('post_row_actions', 'ElementorLinksFix', 12, 2);
-add_filter('page_row_actions', 'ElementorLinksFix', 12, 2);
 */
