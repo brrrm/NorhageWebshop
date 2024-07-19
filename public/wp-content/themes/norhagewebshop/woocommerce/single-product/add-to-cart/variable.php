@@ -60,20 +60,20 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			$cutting_fee = get_field('cutting_fee');
 			if($cutting_fee && $cutting_fee > 0): ?>
 				<?php
-					$max_width = get_field('max_width') ?? 0;
-					$min_width = get_field('min_width') ?? 0;
-					$max_height = get_field('max_height') ?? 0;
-					$min_height = get_field('min_height') ?? 0;
+					$max_width = (get_field('max_width')) ? get_field('max_width') * 1000 : 0;
+					$min_width = (get_field('min_width')) ? get_field('min_width') * 1000 : 0;
+					$max_height = (get_field('max_height')) ? get_field('max_height') * 1000 : 0;
+					$min_height = (get_field('min_height')) ? get_field('min_height') * 1000 : 0;
 				?>
 				<div class="sizes_input">
 					<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
 					<div class="width">
-						<label for="width"><?php _e('Width (m)', 'norhagewebshop'); ?></label>
-						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[width]" value="1" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
+						<label for="width"><?php _e('Width (mm)', 'norhagewebshop'); ?></label>
+						<div class="quantity"><input class="qty" type="number" step="1" name="cutting_variables[width]" value="<?php echo $min_width; ?>" max="<?php echo $max_width; ?>" min="<?php echo $min_width; ?>" /></div>
 					</div>
 					<div class="height">
-						<label for="height"><?php _e('Height (m)', 'norhagewebshop'); ?></label>
-						<div class="quantity"><input class="qty" type="number" step="0.001" name="cutting_variables[height]" value="1" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
+						<label for="height"><?php _e('Height (mm)', 'norhagewebshop'); ?></label>
+						<div class="quantity"><input class="qty" type="number" step="1" name="cutting_variables[height]" value="<?php echo $min_height; ?>" max="<?php echo $max_height; ?>" min="<?php echo $min_height; ?>" /></div>
 					</div>
 				</div>
 			<?php endif; ?>

@@ -120,8 +120,8 @@
 
 			// first we need to calculate the unit price
 			if($('.sizes_input').length){
-				let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val());
-				let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val());
+				let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val()) / 1000;
+				let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val()) / 1000;
 				let cutting_fee = parseFloat($('.sizes_input input[name="cutting_variables[cutting_fee]"]').val());
 				if(isNaN(width)){
 					width = 1;

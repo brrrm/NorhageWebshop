@@ -390,7 +390,7 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		];
 		$item_data[] = [
 			'key'	=> __('Size', 'norhagewebshop'),
-			'value'	=> $cart_item_data['cutting_variables']['width'] . 'm x ' . $cart_item_data['cutting_variables']['height'] . 'm'
+			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
 		];
 	}
 
@@ -422,9 +422,9 @@ function norhage_before_calculate_totals($cart_object){
 		
 		if(isset($value['cutting_variables'])){
 			$cutting_fee = floatval($value['cutting_variables']['cutting_fee']);
-			$width = floatval($value['cutting_variables']['width']);
-			$height = floatval($value['cutting_variables']['height']);
-			$product_price = $cutting_fee + ($width * $height * $product_price);
+			$width = floatval($value['cutting_variables']['width']) / 1000; // width and height are in mm's not meter!
+			$height = floatval($value['cutting_variables']['height']) / 1000;
+			$product_price = $cutting_fee + ($width * $height * $product_price); 
 		}
 
 		if(isset($value['addons']) && !empty($value['addons'])){
@@ -465,7 +465,7 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 		);
 		$item->add_meta_data(
 			__('Size', 'norhagewebshop'),
-			$values['cutting_variables']['width'] . 'm x ' . $values['cutting_variables']['height'] . 'm'
+			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
 		);
 	}
 
@@ -494,7 +494,7 @@ function norhage_order_item_name( $product_name, $item ) {
 	if(isset($item['cutting_variables'])){
 		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee', 'norhagewebshop'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
 		$product_name .= sprintf(
-			'<br /> %s: %sm x %sm', 
+			'<br /> %s: %smm x %smm', 
 			__('Sizes', 'norhagewebshop'), 
 			$cart_item_data['cutting_variables']['width'],
 			$cart_item_data['cutting_variables']['height']
