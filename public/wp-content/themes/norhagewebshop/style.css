@@ -2085,8 +2085,9 @@ div.quantity,
 .simple_product_wrap .delivery-cost{
 	margin: 0 0 0.5em;
 	padding: 0 0 0 3em;
+	min-height: 2.2em;
 	background: transparent url(images/svg/delivery-time.svg) left 0 no-repeat;
-	background-size: contain;
+	background-size: 2.2emem;
 	color: var(--store-color);
 	font-size: 0.8em;
 }
