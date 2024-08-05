@@ -843,6 +843,18 @@ function norhage_wt_order_number_sequence_prefix($prefix,$order_id){
 	
 	return 'XX-';
 }
+
+
+/**
+ * remove ordering by rating from catalogue pages
+ * */
+add_filter('woocommerce_catalog_orderby', 'norhage_woocommerce_catalog_orderby', 10, 1);
+function norhage_woocommerce_catalog_orderby($opts){
+	unset($opts['rating']);
+	return $opts;
+}
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
