@@ -146,7 +146,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 				$delivery_cost = get_field('delivery_cost');
 				if(isset($delivery_cost)){
-					printf('<p class="delivery-cost"><strong>%s:</strong> %s</p>', __('Delivery costs', 'norhagewebshop'), $delivery_time);
+					printf('<p class="delivery-cost"><strong>%s:</strong> %s</p>', __('Delivery costs', 'norhagewebshop'), $delivery_cost);
 				}
 			?>
 		</div>
