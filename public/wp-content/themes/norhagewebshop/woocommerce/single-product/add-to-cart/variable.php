@@ -139,10 +139,12 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				do_action( 'woocommerce_after_single_variation' );
 
 				$delivery_time = get_field('delivery_time');
+				$delivery_cost = get_field('delivery_cost');
 
 				if(isset($delivery_time)):
 			?>
 				<p class="delivery-time"><?php _e('Delivery time', 'norhagewebshop'); ?>: <?php echo $delivery_time; ?></p>
+				<p class="delivery-cost"><?php echo $delivery_cost; ?></p>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>

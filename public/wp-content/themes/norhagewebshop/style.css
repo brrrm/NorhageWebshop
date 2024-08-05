@@ -2087,6 +2087,12 @@ div.quantity,
 	background-size: 1.5em;
 	color: var(--store-color);
 }
+.single_variation_wrap .delivery-cost,
+.simple_product_wrap .delivery-cost{
+	margin: 0;
+	padding: 0 0 0 0;
+	color: var(--store-color);
+}
 
 @media all and (max-width:1024px){
 	.summary form.variations_form .dimensions .variations tbody tr  td select{
