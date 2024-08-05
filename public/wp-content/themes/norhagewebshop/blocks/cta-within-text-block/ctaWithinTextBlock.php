@@ -48,14 +48,15 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 <figure <?php echo esc_attr( $anchor ); ?>class="<?php echo esc_attr( $class_name ); ?>" >
 	<div class="wrapper">
 		<div class="image-col">
-			<?php if ( $image ) : ?>
-				<div class="image">
-					<?php echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'img', 'alt' => $image['alt'] ) ); ?>
-				</div>
-			<?php else : ?>
-				<div class="dummy">
-				</div>
-			<?php endif; ?>
+			<div class="image">
+				<?php 
+				if(!empty($image)){
+					echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'img', 'alt' => $image['alt'] ) );
+				} else{
+					echo wp_get_attachment_image( 51651, 'full', '', array( 'class' => 'img', 'alt' => __('Contact us', 'norhage') ) );
+				} 
+				?>
+			</div>
 			<?php if($phone):?>
 				<p><a href="tel:<?php echo trim(esc_html($phone)); ?>" class="cta-phone button"><?php echo esc_html($phone); ?></a></p>
 			<?php endif; ?>
