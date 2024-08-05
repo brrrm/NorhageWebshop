@@ -2080,18 +2080,19 @@ div.quantity,
 }
 
 .single_variation_wrap .delivery-time,
-.simple_product_wrap .delivery-time{
-	margin: 0;
-	padding: 0 0 0 2em;
-	background: transparent url(images/svg/delivery-time.svg) left top no-repeat;
-	background-size: 1.5em;
-	color: var(--store-color);
-}
+.simple_product_wrap .delivery-time,
 .single_variation_wrap .delivery-cost,
 .simple_product_wrap .delivery-cost{
 	margin: 0;
-	padding: 0 0 0 0;
+	padding: 0 0 0 3em;
+	background: transparent url(images/svg/delivery-time.svg) left 0.2em no-repeat;
+	background-size: 2.2em;
 	color: var(--store-color);
+	font-size: 0.8em;
+}
+.single_variation_wrap .delivery-cost,
+.simple_product_wrap .delivery-cost{
+	background-image: url('images/svg/delivery.svg');
 }
 
 @media all and (max-width:1024px){

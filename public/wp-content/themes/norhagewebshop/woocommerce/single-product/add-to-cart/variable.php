@@ -138,14 +138,17 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 				 */
 				do_action( 'woocommerce_after_single_variation' );
 
+				
 				$delivery_time = get_field('delivery_time');
-				$delivery_cost = get_field('delivery_cost');
+				if(isset($delivery_time)){
+					printf('<p class="delivery-time"><strong>%s:</strong> %s</p>', __('Delivery time', 'norhagewebshop'), $delivery_time);
+				}
 
-				if(isset($delivery_time)):
+				$delivery_cost = get_field('delivery_cost');
+				if(isset($delivery_cost)){
+					printf('<p class="delivery-cost"><strong>%s:</strong> %s</p>', __('Delivery costs', 'norhagewebshop'), $delivery_time);
+				}
 			?>
-				<p class="delivery-time"><?php _e('Delivery time', 'norhagewebshop'); ?>: <?php echo $delivery_time; ?></p>
-				<p class="delivery-cost"><?php echo $delivery_cost; ?></p>
-			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 

@@ -103,7 +103,12 @@ if ( $product->is_in_stock() ) : ?>
 			<?php
 				$delivery_time = get_field('delivery_time');
 				if(isset($delivery_time)){
-					printf('<p class="delivery-time">'.__('Delivery time', 'norhagewebshop').': %s</p>', $delivery_time);
+					printf('<p class="delivery-time"><strong>%s:</strong> %s</p>', __('Delivery time', 'norhagewebshop'), $delivery_time);
+				}
+
+				$delivery_cost = get_field('delivery_cost');
+				if(isset($delivery_cost)){
+					printf('<p class="delivery-cost"><strong>%s:</strong> %s</p>', __('Delivery costs', 'norhagewebshop'), $delivery_time);
 				}
 			?>
 		</div>
