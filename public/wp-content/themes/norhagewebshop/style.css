@@ -2087,7 +2087,7 @@ div.quantity,
 	padding: 0 0 0 3em;
 	min-height: 2.2em;
 	background: transparent url(images/svg/delivery-time.svg) left 0 no-repeat;
-	background-size: 2.2emem;
+	background-size: 2.2em;
 	color: var(--store-color);
 	font-size: 0.8em;
 }
