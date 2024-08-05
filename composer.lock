@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c06e6a725bc175a6cffa4433e92551d",
+    "content-hash": "46f83389d5a6ca0ad3cafde1ee965349",
     "packages": [
         {
             "name": "composer/installers",
@@ -550,24 +550,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
-        },
-        {
-            "name": "wpackagist-plugin/woocommerce-paypal-payments",
-            "version": "2.8.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/woocommerce-paypal-payments/",
-                "reference": "tags/2.8.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-paypal-payments.2.8.1.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-paypal-payments/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips",
