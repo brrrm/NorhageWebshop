@@ -1886,14 +1886,8 @@ div.quantity,
 	float: none;
 	width: auto;
 	background-color: var(--light-green);
-	padding: 2em 0;
+	padding: 0;
 	border-bottom: 1px solid var(--store-color);
-}
-.product .entry-content .summary.entry-summary h2.variations_form-title{
-	flex: 100% 0 0;
-	background: transparent url(images/svg/cart-black.svg) left center no-repeat;
-	background-size: 1em;
-	padding-left: 1.5em;
 }
 
 .product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
@@ -1915,10 +1909,15 @@ div.quantity,
 	margin: 0 0 0.5em;
 }
 .summary form.cart{
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-areas: "vars"
+						"totals";
 	margin-left: 20%;
 	font-size: 0.75em;
+}
+.summary form.cart:has(.addons){
+	grid-template-areas: "vars addons"
+						"totals addons";
 }
 .productHeaderBlock .text-col .summary form{
 	font-size: 1rem;
@@ -1944,8 +1943,7 @@ div.quantity,
     margin: 0 0 1em 0;
 }
 .summary form.variations_form .dimensions{
-	flex: 30% 1 0;
-	border-top: 1px dashed var(--store-color);
+	grid-area: vars;
 	padding-right: 1em;
 	padding-bottom: 1em;
 }
@@ -1993,8 +1991,7 @@ div.quantity,
 }
 
 .summary form.variations_form .addons{
-	flex: var(--big-flex) 1 0;
-	border-top: 1px dashed var(--store-color);
+	grid-area: addons;
 	border-left: 1px dashed var(--store-color);
 	padding-left: 1em;
 	padding-bottom: 1em;
@@ -2045,8 +2042,8 @@ div.quantity,
 }
 .summary form.variations_form .single_variation_wrap,
 .summary form.simple_form .simple_product_wrap{
-	flex: 100% 0 0;
-	padding: 0;
+	grid-area: totals;
+	padding: 0 0 1.5em;
 	border-top: 1px dashed var(--store-color);
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
@@ -2071,8 +2068,7 @@ div.quantity,
 }
 .summary form.simple_form .sizes_input:before, 
 .summary form.simple_form .simple_product_wrap:before,
-.summary form.variations_form .single_variation_wrap:before, 
-.summary form.variations_form .dimensions:before {
+.summary form.variations_form .single_variation_wrap:before{
 	content: " ";
 	position: relative;
 	top: -1px;
@@ -2102,14 +2098,29 @@ div.quantity,
 }
 @media all and (max-width:768px){
 	.product .entry-content .summary.entry-summary{
-		padding: 2em 1em;
+		padding: 2em 0;
 	}
 	.summary form.variations_form{
 		margin-left: 0;
 		display: block;
 	}
+	.summary form.variations_form .dimensions,
+	.summary form.variations_form .addons,
+	.summary form.variations_form .single_variation_wrap{
+		padding-left: 1rem;
+		padding-right: 1rem;
+		border-bottom: 1px dashed var(--store-color);
+		border-top: none;
+	}
+	.summary form.variations_form > *:last-child{
+		border-bottom: none;
+	}
+	.summary form.variations_form .dimensions:before,
+	.summary form.variations_form .addons:before,
+	.summary form.variations_form .single_variation_wrap:before{
+		content: none;
+	}
 	.summary form.variations_form .addons{
-		padding-left: 0;
 		border-left: 0;
 	}
 	.summary form.variations_form .addons h3{

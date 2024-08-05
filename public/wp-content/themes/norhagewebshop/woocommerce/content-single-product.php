@@ -48,13 +48,6 @@ $max_shown = 4;
 				<h1><?php the_title(); ?></h1>
 				
 				<?php wc_get_template( 'single-product/price.php' ); ?>
-				
-				<?php
-					$delivery_time = get_field('delivery_time');
-					if(isset($delivery_time)){
-						printf('<p class="delivery-time">'.__('Delivery time', 'norhagewebshop').': %s</p>', $delivery_time);
-					}
-				?>
 
 				<div><?php echo wpautop($product->get_short_description()); ?></div>
 

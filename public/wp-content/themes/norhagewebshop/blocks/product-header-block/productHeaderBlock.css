@@ -10,7 +10,7 @@
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
 	height: 70vh;
-	padding: calc(var(--header-height) + 1em) 1em 6em 2em;
+	padding: calc(var(--header-height) + 2.5em) 1em 6em 2em;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
@@ -22,7 +22,8 @@
 }
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
-	top: var(--header-height);
+	top: calc(1em + var(--header-height));
+	margin: 0;
 }
 .productHeaderBlock .text-col h1{
 	margin: 0;
