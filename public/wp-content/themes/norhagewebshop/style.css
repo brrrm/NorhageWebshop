@@ -2098,7 +2098,7 @@ div.quantity,
 .summary form.variations_form .single_variation_wrap,
 .summary form.simple_form .simple_product_wrap{
 	grid-area: totals;
-	padding: 0 0 1em;
+	padding: 0;
 	border-top: 1px dashed var(--store-color);
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
