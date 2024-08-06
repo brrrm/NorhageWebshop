@@ -10,7 +10,7 @@
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
 	height: 70vh;
-	padding: calc(var(--header-height) + 2.5em) 1em 6em 2em;
+	padding: calc(var(--header-height) + 2.5em) 1em 1em 2em;
 	display: flex;
 	flex-direction: column;
     justify-content: center;

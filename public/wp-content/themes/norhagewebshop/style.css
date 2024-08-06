@@ -148,6 +148,11 @@ p#breadcrumbs{
 	margin: 1em 0;
 	line-height: 1.1667;
 }
+@media all and (min-width:1280px){
+	p#breadcrumbs{
+		font-size: 0.667rem;
+	}
+}
 p#breadcrumbs span{
 	padding: 0 0.3em;
 }
