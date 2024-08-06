@@ -20,6 +20,9 @@
 	position: sticky;
 	top: 0;
 }
+.productHeaderBlock .text-col:has(.summary){
+	padding-bottom: 6em;
+}
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
 	top: calc(1em + var(--header-height));
@@ -153,7 +156,8 @@
 	}
 }
 @media screen and (max-width: 768px){
-	.productHeaderBlock .text-col{
+	.productHeaderBlock .text-col,
+	.productHeaderBlock .text-col:has(.summary){
 		flex: 100% 0 0;
 		order: 2;
 		font-size: 1em;

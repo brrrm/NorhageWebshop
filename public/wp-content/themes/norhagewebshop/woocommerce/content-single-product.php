@@ -56,7 +56,7 @@ $max_shown = 4;
 					$has_cutting_fee = ($cutting_fee && $cutting_fee > 0)? true : false;
 				?>
 
-				<?php if($product->is_type('simple') && !$has_cutting_fee): ?>
+				<?php if($product->is_type('simple') && !$has_cutting_fee && $product->get_price()): ?>
 					<div class="summary entry-summary alignfull">
 						<?php do_action( 'woocommerce_single_product_summary' ); ?>
 					</div>

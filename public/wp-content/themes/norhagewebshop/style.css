@@ -1945,8 +1945,8 @@ div.quantity,
 }
 
 .product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
-	margin: 2em 0 0 0;
-	padding: 1.5em 1em 1.5em 2em;
+	margin: 0 0 0 0;
+	padding: 1em 1em 1em 2em;
 	border-top: 1px solid var(--store-color);
 	border-bottom: none;
 	position: absolute;
@@ -1956,7 +1956,7 @@ div.quantity,
 }
 @media all and (max-width:768px){
 	.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
-		padding: 1.5em 1em 1.5em 1em;
+		padding: 1em 1em 1em 1em;
 	}
 }
 .productHeaderBlock .text-col .summary .price{
@@ -2098,7 +2098,7 @@ div.quantity,
 .summary form.variations_form .single_variation_wrap,
 .summary form.simple_form .simple_product_wrap{
 	grid-area: totals;
-	padding: 0 0 1.5em;
+	padding: 0 0 1em;
 	border-top: 1px dashed var(--store-color);
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
