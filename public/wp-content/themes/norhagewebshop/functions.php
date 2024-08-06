@@ -854,6 +854,12 @@ function norhage_woocommerce_catalog_orderby($opts){
 	return $opts;
 }
 
+add_filter('BeRocket_AAPF_template_full_element_content', 'norhage_BeRocket_AAPF_template_full_element_content', 10, 2);
+function norhage_BeRocket_AAPF_template_full_element_content($template_content, $berocket_query_var_title){
+	$template_content['template']['content']['header']['content']['title']['content']['title'] = __('Selected filters', 'norhagewebshop');
+	return $template_content;
+}
+
 
 /*
 // CORS HOT FIX BY NB:
