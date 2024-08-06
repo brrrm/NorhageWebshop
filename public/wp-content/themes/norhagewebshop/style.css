@@ -2075,15 +2075,16 @@ div.quantity,
 .summary form.variations_form .addons .addon .addon-image{
 	grid-area: image;
 	aspect-ratio: 1;
+	overflow: hidden;
+	transition: transform 0.3s ease-out;
 }
 .summary form.variations_form .addons .addon .addon-image img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	transition: transform 0.3s ease-out;
 }
-.summary form.variations_form .addons .addon .addon-image img:hover{
+.summary form.variations_form .addons .addon .addon-image:hover{
 	transform: scale(2);
 }
 .summary form.variations_form .addons .addon .addon-price{
