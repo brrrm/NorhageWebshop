@@ -1994,7 +1994,6 @@ div.quantity,
 .summary form.cart.simple_form .sizes_input{
 	grid-area: vars;
 	flex: 100%;
-    border-top: 1px dashed var(--store-color);
     margin: 0 0 1em 0;
 }
 .summary form.variations_form .dimensions{
