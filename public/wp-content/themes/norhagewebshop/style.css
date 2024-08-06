@@ -900,6 +900,13 @@ button.button.open-filters:hover{
 
 #filters-sidebar .selected_filters{
 	position: relative;
+	border-left: 2px solid var(--store-color);
+	padding: 0 0 0 1em;
+	margin: 2em 0;
+}
+#filters-sidebar .selected_filters .bapf_head h3{
+	font-weight: 500;
+	color: var(--store-color);
 }
 #filters-sidebar .selected_filters .bapf_sfa_taxonomy{
 	display: flex;
@@ -923,6 +930,9 @@ button.button.open-filters:hover{
 #filters-sidebar .selected_filters ul{
 	padding: 0;
 	margin: 0.5em 0;
+}
+#filters-sidebar h3.bapf_hascolarr{
+	font-weight: 500;
 }
 @media all and (max-width: 768px){
 	.cart-popout.open,
