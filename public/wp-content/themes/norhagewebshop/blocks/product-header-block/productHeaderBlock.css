@@ -37,19 +37,6 @@
 	color: var(--store-color);
 	font-weight: 600;
 }
-.productHeaderBlock .delivery-time{
-	font-size: 0.7rem;
-	line-height: 1.1667em;
-	margin: 0 0 0;
-	padding: 0 0 0 2em;
-	background: transparent url(../../images/svg/delivery-time.svg) left center no-repeat;
-	background-size: 1.5em;
-	color: var(--store-color);
-	position: absolute;
-	bottom: 1rem;
-	left: 2rem;
-	right: 1rem;
-}
 .productHeaderBlock .image-col{
 	flex: 65% 0 0;
 	overflow: auto;

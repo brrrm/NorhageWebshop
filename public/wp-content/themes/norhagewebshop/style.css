@@ -2146,6 +2146,11 @@ div.quantity,
 	color: var(--store-color);
 	font-size: 0.8em;
 }
+.simple_product_wrap .delivery-time,
+.simple_product_wrap .delivery-cost{
+	font-size: 0.6em;
+	line-height: 1.1667em;
+}
 .single_variation_wrap .delivery-cost,
 .simple_product_wrap .delivery-cost{
 	background-image: url('images/svg/delivery.svg');
