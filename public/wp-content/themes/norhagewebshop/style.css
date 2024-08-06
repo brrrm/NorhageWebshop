@@ -931,7 +931,7 @@ button.button.open-filters:hover{
 	padding: 0;
 	margin: 0.5em 0;
 }
-#filters-sidebar h3.bapf_hascolarr{
+#filters-sidebar h3{
 	font-weight: 500;
 }
 @media all and (max-width: 768px){
@@ -980,6 +980,7 @@ header#masthead nav#site-navigation .widget_shopping_cart h2,
 	background-size: 1em;
 	text-indent: -999em;
 	overflow: hidden;
+	cursor: pointer;
 }
 @media all and (max-width:1280px){
 	.widget_shopping_cart .close-btn,
