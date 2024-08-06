@@ -13,7 +13,7 @@
 	
 		<?php
 			$title = get_the_title( );
-		    $thumb = get_the_post_thumbnail();
+		    $thumb = get_the_post_thumbnail($post, 'post-thumbnail', ['loading' => 'lazy', 'fetchpriority' => 'auto']);
 		    $categories = get_the_category();
 	    ?>
 	    
