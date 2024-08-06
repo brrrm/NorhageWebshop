@@ -897,6 +897,33 @@ button.button.open-filters:hover{
 	opacity: 1;
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0s;
 }
+
+#filters-sidebar .selected_filters{
+	position: relative;
+}
+#filters-sidebar .selected_filters .bapf_sfa_taxonomy{
+	display: flex;
+	gap: 1em;
+	margin: 0.5em 0;
+}
+#filters-sidebar .selected_filters .bapf_sfa_taxonomy > span{
+	font-weight: 600;
+}
+#filters-sidebar .selected_filters .bapf_sfa_taxonomy ul{
+	margin: 0;
+}
+#filters-sidebar .selected_filters .bapf_sfa_unall{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+}
+#filters-sidebar .selected_filters ul{
+	padding: 0;
+	margin: 0.5em 0;
+}
 @media all and (max-width: 768px){
 	.cart-popout.open,
 	.widget_shopping_cart.open{
