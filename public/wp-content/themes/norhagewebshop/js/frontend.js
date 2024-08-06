@@ -105,6 +105,9 @@
 		if(!variationPrice && typeof norhage_product_info !== 'undefined'){
 			variationPrice = norhage_product_info.price;
 		}
+		
+		add_addons_to_wc_variation_price(); // initial price correction
+
 		$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
 			variationPrice = variation.display_price;
 			add_addons_to_wc_variation_price();
