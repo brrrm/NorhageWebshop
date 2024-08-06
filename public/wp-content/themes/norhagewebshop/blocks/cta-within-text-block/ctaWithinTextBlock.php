@@ -31,13 +31,13 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'content' => 'Need emergency damage repair? <br>Call us today!'
+			'content' => __('Need emergency damage repair? <br>Call us today!', 'norhagewebshop')
 		]
 	],
 	[
 		'core/paragraph',
 		[ 
-			'content' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+			'content' => __('Our experts are ready to assist you with selecting the best match for your growing operations.', 'norhagewebshop') 
 		]
 	]
 ];
@@ -53,7 +53,7 @@ $allowedBlocks = ['core/heading', 'core/paragraph', 'core/list', 'core/list-item
 				if(!empty($image)){
 					echo wp_get_attachment_image( $image['ID'], 'full', '', array( 'class' => 'img', 'alt' => $image['alt'] ) );
 				} else{
-					echo wp_get_attachment_image( 51651, 'full', '', array( 'class' => 'img', 'alt' => __('Contact us', 'norhage') ) );
+					echo wp_get_attachment_image( 51651, 'full', '', array( 'class' => 'img', 'alt' => __('Contact us', 'norhagewebshop') ) );
 				} 
 				?>
 			</div>

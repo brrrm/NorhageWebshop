@@ -35,19 +35,19 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'content' => 'Need help with your choice?'
+			'content' => __('Need help with your choice?', 'norhagewebshop')
 		]
 	],
 	[
 		'core/paragraph',
 		[
-			'content' => 'Our experts are ready to assist you with selecting the best match for your growing operations.' 
+			'content' => __('Our experts are ready to assist you with selecting the best match for your growing operations.', 'norhagewebshop')
 		]
 	],
 	[
 		'core/paragraph',
 		[
-			'content' => 'Contact us today and we’ll jumpstart your project!' 
+			'content' => __('Contact us today and we’ll jumpstart your project!', 'norhagewebshop' )
 		]
 	],
 	[

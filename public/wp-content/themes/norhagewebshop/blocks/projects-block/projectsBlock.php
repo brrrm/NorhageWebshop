@@ -49,19 +49,19 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'content' => 'Our quality? Have a look for yourself!'
+			'content' => __('Our quality? Have a look for yourself!', 'norhagewebshop')
 		]
 	],
 	[
 		'core/paragraph',
 		[
-			'content' => 'We take pride in the quality and durabillity of our products.' 
+			'content' => __('We take pride in the quality and durabillity of our products.', 'norhagewebshop' )
 		]
 	],
 	[
 		'core/button',
 		[ 
-			'text' => 'All showcases',
+			'text' => __('All showcases', 'norhagewebshop'),
 			'url' => '/projects'
 		]
 	]

@@ -30,7 +30,7 @@ $innerBlocksTemplate = [
 		'core/heading',
 		[
 			'level'	=> 2,
-			'content' => 'Is your garden big or small? <br />We have a matching greenhouse for you!'
+			'content' => __('Is your garden big or small? <br />We have a matching greenhouse for you!', 'norhagewebshop')
 		]
 	]
 ];
