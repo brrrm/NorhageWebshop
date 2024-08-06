@@ -53,7 +53,6 @@ if ( $product->is_in_stock() ) : ?>
 				$max_height = (get_field('max_height')) ? get_field('max_height') * 1000 : 0;
 				$min_height = (get_field('min_height')) ? get_field('min_height') * 1000 : 0;
 			?>
-			<h2 class="variations_form-title"><?php printf(__('Customize and order your %s', 'norhagewebshop'), $product->get_title()); ?></h2>
 			<div class="sizes_input">
 				<h3>1: <?php _e('Configure the size', 'norhagewebshop'); ?></h3>
 				<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
