@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-06-17 12:13+0200\n"
-"PO-Revision-Date: 2024-06-17 12:31+0200\n"
+"POT-Creation-Date: 2024-08-06 16:28+0200\n"
+"PO-Revision-Date: 2024-08-06 16:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
@@ -28,26 +28,81 @@ msgstr "404"
 msgid "oh dear, we had to short on material.."
 msgstr "åh kære, vi var nødt til at kortlægge materiale..."
 
-#: blocks/categories-block/categoriesBlock.php:72
-#: blocks/categories-block/categoriesBlock.php:82
-#, php-format
-msgid "View all post filed under %s"
-msgstr "Se alle indlæg gemt under %s"
+#: blocks/categories-block/categoriesBlock.php:33
+msgid ""
+"Is your garden big or small? <br />We have a matching greenhouse for you!"
+msgstr ""
+"Er din have stor eller lille? <br />Vi har et matchende drivhus til dig!"
 
-#: blocks/products-slider-block/productsSliderBlock.php:67
-#: blocks/projects-block/projectsBlock.php:88
+#: blocks/cta-block/ctaBlock.php:38
+#: blocks/text-image-block/textImageBlock.php:45
+msgid "Need help with your choice?"
+msgstr "Har du brug for hjælp til dit valg?"
+
+#: blocks/cta-block/ctaBlock.php:44
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:40
+#: blocks/products-block/productsBlock.php:43
+#: blocks/text-image-block/textImageBlock.php:51
+msgid ""
+"Our experts are ready to assist you with selecting the best match for your "
+"growing operations."
+msgstr ""
+"Vores eksperter er klar til at hjælpe dig med at vælge det bedste match til "
+"din voksende virksomhed."
+
+#: blocks/cta-block/ctaBlock.php:50
+msgid "Contact us today and we’ll jumpstart your project!"
+msgstr "Kontakt os i dag, så kickstarter vi dit projekt!"
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:34
+msgid "Need emergency damage repair? <br>Call us today!"
+msgstr "Har du brug for akut reparation af skader? <br>Ring til os i dag!"
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:56
+msgid "Contact us"
+msgstr "Kontakt os"
+
+#: blocks/products-block/productsBlock.php:37
+msgid "You might be interested in these items"
+msgstr "Du kan være interesseret i disse varer"
+
+#: blocks/products-block/productsBlock.php:49
+msgid "Call us today and we’ll jumpstart your project!"
+msgstr "Ring til os i dag, så kickstarter vi dit projekt!"
+
+#: blocks/products-slider-block/productsSliderBlock.php:63
+#: blocks/projects-block/projectsBlock.php:84
 msgid "Left"
 msgstr "Venstre"
 
-#: blocks/products-slider-block/productsSliderBlock.php:68
-#: blocks/projects-block/projectsBlock.php:89
+#: blocks/products-slider-block/productsSliderBlock.php:64
+#: blocks/projects-block/projectsBlock.php:85
 msgid "Right"
 msgstr "Højre"
 
-#: blocks/products-slider-block/productsSliderBlock.php:85
-#: blocks/projects-block/projectsBlock.php:107
-msgid "Read more ->"
-msgstr "Læs mere ->"
+#: blocks/projects-block/projectsBlock.php:52
+msgid "Our quality? Have a look for yourself!"
+msgstr "Vores kvalitet? Tag et kig selv!"
+
+#: blocks/projects-block/projectsBlock.php:58
+msgid "We take pride in the quality and durabillity of our products."
+msgstr "Vi sætter en ære i kvaliteten og holdbarheden af vores produkter."
+
+#: blocks/projects-block/projectsBlock.php:64
+msgid "All showcases"
+msgstr "Alle montrer"
+
+#: blocks/text-image-block/textImageBlock.php:57
+msgid "Please contact us:"
+msgstr "Kontakt os venligst:"
+
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr "info@norhage.dk"
+
+#: blocks/text-image-block/textImageBlock.php:71
+msgid "info@norhage.no"
+msgstr "info@norhage.dk"
 
 #: footer.php:16
 msgid "Norhage Webshop"
@@ -68,10 +123,6 @@ msgstr ""
 #: footer.php:26
 msgid "Email"
 msgstr "E-mail"
-
-#: footer.php:27 header.php:136
-msgid "info@norhage.com"
-msgstr ""
 
 #: footer.php:29
 msgid "Phone"
@@ -127,33 +178,45 @@ msgstr "Sekundær navigation"
 msgid "Footer navigation"
 msgstr "Sidefod navigation"
 
-#: functions.php:147
+#: functions.php:94
+msgid "Above products listing"
+msgstr "Ovenstående produktliste"
+
+#: functions.php:95
+msgid "A widget area above the products listing"
+msgstr "Et widgetområde over produktlisten"
+
+#: functions.php:172
 msgid "expand"
 msgstr "udvide"
 
-#: functions.php:276
+#: functions.php:303
 msgid "Read More"
 msgstr "Læs mere"
 
-#: functions.php:361 functions.php:436 functions.php:468
+#: functions.php:388 functions.php:463 functions.php:495
 msgid "Cutting fee"
 msgstr "Nedsættelse af gebyr"
 
-#: functions.php:365 functions.php:440
+#: functions.php:392 functions.php:467
 msgid "Size"
 msgstr "Størrelse"
 
-#: functions.php:471
+#: functions.php:498
 msgid "Sizes"
 msgstr "Størrelser"
 
-#: functions.php:542
+#: functions.php:569
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:549
+#: functions.php:576
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på kategorioversigtssiden."
+
+#: functions.php:859
+msgid "Selected filters"
+msgstr "Valgte filtre"
 
 #: header.php:52
 msgid "Skip to content"
@@ -179,7 +242,7 @@ msgstr "Kurv"
 msgid "Shopping cart"
 msgstr "Varekurv"
 
-#: inc/ajax-cart.php:45
+#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Luk"
 
@@ -233,10 +296,18 @@ msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Redigér <span class=\"screen-reader-text\" >%s</span>"
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:26
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Søgeresultater for: %s"
+
+#: sidebar-before_shop_loop.php:12
+msgid "Filter products"
+msgstr "Filtrér produkter"
+
+#: sidebar-before_shop_loop.php:15
+msgid "Filters"
+msgstr "Filtre"
 
 #: single-post.php:23
 msgid "Continue reading:"
@@ -270,7 +341,7 @@ msgstr ""
 "stedet."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-post.php:48 template-parts/content.php:36
+#: template-parts/content-post.php:53 template-parts/content.php:41
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Læs mere<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -336,19 +407,7 @@ msgstr "Du skal være logget ind for at gå til kassen."
 msgid "Your order"
 msgstr "Din ordre"
 
-#: woocommerce/content-single-product.php:58
-#, php-format
-msgid "Customize your %s"
-msgstr "Tilpas din %s"
-
-#: woocommerce/content-single-product.php:62
-#: woocommerce/single-product/add-to-cart/simple.php:106
-#: woocommerce/single-product/add-to-cart/variable.php:146
-msgid "Delivery time"
-msgstr "Leveringstid"
-
 #: woocommerce/single-product/add-to-cart/simple.php:56
-#: woocommerce/single-product/add-to-cart/variable.php:34
 #, php-format
 msgid "Customize and order your %s"
 msgstr "Tilpas og bestil din %s"
@@ -358,35 +417,49 @@ msgid "Configure the size"
 msgstr "Konfigurer størrelsen"
 
 #: woocommerce/single-product/add-to-cart/simple.php:61
-#: woocommerce/single-product/add-to-cart/variable.php:71
-msgid "Width (m)"
-msgstr "Bredde (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:70
+msgid "Width (mm)"
+msgstr "Bredde (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:65
-#: woocommerce/single-product/add-to-cart/variable.php:75
-msgid "Height (m)"
-msgstr "Højde (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:74
+msgid "Height (mm)"
+msgstr "Højde (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:74
-#: woocommerce/single-product/add-to-cart/variable.php:118
+#: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Vælg antal"
+
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:144
+msgid "Delivery time"
+msgstr "Leveringstid"
+
+#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/variable.php:149
+msgid "Delivery costs"
+msgstr "Leveringsomkostninger"
 
 #: woocommerce/single-product/add-to-cart/variable.php:32
 msgid "This product is currently out of stock and unavailable."
 msgstr "Dette produkt er ikke på lager i øjeblikket."
 
-#: woocommerce/single-product/add-to-cart/variable.php:36
+#: woocommerce/single-product/add-to-cart/variable.php:35
 msgid "Configure product options"
 msgstr "Konfigurer produktindstillinger"
 
-#: woocommerce/single-product/add-to-cart/variable.php:51
+#: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr "Ryd"
 
-#: woocommerce/single-product/add-to-cart/variable.php:88
+#: woocommerce/single-product/add-to-cart/variable.php:87
 msgid "Select extra options"
 msgstr "Vælg ekstra indstillinger"
+
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
+msgstr "Vis"
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -399,6 +472,17 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#, php-format
+#~ msgid "View all post filed under %s"
+#~ msgstr "Se alle indlæg gemt under %s"
+
+#~ msgid "Read more ->"
+#~ msgstr "Læs mere ->"
+
+#, php-format
+#~ msgid "Customize your %s"
+#~ msgstr "Tilpas din %s"
 
 #~ msgid "Projects"
 #~ msgstr "Projekter"

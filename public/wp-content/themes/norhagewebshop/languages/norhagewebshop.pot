@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-06-17 12:13+0200\n"
+"POT-Creation-Date: 2024-08-06 16:27+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -29,25 +29,77 @@ msgstr ""
 msgid "oh dear, we had to short on material.."
 msgstr ""
 
-#: blocks/categories-block/categoriesBlock.php:72
-#: blocks/categories-block/categoriesBlock.php:82
-#, php-format
-msgid "View all post filed under %s"
+#: blocks/categories-block/categoriesBlock.php:33
+msgid ""
+"Is your garden big or small? <br />We have a matching greenhouse for you!"
 msgstr ""
 
-#: blocks/products-slider-block/productsSliderBlock.php:67
-#: blocks/projects-block/projectsBlock.php:88
+#: blocks/cta-block/ctaBlock.php:38
+#: blocks/text-image-block/textImageBlock.php:45
+msgid "Need help with your choice?"
+msgstr ""
+
+#: blocks/cta-block/ctaBlock.php:44
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:40
+#: blocks/products-block/productsBlock.php:43
+#: blocks/text-image-block/textImageBlock.php:51
+msgid ""
+"Our experts are ready to assist you with selecting the best match for your "
+"growing operations."
+msgstr ""
+
+#: blocks/cta-block/ctaBlock.php:50
+msgid "Contact us today and we’ll jumpstart your project!"
+msgstr ""
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:34
+msgid "Need emergency damage repair? <br>Call us today!"
+msgstr ""
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:56
+msgid "Contact us"
+msgstr ""
+
+#: blocks/products-block/productsBlock.php:37
+msgid "You might be interested in these items"
+msgstr ""
+
+#: blocks/products-block/productsBlock.php:49
+msgid "Call us today and we’ll jumpstart your project!"
+msgstr ""
+
+#: blocks/products-slider-block/productsSliderBlock.php:63
+#: blocks/projects-block/projectsBlock.php:84
 msgid "Left"
 msgstr ""
 
-#: blocks/products-slider-block/productsSliderBlock.php:68
-#: blocks/projects-block/projectsBlock.php:89
+#: blocks/products-slider-block/productsSliderBlock.php:64
+#: blocks/projects-block/projectsBlock.php:85
 msgid "Right"
 msgstr ""
 
-#: blocks/products-slider-block/productsSliderBlock.php:85
-#: blocks/projects-block/projectsBlock.php:107
-msgid "Read more ->"
+#: blocks/projects-block/projectsBlock.php:52
+msgid "Our quality? Have a look for yourself!"
+msgstr ""
+
+#: blocks/projects-block/projectsBlock.php:58
+msgid "We take pride in the quality and durabillity of our products."
+msgstr ""
+
+#: blocks/projects-block/projectsBlock.php:64
+msgid "All showcases"
+msgstr ""
+
+#: blocks/text-image-block/textImageBlock.php:57
+msgid "Please contact us:"
+msgstr ""
+
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr ""
+
+#: blocks/text-image-block/textImageBlock.php:71
+msgid "info@norhage.no"
 msgstr ""
 
 #: footer.php:16
@@ -68,10 +120,6 @@ msgstr ""
 
 #: footer.php:26
 msgid "Email"
-msgstr ""
-
-#: footer.php:27 header.php:136
-msgid "info@norhage.com"
 msgstr ""
 
 #: footer.php:29
@@ -128,32 +176,44 @@ msgstr ""
 msgid "Footer navigation"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:94
+msgid "Above products listing"
+msgstr ""
+
+#: functions.php:95
+msgid "A widget area above the products listing"
+msgstr ""
+
+#: functions.php:172
 msgid "expand"
 msgstr ""
 
-#: functions.php:276
+#: functions.php:303
 msgid "Read More"
 msgstr ""
 
-#: functions.php:361 functions.php:436 functions.php:468
+#: functions.php:388 functions.php:463 functions.php:495
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:365 functions.php:440
+#: functions.php:392 functions.php:467
 msgid "Size"
 msgstr ""
 
-#: functions.php:471
+#: functions.php:498
 msgid "Sizes"
 msgstr ""
 
-#: functions.php:542
+#: functions.php:569
 msgid "Description"
 msgstr ""
 
-#: functions.php:549
+#: functions.php:576
 msgid "The description is shown on the category overview page."
+msgstr ""
+
+#: functions.php:859
+msgid "Selected filters"
 msgstr ""
 
 #: header.php:52
@@ -180,7 +240,7 @@ msgstr ""
 msgid "Shopping cart"
 msgstr ""
 
-#: inc/ajax-cart.php:45
+#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr ""
 
@@ -234,9 +294,17 @@ msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:26
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar-before_shop_loop.php:12
+msgid "Filter products"
+msgstr ""
+
+#: sidebar-before_shop_loop.php:15
+msgid "Filters"
 msgstr ""
 
 #: single-post.php:23
@@ -267,7 +335,7 @@ msgid ""
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-post.php:48 template-parts/content.php:36
+#: template-parts/content-post.php:53 template-parts/content.php:41
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -333,19 +401,7 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: woocommerce/content-single-product.php:58
-#, php-format
-msgid "Customize your %s"
-msgstr ""
-
-#: woocommerce/content-single-product.php:62
-#: woocommerce/single-product/add-to-cart/simple.php:106
-#: woocommerce/single-product/add-to-cart/variable.php:146
-msgid "Delivery time"
-msgstr ""
-
 #: woocommerce/single-product/add-to-cart/simple.php:56
-#: woocommerce/single-product/add-to-cart/variable.php:34
 #, php-format
 msgid "Customize and order your %s"
 msgstr ""
@@ -355,34 +411,48 @@ msgid "Configure the size"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:61
-#: woocommerce/single-product/add-to-cart/variable.php:71
-msgid "Width (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:70
+msgid "Width (mm)"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:65
-#: woocommerce/single-product/add-to-cart/variable.php:75
-msgid "Height (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:74
+msgid "Height (mm)"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/simple.php:74
-#: woocommerce/single-product/add-to-cart/variable.php:118
+#: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:144
+msgid "Delivery time"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/variable.php:149
+msgid "Delivery costs"
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:32
 msgid "This product is currently out of stock and unavailable."
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:36
+#: woocommerce/single-product/add-to-cart/variable.php:35
 msgid "Configure product options"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:51
+#: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:88
+#: woocommerce/single-product/add-to-cart/variable.php:87
 msgid "Select extra options"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
 msgstr ""
 
 #. Theme Name of the plugin/theme

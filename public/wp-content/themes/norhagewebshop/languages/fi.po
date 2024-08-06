@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-06-17 12:31+0200\n"
-"PO-Revision-Date: 2024-06-17 12:32+0200\n"
+"POT-Creation-Date: 2024-08-06 16:30+0200\n"
+"PO-Revision-Date: 2024-08-06 16:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -28,26 +28,81 @@ msgstr "404"
 msgid "oh dear, we had to short on material.."
 msgstr "Voi rakas, meillä oli pulaa materiaalista.."
 
-#: blocks/categories-block/categoriesBlock.php:72
-#: blocks/categories-block/categoriesBlock.php:82
-#, php-format
-msgid "View all post filed under %s"
-msgstr "Syöte kaikille kategorian %s artikkeleille"
+#: blocks/categories-block/categoriesBlock.php:33
+msgid ""
+"Is your garden big or small? <br />We have a matching greenhouse for you!"
+msgstr ""
+"Onko puutarhasi iso vai pieni? <br />Meillä on sinulle sopiva kasvihuone!"
 
-#: blocks/products-slider-block/productsSliderBlock.php:67
-#: blocks/projects-block/projectsBlock.php:88
+#: blocks/cta-block/ctaBlock.php:38
+#: blocks/text-image-block/textImageBlock.php:45
+msgid "Need help with your choice?"
+msgstr "Tarvitsetko apua valinnassasi?"
+
+#: blocks/cta-block/ctaBlock.php:44
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:40
+#: blocks/products-block/productsBlock.php:43
+#: blocks/text-image-block/textImageBlock.php:51
+msgid ""
+"Our experts are ready to assist you with selecting the best match for your "
+"growing operations."
+msgstr ""
+"Asiantuntijamme ovat valmiita auttamaan sinua valitsemaan parhaan ottelun "
+"kasvavaan toimintaasi."
+
+#: blocks/cta-block/ctaBlock.php:50
+msgid "Contact us today and we’ll jumpstart your project!"
+msgstr "Ota yhteyttä jo tänään, niin käynnistämme projektisi!"
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:34
+msgid "Need emergency damage repair? <br>Call us today!"
+msgstr "Tarvitsetko hätävaurioiden korjausta? <br>Soita meille jo tänään!"
+
+#: blocks/cta-within-text-block/ctaWithinTextBlock.php:56
+msgid "Contact us"
+msgstr "Ota yhteyttä"
+
+#: blocks/products-block/productsBlock.php:37
+msgid "You might be interested in these items"
+msgstr "Saatat olla kiinnostunut näistä kohteista"
+
+#: blocks/products-block/productsBlock.php:49
+msgid "Call us today and we’ll jumpstart your project!"
+msgstr "Soita meille jo tänään, niin käynnistämme projektisi!"
+
+#: blocks/products-slider-block/productsSliderBlock.php:63
+#: blocks/projects-block/projectsBlock.php:84
 msgid "Left"
 msgstr "Vasen"
 
-#: blocks/products-slider-block/productsSliderBlock.php:68
-#: blocks/projects-block/projectsBlock.php:89
+#: blocks/products-slider-block/productsSliderBlock.php:64
+#: blocks/projects-block/projectsBlock.php:85
 msgid "Right"
 msgstr "Oikea"
 
-#: blocks/products-slider-block/productsSliderBlock.php:85
-#: blocks/projects-block/projectsBlock.php:107
-msgid "Read more ->"
-msgstr "Lue lisää ->"
+#: blocks/projects-block/projectsBlock.php:52
+msgid "Our quality? Have a look for yourself!"
+msgstr "Meidän laatumme? Katso itse!"
+
+#: blocks/projects-block/projectsBlock.php:58
+msgid "We take pride in the quality and durabillity of our products."
+msgstr "Olemme ylpeitä tuotteidemme laadusta ja kestävyydestä."
+
+#: blocks/projects-block/projectsBlock.php:64
+msgid "All showcases"
+msgstr "Kaikki vitriinit"
+
+#: blocks/text-image-block/textImageBlock.php:57
+msgid "Please contact us:"
+msgstr "Ota yhteyttä:"
+
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+msgid "info@norhage.com"
+msgstr "info@norhage.fi"
+
+#: blocks/text-image-block/textImageBlock.php:71
+msgid "info@norhage.no"
+msgstr "info@norhage.fi"
 
 #: footer.php:16
 msgid "Norhage Webshop"
@@ -68,10 +123,6 @@ msgstr ""
 #: footer.php:26
 msgid "Email"
 msgstr "Sähköposti"
-
-#: footer.php:27 header.php:136
-msgid "info@norhage.com"
-msgstr ""
 
 #: footer.php:29
 msgid "Phone"
@@ -127,33 +178,45 @@ msgstr "Toissijainen navigointi"
 msgid "Footer navigation"
 msgstr "Alatunnisteen navigointi"
 
-#: functions.php:147
+#: functions.php:94
+msgid "Above products listing"
+msgstr "Yllä oleva tuoteluettelo"
+
+#: functions.php:95
+msgid "A widget area above the products listing"
+msgstr "Widget-alue tuotelistauksen yläpuolella"
+
+#: functions.php:172
 msgid "expand"
 msgstr "laajentaa"
 
-#: functions.php:276
+#: functions.php:303
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:361 functions.php:436 functions.php:468
+#: functions.php:388 functions.php:463 functions.php:495
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:365 functions.php:440
+#: functions.php:392 functions.php:467
 msgid "Size"
 msgstr "Koko"
 
-#: functions.php:471
+#: functions.php:498
 msgid "Sizes"
 msgstr "Koot"
 
-#: functions.php:542
+#: functions.php:569
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:549
+#: functions.php:576
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
+
+#: functions.php:859
+msgid "Selected filters"
+msgstr "Valitut suodattimet"
 
 #: header.php:52
 msgid "Skip to content"
@@ -179,7 +242,7 @@ msgstr "Ostoskori"
 msgid "Shopping cart"
 msgstr "Ostoskori"
 
-#: inc/ajax-cart.php:45
+#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Sulje"
 
@@ -233,10 +296,18 @@ msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Muokkaa<span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: search query.
-#: search.php:21
+#: search.php:26
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
+
+#: sidebar-before_shop_loop.php:12
+msgid "Filter products"
+msgstr "Rajaa tuotteita"
+
+#: sidebar-before_shop_loop.php:15
+msgid "Filters"
+msgstr "Suodattimet"
 
 #: single-post.php:23
 msgid "Continue reading:"
@@ -269,7 +340,7 @@ msgid ""
 msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-post.php:48 template-parts/content.php:36
+#: template-parts/content-post.php:53 template-parts/content.php:41
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Jatka lukemista<span class=\"screen-reader-text\">%s</span>"
@@ -335,19 +406,7 @@ msgstr "Sinun täytyy olla kirjautunut sisään, kun aiot siirtyä kassalle."
 msgid "Your order"
 msgstr "Tilauksesi"
 
-#: woocommerce/content-single-product.php:58
-#, php-format
-msgid "Customize your %s"
-msgstr "Mukauta %s"
-
-#: woocommerce/content-single-product.php:62
-#: woocommerce/single-product/add-to-cart/simple.php:106
-#: woocommerce/single-product/add-to-cart/variable.php:146
-msgid "Delivery time"
-msgstr "Toimitusaika"
-
 #: woocommerce/single-product/add-to-cart/simple.php:56
-#: woocommerce/single-product/add-to-cart/variable.php:34
 #, php-format
 msgid "Customize and order your %s"
 msgstr "Mukauta ja tilaa %s"
@@ -357,35 +416,49 @@ msgid "Configure the size"
 msgstr "Määritä koko"
 
 #: woocommerce/single-product/add-to-cart/simple.php:61
-#: woocommerce/single-product/add-to-cart/variable.php:71
-msgid "Width (m)"
-msgstr "Leveys (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:70
+msgid "Width (mm)"
+msgstr "Leveys (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:65
-#: woocommerce/single-product/add-to-cart/variable.php:75
-msgid "Height (m)"
-msgstr "Korkeus (m)"
+#: woocommerce/single-product/add-to-cart/variable.php:74
+msgid "Height (mm)"
+msgstr "Korkeus (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:74
-#: woocommerce/single-product/add-to-cart/variable.php:118
+#: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Valitse määrä"
+
+#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/variable.php:144
+msgid "Delivery time"
+msgstr "Toimitusaika"
+
+#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/variable.php:149
+msgid "Delivery costs"
+msgstr "Toimituskulut"
 
 #: woocommerce/single-product/add-to-cart/variable.php:32
 msgid "This product is currently out of stock and unavailable."
 msgstr "Palvelu ei ole myytävänä."
 
-#: woocommerce/single-product/add-to-cart/variable.php:36
+#: woocommerce/single-product/add-to-cart/variable.php:35
 msgid "Configure product options"
 msgstr "Määritä tuoteasetukset"
 
-#: woocommerce/single-product/add-to-cart/variable.php:51
+#: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr "Tyhjennä"
 
-#: woocommerce/single-product/add-to-cart/variable.php:88
+#: woocommerce/single-product/add-to-cart/variable.php:87
 msgid "Select extra options"
 msgstr "Valitse lisäasetukset"
+
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
+msgstr "Näytä"
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -398,6 +471,17 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#, php-format
+#~ msgid "View all post filed under %s"
+#~ msgstr "Syöte kaikille kategorian %s artikkeleille"
+
+#~ msgid "Read more ->"
+#~ msgstr "Lue lisää ->"
+
+#, php-format
+#~ msgid "Customize your %s"
+#~ msgstr "Mukauta %s"
 
 #~ msgid "Projects"
 #~ msgstr "Projektit"
