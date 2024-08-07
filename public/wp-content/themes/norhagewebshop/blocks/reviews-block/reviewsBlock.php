@@ -42,7 +42,9 @@ if ( ! empty( $block['align'] ) ) {
 	        	<figure>
 		        	<?php if($image):
 		        		echo wp_get_attachment_image( $image['ID'], 'full', '', [ 'alt' => $image['alt']] );
-		        	endif; ?>
+		        	else: ?>
+		        		<span class="dashicons dashicons-heart"></span>
+		        	<?php endif; ?>
 	        	</figure>
 	        	<div class="review-text"><?php the_sub_field('review_text'); ?></div>
 	        	<footer>

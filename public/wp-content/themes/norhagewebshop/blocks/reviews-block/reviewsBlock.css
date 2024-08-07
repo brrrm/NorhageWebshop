@@ -1,7 +1,6 @@
 .reviews-block{
 	box-sizing: border-box;
 	width: 100%;
-	min-height: 50vh;
 	background: var(--store-color);
 	color: var(--white);
 	padding: 3em 0;
@@ -29,6 +28,7 @@
 .reviews-block h2{
 	font-style: normal;
 	font-weight: 700;
+	text-align: center;
 }
 .reviews-block .reviews article{
 	display: grid;
@@ -90,9 +90,49 @@
 	overflow: hidden;
 	aspect-ratio: 1;
 	background-color: var(--light-green);
+	border: 2px solid #fff;
+}
+.reviews-block .reviews article figure img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.reviews-block .reviews article figure:has(span){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	box-sizing: border-box;
+}
+.reviews-block .reviews article figure span{
+	font-size: 3em;
+	width: 1em;
+	height: 1em;
 }
 .reviews-block .reviews footer{
 	font-style: italic;
+}
+.reviews-block .slick-arrow{
+	display: block;
+	border: none;
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	position: absolute;
+	top: -2.7rem;
+	z-index: 2;
+	background: transparent url(../../images/svg/arrow-white.svg) center no-repeat;
+	background-size: contain;
+	text-indent: -999em;
+	overflow: hidden;
+	cursor: pointer;
+}
+.reviews-block .slick-arrow.slick-prev{
+	left: -5em;
+	background-image: url(../../images/svg/arrow-white-left.svg);
+}
+.reviews-block .slick-arrow.slick-next{
+	right: -5em;
 }
 @media screen and (max-width:768px){
 	.reviews-block h2,
@@ -102,5 +142,8 @@
 	}
 	.reviews-block h2{
 		text-align: center;
+	}
+	.reviews-block .reviews article figure span{
+		font-size: 1.5em;
 	}
 }
