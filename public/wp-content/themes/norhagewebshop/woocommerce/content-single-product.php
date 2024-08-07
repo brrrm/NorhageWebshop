@@ -47,7 +47,7 @@ $max_shown = 4;
 				?>
 				<h1><?php the_title(); ?></h1>
 				
-				<?php wc_get_template( 'single-product/price.php' ); ?>
+				<?php $product->is_type('simple') ? FALSE : wc_get_template( 'single-product/price.php' ); ?>
 
 				<div><?php echo wpautop($product->get_short_description()); ?></div>
 
