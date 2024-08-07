@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-08-06 16:31+0200\n"
-"PO-Revision-Date: 2024-08-06 16:32+0200\n"
+"PO-Revision-Date: 2024-08-07 16:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: footer.php:35
 msgid "B2B website"
-msgstr "B2C nettbutikk"
+msgstr "B2B nettbutikk"
 
 #: footer.php:36
 msgid "https://norhageindustri.com"
