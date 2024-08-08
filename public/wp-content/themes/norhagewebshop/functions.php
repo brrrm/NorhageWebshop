@@ -411,18 +411,20 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		$product = wc_get_product($cart_item_data['product_id']);
 		$regular_price = $product->get_price();
 	}
+	$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
+	
 	if(isset($cart_item_data['cutting_variables'])){
 		$item_data[] = [
-			'key'	=> __('Price per m<sup>2</sup>', 'norhagewebshop'),
-			'value'	=> wc_price($regular_price)
+			'key'	=> __('Size', 'norhagewebshop'),
+			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
+		];
+		$item_data[] = [
+			'key'	=> __('Unit price', 'norhagewebshop'),
+			'value'	=> wc_price($unit_price)
 		];
 		$item_data[] = [
 			'key'	=> __('Cutting fee', 'norhagewebshop'),
 			'value'	=> wc_price($cart_item_data['cutting_variables']['cutting_fee'])
-		];
-		$item_data[] = [
-			'key'	=> __('Size', 'norhagewebshop'),
-			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
 		];
 	}
 
@@ -498,17 +500,18 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 			$product = wc_get_product($product_id);
 			$regular_price = $product->get_price();
 		}
+		$unit_price = (floatval($values['cutting_variables']['width']) / 1000) * (floatval($values['cutting_variables']['height']) / 1000) * $regular_price;
 		$item->add_meta_data(
-			__('Price per m<sup>2</sup>', 'norhagewebshop'),
-			wc_price($regular_price)
+			__('Size', 'norhagewebshop'),
+			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
+		);
+		$item->add_meta_data(
+			__('Unit price>', 'norhagewebshop'),
+			wc_price($unit_price)
 		);
 		$item->add_meta_data(
 			__('Cutting fee', 'norhagewebshop'),
 			wc_price($values['cutting_variables']['cutting_fee'])
-		);
-		$item->add_meta_data(
-			__('Size', 'norhagewebshop'),
-			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
 		);
 	}
 
