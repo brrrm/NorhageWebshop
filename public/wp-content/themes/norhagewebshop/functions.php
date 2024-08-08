@@ -860,6 +860,19 @@ function norhage_BeRocket_AAPF_template_full_element_content($template_content, 
 	return $template_content;
 }
 
+/**
+ * translate strings from filter plugin
+ * */
+add_filter('aapf_localize_widget_script', 'norhage_aapf_localize_widget_script', 10, 1);
+function norhage_aapf_localize_widget_script($strings){
+	$strings['translate']['show_value'] = __('Show value(s)', 'norhagewebshop');
+	$strings['translate']['hide_value'] = __('Hide value(s)', 'norhagewebshop');
+	$strings['translate']['unselect_all'] = __('Unselect all', 'norhagewebshop');
+	$strings['translate']['nothing_selected'] = __('Nothing is selected', 'norhagewebshop');
+	$strings['translate']['products'] = __('products', 'norhagewebshop');
+	return $strings
+}
+
 
 /*
 // CORS HOT FIX BY NB:
