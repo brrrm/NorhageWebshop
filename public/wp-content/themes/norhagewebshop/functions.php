@@ -469,7 +469,9 @@ function norhage_before_calculate_totals($cart_object){
 			$height = floatval($value['cutting_variables']['height']) / 1000;
 			$product_price = $cutting_fee + ($width * $height * $product_price); 
 
-			// set the appropriate shipping class
+			// Set the appropriate shipping class
+			// Items that are cut and that have the special-small shipping class get
+			// their actual shipping class assigned based on the cut size.
 			$product_shipping_class = $product->get_shipping_class();
 			if($product_shipping_class == 'special-small'){
 				if($width <= 1.05 && $height <= 1.5){
