@@ -413,16 +413,17 @@ add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 
  * Display custom cart_item_data in the cart
  */
 function norhage_get_item_data( $item_data, $cart_item_data ) {
-	if(!empty($cart_item_data['variation_id'])){
-		$product_variation = new WC_Product_Variation($cart_item_data['variation_id']);
-		$regular_price = $product_variation->get_price();
-	}else{
-		$product = wc_get_product($cart_item_data['product_id']);
-		$regular_price = $product->get_price();
-	}
-	$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
 
 	if(isset($cart_item_data['cutting_variables'])){
+		if(!empty($cart_item_data['variation_id'])){
+			$product_variation = new WC_Product_Variation($cart_item_data['variation_id']);
+			$regular_price = $product_variation->get_price();
+		}else{
+			$product = wc_get_product($cart_item_data['product_id']);
+			$regular_price = $product->get_price();
+		}
+		$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
+
 		$item_data[] = [
 			'key'	=> __('Size', 'norhagewebshop'),
 			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
@@ -467,6 +468,25 @@ function norhage_before_calculate_totals($cart_object){
 			$width = floatval($value['cutting_variables']['width']) / 1000; // width and height are in mm's not meter!
 			$height = floatval($value['cutting_variables']['height']) / 1000;
 			$product_price = $cutting_fee + ($width * $height * $product_price); 
+
+			// set the appropriate shipping class
+			$product_shipping_class = $product->get_shipping_class();
+			if($product_shipping_class == 'special-small'){
+				if($width <= 1.05 && $height <= 1.5){
+					// medium
+					$value['data']->set_shipping_class_id(214);	
+				}elseif($width <= 1.05 && $height <= 4){
+					// large
+					$value['data']->set_shipping_class_id(20507);	
+				}elseif($width <= 2.1 && $height <= 6){
+					// extra-large
+					$value['data']->set_shipping_class_id(136);	
+				}else{
+					// giant
+					$value['data']->set_shipping_class_id(20506);	
+				}
+			}
+			
 		}
 
 		if(isset($value['addons']) && !empty($value['addons'])){
