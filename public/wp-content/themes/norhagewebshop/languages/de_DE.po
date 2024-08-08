@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 10:40+0200\n"
-"PO-Revision-Date: 2024-08-08 10:40+0200\n"
+"POT-Creation-Date: 2024-08-08 12:53+0200\n"
+"PO-Revision-Date: 2024-08-08 12:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -202,47 +202,55 @@ msgstr "aufklappen"
 msgid "Read More"
 msgstr "Weiterlesen ->"
 
-#: functions.php:388 functions.php:463 functions.php:495
+#: functions.php:375
+msgid "Customize"
+msgstr "Anpassen"
+
+#: functions.php:416 functions.php:502
+msgid "Price per m<sup>2</sup>"
+msgstr "Preis pro m<sup>2</sup>"
+
+#: functions.php:420 functions.php:506 functions.php:538
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:392 functions.php:467
+#: functions.php:424 functions.php:510
 msgid "Size"
 msgstr "Größe"
 
-#: functions.php:498
+#: functions.php:541
 msgid "Sizes"
 msgstr "Größen"
 
-#: functions.php:569
+#: functions.php:612
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:576
+#: functions.php:619
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: functions.php:859 sidebar-before_shop_loop.php:20
+#: functions.php:902 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Ausgewählte Filter"
 
-#: functions.php:868
+#: functions.php:911
 msgid "Show value(s)"
 msgstr "Wert(e) anzeigen"
 
-#: functions.php:869
+#: functions.php:912
 msgid "Hide value(s)"
 msgstr "Wert(e) ausblenden"
 
-#: functions.php:870
+#: functions.php:913
 msgid "Unselect all"
 msgstr "Alles abwählen"
 
-#: functions.php:871
+#: functions.php:914
 msgid "Nothing is selected"
 msgstr "Nichts ist ausgewählt"
 
-#: functions.php:872
+#: functions.php:915
 msgid "products"
 msgstr "Produkte"
 
@@ -509,10 +517,6 @@ msgstr "https://garbo.nl"
 
 #~ msgid "Read more ->"
 #~ msgstr "Weiterlesen ->"
-
-#, php-format
-#~ msgid "Customize your %s"
-#~ msgstr "Passen Sie Ihre %s an"
 
 #~ msgid "Projects"
 #~ msgstr "Projekte"

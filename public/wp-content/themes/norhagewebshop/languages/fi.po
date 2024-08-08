@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 10:40+0200\n"
-"PO-Revision-Date: 2024-08-08 10:40+0200\n"
+"POT-Creation-Date: 2024-08-08 12:53+0200\n"
+"PO-Revision-Date: 2024-08-08 12:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -194,47 +194,55 @@ msgstr "laajentaa"
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:388 functions.php:463 functions.php:495
+#: functions.php:375
+msgid "Customize"
+msgstr "Mukauta"
+
+#: functions.php:416 functions.php:502
+msgid "Price per m<sup>2</sup>"
+msgstr "Hinta per m<sup>2</sup>"
+
+#: functions.php:420 functions.php:506 functions.php:538
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:392 functions.php:467
+#: functions.php:424 functions.php:510
 msgid "Size"
 msgstr "Koko"
 
-#: functions.php:498
+#: functions.php:541
 msgid "Sizes"
 msgstr "Koot"
 
-#: functions.php:569
+#: functions.php:612
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:576
+#: functions.php:619
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:859 sidebar-before_shop_loop.php:20
+#: functions.php:902 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:868
+#: functions.php:911
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:869
+#: functions.php:912
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:870
+#: functions.php:913
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:871
+#: functions.php:914
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:872
+#: functions.php:915
 msgid "products"
 msgstr "tuotteet"
 
@@ -497,10 +505,6 @@ msgstr "https://garbo.nl"
 
 #~ msgid "Read more ->"
 #~ msgstr "Lue lisää ->"
-
-#, php-format
-#~ msgid "Customize your %s"
-#~ msgstr "Mukauta %s"
 
 #~ msgid "Projects"
 #~ msgstr "Projektit"

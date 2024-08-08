@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 10:39+0200\n"
-"PO-Revision-Date: 2024-08-08 10:39+0200\n"
+"POT-Creation-Date: 2024-08-08 12:52+0200\n"
+"PO-Revision-Date: 2024-08-08 12:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -198,47 +198,55 @@ msgstr "expandera"
 msgid "Read More"
 msgstr "Läs mer ->"
 
-#: functions.php:388 functions.php:463 functions.php:495
+#: functions.php:375
+msgid "Customize"
+msgstr "Anpassa"
+
+#: functions.php:416 functions.php:502
+msgid "Price per m<sup>2</sup>"
+msgstr "Pris per m<sup>2</sup>"
+
+#: functions.php:420 functions.php:506 functions.php:538
 msgid "Cutting fee"
 msgstr "Avgift för sänkning"
 
-#: functions.php:392 functions.php:467
+#: functions.php:424 functions.php:510
 msgid "Size"
 msgstr "Storlek"
 
-#: functions.php:498
+#: functions.php:541
 msgid "Sizes"
 msgstr "Storlekar"
 
-#: functions.php:569
+#: functions.php:612
 msgid "Description"
 msgstr "Beskrivning"
 
-#: functions.php:576
+#: functions.php:619
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivningen visas på kategoriöversiktssidan."
 
-#: functions.php:859 sidebar-before_shop_loop.php:20
+#: functions.php:902 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valda filter"
 
-#: functions.php:868
+#: functions.php:911
 msgid "Show value(s)"
 msgstr "Visa värde(n)"
 
-#: functions.php:869
+#: functions.php:912
 msgid "Hide value(s)"
 msgstr "Dölj värde(n)"
 
-#: functions.php:870
+#: functions.php:913
 msgid "Unselect all"
 msgstr "Avmarkera alla"
 
-#: functions.php:871
+#: functions.php:914
 msgid "Nothing is selected"
 msgstr "Ingenting är markerat"
 
-#: functions.php:872
+#: functions.php:915
 msgid "products"
 msgstr "produkter"
 
@@ -502,10 +510,6 @@ msgstr "https://garbo.nl"
 
 #~ msgid "Read more ->"
 #~ msgstr "Läs mer ->"
-
-#, php-format
-#~ msgid "Customize your %s"
-#~ msgstr "Anpassa din %s"
 
 #~ msgid "Projects"
 #~ msgstr "Projekt"
