@@ -29,6 +29,6 @@ global $product;
 		$has_cutting_fee = ($cutting_fee && $cutting_fee > 0)? true : false;
 	?>
 	<?php if($has_cutting_fee): ?>
-		<small class="cutting-fee-notice">(<?php _e('Cutting fee is included in the price.'); ?>)</small>
+		<small class="cutting-fee-notice">(<?php _e('Cutting fee is included in the price.', 'norhagewebshop'); ?>)</small>
 	<?php endif; ?>
 </p>
