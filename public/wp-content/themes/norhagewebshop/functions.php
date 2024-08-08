@@ -870,7 +870,7 @@ function norhage_aapf_localize_widget_script($strings){
 	$strings['translate']['unselect_all'] = __('Unselect all', 'norhagewebshop');
 	$strings['translate']['nothing_selected'] = __('Nothing is selected', 'norhagewebshop');
 	$strings['translate']['products'] = __('products', 'norhagewebshop');
-	return $strings
+	return $strings;
 }
 
 
