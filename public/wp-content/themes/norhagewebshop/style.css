@@ -2115,6 +2115,11 @@ div.quantity,
 .summary form.simple_form .simple_product_wrap .price{
 	margin: 1em 0 0.5em;
 }
+.summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price small.cutting-fee-notice,
+.summary form.simple_form .simple_product_wrap .price small.cutting-fee-notice{
+	font-size: 0.667em;
+	color: var(--store-color);
+}
 .summary form.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart,
 .summary form.simple_form .simple_product_wrap .woocommerce-simple-product-add-to-cart {
 	display: flex;

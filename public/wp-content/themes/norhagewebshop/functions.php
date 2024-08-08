@@ -412,7 +412,7 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		$regular_price = $product->get_price();
 	}
 	$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
-	
+
 	if(isset($cart_item_data['cutting_variables'])){
 		$item_data[] = [
 			'key'	=> __('Size', 'norhagewebshop'),
@@ -449,7 +449,6 @@ add_filter( 'woocommerce_get_item_data', 'norhage_get_item_data', 10, 2 );
  *  calculate the price of the items in the cart
  */
 function norhage_before_calculate_totals($cart_object){
-	
 	foreach ( $cart_object->get_cart() as $hash => $value ) {
 		$product = wc_get_product( $value['data']->get_id() );
 		$product_price = $product->get_price();
