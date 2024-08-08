@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-06 16:27+0200\n"
+"POT-Creation-Date: 2024-08-08 10:39+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -212,8 +212,28 @@ msgstr ""
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:859
+#: functions.php:859 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
+msgstr ""
+
+#: functions.php:868
+msgid "Show value(s)"
+msgstr ""
+
+#: functions.php:869
+msgid "Hide value(s)"
+msgstr ""
+
+#: functions.php:870
+msgid "Unselect all"
+msgstr ""
+
+#: functions.php:871
+msgid "Nothing is selected"
+msgstr ""
+
+#: functions.php:872
+msgid "products"
 msgstr ""
 
 #: header.php:52
@@ -401,36 +421,31 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:56
-#, php-format
-msgid "Customize and order your %s"
-msgstr ""
-
-#: woocommerce/single-product/add-to-cart/simple.php:58
+#: woocommerce/single-product/add-to-cart/simple.php:57
 msgid "Configure the size"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:61
+#: woocommerce/single-product/add-to-cart/simple.php:60
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:65
+#: woocommerce/single-product/add-to-cart/simple.php:64
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:74
+#: woocommerce/single-product/add-to-cart/simple.php:73
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/simple.php:105
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/simple.php:110
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr ""

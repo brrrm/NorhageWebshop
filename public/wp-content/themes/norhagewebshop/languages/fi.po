@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-06 16:30+0200\n"
-"PO-Revision-Date: 2024-08-06 16:31+0200\n"
+"POT-Creation-Date: 2024-08-08 10:40+0200\n"
+"PO-Revision-Date: 2024-08-08 10:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -214,9 +214,29 @@ msgstr "Kuvaus"
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:859
+#: functions.php:859 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
+
+#: functions.php:868
+msgid "Show value(s)"
+msgstr "Näytä arvot:"
+
+#: functions.php:869
+msgid "Hide value(s)"
+msgstr "Piilota osastot"
+
+#: functions.php:870
+msgid "Unselect all"
+msgstr "Poista kaikki valinnat"
+
+#: functions.php:871
+msgid "Nothing is selected"
+msgstr "Mitään ei ole valittu"
+
+#: functions.php:872
+msgid "products"
+msgstr "tuotteet"
 
 #: header.php:52
 msgid "Skip to content"
@@ -406,36 +426,31 @@ msgstr "Sinun täytyy olla kirjautunut sisään, kun aiot siirtyä kassalle."
 msgid "Your order"
 msgstr "Tilauksesi"
 
-#: woocommerce/single-product/add-to-cart/simple.php:56
-#, php-format
-msgid "Customize and order your %s"
-msgstr "Mukauta ja tilaa %s"
-
-#: woocommerce/single-product/add-to-cart/simple.php:58
+#: woocommerce/single-product/add-to-cart/simple.php:57
 msgid "Configure the size"
 msgstr "Määritä koko"
 
-#: woocommerce/single-product/add-to-cart/simple.php:61
+#: woocommerce/single-product/add-to-cart/simple.php:60
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr "Leveys (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:65
+#: woocommerce/single-product/add-to-cart/simple.php:64
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr "Korkeus (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:74
+#: woocommerce/single-product/add-to-cart/simple.php:73
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Valitse määrä"
 
-#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/simple.php:105
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr "Toimitusaika"
 
-#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/simple.php:110
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr "Toimituskulut"
@@ -471,6 +486,10 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#, php-format
+#~ msgid "Customize and order your %s"
+#~ msgstr "Mukauta ja tilaa %s"
 
 #, php-format
 #~ msgid "View all post filed under %s"

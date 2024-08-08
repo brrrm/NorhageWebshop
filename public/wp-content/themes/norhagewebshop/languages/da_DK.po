@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-06 16:28+0200\n"
-"PO-Revision-Date: 2024-08-06 16:29+0200\n"
+"POT-Creation-Date: 2024-08-08 10:40+0200\n"
+"PO-Revision-Date: 2024-08-08 10:40+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
@@ -214,9 +214,29 @@ msgstr "Beskrivelse"
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på kategorioversigtssiden."
 
-#: functions.php:859
+#: functions.php:859 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valgte filtre"
+
+#: functions.php:868
+msgid "Show value(s)"
+msgstr "Vis værdi(er)"
+
+#: functions.php:869
+msgid "Hide value(s)"
+msgstr "Skjul værdi(er)"
+
+#: functions.php:870
+msgid "Unselect all"
+msgstr "Fravælg alle"
+
+#: functions.php:871
+msgid "Nothing is selected"
+msgstr "Intet er valgt"
+
+#: functions.php:872
+msgid "products"
+msgstr "produkter"
 
 #: header.php:52
 msgid "Skip to content"
@@ -407,36 +427,31 @@ msgstr "Du skal være logget ind for at gå til kassen."
 msgid "Your order"
 msgstr "Din ordre"
 
-#: woocommerce/single-product/add-to-cart/simple.php:56
-#, php-format
-msgid "Customize and order your %s"
-msgstr "Tilpas og bestil din %s"
-
-#: woocommerce/single-product/add-to-cart/simple.php:58
+#: woocommerce/single-product/add-to-cart/simple.php:57
 msgid "Configure the size"
 msgstr "Konfigurer størrelsen"
 
-#: woocommerce/single-product/add-to-cart/simple.php:61
+#: woocommerce/single-product/add-to-cart/simple.php:60
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr "Bredde (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:65
+#: woocommerce/single-product/add-to-cart/simple.php:64
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr "Højde (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:74
+#: woocommerce/single-product/add-to-cart/simple.php:73
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Vælg antal"
 
-#: woocommerce/single-product/add-to-cart/simple.php:106
+#: woocommerce/single-product/add-to-cart/simple.php:105
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr "Leveringstid"
 
-#: woocommerce/single-product/add-to-cart/simple.php:111
+#: woocommerce/single-product/add-to-cart/simple.php:110
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr "Leveringsomkostninger"
@@ -472,6 +487,10 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#, php-format
+#~ msgid "Customize and order your %s"
+#~ msgstr "Tilpas og bestil din %s"
 
 #, php-format
 #~ msgid "View all post filed under %s"
