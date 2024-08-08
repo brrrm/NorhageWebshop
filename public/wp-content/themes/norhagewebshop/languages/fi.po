@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 12:53+0200\n"
-"PO-Revision-Date: 2024-08-08 12:53+0200\n"
+"POT-Creation-Date: 2024-08-08 13:24+0200\n"
+"PO-Revision-Date: 2024-08-08 13:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -198,51 +198,51 @@ msgstr "Lue lisää"
 msgid "Customize"
 msgstr "Mukauta"
 
-#: functions.php:416 functions.php:502
-msgid "Price per m<sup>2</sup>"
-msgstr "Hinta per m<sup>2</sup>"
-
-#: functions.php:420 functions.php:506 functions.php:538
-msgid "Cutting fee"
-msgstr "Leikkausmaksu"
-
-#: functions.php:424 functions.php:510
+#: functions.php:418 functions.php:504
 msgid "Size"
 msgstr "Koko"
 
-#: functions.php:541
+#: functions.php:422 functions.php:508
+msgid "Unit price"
+msgstr "Yksikköhinta"
+
+#: functions.php:426 functions.php:512 functions.php:540
+msgid "Cutting fee"
+msgstr "Leikkausmaksu"
+
+#: functions.php:543
 msgid "Sizes"
 msgstr "Koot"
 
-#: functions.php:612
+#: functions.php:614
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:619
+#: functions.php:621
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:902 sidebar-before_shop_loop.php:20
+#: functions.php:904 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:911
+#: functions.php:913
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:912
+#: functions.php:914
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:913
+#: functions.php:915
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:914
+#: functions.php:916
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:915
+#: functions.php:917
 msgid "products"
 msgstr "tuotteet"
 
@@ -483,6 +483,10 @@ msgstr "Valitse lisäasetukset"
 msgid "View"
 msgstr "Näytä"
 
+#: woocommerce/single-product/price.php:32
+msgid "Cutting fee is included in the price."
+msgstr "Leikkuumaksu sisältyy hintaan."
+
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
 msgstr "Norhagen verkkokauppa"
@@ -494,6 +498,9 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Price per m<sup>2</sup>"
+#~ msgstr "Hinta per m<sup>2</sup>"
 
 #, php-format
 #~ msgid "Customize and order your %s"

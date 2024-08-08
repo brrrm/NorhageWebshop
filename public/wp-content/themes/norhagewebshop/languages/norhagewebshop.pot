@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 12:52+0200\n"
+"POT-Creation-Date: 2024-08-08 13:22+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -196,51 +196,51 @@ msgstr ""
 msgid "Customize"
 msgstr ""
 
-#: functions.php:416 functions.php:502
-msgid "Price per m<sup>2</sup>"
-msgstr ""
-
-#: functions.php:420 functions.php:506 functions.php:538
-msgid "Cutting fee"
-msgstr ""
-
-#: functions.php:424 functions.php:510
+#: functions.php:418 functions.php:504
 msgid "Size"
 msgstr ""
 
-#: functions.php:541
+#: functions.php:422 functions.php:508
+msgid "Unit price"
+msgstr ""
+
+#: functions.php:426 functions.php:512 functions.php:540
+msgid "Cutting fee"
+msgstr ""
+
+#: functions.php:543
 msgid "Sizes"
 msgstr ""
 
-#: functions.php:612
+#: functions.php:614
 msgid "Description"
 msgstr ""
 
-#: functions.php:619
+#: functions.php:621
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:902 sidebar-before_shop_loop.php:20
+#: functions.php:904 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr ""
 
-#: functions.php:911
+#: functions.php:913
 msgid "Show value(s)"
 msgstr ""
 
-#: functions.php:912
+#: functions.php:914
 msgid "Hide value(s)"
 msgstr ""
 
-#: functions.php:913
+#: functions.php:915
 msgid "Unselect all"
 msgstr ""
 
-#: functions.php:914
+#: functions.php:916
 msgid "Nothing is selected"
 msgstr ""
 
-#: functions.php:915
+#: functions.php:917
 msgid "products"
 msgstr ""
 
@@ -476,6 +476,10 @@ msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable.php:103
 msgid "View"
+msgstr ""
+
+#: woocommerce/single-product/price.php:32
+msgid "Cutting fee is included in the price."
 msgstr ""
 
 #. Theme Name of the plugin/theme

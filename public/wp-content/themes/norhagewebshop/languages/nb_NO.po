@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 12:52+0200\n"
-"PO-Revision-Date: 2024-08-08 12:53+0200\n"
+"POT-Creation-Date: 2024-08-08 13:23+0200\n"
+"PO-Revision-Date: 2024-08-08 13:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -204,51 +204,51 @@ msgstr "Les mer ->"
 msgid "Customize"
 msgstr "Tilpass"
 
-#: functions.php:416 functions.php:502
-msgid "Price per m<sup>2</sup>"
-msgstr "Pris per m<sup>2</sup>"
-
-#: functions.php:420 functions.php:506 functions.php:538
-msgid "Cutting fee"
-msgstr "Kutter gebyr"
-
-#: functions.php:424 functions.php:510
+#: functions.php:418 functions.php:504
 msgid "Size"
 msgstr "Størrelse"
 
-#: functions.php:541
+#: functions.php:422 functions.php:508
+msgid "Unit price"
+msgstr "Enhetspris"
+
+#: functions.php:426 functions.php:512 functions.php:540
+msgid "Cutting fee"
+msgstr "Kutter gebyr"
+
+#: functions.php:543
 msgid "Sizes"
 msgstr "Størrelser"
 
-#: functions.php:612
+#: functions.php:614
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:619
+#: functions.php:621
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på siden for kategorioversikt."
 
-#: functions.php:902 sidebar-before_shop_loop.php:20
+#: functions.php:904 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valgte filtre"
 
-#: functions.php:911
+#: functions.php:913
 msgid "Show value(s)"
 msgstr "Vis verdi(er)"
 
-#: functions.php:912
+#: functions.php:914
 msgid "Hide value(s)"
 msgstr "Skjul verdi(er)"
 
-#: functions.php:913
+#: functions.php:915
 msgid "Unselect all"
 msgstr "Opphev alle"
 
-#: functions.php:914
+#: functions.php:916
 msgid "Nothing is selected"
 msgstr "Ingenting er valgt"
 
-#: functions.php:915
+#: functions.php:917
 msgid "products"
 msgstr "produkter"
 
@@ -491,6 +491,10 @@ msgstr "Velg ekstra alternativer"
 msgid "View"
 msgstr "Vis"
 
+#: woocommerce/single-product/price.php:32
+msgid "Cutting fee is included in the price."
+msgstr "Kuttegebyr er inkludert i prisen."
+
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
 msgstr "Norhage nettbutikk"
@@ -502,6 +506,9 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Price per m<sup>2</sup>"
+#~ msgstr "Pris per m<sup>2</sup>"
 
 #, php-format
 #~ msgid "Customize and order your %s"

@@ -505,7 +505,7 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
 		);
 		$item->add_meta_data(
-			__('Unit price>', 'norhagewebshop'),
+			__('Unit price', 'norhagewebshop'),
 			wc_price($unit_price)
 		);
 		$item->add_meta_data(

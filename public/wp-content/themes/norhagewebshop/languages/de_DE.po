@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 12:53+0200\n"
-"PO-Revision-Date: 2024-08-08 12:53+0200\n"
+"POT-Creation-Date: 2024-08-08 13:24+0200\n"
+"PO-Revision-Date: 2024-08-08 13:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -206,51 +206,51 @@ msgstr "Weiterlesen ->"
 msgid "Customize"
 msgstr "Anpassen"
 
-#: functions.php:416 functions.php:502
-msgid "Price per m<sup>2</sup>"
-msgstr "Preis pro m<sup>2</sup>"
-
-#: functions.php:420 functions.php:506 functions.php:538
-msgid "Cutting fee"
-msgstr "Kürzungsgebühr"
-
-#: functions.php:424 functions.php:510
+#: functions.php:418 functions.php:504
 msgid "Size"
 msgstr "Größe"
 
-#: functions.php:541
+#: functions.php:422 functions.php:508
+msgid "Unit price"
+msgstr "Einheitspreis"
+
+#: functions.php:426 functions.php:512 functions.php:540
+msgid "Cutting fee"
+msgstr "Kürzungsgebühr"
+
+#: functions.php:543
 msgid "Sizes"
 msgstr "Größen"
 
-#: functions.php:612
+#: functions.php:614
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:619
+#: functions.php:621
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: functions.php:902 sidebar-before_shop_loop.php:20
+#: functions.php:904 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Ausgewählte Filter"
 
-#: functions.php:911
+#: functions.php:913
 msgid "Show value(s)"
 msgstr "Wert(e) anzeigen"
 
-#: functions.php:912
+#: functions.php:914
 msgid "Hide value(s)"
 msgstr "Wert(e) ausblenden"
 
-#: functions.php:913
+#: functions.php:915
 msgid "Unselect all"
 msgstr "Alles abwählen"
 
-#: functions.php:914
+#: functions.php:916
 msgid "Nothing is selected"
 msgstr "Nichts ist ausgewählt"
 
-#: functions.php:915
+#: functions.php:917
 msgid "products"
 msgstr "Produkte"
 
@@ -495,6 +495,10 @@ msgstr "Zusätzliche Optionen auswählen"
 msgid "View"
 msgstr "Anzeigen"
 
+#: woocommerce/single-product/price.php:32
+msgid "Cutting fee is included in the price."
+msgstr "Schneidegebühr ist im Preis inbegriffen."
+
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
 msgstr "Norhage Webshop"
@@ -506,6 +510,9 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Price per m<sup>2</sup>"
+#~ msgstr "Preis pro m<sup>2</sup>"
 
 #, php-format
 #~ msgid "Customize and order your %s"
