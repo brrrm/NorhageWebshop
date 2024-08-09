@@ -186,16 +186,17 @@
 				$(this).buttonPlusMin('min');
 			});
 			$(this).find('input[type="number"]').change(function(e){
-				let value = parseFloat($(this).val());
-				let min = parseFloat($(this).attr('min'));
-				let max = parseFloat($(this).attr('max'));
+				let numVal = parseInt($(this).val());
+				let min = parseInt($(this).attr('min'));
+				let max = parseInt($(this).attr('max'));
 
-				if(min !== 'NaN' && value < min){
-					$(this).val(min);
+				if(min !== 'NaN' && numVal < min){
+					numVal = min;
 				}
-				if(max !== 'NaN' && value > max){
-					$(this).val(max);
+				if(max !== 'NaN' && numVal > max){
+					numVal = max;
 				}
+				$(this).val(numVal);
 			});
 		});
 
