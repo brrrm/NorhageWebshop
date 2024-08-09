@@ -185,7 +185,20 @@
 				e.preventDefault();
 				$(this).buttonPlusMin('min');
 			});
+			$(this).find('input[type="number"]').change(function(e){
+				let value = parseFloat($(this).val());
+				let min = parseFloat($(this).attr('min'));
+				let max = parseFloat($(this).attr('max'));
+
+				if(min !== 'NaN' && value < min){
+					$(this).val(min);
+				}
+				if(max !== 'NaN' && value > max){
+					$(this).val(max);
+				}
+			});
 		});
+
 
 		$.fn.buttonPlusMin = function(action){
 			let inputSibling = $(this).siblings('input');

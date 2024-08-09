@@ -48,10 +48,10 @@ if ( $product->is_in_stock() ) : ?>
 
 		<?php if($has_cutting_fee): ?>
 			<?php
-				$max_width = (get_field('max_width')) ? get_field('max_width') * 1000 : 0;
-				$min_width = (get_field('min_width')) ? get_field('min_width') * 1000 : 0;
-				$max_height = (get_field('max_height')) ? get_field('max_height') * 1000 : 0;
-				$min_height = (get_field('min_height')) ? get_field('min_height') * 1000 : 0;
+				$max_width = (get_field('max_width')) ? get_field('max_width') * 1000 : 10000;
+				$min_width = (get_field('min_width')) ? get_field('min_width') * 1000 : 1;
+				$max_height = (get_field('max_height')) ? get_field('max_height') * 1000 : 10000;
+				$min_height = (get_field('min_height')) ? get_field('min_height') * 1000 : 1;
 			?>
 			<div class="sizes_input">
 				<h3>1: <?php _e('Configure the size', 'norhagewebshop'); ?></h3>
