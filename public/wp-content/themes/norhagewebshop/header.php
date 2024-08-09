@@ -30,7 +30,7 @@
 
 	</script>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-V26DXPHHTF"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4KPNLV7VQ"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
