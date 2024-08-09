@@ -272,6 +272,18 @@
 		});
 
 
+		window.dataLayer = window.dataLayer || [];
+		$('a[href^="mailto:"]').click(function(e){
+			dataLayer.push({'event': 'click_email_link'});
+		});
+		$('a[href^="tel:"]').click(function(e){
+			dataLayer.push({'event': 'click_phone_link'});
+		});
+		$(document).on('wpcf7mailsent', function(e){
+			dataLayer.push({'event': 'contact_form_submit'});
+		})
+
+
 		/*
 		function gtag() { dataLayer.push(arguments); }
 		$('#cn-accept-cookie').click(function(e){
