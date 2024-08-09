@@ -5,7 +5,7 @@ Author URI: https://garbo.nl
 Version: 0.1
 */
 
-@import url("https://use.typekit.net/aus7nxi.css"); 
+@import url("https://use.typekit.net/qaf3pms.css"); 
 
 :root{
 	--dark-blue: #0A4164;
@@ -912,7 +912,7 @@ button.button.open-filters:hover{
 }
 #filters-sidebar .selected_filters .bapf_head h3,
 .before-products > .bapf_sfilter .bapf_head h3{
-	font-weight: 500;
+	font-weight: 400;
 	color: var(--store-color);
 }
 .before-products > .bapf_sfilter .bapf_body{
@@ -926,7 +926,7 @@ button.button.open-filters:hover{
 }
 #filters-sidebar .selected_filters .bapf_sfa_taxonomy > span,
 .before-products > .bapf_sfilter .bapf_sfa_taxonomy > span{
-	font-weight: 600;
+	font-weight: 700;
 }
 #filters-sidebar .selected_filters .bapf_sfa_taxonomy ul,
 .before-products > .bapf_sfilter .bapf_sfa_taxonomy ul{
@@ -939,7 +939,7 @@ button.button.open-filters:hover{
 	right: 0;
 	margin: 0;
 	padding: 0;
-	font-weight: 600;
+	font-weight: 700;
 }
 #filters-sidebar .selected_filters ul,
 .before-products > .bapf_sfilter ul{
@@ -948,7 +948,7 @@ button.button.open-filters:hover{
 }
 #filters-sidebar h3,
 .before-products > .bapf_sfilter h3{
-	font-weight: 500;
+	font-weight: 400;
 }
 @media all and (max-width: 768px){
 	.cart-popout.open,
@@ -1067,7 +1067,7 @@ header#masthead nav#site-navigation .widget_shopping_cart h2,
 	content: none;
 }
 .woocommerce ul.product_list_widget.cart_list li ul.variation li > span.name{
-	font-weight: 500;
+	font-weight: 400;
 }
 .woocommerce ul.product_list_widget.cart_list li ul.variation li span.amount{
 	font-weight: 300;
@@ -1864,7 +1864,7 @@ body .image-popup .scroll-button:hover{
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) .summary.entry-summary div.product p.price, 
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) .summary.entry-summary div.product span.price{
 	color: var(--black);
-	font-weight: 600;
+	font-weight: 700;
 }
 div.quantity,
 .woocommerce div.product form.cart div.quantity{
@@ -1988,7 +1988,7 @@ div.quantity,
 }
 .summary form.cart > div > h3{
 	color: var(--store-color);
-	font-weight: 600;
+	font-weight: 700;
 	margin: 1em 0 0.5em;
 }
 .summary form.cart.simple_form .sizes_input{
@@ -2069,7 +2069,7 @@ div.quantity,
 .summary form.variations_form .addons .addon h3{
 	grid-area: title;
 	font-size: 1em;
-	font-weight: 600;
+	font-weight: 700;
 	margin-right: 1em;
 }
 .summary form.variations_form .addons .addon .addon-image{
@@ -2110,7 +2110,7 @@ div.quantity,
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation .woocommerce-variation-price span,
 .summary form.simple_form .simple_product_wrap .price span{
 	color: var(--store-color);
-	font-weight: 600;
+	font-weight: 700;
 }
 .summary form.simple_form .simple_product_wrap .price{
 	margin: 1em 0 0.5em;
@@ -2274,7 +2274,7 @@ div.quantity,
 }
 .norhage-cart-wrap .cart-collaterals h2{
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 1.5em;
 }
 .norhage-cart-wrap .cart-collaterals table{
@@ -2304,7 +2304,7 @@ div.quantity,
 }
 .woocommerce .norhage-cart-wrap table.shop_table tbody tr.cart-subtotal td{
 	text-align: right;
-	font-weight: bold;
+	font-weight: 700;
 }
 .woocommerce .norhage-cart-wrap table.shop_table tbody tr.order-total{
 	position: relative;
@@ -2312,7 +2312,7 @@ div.quantity,
 .woocommerce .norhage-cart-wrap table.shop_table tbody tr.order-total th,
 .woocommerce .norhage-cart-wrap table.shop_table tbody tr.order-total td{
 	padding-bottom: 2em;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 1.25em;
 }
 .woocommerce .norhage-cart-wrap table.shop_table tbody tr.order-total td{
@@ -2517,7 +2517,8 @@ table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart
 table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-cart-item__prices,
 .woocommerce table.shop_table.cart tbody tr td.product-name .cart-item-wrap .product-prices{
 	grid-area: price;
-	font-weight: 100;
+	font-weight: 200;
+	font-size: 0.75em;
 }
 table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-components-product-metadata,
 .woocommerce table.shop_table.cart tbody tr td.product-name .cart-item-wrap .item-meta{
@@ -2555,7 +2556,7 @@ form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table ul.
 table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-components-product-metadata ul li span.wc-block-components-product-details__value,
 .woocommerce table.shop_table.cart tbody tr td.product-name .cart-item-wrap .item-meta ul.variation li span.value,
 form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table ul.variation li span.value{
-	font-weight: 100;
+	font-weight: 200;
 }
 table.wc-block-cart-items tbody tr td.wc-block-cart-item__product .wc-block-cart-item__wrap .wc-block-cart-item__quantity,
 .woocommerce table.shop_table.cart tbody tr td.product-name .cart-item-wrap .item-quantity{
@@ -2648,7 +2649,7 @@ form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table tr.
 	display: block;
 }
 form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table tr.order-total td small{
-	font-weight: 100;
+	font-weight: 200;
 }
 .woocommerce form .form-row{
 	padding: 0;
@@ -3160,7 +3161,7 @@ form.wpcf7-form p span{
 form.wpcf7-form p label{
 	display: block;
 	margin: 0 0 0.3em;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 0.667em;
 }
 form.wpcf7-form p .wpcf7-not-valid-tip{
