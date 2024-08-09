@@ -34,9 +34,20 @@
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		
+		const tld = window.location.origin.split('.').pop();
+
 		gtag('js', new Date());
-		gtag('config', 'G-V26DXPHHTF');
+		if(tld == 'no'){
+			gtag('config', 'G-P4KPNLV7VQ');
+		}else if(tld == 'de'){
+			gtag('config', 'G-N859WWKZNK');
+		}else if(tld == 'se'){
+			gtag('config', 'G-9GK8JL0TB9');
+		}else{
+			// default account
+			gtag('config', 'G-P4KPNLV7VQ');
+		}
+		
 	</script>
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
