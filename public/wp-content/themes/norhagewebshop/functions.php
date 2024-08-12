@@ -949,6 +949,37 @@ function norhage_aapf_localize_widget_script($strings){
 	return $strings;
 }
 
+/**
+ * Disable/enable payment methods based on country
+ * */
+add_filter('woocommerce_available_payment_gateways', 'norhage_woocommerce_available_payment_gateways', 10, 1);
+function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
+    // Not in backend (admin)
+    if( is_admin() || !function_exists('pll_current_language') ) {
+        return $available_gateways;
+    }
+
+	switch(pll_current_language()){
+		case 'sv':
+			unset($available_gateways['kco']);
+			break;
+		case 'fi':
+			unset($available_gateways['kco']);
+			break;
+		case 'de':
+			unset($available_gateways['svea_checkout']);
+			break;
+		case 'da':
+			unset($available_gateways['kco']);
+			break;
+		case 'nb':
+		default:
+			unset($available_gateways['kco']);
+	}
+
+    return $available_gateways;
+}
+
 
 /*
 // CORS HOT FIX BY NB:
