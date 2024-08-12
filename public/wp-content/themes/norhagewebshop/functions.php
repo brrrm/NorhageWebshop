@@ -387,6 +387,35 @@ function norhage_woocommerce_loop_add_to_cart_link($link, $product, $args){
 	return $link;
 }
 
+
+function norhage_woocommerce_add_to_cart_validation($passed, $product_id, $quantity){
+	if(isset($_POST['cutting_variables']) 
+		&& (empty($_POST['cutting_variables']['width']) || empty($_POST['cutting_variables']['width']) )  
+	){
+		$passed = false;
+		wc_add_notice( __( 'Please, enter a value for width and height.', 'norhagewebshop'), 'error' );
+	}
+	
+	if(isset($_POST['cutting_variables'])){
+		// check width > 0, height > 0
+		$min_width = floatval(get_field('min_width', $product_id)) * 1000;
+		$max_width = floatval(get_field('max_width', $product_id)) * 1000;
+		$min_height = floatval(get_field('min_height', $product_id)) * 1000;
+		$max_height = floatval(get_field('max_height', $product_id)) * 1000;
+		if(floatval($_POST['cutting_variables']['width']) < $min_width
+			|| floatval($_POST['cutting_variables']['width']) > $max_width
+			|| floatval($_POST['cutting_variables']['height']) < $min_height
+			|| floatval($_POST['cutting_variables']['height']) > $max_height
+		){
+			$passed = false;
+			wc_add_notice( sprintf(__( 'Width should be any size from %s to %smm and Height should be any size from %s to %smm.', 'norhagewebshop'), $min_width, $max_width, $min_height, $max_height), 'error' );
+		}
+	}
+
+	return $passed;
+}
+add_filter( 'woocommerce_add_to_cart_validation', 'norhage_woocommerce_add_to_cart_validation', 10, 3 );
+
 /**
  * Function for `woocommerce_add_cart_item_data` filter-hook.
  * add the addons for variable products to the cart_item_data.
