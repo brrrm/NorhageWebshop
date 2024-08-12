@@ -395,7 +395,7 @@ function norhage_woocommerce_add_to_cart_validation($passed, $product_id, $quant
 		$passed = false;
 		wc_add_notice( __( 'Please, enter a value for width and height.', 'norhagewebshop'), 'error' );
 	}
-	
+
 	if(isset($_POST['cutting_variables'])){
 		// check width > 0, height > 0
 		$min_width = floatval(get_field('min_width', $product_id)) * 1000;
@@ -921,6 +921,31 @@ function norhage_woocommerce_email_from_address($default_from_address, $email, $
 		case 'nb':
 		default:
 			return 'info@norhage.no';
+	}
+}
+
+// fix email recipients of order notifications
+add_filter( 'woocommerce_email_recipient_new_order', 'norhage_woocommerce_email_recipient', 10, 3);
+add_filter( 'woocommerce_email_recipient_cancelled_order', 'norhage_woocommerce_email_recipient', 10, 3);
+add_filter( 'woocommerce_email_recipient_failed_order', 'norhage_woocommerce_email_recipient', 10, 3);
+function norhage_woocommerce_email_recipient($recipient, $object, $email ){
+	if(!function_exists('pll_get_post_language')){
+		return $recipient;
+	}
+
+	$lang = pll_get_post_language($email->object->get_id());
+	switch($lang){
+		case 'sv':
+			return 'info@norhage.se';
+		case 'fi':
+			return 'info@norhage.fi';
+		case 'de':
+			return 'info@norhage.de';
+		case 'da':
+			return 'info@norhage.dk';
+		case 'nb':
+		default:
+			return 'sales@norhage.no';
 	}
 }
 
