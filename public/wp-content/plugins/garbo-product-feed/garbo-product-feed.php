@@ -17,7 +17,7 @@ add_action( 'init', 'wpse9870_init_external' );
 function wpse9870_init_external()
 {
     global $wp_rewrite;
-    $plugin_url = plugins_url( 'feed.php', __FILE__ );
+    $plugin_url = plugins_url( 'includes/feed.php', __FILE__ );
     $plugin_url = substr( $plugin_url, strlen( home_url() ) + 1 );
 
     // The pattern is prefixed with '^'
