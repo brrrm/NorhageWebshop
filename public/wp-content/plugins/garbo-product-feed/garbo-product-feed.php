@@ -23,5 +23,5 @@ function wpse9870_init_external()
     // The pattern is prefixed with '^'
     // The substitution is prefixed with the "home root", at least a '/'
     // This is equivalent to appending it to `non_wp_rules`
-    $wp_rewrite->add_external_rule( 'products-xml?$', $plugin_url );
+    $wp_rewrite->add_external_rule( 'products-xml/?$', $plugin_url );
 }
