@@ -6,12 +6,14 @@ require_once(dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php');
 $language = function_exists( 'pll_current_language' ) ? pll_current_language() : 'nb';
 $upload_dir = wp_upload_dir();
 $xml_feed_dir = $upload_dir['basedir'].'/garbo-product-feeds';
-if ( !file_exists( $xml_feed_dir ) && !is_dir( $xml_feed_dir ) ) {
-	mkdir( $xml_feed_dir );
-} 
 $filename = $xml_feed_dir . '/products-' . $language . '.xml';
 $treshold = time() - (60*60*24);
 
+
+// check if folder exists
+if ( !file_exists( $xml_feed_dir ) && !is_dir( $xml_feed_dir ) ) {
+	mkdir( $xml_feed_dir );
+} 
 
 // check if we have a cached xml feed.
 if (file_exists($filename) && filectime($filename) > $treshold) {
@@ -47,6 +49,7 @@ $channelNode->appendChild($doc->createElement('title', 'Norhage'));
 $channelNode->appendChild($doc->createElement('link', 'https://' . $_SERVER['SERVER_NAME']));
 $channelNode->appendChild($doc->createElement('description', get_post_meta(pll_get_post(get_option( 'page_on_front' )), '_yoast_wpseo_metadesc', true) ));
 
+// loop over products
 foreach ($posts as $post){
 	$product = wc_get_product($post->ID);
 
@@ -88,6 +91,8 @@ foreach ($posts as $post){
 	$itemNode->appendChild($doc->createElement('g:brand', 'TEHI AS'));
 	$itemNode->appendChild($doc->createElement('g:mpn', 'TEHI-AS-'.$post->ID));
 }
+
+// finalize the file
 $cache_comment = $doc->createComment('Cached on ' . date('Y-m-d H:i', time()) );
 $doc->appendChild($cache_comment);
 $doc->formatOutput = true; // set the formatOutput attribute of domDocument to true
