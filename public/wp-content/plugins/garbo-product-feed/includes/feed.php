@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php');
+require_once(dirname(dirname(dirname(dirname(dirname(__FILE__))))) . '/wp-load.php');
 
 // setup variables
 $language = function_exists( 'pll_current_language' ) ? pll_current_language() : 'nb';
