@@ -88,7 +88,7 @@ foreach ($posts as $post){
 	$itemNode->appendChild($doc->createElement('g:brand', 'TEHI AS'));
 	$itemNode->appendChild($doc->createElement('g:mpn', 'TEHI-AS-'.$post->ID));
 }
-$cache_comment = $doc->createComment('cached on ' . date('Y-m-d H:i', time()) );
+$cache_comment = $doc->createComment('Cached on ' . date('Y-m-d H:i', time()) );
 $doc->appendChild($cache_comment);
 $doc->formatOutput = true; // set the formatOutput attribute of domDocument to true
 echo $doc->saveXML();
