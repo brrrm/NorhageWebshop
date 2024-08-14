@@ -503,7 +503,7 @@ function norhage_before_calculate_totals($cart_object){
 			// their actual shipping class assigned based on the cut size.
 			$product_shipping_class = $product->get_shipping_class();
 			if($product_shipping_class == 'special-small'){
-				if($width <= 1.05 && $height <= 1.5){
+				if($width <= 1.05 && $height <= 1){
 					// medium
 					$value['data']->set_shipping_class_id(214);	
 				}elseif($width <= 1.05 && $height <= 4){
