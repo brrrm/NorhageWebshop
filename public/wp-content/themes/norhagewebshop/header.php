@@ -55,6 +55,24 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 
+	<?php
+		$urlData = parse_url('https://'.$_SERVER["HTTP_HOST"]);
+		if(isset($urlData['host'])):
+			switch($urlData['host']){
+				case 'de':
+					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
+					break;
+				case 'se':
+					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
+					break;
+				case 'no':
+				default:
+					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
+			}
+			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
+		endif;
+	?>
+
 	<?php wp_head(); ?>
 </head>
 
