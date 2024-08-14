@@ -70,6 +70,7 @@
 					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
 			}
 			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
+			echo '<!-- ' . $urlData['host'] . '-->';
 		endif;
 	?>
 
