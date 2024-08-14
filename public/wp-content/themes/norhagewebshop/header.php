@@ -59,13 +59,13 @@
 		$urlData = parse_url('https://'.$_SERVER["HTTP_HOST"]);
 		if(isset($urlData['host'])):
 			switch($urlData['host']){
-				case 'de':
+				case 'norhage.de':
 					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
 					break;
-				case 'se':
+				case 'norhage.se':
 					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
 					break;
-				case 'no':
+				case 'norhage.no':
 				default:
 					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
 			}
