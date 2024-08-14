@@ -623,6 +623,27 @@ add_filter( 'woocommerce_order_item_name', 'norhage_order_item_name', 10, 2 );
 
 
 
+
+/**
+ * Fix shipping tax.
+ * For some reason, in the non-default currencies, the shipping tax was not calculated
+ * this filter calculates and adds these taxes.
+ * 
+ * See also: WOOMULTI_CURRENCY_Frontend_Shipping->woocommerce_package_rates() where it goes wrong
+ * 
+ * */
+add_filter( 'woocommerce_package_rates', 'norhage_woocommerce_package_rates', 10, 2 );
+function norhage_woocommerce_package_rates($methods, $package){
+	foreach($methods as $key => $method){
+		if ( !count( $method->get_taxes() ) ) {
+			$taxes = WC_Tax::calc_shipping_tax( $method->get_cost(), WC_Tax::get_shipping_tax_rates() );
+			$methods[$key]->set_taxes( $taxes );
+		}
+	}
+
+	return $methods;
+}
+
 /**
  * Filters dealing with multi-currency
  * */
@@ -1033,7 +1054,6 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 
     return $available_gateways;
 }
-
 
 /*
 // CORS HOT FIX BY NB:
