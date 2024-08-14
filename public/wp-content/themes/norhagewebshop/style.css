@@ -2889,6 +2889,11 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 	padding: 0 1em;
 }
 
+/* bevestigingspagina */
+.woocommerce.alignwide .woocommerce-order{
+	margin-right: 2em;
+}
+
 
 
 /* product listing on category pages */
