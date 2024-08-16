@@ -401,7 +401,7 @@ function norhage_woocommerce_add_to_cart_validation($passed, $product_id, $quant
 		if($parent_id = wp_get_post_parent_id($product_id)){
 			$product_id = $parent_id;
 		}
-		
+
 		// check width > 0, height > 0
 		$min_width = floatval(get_field('min_width', $product_id)) * 1000;
 		$max_width = floatval(get_field('max_width', $product_id)) * 1000;
@@ -460,7 +460,7 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
 
 		$item_data[] = [
-			'key'	=> __('Size', 'norhagewebshop'),
+			'key'	=> __('Size (WxH)', 'norhagewebshop'),
 			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
 		];
 		$item_data[] = [
@@ -567,7 +567,7 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 		}
 		$unit_price = (floatval($values['cutting_variables']['width']) / 1000) * (floatval($values['cutting_variables']['height']) / 1000) * $regular_price;
 		$item->add_meta_data(
-			__('Size', 'norhagewebshop'),
+			__('Size (WxH)', 'norhagewebshop'),
 			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
 		);
 		$item->add_meta_data(
@@ -606,7 +606,7 @@ function norhage_order_item_name( $product_name, $item ) {
 		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee', 'norhagewebshop'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
 		$product_name .= sprintf(
 			'<br /> %s: %smm x %smm', 
-			__('Sizes', 'norhagewebshop'), 
+			__('Size (WxH)', 'norhagewebshop'), 
 			$cart_item_data['cutting_variables']['width'],
 			$cart_item_data['cutting_variables']['height']
 		);
