@@ -397,11 +397,17 @@ function norhage_woocommerce_add_to_cart_validation($passed, $product_id, $quant
 	}
 
 	if(isset($_POST['cutting_variables'])){
+		// maybe the product is actually a variant
+		if($parent_id = wp_get_post_parent_id($product_id)){
+			$product_id = $parent_id;
+		}
+		
 		// check width > 0, height > 0
 		$min_width = floatval(get_field('min_width', $product_id)) * 1000;
 		$max_width = floatval(get_field('max_width', $product_id)) * 1000;
 		$min_height = floatval(get_field('min_height', $product_id)) * 1000;
 		$max_height = floatval(get_field('max_height', $product_id)) * 1000;
+
 		if(floatval($_POST['cutting_variables']['width']) < $min_width
 			|| floatval($_POST['cutting_variables']['width']) > $max_width
 			|| floatval($_POST['cutting_variables']['height']) < $min_height
