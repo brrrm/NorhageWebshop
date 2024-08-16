@@ -35,15 +35,21 @@
 			switch($urlData['host']){
 				case 'norhage.de':
 					$google_account_id = 'G-N859WWKZNK';
+					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
 					break;
 				case 'norhage.se':
 					$google_account_id = 'G-9GK8JL0TB9';
+					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
 					break;
 				case 'norhage.no':
 				default:
 					$google_account_id = 'G-P4KPNLV7VQ';
+					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
 			}
 			printf('<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>', $google_account_id);
+			echo "\n	"; // newline
+			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
+			echo "\n	"; // newline
 			echo '<!-- ' . $urlData['host'] . '-->';
 		endif;
 	?>
@@ -55,24 +61,6 @@
 		gtag('js', new Date());
 		gtag('config', '<?php echo $google_account_id; ?>');
 	</script>
-
-	<?php
-		if(isset($urlData['host'])):
-			switch($urlData['host']){
-				case 'norhage.de':
-					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
-					break;
-				case 'norhage.se':
-					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
-					break;
-				case 'norhage.no':
-				default:
-					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
-			}
-			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
-			echo '<!-- ' . $urlData['host'] . '-->';
-		endif;
-	?>
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
