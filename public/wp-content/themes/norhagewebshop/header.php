@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<?php $urlData = parse_url('https://'.$_SERVER["HTTP_HOST"]); ?>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -30,33 +30,33 @@
 
 	</script>
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-P4KPNLV7VQ"></script>
+	<?php
+		if(isset($urlData['host'])):
+			switch($urlData['host']){
+				case 'norhage.de':
+					$google_account_id = 'G-N859WWKZNK';
+					break;
+				case 'norhage.se':
+					$google_account_id = 'G-9GK8JL0TB9';
+					break;
+				case 'norhage.no':
+				default:
+					$google_account_id = 'G-P4KPNLV7VQ';
+			}
+			printf('<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>', $google_account_id);
+			echo '<!-- ' . $urlData['host'] . '-->';
+		endif;
+	?>
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
-		const tld = window.location.origin.split('.').pop();
 
 		gtag('js', new Date());
-		if(tld == 'no'){
-			gtag('config', 'G-P4KPNLV7VQ');
-		}else if(tld == 'de'){
-			gtag('config', 'G-N859WWKZNK');
-		}else if(tld == 'se'){
-			gtag('config', 'G-9GK8JL0TB9');
-		}else{
-			// default account
-			gtag('config', 'G-P4KPNLV7VQ');
-		}
-		
+		gtag('config', '<?php echo $google_account_id; ?>');
 	</script>
-	
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
 
 	<?php
-		$urlData = parse_url('https://'.$_SERVER["HTTP_HOST"]);
 		if(isset($urlData['host'])):
 			switch($urlData['host']){
 				case 'norhage.de':
@@ -73,11 +73,18 @@
 			echo '<!-- ' . $urlData['host'] . '-->';
 		endif;
 	?>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $google_account_id; ?>" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
 <?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'norhagewebshop' ); ?></a>
 
