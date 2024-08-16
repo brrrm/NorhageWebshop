@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 13:24+0200\n"
-"PO-Revision-Date: 2024-08-08 13:25+0200\n"
+"POT-Creation-Date: 2024-08-16 11:22+0200\n"
+"PO-Revision-Date: 2024-08-16 11:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -100,7 +100,7 @@ msgstr "Alle Vitrinen"
 msgid "Please contact us:"
 msgstr "Bitte kontaktieren Sie uns:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
 msgid "info@norhage.com"
 msgstr "info@norhage.de"
 
@@ -202,71 +202,80 @@ msgstr "aufklappen"
 msgid "Read More"
 msgstr "Weiterlesen ->"
 
-#: functions.php:375
+#: functions.php:375 functions.php:384
 msgid "Customize"
 msgstr "Anpassen"
 
-#: functions.php:418 functions.php:504
-msgid "Size"
-msgstr "Größe"
+#: functions.php:396
+msgid "Please, enter a value for width and height."
+msgstr "Bitte geben Sie einen Wert für Breite und Höhe ein."
 
-#: functions.php:422 functions.php:508
+#: functions.php:417
+#, php-format
+msgid ""
+"Width should be any size from %s to %smm and Height should be any size from "
+"%s to %smm."
+msgstr ""
+"Die Breite sollte eine beliebige Größe von %s bis %s mm und eine beliebige "
+"Größe von %s bis %s mm haben."
+
+#: functions.php:463 functions.php:570 functions.php:609
+msgid "Size (WxH)"
+msgstr "Größe (BxH)"
+
+#: functions.php:467 functions.php:574
 msgid "Unit price"
 msgstr "Einheitspreis"
 
-#: functions.php:426 functions.php:512 functions.php:540
+#: functions.php:471 functions.php:578 functions.php:606
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:543
-msgid "Sizes"
-msgstr "Größen"
-
-#: functions.php:614
+#: functions.php:701
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:621
+#: functions.php:708
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: functions.php:904 sidebar-before_shop_loop.php:20
+#: functions.php:1016 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Ausgewählte Filter"
 
-#: functions.php:913
+#: functions.php:1025
 msgid "Show value(s)"
 msgstr "Wert(e) anzeigen"
 
-#: functions.php:914
+#: functions.php:1026
 msgid "Hide value(s)"
 msgstr "Wert(e) ausblenden"
 
-#: functions.php:915
+#: functions.php:1027
 msgid "Unselect all"
 msgstr "Alles abwählen"
 
-#: functions.php:916
+#: functions.php:1028
 msgid "Nothing is selected"
 msgstr "Nichts ist ausgewählt"
 
-#: functions.php:917
+#: functions.php:1029
 msgid "products"
 msgstr "Produkte"
 
-#: header.php:52
+#: header.php:82
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: header.php:113
+#: header.php:143
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: header.php:117
+#: header.php:147
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:135
+#: header.php:165
 msgid "Contact us today"
 msgstr "Kontaktieren Sie uns noch heute"
 
@@ -495,9 +504,17 @@ msgstr "Zusätzliche Optionen auswählen"
 msgid "View"
 msgstr "Anzeigen"
 
+#: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
 msgid "Cutting fee is included in the price."
 msgstr "Schneidegebühr ist im Preis inbegriffen."
+
+#: woocommerce/single-product/add-to-cart/variation.php:32
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+"Dieses Produkt ist leider nicht verfügbar. Bitte wählen Sie eine andere "
+"Kombination."
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -510,6 +527,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Size"
+#~ msgstr "Größe"
+
+#~ msgid "Sizes"
+#~ msgstr "Größen"
 
 #~ msgid "Price per m<sup>2</sup>"
 #~ msgstr "Preis pro m<sup>2</sup>"

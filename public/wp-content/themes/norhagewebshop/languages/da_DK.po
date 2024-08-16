@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 13:25+0200\n"
-"PO-Revision-Date: 2024-08-08 13:25+0200\n"
+"POT-Creation-Date: 2024-08-16 11:22+0200\n"
+"PO-Revision-Date: 2024-08-16 11:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
@@ -96,7 +96,7 @@ msgstr "Alle montrer"
 msgid "Please contact us:"
 msgstr "Kontakt os venligst:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
 msgid "info@norhage.com"
 msgstr "info@norhage.dk"
 
@@ -194,71 +194,80 @@ msgstr "udvide"
 msgid "Read More"
 msgstr "Læs mere"
 
-#: functions.php:375
+#: functions.php:375 functions.php:384
 msgid "Customize"
 msgstr "Tilpas"
 
-#: functions.php:418 functions.php:504
-msgid "Size"
-msgstr "Størrelse"
+#: functions.php:396
+msgid "Please, enter a value for width and height."
+msgstr "Indtast venligst en værdi for bredde og højde."
 
-#: functions.php:422 functions.php:508
+#: functions.php:417
+#, php-format
+msgid ""
+"Width should be any size from %s to %smm and Height should be any size from "
+"%s to %smm."
+msgstr ""
+"Bredden skal være enhver størrelse fra %s til %s mm, og højden skal være "
+"enhver størrelse fra %s til %smm."
+
+#: functions.php:463 functions.php:570 functions.php:609
+msgid "Size (WxH)"
+msgstr "Størrelse (BxH)"
+
+#: functions.php:467 functions.php:574
 msgid "Unit price"
 msgstr "Enheds pris"
 
-#: functions.php:426 functions.php:512 functions.php:540
+#: functions.php:471 functions.php:578 functions.php:606
 msgid "Cutting fee"
 msgstr "Nedsættelse af gebyr"
 
-#: functions.php:543
-msgid "Sizes"
-msgstr "Størrelser"
-
-#: functions.php:614
+#: functions.php:701
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:621
+#: functions.php:708
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på kategorioversigtssiden."
 
-#: functions.php:904 sidebar-before_shop_loop.php:20
+#: functions.php:1016 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valgte filtre"
 
-#: functions.php:913
+#: functions.php:1025
 msgid "Show value(s)"
 msgstr "Vis værdi(er)"
 
-#: functions.php:914
+#: functions.php:1026
 msgid "Hide value(s)"
 msgstr "Skjul værdi(er)"
 
-#: functions.php:915
+#: functions.php:1027
 msgid "Unselect all"
 msgstr "Fravælg alle"
 
-#: functions.php:916
+#: functions.php:1028
 msgid "Nothing is selected"
 msgstr "Intet er valgt"
 
-#: functions.php:917
+#: functions.php:1029
 msgid "products"
 msgstr "produkter"
 
-#: header.php:52
+#: header.php:82
 msgid "Skip to content"
 msgstr "Fortsæt til indhold"
 
-#: header.php:113
+#: header.php:143
 msgid "Primary Menu"
 msgstr "Primær Menu"
 
-#: header.php:117
+#: header.php:147
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:135
+#: header.php:165
 msgid "Contact us today"
 msgstr "Kontakt os i dag"
 
@@ -484,9 +493,17 @@ msgstr "Vælg ekstra indstillinger"
 msgid "View"
 msgstr "Vis"
 
+#: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
 msgid "Cutting fee is included in the price."
 msgstr "Klippegebyr er inkluderet i prisen."
+
+#: woocommerce/single-product/add-to-cart/variation.php:32
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+"Beklager, dette produkt er ikke tilgængeligt. Vælg venligst en anden "
+"kombination."
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -499,6 +516,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Size"
+#~ msgstr "Størrelse"
+
+#~ msgid "Sizes"
+#~ msgstr "Størrelser"
 
 #~ msgid "Price per m<sup>2</sup>"
 #~ msgstr "Pris pr. m<sup>2</sup>"

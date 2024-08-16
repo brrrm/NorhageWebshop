@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 13:24+0200\n"
-"PO-Revision-Date: 2024-08-08 13:24+0200\n"
+"POT-Creation-Date: 2024-08-16 11:21+0200\n"
+"PO-Revision-Date: 2024-08-16 11:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -96,7 +96,7 @@ msgstr "Kaikki vitriinit"
 msgid "Please contact us:"
 msgstr "Ota yhteyttä:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
 msgid "info@norhage.com"
 msgstr "info@norhage.fi"
 
@@ -194,71 +194,80 @@ msgstr "laajentaa"
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:375
+#: functions.php:375 functions.php:384
 msgid "Customize"
 msgstr "Mukauta"
 
-#: functions.php:418 functions.php:504
-msgid "Size"
-msgstr "Koko"
+#: functions.php:396
+msgid "Please, enter a value for width and height."
+msgstr "Anna arvo leveydelle ja korkeudelle."
 
-#: functions.php:422 functions.php:508
+#: functions.php:417
+#, php-format
+msgid ""
+"Width should be any size from %s to %smm and Height should be any size from "
+"%s to %smm."
+msgstr ""
+"Leveyden tulee olla minkä tahansa kokoinen %s - %s mm ja korkeuden tulee "
+"olla minkä tahansa kokoinen %s - %smm."
+
+#: functions.php:463 functions.php:570 functions.php:609
+msgid "Size (WxH)"
+msgstr "Koko (LxK)"
+
+#: functions.php:467 functions.php:574
 msgid "Unit price"
 msgstr "Yksikköhinta"
 
-#: functions.php:426 functions.php:512 functions.php:540
+#: functions.php:471 functions.php:578 functions.php:606
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:543
-msgid "Sizes"
-msgstr "Koot"
-
-#: functions.php:614
+#: functions.php:701
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:621
+#: functions.php:708
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:904 sidebar-before_shop_loop.php:20
+#: functions.php:1016 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:913
+#: functions.php:1025
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:914
+#: functions.php:1026
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:915
+#: functions.php:1027
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:916
+#: functions.php:1028
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:917
+#: functions.php:1029
 msgid "products"
 msgstr "tuotteet"
 
-#: header.php:52
+#: header.php:82
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: header.php:113
+#: header.php:143
 msgid "Primary Menu"
 msgstr "Päävalikko"
 
-#: header.php:117
+#: header.php:147
 msgid "Navigation"
 msgstr "Navigaatio"
 
-#: header.php:135
+#: header.php:165
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
 
@@ -483,9 +492,16 @@ msgstr "Valitse lisäasetukset"
 msgid "View"
 msgstr "Näytä"
 
+#: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
 msgid "Cutting fee is included in the price."
 msgstr "Leikkuumaksu sisältyy hintaan."
+
+#: woocommerce/single-product/add-to-cart/variation.php:32
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+"Pahoittelemme, tämä palvelu ei ole saatavilla. Valitse toinen yhdistelmä."
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -498,6 +514,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Size"
+#~ msgstr "Koko"
+
+#~ msgid "Sizes"
+#~ msgstr "Koot"
 
 #~ msgid "Price per m<sup>2</sup>"
 #~ msgstr "Hinta per m<sup>2</sup>"

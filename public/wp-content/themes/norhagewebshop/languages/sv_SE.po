@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-08 13:22+0200\n"
-"PO-Revision-Date: 2024-08-08 13:23+0200\n"
+"POT-Creation-Date: 2024-08-16 11:20+0200\n"
+"PO-Revision-Date: 2024-08-16 11:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -96,7 +96,7 @@ msgstr "Alla montrar"
 msgid "Please contact us:"
 msgstr "Kontakta oss gärna:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:136
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
 msgid "info@norhage.com"
 msgstr "info@norhage.se"
 
@@ -198,71 +198,80 @@ msgstr "expandera"
 msgid "Read More"
 msgstr "Läs mer ->"
 
-#: functions.php:375
+#: functions.php:375 functions.php:384
 msgid "Customize"
 msgstr "Anpassa"
 
-#: functions.php:418 functions.php:504
-msgid "Size"
-msgstr "Storlek"
+#: functions.php:396
+msgid "Please, enter a value for width and height."
+msgstr "Ange ett värde för bredd och höjd."
 
-#: functions.php:422 functions.php:508
+#: functions.php:417
+#, php-format
+msgid ""
+"Width should be any size from %s to %smm and Height should be any size from "
+"%s to %smm."
+msgstr ""
+"Bredden ska vara vilken storlek som helst från %s till %s mm och höjden ska "
+"vara vilken storlek som helst från %s till %s mm."
+
+#: functions.php:463 functions.php:570 functions.php:609
+msgid "Size (WxH)"
+msgstr "Storlek (BxH)"
+
+#: functions.php:467 functions.php:574
 msgid "Unit price"
 msgstr "Enhetspris"
 
-#: functions.php:426 functions.php:512 functions.php:540
+#: functions.php:471 functions.php:578 functions.php:606
 msgid "Cutting fee"
 msgstr "Avgift för sänkning"
 
-#: functions.php:543
-msgid "Sizes"
-msgstr "Storlekar"
-
-#: functions.php:614
+#: functions.php:701
 msgid "Description"
 msgstr "Beskrivning"
 
-#: functions.php:621
+#: functions.php:708
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivningen visas på kategoriöversiktssidan."
 
-#: functions.php:904 sidebar-before_shop_loop.php:20
+#: functions.php:1016 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valda filter"
 
-#: functions.php:913
+#: functions.php:1025
 msgid "Show value(s)"
 msgstr "Visa värde(n)"
 
-#: functions.php:914
+#: functions.php:1026
 msgid "Hide value(s)"
 msgstr "Dölj värde(n)"
 
-#: functions.php:915
+#: functions.php:1027
 msgid "Unselect all"
 msgstr "Avmarkera alla"
 
-#: functions.php:916
+#: functions.php:1028
 msgid "Nothing is selected"
 msgstr "Ingenting är markerat"
 
-#: functions.php:917
+#: functions.php:1029
 msgid "products"
 msgstr "produkter"
 
-#: header.php:52
+#: header.php:82
 msgid "Skip to content"
 msgstr "Hoppa till innehåll"
 
-#: header.php:113
+#: header.php:143
 msgid "Primary Menu"
 msgstr "Primär meny"
 
-#: header.php:117
+#: header.php:147
 msgid "Navigation"
 msgstr "Navigering"
 
-#: header.php:135
+#: header.php:165
 msgid "Contact us today"
 msgstr "Kontakta oss idag"
 
@@ -488,9 +497,16 @@ msgstr "Välj extra alternativ"
 msgid "View"
 msgstr "Visa"
 
+#: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
 msgid "Cutting fee is included in the price."
 msgstr "Skäravgift är inkluderad i priset."
+
+#: woocommerce/single-product/add-to-cart/variation.php:32
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+"Den här produkten är inte tillgänglig, eller ligger redan i din varukorg."
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
@@ -503,6 +519,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Size"
+#~ msgstr "Storlek"
+
+#~ msgid "Sizes"
+#~ msgstr "Storlekar"
 
 #~ msgid "Price per m<sup>2</sup>"
 #~ msgstr "Pris per m<sup>2</sup>"
