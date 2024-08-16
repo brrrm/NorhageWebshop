@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-16 11:20+0200\n"
+"POT-Creation-Date: 2024-08-16 11:30+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -207,47 +207,51 @@ msgid ""
 "from %s to %smm."
 msgstr ""
 
-#: functions.php:463 functions.php:570 functions.php:609
-msgid "Size (WxH)"
+#: functions.php:463 functions.php:574 functions.php:617
+msgid "Width"
 msgstr ""
 
-#: functions.php:467 functions.php:574
+#: functions.php:467 functions.php:578 functions.php:619
+msgid "Height"
+msgstr ""
+
+#: functions.php:471 functions.php:582
 msgid "Unit price"
 msgstr ""
 
-#: functions.php:471 functions.php:578 functions.php:606
+#: functions.php:475 functions.php:586 functions.php:614
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:701
+#: functions.php:710
 msgid "Description"
 msgstr ""
 
-#: functions.php:708
+#: functions.php:717
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:1016 sidebar-before_shop_loop.php:20
+#: functions.php:1025 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr ""
 
-#: functions.php:1025
+#: functions.php:1034
 msgid "Show value(s)"
 msgstr ""
 
-#: functions.php:1026
+#: functions.php:1035
 msgid "Hide value(s)"
 msgstr ""
 
-#: functions.php:1027
+#: functions.php:1036
 msgid "Unselect all"
 msgstr ""
 
-#: functions.php:1028
+#: functions.php:1037
 msgid "Nothing is selected"
 msgstr ""
 
-#: functions.php:1029
+#: functions.php:1038
 msgid "products"
 msgstr ""
 

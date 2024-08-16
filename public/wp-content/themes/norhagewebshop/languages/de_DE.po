@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-16 11:22+0200\n"
-"PO-Revision-Date: 2024-08-16 11:22+0200\n"
+"POT-Creation-Date: 2024-08-16 11:31+0200\n"
+"PO-Revision-Date: 2024-08-16 11:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -219,47 +219,51 @@ msgstr ""
 "Die Breite sollte eine beliebige Größe von %s bis %s mm und eine beliebige "
 "Größe von %s bis %s mm haben."
 
-#: functions.php:463 functions.php:570 functions.php:609
-msgid "Size (WxH)"
-msgstr "Größe (BxH)"
+#: functions.php:463 functions.php:574 functions.php:617
+msgid "Width"
+msgstr "Breite"
 
-#: functions.php:467 functions.php:574
+#: functions.php:467 functions.php:578 functions.php:619
+msgid "Height"
+msgstr "Höhe"
+
+#: functions.php:471 functions.php:582
 msgid "Unit price"
 msgstr "Einheitspreis"
 
-#: functions.php:471 functions.php:578 functions.php:606
+#: functions.php:475 functions.php:586 functions.php:614
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:701
+#: functions.php:710
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:708
+#: functions.php:717
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: functions.php:1016 sidebar-before_shop_loop.php:20
+#: functions.php:1025 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Ausgewählte Filter"
 
-#: functions.php:1025
+#: functions.php:1034
 msgid "Show value(s)"
 msgstr "Wert(e) anzeigen"
 
-#: functions.php:1026
+#: functions.php:1035
 msgid "Hide value(s)"
 msgstr "Wert(e) ausblenden"
 
-#: functions.php:1027
+#: functions.php:1036
 msgid "Unselect all"
 msgstr "Alles abwählen"
 
-#: functions.php:1028
+#: functions.php:1037
 msgid "Nothing is selected"
 msgstr "Nichts ist ausgewählt"
 
-#: functions.php:1029
+#: functions.php:1038
 msgid "products"
 msgstr "Produkte"
 
@@ -401,7 +405,7 @@ msgstr "Summe"
 #: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
 #: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
 msgid "Subtotal"
-msgstr "Zwischensumme "
+msgstr "Zwischensumme"
 
 #: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
 msgid "Shipping"
@@ -527,6 +531,9 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "Size (WxH)"
+#~ msgstr "Größe (BxH)"
 
 #~ msgid "Size"
 #~ msgstr "Größe"

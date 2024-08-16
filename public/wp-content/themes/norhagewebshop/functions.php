@@ -460,8 +460,12 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
 
 		$item_data[] = [
-			'key'	=> __('Size (WxH)', 'norhagewebshop'),
-			'value'	=> $cart_item_data['cutting_variables']['width'] . 'mm x ' . $cart_item_data['cutting_variables']['height'] . 'mm'
+			'key'	=> __('Width', 'norhagewebshop'),
+			'value'	=> $cart_item_data['cutting_variables']['width'] . ' mm'
+		];
+		$item_data[] = [
+			'key'	=> __('Height', 'norhagewebshop'),
+			'value'	=> $cart_item_data['cutting_variables']['height'] . ' mm'
 		];
 		$item_data[] = [
 			'key'	=> __('Unit price', 'norhagewebshop'),
@@ -567,8 +571,12 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 		}
 		$unit_price = (floatval($values['cutting_variables']['width']) / 1000) * (floatval($values['cutting_variables']['height']) / 1000) * $regular_price;
 		$item->add_meta_data(
-			__('Size (WxH)', 'norhagewebshop'),
-			$values['cutting_variables']['width'] . 'mm x ' . $values['cutting_variables']['height'] . 'mm'
+			__('Width', 'norhagewebshop'),
+			$values['cutting_variables']['width'] . ' mm'
+		);
+		$item->add_meta_data(
+			__('Height', 'norhagewebshop'),
+			$values['cutting_variables']['height'] . ' mm'
 		);
 		$item->add_meta_data(
 			__('Unit price', 'norhagewebshop'),
@@ -605,9 +613,10 @@ function norhage_order_item_name( $product_name, $item ) {
 	if(isset($item['cutting_variables'])){
 		$product_name .= sprintf('<br /> %s: %s', __('Cutting fee', 'norhagewebshop'), wc_price($cart_item_data['cutting_variables']['cutting_fee']));
 		$product_name .= sprintf(
-			'<br /> %s: %smm x %smm', 
-			__('Size (WxH)', 'norhagewebshop'), 
+			'<br /> %s: %smm <br /> %s: %smm', 
+			__('Width', 'norhagewebshop'), 
 			$cart_item_data['cutting_variables']['width'],
+			__('Height', 'norhagewebshop'), 
 			$cart_item_data['cutting_variables']['height']
 		);
 	}
