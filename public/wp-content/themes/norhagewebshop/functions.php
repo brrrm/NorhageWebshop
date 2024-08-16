@@ -571,20 +571,20 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 		}
 		$unit_price = (floatval($values['cutting_variables']['width']) / 1000) * (floatval($values['cutting_variables']['height']) / 1000) * $regular_price;
 		$item->add_meta_data(
-			__('Width', 'norhagewebshop'),
+			'cutting_width',
 			$values['cutting_variables']['width'] . ' mm'
 		);
 		$item->add_meta_data(
-			__('Height', 'norhagewebshop'),
+			'cutting_height',
 			$values['cutting_variables']['height'] . ' mm'
 		);
 		$item->add_meta_data(
-			__('Unit price', 'norhagewebshop'),
-			wc_price($unit_price)
+			'unit_price',
+			$unit_price
 		);
 		$item->add_meta_data(
-			__('Cutting fee', 'norhagewebshop'),
-			wc_price($values['cutting_variables']['cutting_fee'])
+			'cutting_fee',
+			$values['cutting_variables']['cutting_fee']
 		);
 	}
 
@@ -603,6 +603,33 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 	}
 }
 add_action( 'woocommerce_checkout_create_order_line_item', 'norhage_checkout_create_order_line_item', 10, 4 );
+
+// convert price values to display prices
+add_filter( 'woocommerce_order_item_get_formatted_meta_data', 'norhage_woocommerce_is_attribute_in_product_name', 10, 1);
+function norhage_woocommerce_is_attribute_in_product_name($formatted_meta){
+	foreach($formatted_meta as $key => $meta){
+		if(in_array($meta->key, ['cutting_fee', 'unit_price']) ){
+			$formatted_meta[$key]->display_value = '<p>' . wc_price(strip_tags($formatted_meta[$key]->display_value)) . '</p>';
+		}
+	}
+	return $formatted_meta;
+}
+
+// add translations
+add_filter( 'woocommerce_order_item_display_meta_key', 'norhage_woocommerce_order_item_display_meta_key', 10, 3);
+function norhage_woocommerce_order_item_display_meta_key($display_key, $meta, $order_item ){
+	switch($display_key){
+		case 'cutting_width':
+			return __('Width', 'norhagewebshop');
+		case 'cutting_height':
+			return __('Height', 'norhagewebshop');
+		case 'cutting_fee':
+			return __('Cutting fee', 'norhagewebshop');
+		case 'unit_price':
+			return __('Unit price', 'norhagewebshop');
+	}
+	return $display_key;
+}
 
 
 /**
