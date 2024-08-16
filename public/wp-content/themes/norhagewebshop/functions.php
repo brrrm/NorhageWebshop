@@ -721,6 +721,11 @@ function add_rich_category_description($tag) {
 
 }
 
+/**
+ * Hide the sale flash
+ * */
+add_filter('woocommerce_sale_flash', '__return_null');
+
 
 /**
  * gets the tumbnail of a (product) category
