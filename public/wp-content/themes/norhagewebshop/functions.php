@@ -1104,18 +1104,12 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 
 add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 20, 1 );
 function norhage_svea_change_push_uri($data){
-	error_log('pll_home_url(): ' . pll_home_url() . ' - ' . home_url( '/' ));
 	if ( ! empty( $data['MerchantSettings'] ) ) {
-		error_log('MerchantSettings: ' . print_r($data['MerchantSettings'], true));
-		
 		$home_url = 'https://norhage.no/';
 		$data['MerchantSettings']['PushUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['PushUri'] );
 		$data['MerchantSettings']['CheckoutValidationCallBackUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['CheckoutValidationCallBackUri'] );
 		$data['MerchantSettings']['WebhookUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['WebhookUri'] );
-	}else{
-		error_log('empty( $data[MerchantSettings] )');
 	}
-	error_log('MerchantSettings before return: ' . print_r($data['MerchantSettings'], true));
 	return $data;
 }
 
