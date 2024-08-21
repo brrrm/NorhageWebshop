@@ -1102,7 +1102,7 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
     return $available_gateways;
 }
 
-add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 20, 1 );
+add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 10, 1 );
 function norhage_svea_change_push_uri($data){
 	error_log('pll_home_url(): ' . pll_home_url());
 	if ( ! empty( $data['MerchantSettings'] ) ) {
@@ -1118,6 +1118,7 @@ function norhage_svea_change_push_uri($data){
 
 	return $data;
 }
+
 
 /*
 // CORS HOT FIX BY NB:
