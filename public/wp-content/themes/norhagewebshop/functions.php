@@ -1000,7 +1000,10 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 	if(!function_exists('pll_get_post_language')){
 		return $recipient;
 	}
-
+	if(!isset($email->object) || !method_exists($email->object, 'get_id')){
+		return $recipient;
+	}
+	
 	$lang = pll_get_post_language($email->object->get_id());
 	switch($lang){
 		case 'sv':
@@ -1102,6 +1105,9 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
     return $available_gateways;
 }
 
+/**
+ * fix SVEA bug where the wrong domain is used for webhook uri
+ * */
 add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 20, 1 );
 function norhage_svea_change_push_uri($data){
 	if ( ! empty( $data['MerchantSettings'] ) ) {
