@@ -1109,9 +1109,9 @@ function norhage_svea_change_push_uri($data){
 		error_log('MerchantSettings: ' . print_r($data['MerchantSettings'], true));
 		
 		$home_url = 'https://norhage.no/';
-		$data['MerchantSettings']['PushUri'] = str_replace( pll_home_url(), $home_url, $data['MerchantSettings']['PushUri'] );
-		$data['MerchantSettings']['CheckoutValidationCallBackUri'] = str_replace( pll_home_url(), $home_url, $data['MerchantSettings']['CheckoutValidationCallBackUri'] );
-		$data['MerchantSettings']['WebhookUri'] = str_replace( pll_home_url(), $home_url, $data['MerchantSettings']['WebhookUri'] );
+		$data['MerchantSettings']['PushUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['PushUri'] );
+		$data['MerchantSettings']['CheckoutValidationCallBackUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['CheckoutValidationCallBackUri'] );
+		$data['MerchantSettings']['WebhookUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['WebhookUri'] );
 	}else{
 		error_log('empty( $data[MerchantSettings] )');
 	}
