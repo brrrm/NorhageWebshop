@@ -1112,6 +1112,8 @@ function norhage_svea_change_push_uri($data){
 		//$data['MerchantSettings']['PushUri'] = str_replace( pll_home_url(), home_url( '/' ), $data['MerchantSettings']['PushUri'] );
 		//$data['MerchantSettings']['CheckoutValidationCallBackUri'] = str_replace( pll_home_url(), home_url( '/' ), $data['MerchantSettings']['CheckoutValidationCallBackUri'] );
 		//$data['MerchantSettings']['WebhookUri'] = str_replace( pll_home_url(), home_url( '/' ), $data['MerchantSettings']['WebhookUri'] );
+	}else{
+		error_log('empty( $data[MerchantSettings] )');
 	}
 
 	return $data;
