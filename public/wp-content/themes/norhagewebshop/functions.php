@@ -1103,6 +1103,7 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 }
 
 add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 1, 1 );
+add_filter( 'woocommerce_sco_create_order', 'norhage_svea_change_push_uri', 20, 1 );
 function norhage_svea_change_push_uri($data){
 	error_log('pll_home_url(): ' . pll_home_url() . ' - ' . home_url( '/' ));
 	if ( ! empty( $data['MerchantSettings'] ) ) {
