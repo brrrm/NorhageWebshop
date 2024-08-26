@@ -214,8 +214,8 @@ add_filter("wp_nav_menu_objects",'norhage_wp_nav_menu_objects_start_in',10,2);
 function norhagewebshop_scripts() {
 	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.css', [], _G_VERSION );
 	wp_enqueue_style( 'norhagewebshop-style', get_stylesheet_uri(), [], _G_VERSION );
-	wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', ['jquery'], _G_VERSION, ['in_footer' => true] );
-	wp_enqueue_script('norhagewebshop-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true]);
+	wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', ['jquery'], _G_VERSION, ['in_footer' => true, 'strategy' => 'defer'] );
+	wp_enqueue_script('norhagewebshop-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true, 'strategy' => 'defer']);
 	/*$myThemeParams = [
 		'test1'	=> 'lalala'
 	];

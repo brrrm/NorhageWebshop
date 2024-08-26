@@ -29,7 +29,7 @@ add_action( 'walker_nav_menu_start_el', 'norhage_menu_add_cart', 10, 4 );
  * Enqueue scripts and styles.
  */
 function ajaxcart_scripts() {
-	wp_enqueue_script('norhagewebshop-ajaxcart', get_stylesheet_directory_uri() . '/js/ajax-cart.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true]);
+	wp_enqueue_script('norhagewebshop-ajaxcart', get_stylesheet_directory_uri() . '/js/ajax-cart.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true, 'strategy' => 'defer']);
 }
 add_action( 'wp_enqueue_scripts', 'ajaxcart_scripts' );
 
