@@ -1008,16 +1008,16 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 	$lang = pll_get_post_language($email->object->get_id());
 	switch($lang){
 		case 'sv':
-			return 'info@norhage.se';
+			return 'info@norhage.se, bramdeleeuw@gmail.com';
 		case 'fi':
 			return 'info@norhage.fi';
 		case 'de':
-			return 'info@norhage.de';
+			return 'info@norhage.de, bramdeleeuw@gmail.com';
 		case 'da':
 			return 'info@norhage.dk';
 		case 'nb':
 		default:
-			return 'sales@norhage.no';
+			return 'sales@norhage.no, bramdeleeuw@gmail.com';
 	}
 }
 
