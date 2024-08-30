@@ -14,7 +14,7 @@
 !/public/wp-content/themes/norhageindustri
 !/public/wp-content/plugins
 /public/wp-content/plugins/*
-!/public/wp-content/plugins/garbo*
+!/public/wp-content/plugins/garbo-product-feed*
 !/public/wp-content/themes/norhage*
 
 # Configuration
