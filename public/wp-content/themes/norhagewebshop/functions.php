@@ -914,8 +914,8 @@ remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'form_ads' ) );
  * EMAIL CUSTOMIZATIONS
  * */
 // - fix email reply-to addresses
-add_filter( 'woocommerce_email_headers', 'norhage_woocommerce_email_headers', 10, 4 );
-function norhage_woocommerce_email_headers($header, $subject, $order, $email){
+//add_filter( 'woocommerce_email_headers', 'norhage_woocommerce_email_headers', 10, 4 );
+/*function norhage_woocommerce_email_headers($header, $subject, $order, $email){
 	if(!function_exists('pll_get_post_language')){
 		return $header;
 	}
@@ -945,7 +945,7 @@ function norhage_woocommerce_email_headers($header, $subject, $order, $email){
 	$header .= 'Reply-to: ' . utf8_decode($reply_to_name) . ' <' . sanitize_email($reply_to_email) . ">\r\n";
 
 	return $header;
-}
+}*/
 
 // - fix email domain
 add_filter( 'woocommerce_email_from_name', 'norhage_woocommerce_email_from_name', 10, 3);
