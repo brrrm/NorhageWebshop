@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d27d2ec0cbe41186c9ecaa4bfc3ef75",
+    "content-hash": "258ec9b21b840245b41dcad46024322b",
     "packages": [
         {
             "name": "composer/installers",
@@ -550,24 +550,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/woocommerce-ajax-filters/"
-        },
-        {
-            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
-            "version": "8.5.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
-                "reference": "tags/8.5.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.8.5.1.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         },
         {
             "name": "wpackagist-plugin/woocommerce-pdf-invoices-packing-slips",
