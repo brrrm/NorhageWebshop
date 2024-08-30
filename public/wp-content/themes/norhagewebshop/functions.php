@@ -485,8 +485,8 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 			}
 			$product = wc_get_product($product_id);
 			$item_data[] = [
-				'key' => $quantity . ' x ',
-				'value' => $product->get_name() . ' (' . wc_price($product->get_price()) . ')'
+				'key'	=> __('Addon', 'norhagewebshop'),
+				'value'	=> $quantity . ' x ' . $product->get_name() . ' (' . wc_price($product->get_price()) . ')',
 			];
 		}
 	}
@@ -595,9 +595,9 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 			}
 			$product = wc_get_product( $product_id );
 			$item->add_meta_data(
-				$quantity . ' x ',
-				$product->get_name() . ' (' . wc_price($product->get_price()) . ')',
-				true
+				'addon',
+				$quantity . ' x ' . $product->get_name() . ' (' . strip_tags((wc_price($product->get_price()))) . ')',
+				false
 			);
 		}
 	}
@@ -627,6 +627,8 @@ function norhage_woocommerce_order_item_display_meta_key($display_key, $meta, $o
 			return __('Cutting fee', 'norhagewebshop');
 		case 'unit_price':
 			return __('Unit price', 'norhagewebshop');
+		case 'addon':
+			return __('Addon', 'norhagewebshop');
 	}
 	return $display_key;
 }
