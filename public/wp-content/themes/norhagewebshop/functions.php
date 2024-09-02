@@ -915,40 +915,6 @@ remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'form_ads' ) );
 /**
  * EMAIL CUSTOMIZATIONS
  * */
-// - fix email reply-to addresses
-//add_filter( 'woocommerce_email_headers', 'norhage_woocommerce_email_headers', 10, 4 );
-/*function norhage_woocommerce_email_headers($header, $subject, $order, $email){
-	if(!function_exists('pll_get_post_language')){
-		return $header;
-	}
-
-	$lang = pll_get_post_language($order->get_id());
-	switch($lang){
-		case 'sv':
-			$tld = 'se';
-			break;
-		case 'fi':
-			$tld = 'fi';
-			break;
-		case 'de':
-			$tld = 'de';
-			break;
-		case 'da':
-			$tld = 'dk';
-			break;
-		case 'nb':
-		default:
-			$tld = 'no';
-	}
-	$reply_to_name  = 'Norhage.' . $tld;
-	$reply_to_email = 'info@norhage.' . $tld;
-
-	$header  = 'Content-Type: ' . $email->get_content_type() . "\r\n";
-	$header .= 'Reply-to: ' . utf8_decode($reply_to_name) . ' <' . sanitize_email($reply_to_email) . ">\r\n";
-
-	return $header;
-}*/
-
 // - fix email domain
 add_filter( 'woocommerce_email_from_name', 'norhage_woocommerce_email_from_name', 10, 3);
 function norhage_woocommerce_email_from_name($default_from_name, $email, $from_name){
