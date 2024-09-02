@@ -1089,6 +1089,19 @@ function norhage_svea_change_push_uri($data){
 }
 
 
+add_action( 'phpmailer_init', 'norhage_phpmailer_init' );
+function norhage_phpmailer_init($phpmailer){
+	//array( &$phpmailer )
+	error_log($phpmailer->Host);
+	error_log($phpmailer->Hostname);
+	//$phpmailer->Hostname
+	//$phpmailer->Sender = 'sales@norhage.no';
+	//$phpmailer->SetFrom('sales@norhage.no', 'Norhage.no', FALSE);
+	error_log(print_r($phpmailer, true));
+	return;
+}
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
