@@ -811,6 +811,9 @@ if(function_exists('pll_get_post_translations')){
 	}
 }
 
+/**
+ * Sync prices during import
+ * */
 add_action( 'woocommerce_product_import_inserted_product_object', 'norhage_woocommerce_product_import_inserted_product_object', 10, 2);
 function norhage_woocommerce_product_import_inserted_product_object($object, $data ){
 	$post_id = $object->get_id();
@@ -819,7 +822,6 @@ function norhage_woocommerce_product_import_inserted_product_object($object, $da
 	foreach($translations as $lang => $id){
 		
 		if($id == $post_id){
-			error_log('continue');
 			continue;
 		}
 
