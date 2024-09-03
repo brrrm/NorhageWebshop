@@ -811,6 +811,39 @@ if(function_exists('pll_get_post_translations')){
 	}
 }
 
+add_action( 'woocommerce_product_import_inserted_product_object', 'norhage_woocommerce_product_import_inserted_product_object', 10, 2);
+function norhage_woocommerce_product_import_inserted_product_object($object, $data ){
+	$post_id = $object->get_id();
+	$translations = pll_get_post_translations( $post_id );
+
+	foreach($translations as $lang => $id){
+		
+		if($id == $post_id){
+			error_log('continue');
+			continue;
+		}
+
+		$translation_product = wc_get_product( $id );
+		$needs_saving = false;
+		
+		if(!empty($data['regular_price'])){
+			$translation_product->set_regular_price($data['regular_price']);
+			$translation_product->set_price($data['regular_price']);
+			$needs_saving = true;
+		}
+		
+		if(!empty($data['sale_price'])){
+			$translation_product->set_sale_price($data['sale_price']);
+			$translation_product->set_price($data['sale_price']);
+			$needs_saving = true;
+		}
+		
+		if($needs_saving){
+			$translation_product->save();
+		}
+	}
+}
+
 
 
 
@@ -1088,16 +1121,13 @@ function norhage_svea_change_push_uri($data){
 	return $data;
 }
 
-
+/**
+ * fix spam problems where envelope-from is the account on directadmin
+ * */
 add_action( 'phpmailer_init', 'norhage_phpmailer_init' );
 function norhage_phpmailer_init($phpmailer){
-	//array( &$phpmailer )
-	error_log($phpmailer->Host);
-	error_log($phpmailer->Hostname);
-	//$phpmailer->Hostname
-	//$phpmailer->Sender = 'sales@norhage.no';
+	// https://phpmailer.github.io/PHPMailer/classes/PHPMailer-PHPMailer-PHPMailer.html#method_setFrom
 	$phpmailer->SetFrom($phpmailer->From, $phpmailer->FromName, TRUE);
-	error_log(print_r($phpmailer, true));
 	return;
 }
 
