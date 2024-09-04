@@ -229,6 +229,11 @@ add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 require get_template_directory() . '/inc/ajax-cart.php';
 
 /**
+ * Custom shipping costs calculator.
+ */
+require get_template_directory() . '/inc/calc-shipping-costs.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

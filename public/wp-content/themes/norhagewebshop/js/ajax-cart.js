@@ -121,5 +121,51 @@
 		});
 	};
 
+	
+	/**
+	 * Shipping calc stuff
+	 * */
+	$(document).on(
+		'click', 
+		'.norhage-shipping-calculator-button', 
+		toggleShippingCalculator
+	);
+
+	$( document ).on(
+		'submit',
+		'form.norhage-shipping-calculator',
+		submitShippingCalculator
+	);
+
+	function toggleShippingCalculator(e){
+		e.preventDefault()
+		$( '.norhage-shipping-calculator .shipping-calculator-form' ).slideToggle( 'slow' );
+	}
+
+	function submitShippingCalculator(e){
+		e.preventDefault();
+
+		var $form = $( e.currentTarget );
+
+		//block( $form );
+
+		// Make call to actual form post URL.
+		$.ajax( {
+			type: $form.attr( 'method' ),
+			url: $form.attr( 'action' ),
+			data: $form.serialize(),
+			dataType: 'html',
+			success: function ( response ) {
+				$('.shipping-costs-container').html(response);
+				//update_wc_div( response );
+			},
+			complete: function () {
+				//toggleShippingCalculator(e);
+				//unblock( $form );
+				//unblock( $( 'div.cart_totals' ) );
+			},
+		} );
+	}
+
 })(jQuery);
 
