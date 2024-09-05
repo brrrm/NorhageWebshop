@@ -1085,10 +1085,10 @@ header#masthead nav#site-navigation .widget_shopping_cart h2,
 	display: flex;
 }
 .woocommerce.widget_shopping_cart .total > strong{
-	flex: 4em 0 1;
+	flex: 4em 1 1;
 }
 .woocommerce.widget_shopping_cart .total > .amount{
-	flex: auto;
+	flex: auto 0 0;
 }
 .cart-popout li.cart-item .item-subtotal{
 	flex: auto 0 1;
