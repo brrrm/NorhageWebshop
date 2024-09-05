@@ -25,8 +25,7 @@
 		"wpackagist-plugin/cookie-law-info": "^3.2",
 		"wpackagist-plugin/crisp": "^0.46.0",
 		"wpackagist-plugin/wt-woocommerce-sequential-order-numbers": "^1.6",
-		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
-		"wpackagist-plugin/wp-mail-logging": "^1.12"
+		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20"
 	},
 	"repositories": [
 		{
