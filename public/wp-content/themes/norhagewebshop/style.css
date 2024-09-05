@@ -888,6 +888,12 @@ button.button.open-filters:hover{
 	transition: transform 0.3s ease-out, opacity 0.3s ease-out, left 0s linear 0.3s;
 	opacity: 0;
 	padding: 2em;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;
+}
+.widget_shopping_cart::-webkit-scrollbar,
+#filters-sidebar::-webkit-scrollbar{
+	display: none;
 }
 #filters-sidebar{
 	position: fixed;
