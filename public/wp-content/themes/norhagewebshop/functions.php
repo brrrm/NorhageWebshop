@@ -1138,6 +1138,16 @@ function norhage_phpmailer_init($phpmailer){
 	return;
 }
 
+/** 
+ * Increase Woocommerce Variation Threshold 
+ * see: https://stackoverflow.com/questions/39343244/sorry-no-products-matched-your-selection-please-choose-a-different-combination
+ * */
+function norhage_ajax_variation_threshold( $threshold, $product ){
+	$threshold = '1111';
+	return  $threshold;
+}
+add_filter( 'woocommerce_ajax_variation_threshold','norhage_ajax_variation_threshold', 10, 2 );
+
 
 /*
 // CORS HOT FIX BY NB:
