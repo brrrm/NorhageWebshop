@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-16 11:31+0200\n"
-"PO-Revision-Date: 2024-08-16 11:31+0200\n"
+"POT-Creation-Date: 2024-09-06 11:43+0200\n"
+"PO-Revision-Date: 2024-09-06 11:44+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -20,13 +20,42 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:18
-msgid "404"
-msgstr "404"
+#: 404.php:13
+msgid ""
+"It seems like the page you're trying to reach has moved or no longer exists. "
+"Our webshop recently underwent some changes, so it’s possible that the link "
+"is outdated. We apologize for the inconvenience!\n"
+"\n"
+"You can try searching for what you need, or feel free to explore other "
+"sections of our website. We're confident you'll find what you're looking "
+"for.\n"
+"\n"
+"If you still need help, please don't hesitate to contact our team. We're "
+"always here to assist you!"
+msgstr ""
+"Es scheint, dass die Seite, die Sie erreichen möchten, verschoben wurde oder "
+"nicht mehr existiert. Unser Onlineshop hat kürzlich einige Änderungen "
+"durchlaufen, daher ist es möglich, dass der Link veraltet ist. Wir "
+"entschuldigen uns für die Unannehmlichkeiten!\n"
+"\n"
+"Sie können versuchen, nach dem zu suchen, was Sie benötigen, oder erkunden "
+"Sie gerne andere Bereiche unserer Website. Wir sind sicher, dass Sie finden, "
+"wonach Sie suchen.\n"
+"\n"
+"Wenn Sie weiterhin Hilfe benötigen, zögern Sie bitte nicht, unser Team zu "
+"kontaktieren. Wir sind immer hier, um Ihnen zu helfen!"
 
-#: 404.php:20
-msgid "oh dear, we had to short on material.."
-msgstr "oh je, wir mussten an Material mangeln..."
+#: 404.php:29
+msgid "Oh no! We couldn't find the page you're looking for."
+msgstr "Oh nein! Wir konnten die Seite, die Sie suchen, nicht finden"
+
+#: 404.php:36
+msgid "Back to home"
+msgstr "Zurück zur Startseite"
+
+#: 404.php:52
+msgid "Or have a look at our greenhouses"
+msgstr "Oder werfen Sie einen Blick in unsere Gewächshäuser"
 
 #: blocks/categories-block/categoriesBlock.php:33
 msgid ""
@@ -100,7 +129,7 @@ msgstr "Alle Vitrinen"
 msgid "Please contact us:"
 msgstr "Bitte kontaktieren Sie uns:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
 msgid "info@norhage.com"
 msgstr "info@norhage.de"
 
@@ -198,19 +227,19 @@ msgstr "Ein Widget-Bereich über der Produktliste"
 msgid "expand"
 msgstr "aufklappen"
 
-#: functions.php:303
+#: functions.php:308
 msgid "Read More"
 msgstr "Weiterlesen ->"
 
-#: functions.php:375 functions.php:384
+#: functions.php:380 functions.php:389
 msgid "Customize"
 msgstr "Anpassen"
 
-#: functions.php:396
+#: functions.php:401
 msgid "Please, enter a value for width and height."
 msgstr "Bitte geben Sie einen Wert für Breite und Höhe ein."
 
-#: functions.php:417
+#: functions.php:422
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -219,67 +248,71 @@ msgstr ""
 "Die Breite sollte eine beliebige Größe von %s bis %s mm und eine beliebige "
 "Größe von %s bis %s mm haben."
 
-#: functions.php:463 functions.php:574 functions.php:617
+#: functions.php:468 functions.php:628 functions.php:651
 msgid "Width"
 msgstr "Breite"
 
-#: functions.php:467 functions.php:578 functions.php:619
+#: functions.php:472 functions.php:630 functions.php:653
 msgid "Height"
 msgstr "Höhe"
 
-#: functions.php:471 functions.php:582
+#: functions.php:476 functions.php:634
 msgid "Unit price"
 msgstr "Einheitspreis"
 
-#: functions.php:475 functions.php:586 functions.php:614
+#: functions.php:480 functions.php:632 functions.php:648
 msgid "Cutting fee"
 msgstr "Kürzungsgebühr"
 
-#: functions.php:710
+#: functions.php:493 functions.php:636
+msgid "Addon"
+msgstr "Erweiterung"
+
+#: functions.php:745
 msgid "Description"
 msgstr "Beschreibung"
 
-#: functions.php:717
+#: functions.php:752
 msgid "The description is shown on the category overview page."
 msgstr "Die Beschreibung wird auf der Kategorieübersichtsseite angezeigt."
 
-#: functions.php:1025 sidebar-before_shop_loop.php:20
+#: functions.php:1069 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Ausgewählte Filter"
 
-#: functions.php:1034
+#: functions.php:1078
 msgid "Show value(s)"
 msgstr "Wert(e) anzeigen"
 
-#: functions.php:1035
+#: functions.php:1079
 msgid "Hide value(s)"
 msgstr "Wert(e) ausblenden"
 
-#: functions.php:1036
+#: functions.php:1080
 msgid "Unselect all"
 msgstr "Alles abwählen"
 
-#: functions.php:1037
+#: functions.php:1081
 msgid "Nothing is selected"
 msgstr "Nichts ist ausgewählt"
 
-#: functions.php:1038
+#: functions.php:1082
 msgid "products"
 msgstr "Produkte"
 
-#: header.php:82
+#: header.php:77
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: header.php:143
+#: header.php:138
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
-#: header.php:147
+#: header.php:142
 msgid "Navigation"
 msgstr "Navigation"
 
-#: header.php:165
+#: header.php:160
 msgid "Contact us today"
 msgstr "Kontaktieren Sie uns noch heute"
 
@@ -294,6 +327,18 @@ msgstr "Warenkorb"
 #: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Schließen"
+
+#. translators: %d: shipping package number
+#: inc/calc-shipping-costs.php:73
+#, php-format
+msgctxt "shipping packages"
+msgid "Shipping %d"
+msgstr "Versand %d"
+
+#: inc/calc-shipping-costs.php:73 inc/calc-shipping-costs.php:86
+msgctxt "shipping packages"
+msgid "Shipping"
+msgstr "Versand (optional)"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -350,6 +395,90 @@ msgstr "Bearbeiten <span class=\"screen-reader-text\">%s</span>"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
+
+#: shipping-calculator.php:26
+msgid "Calculate shipping"
+msgstr "Versandkosten berechnen"
+
+#: shipping-calculator.php:32
+msgid "Country / region:"
+msgstr "Land / Region:"
+
+#: shipping-calculator.php:34
+msgid "Select a country / region&hellip;"
+msgstr "Wählen Sie ein Land / eine Region&hellip;"
+
+#: shipping-calculator.php:53 shipping-calculator.php:59
+#: shipping-calculator.php:72
+msgid "State / County"
+msgstr "Bundesland"
+
+#: shipping-calculator.php:58 shipping-calculator.php:71
+msgid "State / County:"
+msgstr "Land / Bundesland:"
+
+#: shipping-calculator.php:60
+msgid "Select an option&hellip;"
+msgstr "Wählen Sie eine Option&hellip;"
+
+#: shipping-calculator.php:81
+msgid "City:"
+msgstr "Stadt:"
+
+#: shipping-calculator.php:82
+msgid "City"
+msgstr "Ort"
+
+#: shipping-calculator.php:88
+msgid "Postcode / ZIP:"
+msgstr "Postleitzahl / PLZ:"
+
+#: shipping-calculator.php:89
+msgid "Postcode / ZIP"
+msgstr "Postleitzahl"
+
+#: shipping-calculator.php:93
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: shipping-costs.php:35
+#, php-format
+msgid "Shipping to %s."
+msgstr "Versand nach %s."
+
+#: shipping-costs.php:36
+msgid "Change address"
+msgstr "Adresse ändern"
+
+#: shipping-costs.php:38
+msgid "Shipping options will be updated during checkout."
+msgstr "Wir sind stets um niedrigste Versandkosten bemüht."
+
+#: shipping-costs.php:45
+msgid "Shipping costs are calculated during checkout."
+msgstr "Die Versandkosten werden während des Bezahlvorgangs berechnet."
+
+#: shipping-costs.php:47
+msgid "Enter your address to view shipping options."
+msgstr "Geben Sie Ihre Adresse ein, um die Versandoptionen anzuzeigen."
+
+#: shipping-costs.php:50
+msgid ""
+"There are no shipping options available. Please ensure that your address has "
+"been entered correctly, or contact us if you need any help."
+msgstr ""
+"Es sind keine Versandoptionen verfügbar. Bitte stellen Sie sicher, dass Ihre "
+"Adresse korrekt eingegeben wurde, oder kontaktieren Sie uns, wenn Sie Hilfe "
+"benötigen."
+
+#: shipping-costs.php:64
+#, php-format
+msgid "No shipping options were found for %s."
+msgstr "Es wurden keine Versandoptionen für %s gefunden."
+
+#: shipping-costs.php:68
+msgid "Enter a different address"
+msgstr "Geben Sie eine andere Adresse ein"
 
 #: sidebar-before_shop_loop.php:12
 msgid "Filter products"
@@ -531,6 +660,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "oh dear, we had to short on material.."
+#~ msgstr "oh je, wir mussten an Material mangeln..."
 
 #~ msgid "Size (WxH)"
 #~ msgstr "Größe (BxH)"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-16 11:30+0200\n"
+"POT-Creation-Date: 2024-09-06 11:39+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,12 +21,30 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:18
-msgid "404"
+#: 404.php:13
+msgid ""
+"It seems like the page you're trying to reach has moved or no longer "
+"exists. Our webshop recently underwent some changes, so it’s possible that "
+"the link is outdated. We apologize for the inconvenience!\n"
+"\n"
+"You can try searching for what you need, or feel free to explore other "
+"sections of our website. We're confident you'll find what you're looking "
+"for.\n"
+"\n"
+"If you still need help, please don't hesitate to contact our team. We're "
+"always here to assist you!"
 msgstr ""
 
-#: 404.php:20
-msgid "oh dear, we had to short on material.."
+#: 404.php:29
+msgid "Oh no! We couldn't find the page you're looking for."
+msgstr ""
+
+#: 404.php:36
+msgid "Back to home"
+msgstr ""
+
+#: 404.php:52
+msgid "Or have a look at our greenhouses"
 msgstr ""
 
 #: blocks/categories-block/categoriesBlock.php:33
@@ -94,7 +112,7 @@ msgstr ""
 msgid "Please contact us:"
 msgstr ""
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
 msgid "info@norhage.com"
 msgstr ""
 
@@ -188,86 +206,90 @@ msgstr ""
 msgid "expand"
 msgstr ""
 
-#: functions.php:303
+#: functions.php:308
 msgid "Read More"
 msgstr ""
 
-#: functions.php:375 functions.php:384
+#: functions.php:380 functions.php:389
 msgid "Customize"
 msgstr ""
 
-#: functions.php:396
+#: functions.php:401
 msgid "Please, enter a value for width and height."
 msgstr ""
 
-#: functions.php:417
+#: functions.php:422
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size "
 "from %s to %smm."
 msgstr ""
 
-#: functions.php:463 functions.php:574 functions.php:617
+#: functions.php:468 functions.php:628 functions.php:651
 msgid "Width"
 msgstr ""
 
-#: functions.php:467 functions.php:578 functions.php:619
+#: functions.php:472 functions.php:630 functions.php:653
 msgid "Height"
 msgstr ""
 
-#: functions.php:471 functions.php:582
+#: functions.php:476 functions.php:634
 msgid "Unit price"
 msgstr ""
 
-#: functions.php:475 functions.php:586 functions.php:614
+#: functions.php:480 functions.php:632 functions.php:648
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:710
+#: functions.php:493 functions.php:636
+msgid "Addon"
+msgstr ""
+
+#: functions.php:745
 msgid "Description"
 msgstr ""
 
-#: functions.php:717
+#: functions.php:752
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:1025 sidebar-before_shop_loop.php:20
+#: functions.php:1069 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr ""
 
-#: functions.php:1034
+#: functions.php:1078
 msgid "Show value(s)"
 msgstr ""
 
-#: functions.php:1035
+#: functions.php:1079
 msgid "Hide value(s)"
 msgstr ""
 
-#: functions.php:1036
+#: functions.php:1080
 msgid "Unselect all"
 msgstr ""
 
-#: functions.php:1037
+#: functions.php:1081
 msgid "Nothing is selected"
 msgstr ""
 
-#: functions.php:1038
+#: functions.php:1082
 msgid "products"
 msgstr ""
 
-#: header.php:82
+#: header.php:77
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:143
+#: header.php:138
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:147
+#: header.php:142
 msgid "Navigation"
 msgstr ""
 
-#: header.php:165
+#: header.php:160
 msgid "Contact us today"
 msgstr ""
 
@@ -281,6 +303,18 @@ msgstr ""
 
 #: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
+msgstr ""
+
+#. translators: %d: shipping package number
+#: inc/calc-shipping-costs.php:73
+#, php-format
+msgctxt "shipping packages"
+msgid "Shipping %d"
+msgstr ""
+
+#: inc/calc-shipping-costs.php:73 inc/calc-shipping-costs.php:86
+msgctxt "shipping packages"
+msgid "Shipping"
 msgstr ""
 
 #. translators: %s: post date.
@@ -336,6 +370,87 @@ msgstr ""
 #: search.php:26
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: shipping-calculator.php:26
+msgid "Calculate shipping"
+msgstr ""
+
+#: shipping-calculator.php:32
+msgid "Country / region:"
+msgstr ""
+
+#: shipping-calculator.php:34
+msgid "Select a country / region&hellip;"
+msgstr ""
+
+#: shipping-calculator.php:53 shipping-calculator.php:59
+#: shipping-calculator.php:72
+msgid "State / County"
+msgstr ""
+
+#: shipping-calculator.php:58 shipping-calculator.php:71
+msgid "State / County:"
+msgstr ""
+
+#: shipping-calculator.php:60
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: shipping-calculator.php:81
+msgid "City:"
+msgstr ""
+
+#: shipping-calculator.php:82
+msgid "City"
+msgstr ""
+
+#: shipping-calculator.php:88
+msgid "Postcode / ZIP:"
+msgstr ""
+
+#: shipping-calculator.php:89
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: shipping-calculator.php:93
+msgid "Update"
+msgstr ""
+
+#: shipping-costs.php:35
+#, php-format
+msgid "Shipping to %s."
+msgstr ""
+
+#: shipping-costs.php:36
+msgid "Change address"
+msgstr ""
+
+#: shipping-costs.php:38
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: shipping-costs.php:45
+msgid "Shipping costs are calculated during checkout."
+msgstr ""
+
+#: shipping-costs.php:47
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: shipping-costs.php:50
+msgid ""
+"There are no shipping options available. Please ensure that your address "
+"has been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#: shipping-costs.php:64
+#, php-format
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: shipping-costs.php:68
+msgid "Enter a different address"
 msgstr ""
 
 #: sidebar-before_shop_loop.php:12
