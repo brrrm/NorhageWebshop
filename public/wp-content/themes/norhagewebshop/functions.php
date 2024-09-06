@@ -463,7 +463,14 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 			$regular_price = $product->get_price();
 		}
 		$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
-		$unit_price = round($unit_price);
+		
+		if(class_exists('WOOMULTI_CURRENCY_Data')){
+			$multiCurrencySettings = WOOMULTI_CURRENCY_Data::get_ins();
+			$currentCurrency = $multiCurrencySettings->get_current_currency();
+			if(in_array($currentCurrency, ['NOK', 'SEK'])){
+				$unit_price = round($unit_price);
+			}
+		}
 
 		$item_data[] = [
 			'key'	=> __('Width', 'norhagewebshop'),
@@ -550,9 +557,12 @@ function norhage_before_calculate_totals($cart_object){
 		}
 		
 		// round prices for NOK and SEK
-		$lang = pll_current_language();
-		if($lang == 'sv' || $lang == 'nb'){
-			$product_price = round($product_price);
+		if(class_exists('WOOMULTI_CURRENCY_Data')){
+			$multiCurrencySettings = WOOMULTI_CURRENCY_Data::get_ins();
+			$currentCurrency = $multiCurrencySettings->get_current_currency();
+			if(in_array($currentCurrency, ['NOK', 'SEK'])){
+				$product_price = round($product_price);
+			}
 		}
 
 		// IDIOCY:
