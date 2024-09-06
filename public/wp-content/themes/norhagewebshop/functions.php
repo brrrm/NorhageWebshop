@@ -463,6 +463,7 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 			$regular_price = $product->get_price();
 		}
 		$unit_price = (floatval($cart_item_data['cutting_variables']['width']) / 1000) * (floatval($cart_item_data['cutting_variables']['height']) / 1000) * $regular_price;
+		$unit_price = round($unit_price);
 
 		$item_data[] = [
 			'key'	=> __('Width', 'norhagewebshop'),
@@ -511,7 +512,7 @@ function norhage_before_calculate_totals($cart_object){
 			$cutting_fee = floatval($value['cutting_variables']['cutting_fee']);
 			$width = floatval($value['cutting_variables']['width']) / 1000; // width and height are in mm's not meter!
 			$height = floatval($value['cutting_variables']['height']) / 1000;
-			$product_price = $cutting_fee + ($width * $height * $product_price); 
+			$product_price = $cutting_fee + ($width * $height * $product_price);
 
 			// Set the appropriate shipping class
 			// Items that are cut and that have the special-small shipping class get
@@ -546,6 +547,12 @@ function norhage_before_calculate_totals($cart_object){
 				$extra_costs += $addon_price * $quantity;
 			}
 			$product_price += $extra_costs;
+		}
+		
+		// round prices for NOK and SEK
+		$lang = pll_current_language();
+		if($lang == 'sv' || $lang == 'nb'){
+			$product_price = round($product_price);
 		}
 
 		// IDIOCY:

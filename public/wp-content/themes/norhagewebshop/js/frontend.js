@@ -126,6 +126,8 @@
 				let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val()) / 1000;
 				let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val()) / 1000;
 				let cutting_fee = parseFloat($('.sizes_input input[name="cutting_variables[cutting_fee]"]').val());
+				let currency = 'NOK';
+
 				if(isNaN(width)){
 					width = 1;
 				}
@@ -133,6 +135,14 @@
 					height = 1;
 				}
 				newPrice = cutting_fee + (width * height * variationPrice);
+
+				if(typeof window.wcSettings.currency != 'undefined'){
+					currency = window.wcSettings.currency.code;
+				}
+				if(currency == 'NOK' || currency == 'SEK'){
+					// round prices in NOK and SEK
+					newPrice = Math.round(newPrice);
+				}
 			}
 
 			// then we add the addons
