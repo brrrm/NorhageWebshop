@@ -1149,6 +1149,22 @@ function norhage_ajax_variation_threshold( $threshold, $product ){
 add_filter( 'woocommerce_ajax_variation_threshold','norhage_ajax_variation_threshold', 10, 2 );
 
 
+/**
+ * Fix issue with woo multi currency
+ * WMC formats prices wrongly in the flat fee shipping costs in input fields.
+ * These wrongly formatted prices are then saved which causes problems when calculating shipping costs.
+ * This function removes the formatting.
+ */
+function norhage_shipping_flat_rate_instance_settings_values($instance_settings){
+	foreach($instance_settings as $key => $setting){
+		$instance_settings[$key] = str_replace('.', '', $setting);
+	}
+	return $instance_settings;
+}
+add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_shipping_flat_rate_instance_settings_values', 20, 1 );
+
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
