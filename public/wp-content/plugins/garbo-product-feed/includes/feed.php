@@ -16,7 +16,7 @@ if ( !file_exists( $xml_feed_dir ) && !is_dir( $xml_feed_dir ) ) {
 } 
 
 // check if we have a cached xml feed.
-if (file_exists($filename) && filectime($filename) > $treshold) {
+if (file_exists($filename) && filectime($filename) > $treshold && !isset($_GET['clear_cache'])) {
 	// we can serve the cached file.
 	readfile($filename);
 	exit();
