@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-08-16 11:31+0200\n"
-"PO-Revision-Date: 2024-08-16 11:31+0200\n"
+"POT-Creation-Date: 2024-09-09 14:20+0200\n"
+"PO-Revision-Date: 2024-09-09 14:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -20,13 +20,31 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:18
-msgid "404"
-msgstr "404"
+#: 404.php:13
+msgid ""
+"It seems like the page you're trying to reach has moved or no longer exists. "
+"Our webshop recently underwent some changes, so it’s possible that the link "
+"is outdated. We apologize for the inconvenience!\n"
+"\n"
+"You can try searching for what you need, or feel free to explore other "
+"sections of our website. We're confident you'll find what you're looking "
+"for.\n"
+"\n"
+"If you still need help, please don't hesitate to contact our team. We're "
+"always here to assist you!"
+msgstr ""
 
-#: 404.php:20
-msgid "oh dear, we had to short on material.."
-msgstr "Voi rakas, meillä oli pulaa materiaalista.."
+#: 404.php:29
+msgid "Oh no! We couldn't find the page you're looking for."
+msgstr ""
+
+#: 404.php:36
+msgid "Back to home"
+msgstr ""
+
+#: 404.php:52
+msgid "Or have a look at our greenhouses"
+msgstr ""
 
 #: blocks/categories-block/categoriesBlock.php:33
 msgid ""
@@ -96,7 +114,7 @@ msgstr "Kaikki vitriinit"
 msgid "Please contact us:"
 msgstr "Ota yhteyttä:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:166
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
 msgid "info@norhage.com"
 msgstr "info@norhage.fi"
 
@@ -114,10 +132,10 @@ msgstr "Osoite"
 
 #: footer.php:20
 msgid ""
-"TEHI AS <br />\n"
-"\t\t\t\t\t\t\tPostboks 195 <br />\n"
-"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
-"\t\t\t\t\t\t\tNorge"
+"TEHI AS\n"
+"\t\t\t\t\t\tVardheivegen 68\n"
+"\t\t\t\t\t\t4340 Bryne\n"
+"\t\t\t\t\t\tNorge"
 msgstr ""
 
 #: footer.php:26
@@ -190,19 +208,19 @@ msgstr "Widget-alue tuotelistauksen yläpuolella"
 msgid "expand"
 msgstr "laajentaa"
 
-#: functions.php:303
+#: functions.php:308
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:375 functions.php:384
+#: functions.php:380 functions.php:389
 msgid "Customize"
 msgstr "Mukauta"
 
-#: functions.php:396
+#: functions.php:401
 msgid "Please, enter a value for width and height."
 msgstr "Anna arvo leveydelle ja korkeudelle."
 
-#: functions.php:417
+#: functions.php:422
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -211,67 +229,71 @@ msgstr ""
 "Leveyden tulee olla minkä tahansa kokoinen %s - %s mm ja korkeuden tulee "
 "olla minkä tahansa kokoinen %s - %smm."
 
-#: functions.php:463 functions.php:574 functions.php:617
+#: functions.php:476 functions.php:645 functions.php:668
 msgid "Width"
 msgstr "Leveys"
 
-#: functions.php:467 functions.php:578 functions.php:619
+#: functions.php:480 functions.php:647 functions.php:670
 msgid "Height"
 msgstr "Korkeus"
 
-#: functions.php:471 functions.php:582
+#: functions.php:484 functions.php:651
 msgid "Unit price"
 msgstr "Yksikköhinta"
 
-#: functions.php:475 functions.php:586 functions.php:614
+#: functions.php:488 functions.php:649 functions.php:665
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:710
+#: functions.php:501 functions.php:653
+msgid "Addon"
+msgstr ""
+
+#: functions.php:762
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:717
+#: functions.php:769
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:1025 sidebar-before_shop_loop.php:20
+#: functions.php:1086 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:1034
+#: functions.php:1095
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:1035
+#: functions.php:1096
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:1036
+#: functions.php:1097
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:1037
+#: functions.php:1098
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:1038
+#: functions.php:1099
 msgid "products"
 msgstr "tuotteet"
 
-#: header.php:82
+#: header.php:77
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: header.php:143
+#: header.php:138
 msgid "Primary Menu"
 msgstr "Päävalikko"
 
-#: header.php:147
+#: header.php:142
 msgid "Navigation"
 msgstr "Navigaatio"
 
-#: header.php:165
+#: header.php:160
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
 
@@ -286,6 +308,21 @@ msgstr "Ostoskori"
 #: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Sulje"
+
+#. translators: %d: shipping package number
+#: inc/calc-shipping-costs.php:73
+#, fuzzy, php-format
+#| msgid "Shipping"
+msgctxt "shipping packages"
+msgid "Shipping %d"
+msgstr "Toimitus"
+
+#: inc/calc-shipping-costs.php:73 inc/calc-shipping-costs.php:86
+#, fuzzy
+#| msgid "Shipping"
+msgctxt "shipping packages"
+msgid "Shipping"
+msgstr "Toimitus"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
@@ -341,6 +378,92 @@ msgstr "Muokkaa<span class=\"screen-reader-text\">%s</span>"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
+
+#: shipping-calculator.php:26
+msgid "Calculate shipping"
+msgstr ""
+
+#: shipping-calculator.php:32
+msgid "Country / region:"
+msgstr ""
+
+#: shipping-calculator.php:34
+msgid "Select a country / region&hellip;"
+msgstr ""
+
+#: shipping-calculator.php:53 shipping-calculator.php:59
+#: shipping-calculator.php:72
+msgid "State / County"
+msgstr ""
+
+#: shipping-calculator.php:58 shipping-calculator.php:71
+msgid "State / County:"
+msgstr ""
+
+#: shipping-calculator.php:60
+#, fuzzy
+#| msgid "Select extra options"
+msgid "Select an option&hellip;"
+msgstr "Valitse lisäasetukset"
+
+#: shipping-calculator.php:81
+msgid "City:"
+msgstr ""
+
+#: shipping-calculator.php:82
+msgid "City"
+msgstr ""
+
+#: shipping-calculator.php:88
+msgid "Postcode / ZIP:"
+msgstr ""
+
+#: shipping-calculator.php:89
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: shipping-calculator.php:93
+#, fuzzy
+#| msgid "Update cart"
+msgid "Update"
+msgstr "Päivitä ostoskori"
+
+#: shipping-costs.php:35
+#, fuzzy, php-format
+#| msgid "Shipping"
+msgid "Shipping to %s."
+msgstr "Toimitus"
+
+#: shipping-costs.php:36
+msgid "Change address"
+msgstr ""
+
+#: shipping-costs.php:38
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: shipping-costs.php:45
+msgid "Shipping costs are calculated during checkout."
+msgstr ""
+
+#: shipping-costs.php:47
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: shipping-costs.php:50
+msgid ""
+"There are no shipping options available. Please ensure that your address has "
+"been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#: shipping-costs.php:64
+#, php-format
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: shipping-costs.php:68
+msgid "Enter a different address"
+msgstr ""
 
 #: sidebar-before_shop_loop.php:12
 msgid "Filter products"
@@ -518,6 +641,12 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid "404"
+#~ msgstr "404"
+
+#~ msgid "oh dear, we had to short on material.."
+#~ msgstr "Voi rakas, meillä oli pulaa materiaalista.."
 
 #~ msgid "Size (WxH)"
 #~ msgstr "Koko (LxK)"

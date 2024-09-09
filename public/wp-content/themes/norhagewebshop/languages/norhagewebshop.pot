@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-06 11:39+0200\n"
+"POT-Creation-Date: 2024-09-09 14:19+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -130,10 +130,10 @@ msgstr ""
 
 #: footer.php:20
 msgid ""
-"TEHI AS <br />\n"
-"\t\t\t\t\t\t\tPostboks 195 <br />\n"
-"\t\t\t\t\t\t\t4350 Kleppe <br />\n"
-"\t\t\t\t\t\t\tNorge"
+"TEHI AS\n"
+"\t\t\t\t\t\tVardheivegen 68\n"
+"\t\t\t\t\t\t4340 Bryne\n"
+"\t\t\t\t\t\tNorge"
 msgstr ""
 
 #: footer.php:26
@@ -225,55 +225,55 @@ msgid ""
 "from %s to %smm."
 msgstr ""
 
-#: functions.php:468 functions.php:628 functions.php:651
+#: functions.php:476 functions.php:645 functions.php:668
 msgid "Width"
 msgstr ""
 
-#: functions.php:472 functions.php:630 functions.php:653
+#: functions.php:480 functions.php:647 functions.php:670
 msgid "Height"
 msgstr ""
 
-#: functions.php:476 functions.php:634
+#: functions.php:484 functions.php:651
 msgid "Unit price"
 msgstr ""
 
-#: functions.php:480 functions.php:632 functions.php:648
+#: functions.php:488 functions.php:649 functions.php:665
 msgid "Cutting fee"
 msgstr ""
 
-#: functions.php:493 functions.php:636
+#: functions.php:501 functions.php:653
 msgid "Addon"
 msgstr ""
 
-#: functions.php:745
+#: functions.php:762
 msgid "Description"
 msgstr ""
 
-#: functions.php:752
+#: functions.php:769
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:1069 sidebar-before_shop_loop.php:20
+#: functions.php:1086 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr ""
 
-#: functions.php:1078
+#: functions.php:1095
 msgid "Show value(s)"
 msgstr ""
 
-#: functions.php:1079
+#: functions.php:1096
 msgid "Hide value(s)"
 msgstr ""
 
-#: functions.php:1080
+#: functions.php:1097
 msgid "Unselect all"
 msgstr ""
 
-#: functions.php:1081
+#: functions.php:1098
 msgid "Nothing is selected"
 msgstr ""
 
-#: functions.php:1082
+#: functions.php:1099
 msgid "products"
 msgstr ""
 
