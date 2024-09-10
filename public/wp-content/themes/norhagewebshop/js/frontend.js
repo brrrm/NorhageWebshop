@@ -285,9 +285,12 @@
 
 		window.dataLayer = window.dataLayer || [];
 		$('a[href^="mailto:"]').click(function(e){
+			console.log('click mailto');
 			dataLayer.push({'event': 'click_email_link'});
+			dataLayer.push({'event': 'test_event'});
 		});
 		$('a[href^="tel:"]').click(function(e){
+			console.log('click phone');
 			dataLayer.push({'event': 'click_phone_link'});
 		});
 		$(document).on('wpcf7mailsent', function(e){
