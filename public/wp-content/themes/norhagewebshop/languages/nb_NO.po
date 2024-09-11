@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-09 14:20+0200\n"
-"PO-Revision-Date: 2024-09-09 14:20+0200\n"
+"POT-Creation-Date: 2024-09-11 10:53+0200\n"
+"PO-Revision-Date: 2024-09-11 10:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -123,7 +123,7 @@ msgstr "Alle utstillingsvinduer"
 msgid "Please contact us:"
 msgstr "Ta kontakt med oss:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:167
 msgid "info@norhage.com"
 msgstr "info@norhage.no"
 
@@ -292,19 +292,31 @@ msgstr "Ingenting er valgt"
 msgid "products"
 msgstr "produkter"
 
-#: header.php:77
+#: functions.php:1191
+msgid ""
+"This site is protected by reCAPTCHA and the Google <a href=\"https://"
+"policies.google.com/privacy\" target=\"_blank\" rel=\"nofollow\">Privacy "
+"Policy</a> and <a href=\"https://policies.google.com/terms\" "
+"target=\"_blank\" rel=\"nofollow\">Terms of Service</a> apply."
+msgstr ""
+"Dette nettstedet er beskyttet av reCAPTCHA og Googles <a href=\"https://"
+"policies.google.com/privacy\" target=\"_blank\" "
+"rel=\"nofollow\">personvernregler</a> og <a href=\"https://policies.google."
+"com/terms\" target=\"_blank\" rel=\"nofollow\">vilkår for bruk</a> gjelder."
+
+#: header.php:83
 msgid "Skip to content"
 msgstr "Gå til innhold"
 
-#: header.php:138
+#: header.php:144
 msgid "Primary Menu"
 msgstr "Hovedmeny"
 
-#: header.php:142
+#: header.php:148
 msgid "Navigation"
 msgstr "Navigasjon"
 
-#: header.php:160
+#: header.php:166
 msgid "Contact us today"
 msgstr "Kontakt oss i dag"
 

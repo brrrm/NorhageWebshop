@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-09 14:19+0200\n"
+"POT-Creation-Date: 2024-09-11 10:53+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Please contact us:"
 msgstr ""
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:167
 msgid "info@norhage.com"
 msgstr ""
 
@@ -277,19 +277,27 @@ msgstr ""
 msgid "products"
 msgstr ""
 
-#: header.php:77
+#: functions.php:1191
+msgid ""
+"This site is protected by reCAPTCHA and the Google <a href=\"https://"
+"policies.google.com/privacy\" target=\"_blank\" rel=\"nofollow\">Privacy "
+"Policy</a> and <a href=\"https://policies.google.com/terms\" "
+"target=\"_blank\" rel=\"nofollow\">Terms of Service</a> apply."
+msgstr ""
+
+#: header.php:83
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:138
+#: header.php:144
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:142
+#: header.php:148
 msgid "Navigation"
 msgstr ""
 
-#: header.php:160
+#: header.php:166
 msgid "Contact us today"
 msgstr ""
 
