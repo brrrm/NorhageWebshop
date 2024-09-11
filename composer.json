@@ -26,7 +26,8 @@
 		"wpackagist-plugin/crisp": "^0.46.0",
 		"wpackagist-plugin/wt-woocommerce-sequential-order-numbers": "^1.6",
 		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
-		"wpackagist-plugin/sg-cachepress": "^7.6"
+		"wpackagist-plugin/sg-cachepress": "^7.6",
+		"wpackagist-plugin/wp-optimize": "^3.5"
 	},
 	"repositories": [
 		{
