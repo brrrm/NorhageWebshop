@@ -97,6 +97,32 @@
 			});
 		}
 
+		/**
+		 * Cookie click event
+		 * */
+		document.addEventListener('setCookieNotice', function(e){
+			//console.log(e);
+			//console.log('awesome');
+			setConsent();
+			dataLayer.push({'event': 'consent_given_in_popup'});
+		});
+
+		document.addEventListener('hideRevokeNotice', function(e){
+			//console.log(e);
+			//console.log('hideRevokeNotice');
+			unsetConsent();
+			dataLayer.push({'event': 'consent_removed_in_popup'});
+		});
+
+		let consentCookie = getCookie('cookie_notice_accepted');
+		if(consentCookie != '' && consentCookie == 'true' ){
+			console.log('cookie set');
+			setConsent();
+		}
+		
+
+
+
 
 		/**
 		 * Add-to-cart customization
@@ -316,5 +342,54 @@
 		});
 		*/
 	});
+
+	function getCookie(cname) {
+		let name = cname + "=";
+		let decodedCookie = decodeURIComponent(document.cookie);
+		let ca = decodedCookie.split(';');
+		for(let i = 0; i <ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	function setCookie(cname, cvalue, exdays) {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+
+	function setConsent(){
+		gtag('consent', 'update', {
+			'ad_storage': 'granted',
+			'ad_user_data': 'granted',
+			'ad_personalization': 'granted',
+			'analytics_storage': 'granted',
+			'functionality_storage': 'granted',
+			'personalization_storage': 'granted',
+			'security_storage': 'granted',
+		});
+	}
+
+	function unsetConsent(){
+		//setCookie('cookie_notice_accepted', false, 30);
+		gtag('consent', 'update', {
+			'ad_storage': 'denied',
+			'ad_user_data': 'denied',
+			'ad_personalization': 'denied',
+			'analytics_storage': 'denied',
+			'functionality_storage': 'denied',
+			'personalization_storage': 'denied',
+			'security_storage': 'denied',
+		});
+	}
 
 })(jQuery);
