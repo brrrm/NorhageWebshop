@@ -26,6 +26,9 @@
 	position: relative;
 	border: none !important; /* overwrite SLICK slider css */
 }
+.header-slider-block > .slide:not(:first-child){
+	display: none;
+}
 .header-slider-block .slide-wrap{
 	display: flex;
 	flex-wrap: wrap;
