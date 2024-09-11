@@ -3270,6 +3270,18 @@ form.wpcf7-form p input[type="submit"]{
     border:2px solid var(--store-color);
 }
 
+/** 
+ * verberg recaptcha badge 
+ * */
+.grecaptcha-badge { visibility: hidden; }
+.recaptcha-disclaimer{
+    font-size: 0.7em;
+    line-height: 1.1667;
+    color: #ccc;
+}
+.recaptcha-disclaimer a{
+	color: inherit;
+}
 
 
 

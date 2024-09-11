@@ -1182,6 +1182,19 @@ add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_
 
 
 
+
+/**
+ * Adds reCAPTCHA disclaimer to form.
+ * The official disclaimer badge is hidden by CSS.
+ */
+function norhage_recaptcha_add_hidden_fields( $form ) {
+	$disclaimer = __('This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="nofollow">Terms of Service</a> apply.', 'norhagewebshop');
+	$disclaimer = '<p class="recaptcha-disclaimer">' . $disclaimer . '</p>';
+	return $form . $disclaimer;
+}
+add_filter('wpcf7_form_elements', 'norhage_recaptcha_add_hidden_fields', 100, 1 );
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
