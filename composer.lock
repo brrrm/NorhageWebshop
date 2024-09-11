@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ed217065d673ca1cd53f41f2a8791ca",
+    "content-hash": "174cc899b2570ca9673b73772d9ecc7e",
     "packages": [
         {
             "name": "composer/installers",
@@ -478,24 +478,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/redirection/"
-        },
-        {
-            "name": "wpackagist-plugin/sg-cachepress",
-            "version": "7.6.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/sg-cachepress/",
-                "reference": "tags/7.6.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/sg-cachepress.7.6.4.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/sg-cachepress/"
         },
         {
             "name": "wpackagist-plugin/svea-checkout-for-woocommerce",
