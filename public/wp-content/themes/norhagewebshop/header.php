@@ -17,50 +17,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php $urlData = parse_url('https://'.$_SERVER["HTTP_HOST"]); ?>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
 
-		gtag('consent', 'default', {
-			'ad_storage' : 			'granted',
-			'ad_user_data': 		'granted',
-			'ad_personalization': 	'granted',
-			'analytics_storage': 	'granted'
-		});
-
-	</script>
-	<!-- Google tag (gtag.js) -->
 	<?php
 		if(isset($urlData['host'])):
 			switch($urlData['host']){
 				case 'norhage.de':
-					$google_account_id = 'G-N859WWKZNK';
-					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
+					$gtm_container_id = 'GTM-NH4LWCC7'; // German site GTM ID
 					break;
 				case 'norhage.se':
-					$google_account_id = 'G-9GK8JL0TB9';
-					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
+					$gtm_container_id = 'GTM-MR6DV9PP'; // Swedish site GTM ID
 					break;
 				case 'norhage.no':
 				default:
-					$google_account_id = 'G-P4KPNLV7VQ';
-					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
+					$gtm_container_id = 'GTM-NP5RQNKD'; // Norwegian site GTM ID
 			}
-			printf('<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>', $google_account_id);
-			echo "\n	"; // newline
-			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
-			echo "\n	"; // newline
+			// Load GTM container script
+			printf('<script async src="https://www.googletagmanager.com/gtm.js?id=%s"></script>', $gtm_container_id);
+			echo "\n"; // newline
 			echo '<!-- ' . $urlData['host'] . '-->';
 		endif;
 	?>
 
+	<!-- Google Tag Manager -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-
-		gtag('js', new Date());
-		gtag('config', '<?php echo $google_account_id; ?>');
+	  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	  })(window,document,'script','dataLayer','<?php echo $gtm_container_id; ?>');
 	</script>
+	<!-- End Google Tag Manager -->
+
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -74,8 +61,11 @@
 
 <body <?php body_class(); ?>>
 
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $google_account_id; ?>" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
-<?php wp_body_open(); ?>
+	<noscript>
+	  <iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo $gtm_container_id; ?>"
+	  height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe>
+	</noscript>
+	<?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'norhagewebshop' ); ?></a>
 
 	<header id="masthead" class="site-header">
