@@ -22,17 +22,22 @@
 		if(isset($urlData['host'])):
 			switch($urlData['host']){
 				case 'norhage.de':
+					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
 					$gtm_container_id = 'GTM-NH4LWCC7'; // German site GTM ID
 					break;
 				case 'norhage.se':
+					$google_site_id = '0WVE8UVTmS30efznwbcCkGbm-i91GnDBrQso2_3GVQI';
 					$gtm_container_id = 'GTM-MR6DV9PP'; // Swedish site GTM ID
 					break;
 				case 'norhage.no':
 				default:
+					$google_site_id = 'RRkWEdHqFtfX_zd6o_pomZ98a6bppNVZVOIOLPDvYk';
 					$gtm_container_id = 'GTM-NP5RQNKD'; // Norwegian site GTM ID
 			}
 			// Load GTM container script
 			printf('<script async src="https://www.googletagmanager.com/gtm.js?id=%s"></script>', $gtm_container_id);
+			echo "\n"; // newline
+			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
 			echo "\n"; // newline
 			echo '<!-- ' . $urlData['host'] . '-->';
 		endif;
