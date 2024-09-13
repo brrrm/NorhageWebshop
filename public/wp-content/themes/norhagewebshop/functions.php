@@ -527,17 +527,17 @@ function norhage_before_calculate_totals($cart_object){
 			$product_shipping_class = $product->get_shipping_class();
 			if($product_shipping_class == 'special-small'){
 				if($width <= 1.05 && $height <= 1){
-					// medium
+					// class: small
+					$value['data']->set_shipping_class_id(260);	
+				}elseif($height <= 3){
+					// class: medium
 					$value['data']->set_shipping_class_id(214);	
-				}elseif($width <= 1.05 && $height <= 4){
-					// large
+				}elseif($height <= 4.2){
+					// class: large
 					$value['data']->set_shipping_class_id(20507);	
-				}elseif($width <= 2.1 && $height <= 6){
+				}else{
 					// extra-large
 					$value['data']->set_shipping_class_id(136);	
-				}else{
-					// giant
-					$value['data']->set_shipping_class_id(20506);	
 				}
 			}
 			
