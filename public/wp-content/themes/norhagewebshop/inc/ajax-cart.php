@@ -37,6 +37,8 @@ add_action( 'wp_enqueue_scripts', 'ajaxcart_scripts' );
 function norhage_add_ajax_cart_endpoints() {
 	add_action( 'wp_ajax_cart_count', 'norhage_cart_count' );
 	add_action( 'wp_ajax_nopriv_cart_count', 'norhage_cart_count' );
+	add_action( 'wp_ajax_norhage_load_cart', 'norhage_load_cart' );
+	add_action( 'wp_ajax_nopriv_norhage_load_cart', 'norhage_load_cart' );
 }
 add_action( 'admin_init', 'norhage_add_ajax_cart_endpoints' );
 
@@ -58,3 +60,16 @@ function norhage_cart_count(){
     wp_die();
 }
 
+function norhage_load_cart(){
+	header('Content-type: application/json');
+    send_nosniff_header();
+    header('Cache-Control: no-cache');
+    header('Pragma: no-cache');
+	ob_start();
+	woocommerce_mini_cart();
+	$html = ob_get_clean();
+	wp_send_json(array(
+        'html' => $html
+    ));
+    wp_die();
+}

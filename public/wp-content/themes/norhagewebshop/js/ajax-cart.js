@@ -90,8 +90,30 @@
 		$('.widget_shopping_cart').removeClass('open');
 	});
 
+	$(document).ready(function(){
+		loadCart();
+	});
+
+	function loadCart(){
+		$.ajax({
+			type: 'POST',
+			url: woocommerce_params.ajax_url.toString(),
+			data: {
+				action: 'norhage_load_cart'
+			},
+			beforeSend: function (response) {
+				//$thisbutton.removeClass('added').addClass('loading');
+			},
+			complete: function (response) {
+				//$thisbutton.addClass('added').removeClass('loading');
+			},
+			success: function (response) {
+				$('.widget_shopping_cart .widget_shopping_cart_content').html(response.html);
+			}
+		})
+	}
+
 	function refreshCartCount(){
-		console.log('added');
 		$.ajax({
 			type: 'POST',
 			url: woocommerce_params.ajax_url.toString(),
