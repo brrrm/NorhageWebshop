@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d48b1d6254f174a799e5c812d282d279",
+    "content-hash": "b75c0644542d4776cae1f320ce2e023e",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brrrm/bulk-actions-for-multi-currency.git",
-                "reference": "9c7f791768fd721aae1bdbdc1356fe3a04255dec"
+                "reference": "326e6ceb2cb2188d261ef62612476ec1224474ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brrrm/bulk-actions-for-multi-currency/zipball/9c7f791768fd721aae1bdbdc1356fe3a04255dec",
-                "reference": "9c7f791768fd721aae1bdbdc1356fe3a04255dec",
+                "url": "https://api.github.com/repos/brrrm/bulk-actions-for-multi-currency/zipball/326e6ceb2cb2188d261ef62612476ec1224474ad",
+                "reference": "326e6ceb2cb2188d261ef62612476ec1224474ad",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
             "support": {
-                "source": "https://github.com/brrrm/bulk-actions-for-multi-currency/tree/v0.1.0",
+                "source": "https://github.com/brrrm/bulk-actions-for-multi-currency/tree/v0.2.0",
                 "issues": "https://github.com/brrrm/bulk-actions-for-multi-currency/issues"
             },
-            "time": "2024-09-16T07:34:42+00:00"
+            "time": "2024-09-16T09:49:24+00:00"
         },
         {
             "name": "composer/installers",
