@@ -26,7 +26,8 @@
 		"wpackagist-plugin/crisp": "^0.46.0",
 		"wpackagist-plugin/wt-woocommerce-sequential-order-numbers": "^1.6",
 		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
-		"wpackagist-plugin/wp-optimize": "^3.5"
+		"wpackagist-plugin/wp-optimize": "^3.5",
+		"brrrm/bulk-actions-for-multi-currency": "^0.1.0"
 	},
 	"repositories": [
 		{
@@ -40,6 +41,10 @@
 		{
 			"type": "composer",
 			"url": "https://connect.advancedcustomfields.com"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/brrrm/bulk-actions-for-multi-currency.git"
 		}
 	],
 	"extra": {

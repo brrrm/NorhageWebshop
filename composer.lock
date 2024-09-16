@@ -4,8 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "174cc899b2570ca9673b73772d9ecc7e",
+    "content-hash": "ef6393388bf8a02ebf0bdd3986dd7c39",
     "packages": [
+        {
+            "name": "brrrm/bulk-actions-for-multi-currency",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brrrm/bulk-actions-for-multi-currency.git",
+                "reference": "9c7f791768fd721aae1bdbdc1356fe3a04255dec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brrrm/bulk-actions-for-multi-currency/zipball/9c7f791768fd721aae1bdbdc1356fe3a04255dec",
+                "reference": "9c7f791768fd721aae1bdbdc1356fe3a04255dec",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "support": {
+                "source": "https://github.com/brrrm/bulk-actions-for-multi-currency/tree/v0.1.0",
+                "issues": "https://github.com/brrrm/bulk-actions-for-multi-currency/issues"
+            },
+            "time": "2024-09-16T07:34:42+00:00"
+        },
         {
             "name": "composer/installers",
             "version": "v2.2.0",
