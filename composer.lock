@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef6393388bf8a02ebf0bdd3986dd7c39",
+    "content-hash": "d48b1d6254f174a799e5c812d282d279",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
@@ -625,6 +625,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-optimize/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-super-cache",
+            "version": "1.12.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-super-cache/",
+                "reference": "tags/1.12.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-super-cache.1.12.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-super-cache/"
         },
         {
             "name": "wpackagist-plugin/wt-woocommerce-sequential-order-numbers",

@@ -27,7 +27,8 @@
 		"wpackagist-plugin/wt-woocommerce-sequential-order-numbers": "^1.6",
 		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
 		"wpackagist-plugin/wp-optimize": "^3.5",
-		"brrrm/bulk-actions-for-multi-currency": "^0.1.0"
+		"brrrm/bulk-actions-for-multi-currency": "^0.1.0",
+		"wpackagist-plugin/wp-super-cache": "^1.12"
 	},
 	"repositories": [
 		{
