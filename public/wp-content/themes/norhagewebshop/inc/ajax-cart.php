@@ -1,17 +1,7 @@
 <?php
 
 function norhage_cart(){
-	$cart = WC()->cart;
-	if($cart->is_empty()){
-		$output = '<button href="/cart" class="cart-btn">' . __('Cart', 'norhagewebshop') . '<span class="item-count"></span></button>';
-	}else{
-		$count = $cart->get_cart_contents_count();
-		$output 	= '<button href="/cart" class="cart-btn">' 
-					. __('Cart', 'norhagewebshop') 
-					. ' <span class="item-count">'. $count . '</span>'
-					. '</button>';
-	}
-	return $output;
+	return '<button href="/cart" class="cart-btn">' . __('Cart', 'norhagewebshop') . '<span class="item-count"></span></button>';
 }
 
 /**
