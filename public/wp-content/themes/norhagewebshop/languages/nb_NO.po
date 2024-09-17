@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-11 10:53+0200\n"
-"PO-Revision-Date: 2024-09-11 10:53+0200\n"
+"POT-Creation-Date: 2024-09-17 10:56+0200\n"
+"PO-Revision-Date: 2024-09-17 10:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -123,7 +123,7 @@ msgstr "Alle utstillingsvinduer"
 msgid "Please contact us:"
 msgstr "Ta kontakt med oss:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:167
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:158
 msgid "info@norhage.com"
 msgstr "info@norhage.no"
 
@@ -292,43 +292,31 @@ msgstr "Ingenting er valgt"
 msgid "products"
 msgstr "produkter"
 
-#: functions.php:1191
-msgid ""
-"This site is protected by reCAPTCHA and the Google <a href=\"https://"
-"policies.google.com/privacy\" target=\"_blank\" rel=\"nofollow\">Privacy "
-"Policy</a> and <a href=\"https://policies.google.com/terms\" "
-"target=\"_blank\" rel=\"nofollow\">Terms of Service</a> apply."
-msgstr ""
-"Dette nettstedet er beskyttet av reCAPTCHA og Googles <a href=\"https://"
-"policies.google.com/privacy\" target=\"_blank\" "
-"rel=\"nofollow\">personvernregler</a> og <a href=\"https://policies.google."
-"com/terms\" target=\"_blank\" rel=\"nofollow\">vilkår for bruk</a> gjelder."
-
-#: header.php:83
+#: header.php:74
 msgid "Skip to content"
 msgstr "Gå til innhold"
 
-#: header.php:144
+#: header.php:135
 msgid "Primary Menu"
 msgstr "Hovedmeny"
 
-#: header.php:148
+#: header.php:139
 msgid "Navigation"
 msgstr "Navigasjon"
 
-#: header.php:166
+#: header.php:157
 msgid "Contact us today"
 msgstr "Kontakt oss i dag"
 
-#: inc/ajax-cart.php:6 inc/ajax-cart.php:10
+#: inc/ajax-cart.php:4
 msgid "Cart"
 msgstr "Handlekurv"
 
-#: inc/ajax-cart.php:44
+#: inc/ajax-cart.php:36
 msgid "Shopping cart"
 msgstr "Handlevogn"
 
-#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
+#: inc/ajax-cart.php:37 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Lukk"
 
@@ -660,6 +648,18 @@ msgstr "Garbo"
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
 msgstr "https://garbo.nl"
+
+#~ msgid ""
+#~ "This site is protected by reCAPTCHA and the Google <a href=\"https://"
+#~ "policies.google.com/privacy\" target=\"_blank\" rel=\"nofollow\">Privacy "
+#~ "Policy</a> and <a href=\"https://policies.google.com/terms\" "
+#~ "target=\"_blank\" rel=\"nofollow\">Terms of Service</a> apply."
+#~ msgstr ""
+#~ "Dette nettstedet er beskyttet av reCAPTCHA og Googles <a href=\"https://"
+#~ "policies.google.com/privacy\" target=\"_blank\" "
+#~ "rel=\"nofollow\">personvernregler</a> og <a href=\"https://policies."
+#~ "google.com/terms\" target=\"_blank\" rel=\"nofollow\">vilkår for bruk</a> "
+#~ "gjelder."
 
 #~ msgid ""
 #~ "TEHI AS <br />\n"

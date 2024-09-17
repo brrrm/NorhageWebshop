@@ -20,7 +20,7 @@
 					<?php echo nl2br(__('TEHI AS
 						Vardheivegen 68
 						4340 Bryne
-						Norge', 'norhageindustri')); ?>
+						Norge', 'norhagewebshop')); ?>
 				</dd>
 				
 				<dt><?php _e('Email', 'norhagewebshop'); ?></dt>

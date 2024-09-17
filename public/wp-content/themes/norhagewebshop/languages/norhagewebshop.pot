@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-11 10:53+0200\n"
+"POT-Creation-Date: 2024-09-17 10:55+0200\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Please contact us:"
 msgstr ""
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:167
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:158
 msgid "info@norhage.com"
 msgstr ""
 
@@ -277,39 +277,31 @@ msgstr ""
 msgid "products"
 msgstr ""
 
-#: functions.php:1191
-msgid ""
-"This site is protected by reCAPTCHA and the Google <a href=\"https://"
-"policies.google.com/privacy\" target=\"_blank\" rel=\"nofollow\">Privacy "
-"Policy</a> and <a href=\"https://policies.google.com/terms\" "
-"target=\"_blank\" rel=\"nofollow\">Terms of Service</a> apply."
-msgstr ""
-
-#: header.php:83
+#: header.php:74
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:144
+#: header.php:135
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:148
+#: header.php:139
 msgid "Navigation"
 msgstr ""
 
-#: header.php:166
+#: header.php:157
 msgid "Contact us today"
 msgstr ""
 
-#: inc/ajax-cart.php:6 inc/ajax-cart.php:10
+#: inc/ajax-cart.php:4
 msgid "Cart"
 msgstr ""
 
-#: inc/ajax-cart.php:44
+#: inc/ajax-cart.php:36
 msgid "Shopping cart"
 msgstr ""
 
-#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
+#: inc/ajax-cart.php:37 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr ""
 
