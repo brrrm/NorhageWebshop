@@ -131,8 +131,8 @@ function norhagewebshop_register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/categories-block' );
     register_block_type( __DIR__ . '/blocks/products-block' );
 }
-// Here we call our tt3child_register_acf_block() function on init.
 add_action( 'init', 'norhagewebshop_register_acf_blocks' );
+
 
 
 /**
@@ -1111,18 +1111,13 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
     }
 
 	switch(pll_current_language()){
-		case 'sv':
-			unset($available_gateways['kco']);
-			break;
-		case 'fi':
-			unset($available_gateways['kco']);
-			break;
 		case 'de':
+		case 'en':
 			unset($available_gateways['svea_checkout']);
 			break;
+		case 'sv':
 		case 'da':
-			unset($available_gateways['kco']);
-			break;
+		case 'fi':
 		case 'nb':
 		default:
 			unset($available_gateways['kco']);
@@ -1181,7 +1176,63 @@ function norhage_shipping_flat_rate_instance_settings_values($instance_settings)
 add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_shipping_flat_rate_instance_settings_values', 20, 1 );
 
 
+/**
+ * Force the currency to the one belonging to the domain
+ * */
+function norhagewebshop_force_currency_per_domain(){
+    $settings = WOOMULTI_CURRENCY_Data::get_ins();
+    pll_current_language();
+	switch(pll_current_language()){
+		case 'sv':
+			$currency_code = 'SEK';
+			break;
+		case 'fi':
+		case 'de':
+		case 'en':
+			$currency_code = 'EUR';
+			break;
+		case 'da':
+			$currency_code = 'DKK';
+			break;
+		case 'nb':
+		default:
+			$currency_code = 'NOK';
+	}
+    $settings->set_current_currency( $currency_code );
+}
+add_action( 'init', 'norhagewebshop_force_currency_per_domain' );
 
+/**
+ * alter ALL script tags to point to the current domain
+ * */
+function norhage_script_loader_tag($tag, $handle, $src ){
+	$url = 'https://'.$_SERVER['HTTP_HOST'];
+	error_log($url);
+	switch(pll_current_language()){
+		case 'sv':
+			$currency_code = 'se';
+			break;
+		case 'fi':
+			$currency_code = 'fi';
+			break;
+		case 'de':
+			$currency_code = 'de';
+			break;
+		case 'da':
+			$currency_code = 'dk';
+			break;
+		case 'en':
+			$currency_code = 'com';
+			break;
+		case 'nb':
+		default:
+			$currency_code = 'no';
+	}
+	$tag = str_replace('norhage.no', 'norhage.' . $currency_code, $tag);
+	$tag = str_replace('norhage-no', 'norhage-' . $currency_code, $tag);
+	return $tag;
+}
+add_filter( 'script_loader_tag', 'norhage_script_loader_tag', 999, 3);
 
 /*
 // CORS HOT FIX BY NB:
