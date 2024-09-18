@@ -1233,9 +1233,28 @@ function norhage_script_loader_tag($tag, $handle, $src ){
 	}
 	$tag = str_replace('norhage.no', 'norhage.' . $currency_code, $tag);
 	$tag = str_replace('norhage-no', 'norhage-' . $currency_code, $tag);
+	if(strpos($tag, 'https://www.google.com/recaptcha/api.js') && strpos($tag, 'defer') == false){
+		$tag = str_replace('></script>', ' defer ></script>', $tag);
+	}
 	return $tag;
 }
 add_filter( 'script_loader_tag', 'norhage_script_loader_tag', 999, 3);
+
+
+/**
+ * conditional script loading for contactform 7
+ * */
+function wpcf7_scripts_removal_contact_form_7() {
+	global $post;
+	if( is_a( $post, 'WP_Post' ) && strstr( $post->post_content, 'contact-form-7') ) {
+		wp_enqueue_script('contact-form-7');
+		wp_enqueue_style('contact-form-7');
+	} else {
+		wp_dequeue_script( 'contact-form-7' );
+		wp_dequeue_style( 'contact-form-7' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'wpcf7_scripts_removal_contact_form_7', 999);
 
 
 /**
