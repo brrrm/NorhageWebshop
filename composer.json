@@ -28,7 +28,8 @@
 		"wpackagist-plugin/duracelltomi-google-tag-manager": "^1.20",
 		"wpackagist-plugin/wp-optimize": "^3.5",
 		"brrrm/bulk-actions-for-multi-currency": "^0.2.0",
-		"wpackagist-plugin/wp-super-cache": "^1.12"
+		"wpackagist-plugin/wp-super-cache": "^1.12",
+		"wpackagist-plugin/w3-total-cache": "^2.7"
 	},
 	"repositories": [
 		{
