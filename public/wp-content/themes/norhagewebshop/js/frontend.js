@@ -153,7 +153,7 @@
 			});
 
 			let currencySymbol;
-			let priceNode
+			let priceNode;
 			if(typeof norhage_product_info !== 'undefined' && norhage_product_info.productType == 'simple'){
 				currencySymbol = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol').first().clone();
 				priceNode = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi');
