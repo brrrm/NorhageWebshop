@@ -7,7 +7,7 @@
 		}).map(function (i, elem) {
 			var val = jQuery(this).val();
 			if (val == null) {
-				return val == null
+				return val == null;
 				//next 2 lines of code look if it is a checkbox and set the value to blank
 				//if it is unchecked
 			} else if (this.type == "checkbox" && this.checked === false) {
@@ -161,7 +161,7 @@
 	);
 
 	function toggleShippingCalculator(e){
-		e.preventDefault()
+		e.preventDefault();
 		$( '.norhage-shipping-calculator .shipping-calculator-form' ).slideToggle( 'slow' );
 	}
 
