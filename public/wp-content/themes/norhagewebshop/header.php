@@ -35,8 +35,8 @@
 					$gtm_container_id = 'GTM-NP5RQNKD'; // Norwegian site GTM ID
 			}
 			// Load GTM container script
-			printf('<script async src="https://www.googletagmanager.com/gtm.js?id=%s"></script>', $gtm_container_id);
-			echo "\n"; // newline
+			//printf('<script async src="https://www.googletagmanager.com/gtm.js?id=%s"></script>', $gtm_container_id);
+			//echo "\n"; // newline
 			printf('<meta name="google-site-verification" content="%s" />', $google_site_id);
 			echo "\n"; // newline
 			echo '<!-- ' . $urlData['host'] . '-->';
