@@ -1994,17 +1994,14 @@ div.quantity,
 }
 
 .product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
-	margin: 0 0 0 0;
+	margin: 0 -1em 0 -2em;
 	padding: 1em 1em 1em 2em;
 	border-top: 1px solid var(--store-color);
 	border-bottom: none;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
 @media all and (max-width:768px){
 	.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
+		margin: 0 -1em 0 -1em;
 		padding: 1em 1em 1em 1em;
 	}
 }

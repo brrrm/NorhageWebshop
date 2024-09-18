@@ -10,18 +10,15 @@
 .productHeaderBlock .text-col{
 	flex: 35% 0 0;
 	height: 70vh;
-	padding: calc(var(--header-height) + 2.5em) 1em 1em 2em;
+	padding: calc(var(--header-height) + 2.5em) 1em 0 2em;
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1em; /*min(2vw, 3vh, 1.3rem);*/
     line-height: 1.5em;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-}
-.productHeaderBlock .text-col:has(.summary){
-	padding-bottom: 6em;
 }
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
@@ -31,6 +28,17 @@
 .productHeaderBlock .text-col h1{
 	margin: 0;
 	font-size: 2em;
+}
+/* the short description should be hidden when there's not enough space */
+.productHeaderBlock .text-col h1 + div{
+	flex: auto 0 10;
+	overflow: hidden;
+}
+/* Empty divs should take up as little space as possible */
+.productHeaderBlock .text-col > *:empty{
+	height: 1px;
+	margin: 0;
+	padding: 0;
 }
 .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .productHeaderBlock .text-col .price{
 	margin: 0.3em 0 0;
