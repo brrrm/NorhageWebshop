@@ -1180,8 +1180,10 @@ add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_
  * Force the currency to the one belonging to the domain
  * */
 function norhagewebshop_force_currency_per_domain(){
+	if(!function_exists('pll_get_post_language')){
+		return false;
+	}
     $settings = WOOMULTI_CURRENCY_Data::get_ins();
-    pll_current_language();
 	switch(pll_current_language()){
 		case 'sv':
 			$currency_code = 'SEK';
@@ -1206,8 +1208,9 @@ add_action( 'init', 'norhagewebshop_force_currency_per_domain' );
  * alter ALL script tags to point to the current domain
  * */
 function norhage_script_loader_tag($tag, $handle, $src ){
-	$url = 'https://'.$_SERVER['HTTP_HOST'];
-	error_log($url);
+	if(!function_exists('pll_get_post_language')){
+		return $tag;
+	}
 	switch(pll_current_language()){
 		case 'sv':
 			$currency_code = 'se';
@@ -1233,6 +1236,32 @@ function norhage_script_loader_tag($tag, $handle, $src ){
 	return $tag;
 }
 add_filter( 'script_loader_tag', 'norhage_script_loader_tag', 999, 3);
+
+
+/**
+ * Norhage uses multiple Crisp Chat accounts.
+ * Each language should load its own account.
+ * */
+function norhage_crisp_website_id_per_domain($value, $option){	
+	if(!function_exists('pll_get_post_language')){
+		return $value;
+	}
+	switch(pll_current_language()){
+		case 'sv':
+			return '1cf517a8-f52d-4b1b-9174-ca0507bdae73';
+			break;
+		case 'de':
+			return '1f0c4950-8bf2-4342-9c5b-aa2cf053127d';
+			break;
+		case 'fi':
+		case 'da':
+		case 'en':
+		case 'nb':
+		default:
+			return 'af0d8c08-c7a2-4913-9003-1659258a2bf4';
+	}
+}
+add_filter('option_website_id', 'norhage_crisp_website_id_per_domain', 10, 2);
 
 /*
 // CORS HOT FIX BY NB:
