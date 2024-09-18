@@ -23,7 +23,7 @@
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
 	top: calc(1em + var(--header-height));
-	margin: 0;
+	margin: 0 1rem 0 0;
 }
 .productHeaderBlock .text-col h1{
 	margin: 0;
