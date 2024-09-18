@@ -210,36 +210,6 @@
 			});
 		});
 
-
-		$.fn.buttonPlusMin = function(action){
-			let inputSibling = $(this).siblings('input');
-			let currentValue = parseFloat(inputSibling.val());
-			let stepSize = 1;
-
-			if(inputSibling[0].hasAttribute('step')){
-				stepSize = parseFloat( inputSibling.attr('step'));
-			}
-
-			if(action == 'plus'){
-				currentValue += stepSize;
-				if(inputSibling[0].hasAttribute('max') && inputSibling.attr('max') !== '' && currentValue > inputSibling.attr('max')){
-					currentValue = parseFloat(inputSibling.attr('max'));
-				}
-			}else{
-				currentValue -= stepSize;
-				if(inputSibling[0].hasAttribute('min') && currentValue < inputSibling.attr('min')){
-					currentValue = parseFloat(inputSibling.attr('min'));
-				}
-			}
-			
-			// to fix rounding errors with floating points
-			if(stepSize < 1){
-				currentValue = currentValue.toFixed(3); 
-			}
-			inputSibling.val(currentValue);
-			inputSibling.trigger('change');
-		}
-
 		/**
 		 * filters open and close btns
 		 * */
@@ -295,9 +265,39 @@
 		});
 		$(document).on('wpcf7mailsent', function(e){
 			dataLayer.push({'event': 'contact_form_submit'});
-		})
+		});
 
 
+
+
+		$.fn.buttonPlusMin = function(action){
+			let inputSibling = $(this).siblings('input');
+			let currentValue = parseFloat(inputSibling.val());
+			let stepSize = 1;
+
+			if(inputSibling[0].hasAttribute('step')){
+				stepSize = parseFloat( inputSibling.attr('step'));
+			}
+
+			if(action == 'plus'){
+				currentValue += stepSize;
+				if(inputSibling[0].hasAttribute('max') && inputSibling.attr('max') !== '' && currentValue > inputSibling.attr('max')){
+					currentValue = parseFloat(inputSibling.attr('max'));
+				}
+			}else{
+				currentValue -= stepSize;
+				if(inputSibling[0].hasAttribute('min') && currentValue < inputSibling.attr('min')){
+					currentValue = parseFloat(inputSibling.attr('min'));
+				}
+			}
+			
+			// to fix rounding errors with floating points
+			if(stepSize < 1){
+				currentValue = currentValue.toFixed(3); 
+			}
+			inputSibling.val(currentValue);
+			inputSibling.trigger('change');
+		}
 		/*
 		function gtag() { dataLayer.push(arguments); }
 		$('#cn-accept-cookie').click(function(e){
