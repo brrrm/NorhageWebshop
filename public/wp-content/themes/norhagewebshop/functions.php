@@ -950,12 +950,9 @@ function norhage_countries_allowed_countries($countries){
 
 add_filter( 'wpseo_breadcrumb_single_link' ,'norhage_remove_breadcrumb_link', 10 ,2);
 function norhage_remove_breadcrumb_link( $link_output , $link ){
-	$text_to_remove = ['shop', 'butikk', 'butik', 'kauppa'];
-
-	if( in_array(strtolower($link['text']), $text_to_remove) ) {
+	if( str_ends_with($link['url'], '/shop/') ) {
 		$link_output = '';
 	}
-
 	return $link_output;
 }
 
