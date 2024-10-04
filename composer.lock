@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58c729c7e036585b7bd4ca9de49906ca",
+    "content-hash": "da4d84c4f81d5638de56cc562e5339de",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
@@ -553,6 +553,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/webp-express/"
+        },
+        {
+            "name": "wpackagist-plugin/woo-cart-abandonment-recovery",
+            "version": "1.3.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woo-cart-abandonment-recovery/",
+                "reference": "tags/1.3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woo-cart-abandonment-recovery.1.3.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woo-cart-abandonment-recovery/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
