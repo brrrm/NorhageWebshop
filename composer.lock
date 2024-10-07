@@ -29,24 +29,24 @@
         },
         {
             "name": "brrrm/garbo-translate-woocommerce-cart-abandonment-recovery",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery.git",
-                "reference": "4656a53121664a30ae3e3a30ec96bd74a8794f06"
+                "reference": "77b7f3472fcfd48bf0185beb0c19e122abe5d271"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery/zipball/4656a53121664a30ae3e3a30ec96bd74a8794f06",
-                "reference": "4656a53121664a30ae3e3a30ec96bd74a8794f06",
+                "url": "https://api.github.com/repos/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery/zipball/77b7f3472fcfd48bf0185beb0c19e122abe5d271",
+                "reference": "77b7f3472fcfd48bf0185beb0c19e122abe5d271",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
             "support": {
-                "source": "https://github.com/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery/tree/v1.0.3",
+                "source": "https://github.com/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery/tree/v1.0.4",
                 "issues": "https://github.com/brrrm/garbo-translate-woocommerce-cart-abandonment-recovery/issues"
             },
-            "time": "2024-10-04T15:18:20+00:00"
+            "time": "2024-10-07T14:03:47+00:00"
         },
         {
             "name": "composer/installers",
