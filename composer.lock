@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f9abda5d0c3e322f1072149ca1afa93",
+    "content-hash": "847de82dc824d11fea41444973259183",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
-            "version": "v0.2.0",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brrrm/bulk-actions-for-multi-currency.git",
-                "reference": "326e6ceb2cb2188d261ef62612476ec1224474ad"
+                "reference": "d663914278995029846fa0e69c1c221a3196299d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brrrm/bulk-actions-for-multi-currency/zipball/326e6ceb2cb2188d261ef62612476ec1224474ad",
-                "reference": "326e6ceb2cb2188d261ef62612476ec1224474ad",
+                "url": "https://api.github.com/repos/brrrm/bulk-actions-for-multi-currency/zipball/d663914278995029846fa0e69c1c221a3196299d",
+                "reference": "d663914278995029846fa0e69c1c221a3196299d",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
             "support": {
-                "source": "https://github.com/brrrm/bulk-actions-for-multi-currency/tree/v0.2.0",
+                "source": "https://github.com/brrrm/bulk-actions-for-multi-currency/tree/v0.3.0",
                 "issues": "https://github.com/brrrm/bulk-actions-for-multi-currency/issues"
             },
-            "time": "2024-09-16T09:49:24+00:00"
+            "time": "2024-10-07T14:38:59+00:00"
         },
         {
             "name": "brrrm/garbo-translate-woocommerce-cart-abandonment-recovery",
