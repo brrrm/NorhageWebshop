@@ -1292,6 +1292,15 @@ function norhage_crisp_website_id_per_domain($value, $option){
 }
 add_filter('option_website_id', 'norhage_crisp_website_id_per_domain', 10, 2);
 
+
+// berocket ajax filter plugin uses the wrong domain
+function norhage_berocket_aapf_current_page_url($current_page_url, $br_options){
+	global $wp;
+	$request = preg_replace( "~paged?/[0-9]+/?~", "", $wp->request);
+	return 'https://' . $_SERVER['SERVER_NAME'] . '/' . $request;
+}
+add_filter('berocket_aapf_current_page_url', 'norhage_berocket_aapf_current_page_url', 10, 2);
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
