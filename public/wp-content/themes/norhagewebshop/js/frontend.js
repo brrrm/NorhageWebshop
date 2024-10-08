@@ -72,25 +72,26 @@
 	});
 
 	function createImagePopup(){
-		let popup = $('<div />')
-			.addClass('image-popup')
+		let popup = $('<div class="image-popup">')
 			.appendTo($('body'));
 		$('.productHeaderBlock h1').clone().appendTo(popup);
 		$('.productHeaderBlock .image-col').clone().appendTo(popup);
 		
-		let closeBtn = $('<button />').text('Close').addClass('close-button').click(function(e){
+		let closeBtn = $('<button class="close-button">Close</button>').appendTo(popup);
+		$(document).on('click', '.close-button', function(e){
 			e.preventDefault();
 			$('body').removeClass('showOverlay');
-		}).appendTo(popup);
+		});
 
-		let scrollBtn = $('<button />').text('Click to scroll').addClass('scroll-button').click(function(e){
+		let scrollBtn = $('<button class="scroll-button">Click to scroll</button>').appendTo(popup);
+		$(document).on('click', '.scroll-button', function(e){
 			e.preventDefault();
 			let currScroll = popup.find('.image-col').scrollTop();
 			let imageHeight = popup.find('.image-col figure:first-child').outerHeight();
 			popup.find('.image-col').scrollTop(currScroll + imageHeight);
-		}).appendTo(popup);
+		});
 
-		popup.find('.image-col').click(function(e){
+		$(document).on('click', '.image-popup .image-col', function(e){
 			$(this).toggleClass('cover');
 		});
 	}
