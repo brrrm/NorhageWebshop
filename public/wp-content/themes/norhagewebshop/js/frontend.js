@@ -96,86 +96,88 @@
 		});
 	}
 
-
-	/**
-	 * Add-to-cart customization
-	 */
-	var variationPrice = 0;
-	if(!variationPrice && typeof norhage_product_info !== 'undefined'){
-		variationPrice = norhage_product_info.price;
-	}
-	
-	add_addons_to_wc_variation_price(); // initial price correction
-
-	$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
-		variationPrice = variation.display_price;
-		add_addons_to_wc_variation_price();
-	});
-
-	$(document).on('change', 'form.cart .quantity input', function(e){
-		e.preventDefault();
-		add_addons_to_wc_variation_price();
-	});
-
-	function add_addons_to_wc_variation_price(){
-		let newPrice = variationPrice;
-
-		// first we need to calculate the unit price
-		if($('.sizes_input').length){
-			let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val()) / 1000;
-			let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val()) / 1000;
-			let cutting_fee = parseFloat($('.sizes_input input[name="cutting_variables[cutting_fee]"]').val());
-			let currency = 'NOK';
-
-			if(isNaN(width)){
-				width = 1;
-			}
-			if(isNaN(height)){
-				height = 1;
-			}
-			newPrice = cutting_fee + (width * height * variationPrice);
-
-			if(typeof window.wcSettings.currency != 'undefined'){
-				currency = window.wcSettings.currency.code;
-			}
-			if(currency == 'NOK' || currency == 'SEK'){
-				// round prices in NOK and SEK
-				newPrice = Math.round(newPrice);
-			}
+	if($('form.cart').length){
+		console.log('form.cart');
+		/**
+		 * Add-to-cart customization
+		 */
+		var variationPrice = 0;
+		if(!variationPrice && typeof norhage_product_info !== 'undefined'){
+			variationPrice = norhage_product_info.price;
 		}
+		
+		add_addons_to_wc_variation_price(); // initial price correction
 
-		// then we add the addons
-		$('.addon input.qty').each(function(){
-			let quantity = $(this).val();
-			let price = $(this).data('price');
-			newPrice += (price * quantity);
+		$( '.single_variation' ).on( 'show_variation', function( event, variation ) {
+			variationPrice = variation.display_price;
+			add_addons_to_wc_variation_price();
 		});
 
-		let currencySymbol;
-		let priceNode;
-		if(typeof norhage_product_info !== 'undefined' && norhage_product_info.productType == 'simple'){
-			currencySymbol = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol').first().clone();
-			priceNode = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi');
-		}else{
-			currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
-			priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
-			if($('.woocommerce-variation-price .price del').length){
-				priceNode = $('.woocommerce-variation-price .price ins .woocommerce-Price-amount bdi');
+		$(document).on('change', 'form.cart .quantity input', function(e){
+			e.preventDefault();
+			add_addons_to_wc_variation_price();
+		});
+
+		function add_addons_to_wc_variation_price(){
+			let newPrice = variationPrice;
+
+			// first we need to calculate the unit price
+			if($('.sizes_input').length){
+				let width = parseFloat($('.sizes_input input[name="cutting_variables[width]"]').val()) / 1000;
+				let height = parseFloat($('.sizes_input input[name="cutting_variables[height]"]').val()) / 1000;
+				let cutting_fee = parseFloat($('.sizes_input input[name="cutting_variables[cutting_fee]"]').val());
+				let currency = 'NOK';
+
+				if(isNaN(width)){
+					width = 1;
+				}
+				if(isNaN(height)){
+					height = 1;
+				}
+				newPrice = cutting_fee + (width * height * variationPrice);
+
+				if(typeof window.wcSettings.currency != 'undefined'){
+					currency = window.wcSettings.currency.code;
+				}
+				if(currency == 'NOK' || currency == 'SEK'){
+					// round prices in NOK and SEK
+					newPrice = Math.round(newPrice);
+				}
 			}
-		}
-		//formattedPrice = newPrice.toFixed(2).replace('.', ',');
-		formattedPrice = Number(newPrice).toLocaleString(
-				wcSettings.locale.siteLocale.replace('_', '-'), 
-				{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
-			)
-			.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
-		priceNode.html(' ' + formattedPrice + ' ');
-		
-		
-		if(wcSettings.currency.symbolPosition == 'left' || wcSettings.currency.symbolPosition == 'left_space'){
-			priceNode.prepend(currencySymbol);
-		}else if(wcSettings.currency.symbolPosition == 'right' || wcSettings.currency.symbolPosition == 'right_space'){
-			priceNode.append(currencySymbol);
+
+			// then we add the addons
+			$('.addon input.qty').each(function(){
+				let quantity = $(this).val();
+				let price = $(this).data('price');
+				newPrice += (price * quantity);
+			});
+
+			let currencySymbol;
+			let priceNode;
+			if(typeof norhage_product_info !== 'undefined' && norhage_product_info.productType == 'simple'){
+				currencySymbol = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol').first().clone();
+				priceNode = $('.simple_product_wrap > .price > .woocommerce-Price-amount > bdi, .simple_product_wrap > .price > ins > .woocommerce-Price-amount > bdi');
+			}else{
+				currencySymbol = $('.woocommerce-variation-price .price .woocommerce-Price-amount > bdi .woocommerce-Price-currencySymbol, .woocommerce-variation-price .price .woocommerce-Price-amount > ins bdi .woocommerce-Price-currencySymbol').first().clone();
+				priceNode = $('.woocommerce-variation-price .price .woocommerce-Price-amount bdi');
+				if($('.woocommerce-variation-price .price del').length){
+					priceNode = $('.woocommerce-variation-price .price ins .woocommerce-Price-amount bdi');
+				}
+			}
+			//formattedPrice = newPrice.toFixed(2).replace('.', ',');
+			formattedPrice = Number(newPrice).toLocaleString(
+					wcSettings.locale.siteLocale.replace('_', '-'), 
+					{style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2}
+				)
+				.replaceAll('\xa0', wcSettings.currency.thousandSeparator);
+			priceNode.html(' ' + formattedPrice + ' ');
+			
+			
+			if(wcSettings.currency.symbolPosition == 'left' || wcSettings.currency.symbolPosition == 'left_space'){
+				priceNode.prepend(currencySymbol);
+			}else if(wcSettings.currency.symbolPosition == 'right' || wcSettings.currency.symbolPosition == 'right_space'){
+				priceNode.append(currencySymbol);
+			}
 		}
 	}
 
