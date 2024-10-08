@@ -39,7 +39,11 @@
 			<h2><?php _e('Find the Norhage shop for your country', 'norhagewebshop'); ?></h2>
 			<?php if(function_exists('pll_the_languages')){ ?>
 				<ul class="languages">
-				<?php pll_the_languages( ['show_flags' => true, 'hide_if_empty' => true, 'hide_if_no_translation' => true] ); ?>
+				<?php 
+					$langlinks = pll_the_languages( ['show_flags' => true, 'hide_if_empty' => true, 'hide_if_no_translation' => true, 'echo' => false] );
+					$langlinks = str_replace('<a ', '<a rel="nofollow" ', $langlinks);
+					echo $langlinks;
+				?>
 				</ul>
 			<?php } ?>
 		</div>
