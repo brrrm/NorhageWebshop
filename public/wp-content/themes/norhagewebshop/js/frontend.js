@@ -183,8 +183,9 @@
 	 * quantity stepper input
 	 */
 	$('.quantity:has(input)').each(function(){
-		let plusBtn = $('<button />').text('+').appendTo($(this)).addClass(['qtyBtn', 'plus']);
-		let minBtn = $('<button />').text('-').prependTo($(this)).addClass(['qtyBtn', 'min']);
+		let plusBtn = $('<button class="qtyBtn plus">+</button>').appendTo($(this));
+		let minBtn = $('<button class="qtyBtn min">-</button>').prependTo($(this));
+
 		plusBtn.click(function(e){
 			e.preventDefault();
 			$(this).buttonPlusMin('plus');
