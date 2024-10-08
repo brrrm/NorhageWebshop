@@ -221,37 +221,41 @@
 		$('#filters-sidebar').removeClass('open');
 	});
 
-	$('.header-slider-block').slick({
-		autoplay: true,
-		autoplaySpeed: 3000,
-		arrows: false,
-		pauseOnHover: false,
-		vertical: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					vertical: false
+	if($('.header-slider-block').length){
+		$('.header-slider-block').slick({
+			autoplay: true,
+			autoplaySpeed: 3000,
+			arrows: false,
+			pauseOnHover: false,
+			vertical: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						vertical: false
+					}
 				}
-			}
-		]
-	});
+			]
+		});
+	}
 
-	$('.reviews-block .reviews').slick({
-		autoplay: true,
-		autoplaySpeed: 2000,
-		arrows: true,
-		pauseOnHover: true,
-		adaptiveHeight: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					arrows: false
+	if($('.reviews-block .reviews').length){
+		$('.reviews-block .reviews').slick({
+			autoplay: true,
+			autoplaySpeed: 2000,
+			arrows: true,
+			pauseOnHover: true,
+			adaptiveHeight: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false
+					}
 				}
-			}
-		]
-	});
+			]
+		});
+	}
 
 
 	window.dataLayer = window.dataLayer || [];
