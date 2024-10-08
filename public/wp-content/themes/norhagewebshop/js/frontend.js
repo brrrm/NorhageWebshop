@@ -97,7 +97,6 @@
 	}
 
 	if($('form.cart').length){
-		console.log('form.cart');
 		/**
 		 * Add-to-cart customization
 		 */
