@@ -1177,29 +1177,42 @@ add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_
  * Force the currency to the one belonging to the domain
  * */
 function norhagewebshop_force_currency_per_domain(){
-	if(!function_exists('pll_get_post_language')){
+	if (is_admin() && !wp_doing_ajax()) {
 		return false;
 	}
-    $settings = WOOMULTI_CURRENCY_Data::get_ins();
-	switch(pll_current_language()){
-		case 'sv':
+
+	$url =  'https://' . $_SERVER['SERVER_NAME'];
+	switch($url){
+		case 'https://norhage-se.test':
+		case 'https://norhage.se':
 			$currency_code = 'SEK';
 			break;
-		case 'fi':
-		case 'de':
-		case 'en':
+		case 'https://norhage-fi.test':
+		case 'https://norhage.fi':
+		case 'https://norhage-de.test':
+		case 'https://norhage.de':
+		case 'https://norhage-com.test':
+		case 'https://norhage.com':
 			$currency_code = 'EUR';
 			break;
-		case 'da':
+		case 'https://norhage-dk.test':
+		case 'https://norhage.dk':
 			$currency_code = 'DKK';
 			break;
-		case 'nb':
+		case 'https://norhage-no.test':
+		case 'https://norhage.no':
 		default:
 			$currency_code = 'NOK';
 	}
-    $settings->set_current_currency( $currency_code );
+    $settings = WOOMULTI_CURRENCY_Data::get_ins();
+    $current_currency = $settings->get_current_currency();
+    if($settings->get_enable() && $current_currency != $currency_code){
+    	$settings->set_current_currency( $currency_code );
+    	$current_currency = $settings->get_current_currency();
+    }
+    
 }
-add_action( 'init', 'norhagewebshop_force_currency_per_domain' );
+add_action( 'after_setup_theme', 'norhagewebshop_force_currency_per_domain' );
 
 /**
  * alter ALL script tags to point to the current domain
