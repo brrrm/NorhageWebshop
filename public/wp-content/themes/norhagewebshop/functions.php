@@ -950,7 +950,7 @@ function norhage_countries_allowed_countries($countries){
 
 add_filter( 'wpseo_breadcrumb_single_link' ,'norhage_remove_breadcrumb_link', 10 ,2);
 function norhage_remove_breadcrumb_link( $link_output , $link ){
-	if( str_ends_with($link['url'], '/shop/') ) {
+	if( isset($link['url']) && str_ends_with($link['url'], '/shop/') ) {
 		$link_output = '';
 	}
 	return $link_output;
