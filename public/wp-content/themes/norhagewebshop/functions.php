@@ -1174,9 +1174,10 @@ add_filter( 'woocommerce_shipping_flat_rate_instance_settings_values', 'norhage_
 
 
 /**
- * Force the currency to the one belonging to the domain
+ * Filter the "bot currency"-feature from WMC
+ * see: woocommerce-multi-currency/plugins/google_index.php
  * */
-function norhagewebshop_force_currency_per_domain(){
+function norhage_wmc_set_currency_for_bot_index($bot_currency){
 	if (is_admin() && !wp_doing_ajax()) {
 		return false;
 	}
@@ -1185,34 +1186,25 @@ function norhagewebshop_force_currency_per_domain(){
 	switch($url){
 		case 'https://norhage-se.test':
 		case 'https://norhage.se':
-			$currency_code = 'SEK';
-			break;
+			return 'SEK';
 		case 'https://norhage-fi.test':
 		case 'https://norhage.fi':
 		case 'https://norhage-de.test':
 		case 'https://norhage.de':
 		case 'https://norhage-com.test':
 		case 'https://norhage.com':
-			$currency_code = 'EUR';
-			break;
+			return 'EUR';
 		case 'https://norhage-dk.test':
 		case 'https://norhage.dk':
-			$currency_code = 'DKK';
-			break;
+			return 'DKK';
 		case 'https://norhage-no.test':
 		case 'https://norhage.no':
 		default:
-			$currency_code = 'NOK';
+			return 'NOK';
 	}
-    $settings = WOOMULTI_CURRENCY_Data::get_ins();
-    $current_currency = $settings->get_current_currency();
-    if($settings->get_enable() && $current_currency != $currency_code){
-    	$settings->set_current_currency( $currency_code );
-    	$current_currency = $settings->get_current_currency();
-    }
-    
 }
-add_action( 'after_setup_theme', 'norhagewebshop_force_currency_per_domain' );
+add_filter('wmc_set_currency_for_google_bot_index', 'norhage_wmc_set_currency_for_bot_index', 10, 1);
+add_filter('wmc_set_currency_for_bot_index', 'norhage_wmc_set_currency_for_bot_index', 10, 1);
 
 /**
  * alter ALL script tags to point to the current domain
