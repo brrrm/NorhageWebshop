@@ -1210,31 +1210,31 @@ add_filter('wmc_set_currency_for_bot_index', 'norhage_wmc_set_currency_for_bot_i
  * alter ALL script tags to point to the current domain
  * */
 function norhage_script_loader_tag($tag, $handle, $src ){
-	if(!function_exists('pll_get_post_language')){
+	if(is_admin() || !function_exists('pll_get_post_language')){
 		return $tag;
 	}
 	switch(pll_current_language()){
 		case 'sv':
-			$currency_code = 'se';
+			$tld = 'se';
 			break;
 		case 'fi':
-			$currency_code = 'fi';
+			$tld = 'fi';
 			break;
 		case 'de':
-			$currency_code = 'de';
+			$tld = 'de';
 			break;
 		case 'da':
-			$currency_code = 'dk';
+			$tld = 'dk';
 			break;
 		case 'en':
-			$currency_code = 'com';
+			$tld = 'com';
 			break;
 		case 'nb':
 		default:
-			$currency_code = 'no';
+			$tld = 'no';
 	}
-	$tag = str_replace('norhage.no', 'norhage.' . $currency_code, $tag);
-	$tag = str_replace('norhage-no', 'norhage-' . $currency_code, $tag);
+	$tag = str_replace('norhage.no', 'norhage.' . $tld, $tag);
+	$tag = str_replace('norhage-no', 'norhage-' . $tld, $tag);
 	if(strpos($tag, 'https://www.google.com/recaptcha/api.js') && strpos($tag, 'defer') == false){
 		$tag = str_replace('></script>', ' defer ></script>', $tag);
 	}
