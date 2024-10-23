@@ -257,23 +257,16 @@
 		});
 	}
 
-
 	window.dataLayer = window.dataLayer || [];
-	$('a[href^="mailto:"]').click(function(e){
-		console.log('click mailto');
+	$(document).on('click', 'a[href^="mailto:"]', function(e){
 		dataLayer.push({'event': 'click_email_link'});
-		dataLayer.push({'event': 'test_event'});
 	});
-	$('a[href^="tel:"]').click(function(e){
-		console.log('click phone');
+	$(document).on('click', 'a[href^="tel:"]', function(e){
 		dataLayer.push({'event': 'click_phone_link'});
 	});
 	$(document).on('wpcf7mailsent', function(e){
 		dataLayer.push({'event': 'contact_form_submit'});
 	});
-
-
-
 
 	$.fn.buttonPlusMin = function(action){
 		let inputSibling = $(this).siblings('input');
