@@ -2037,11 +2037,7 @@ div.quantity,
 	font-weight: 700;
 	margin: 1em 0 0.5em;
 }
-.summary form.cart.simple_form .sizes_input{
-	grid-area: vars;
-	flex: 100%;
-    margin: 0 0 1em 0;
-}
+.summary form.cart.simple_form .sizes_input,
 .summary form.variations_form .dimensions{
 	grid-area: vars;
 	padding-right: 1em;
@@ -2090,19 +2086,19 @@ div.quantity,
 	width: 4em;
 }
 
-.summary form.variations_form .addons{
+.summary form.cart .addons{
 	grid-area: addons;
 	border-left: 1px dashed var(--store-color);
 	padding-left: 1em;
 	padding-bottom: 1em;
 }
-.summary form.variations_form .addons .add-products{
+.summary form.cart .addons .add-products{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	row-gap: 1em;
 }
-.summary form.variations_form .addons .addon{
+.summary form.cart .addons .addon{
 	flex: 50% 0 0;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -2112,32 +2108,32 @@ div.quantity,
 						 "image amount";
 	column-gap: 1em;
 }
-.summary form.variations_form .addons .addon h3{
+.summary form.cart .addons .addon h3{
 	grid-area: title;
 	font-size: 1em;
 	font-weight: 700;
 	margin-right: 1em;
 }
-.summary form.variations_form .addons .addon .addon-image{
+.summary form.cart .addons .addon .addon-image{
 	grid-area: image;
 	aspect-ratio: 1;
 	overflow: hidden;
 	transition: transform 0.3s ease-out;
 }
-.summary form.variations_form .addons .addon .addon-image img{
+.summary form.cart .addons .addon .addon-image img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
-.summary form.variations_form .addons .addon .addon-image:hover{
+.summary form.cart .addons .addon .addon-image:hover{
 	transform: scale(2);
 }
-.summary form.variations_form .addons .addon .addon-price{
+.summary form.cart .addons .addon .addon-price{
 	grid-area: price;
 	margin-right: 1em;
 }
-.summary form.variations_form .addons .addon .quantity{
+.summary form.cart .addons .addon .quantity{
 	grid-area: amount;
 	width: fit-content;
 }
@@ -2219,34 +2215,40 @@ div.quantity,
 	.product .entry-content .summary.entry-summary{
 		padding: 2em 0;
 	}
-	.summary form.variations_form{
+	.summary form.cart{
 		margin-left: 0;
 		display: block;
 	}
 	.summary form.variations_form .dimensions,
-	.summary form.variations_form .addons,
-	.summary form.variations_form .single_variation_wrap{
+	.summary form.simple_form .sizes_input,
+	.summary form.cart .addons,
+	.summary form.cart .single_variation_wrap,
+	.summary form.cart .simple_product_wrap{
 		padding-left: 1rem;
 		padding-right: 1rem;
 		border-bottom: 1px dashed var(--store-color);
 		border-top: none;
 	}
-	.summary form.variations_form > *:last-child{
+	.summary form.cart > *:last-child{
 		border-bottom: none;
 	}
 	.summary form.variations_form .dimensions:before,
-	.summary form.variations_form .addons:before,
-	.summary form.variations_form .single_variation_wrap:before{
+	.summary form.simple_form .sizes_input:before,
+	.summary form.cart .addons:before,
+	.summary form.cart .single_variation_wrap:before{
 		content: none;
 	}
-	.summary form.variations_form .addons{
+	.summary form.cart .addons{
 		border-left: 0;
 	}
-	.summary form.variations_form .addons h3{
+	.summary form.cart .addons h3{
 		padding-left: 0;
 	}
-	.summary form.variations_form .addons .add-products{
+	.summary form.cart .addons .add-products{
 		display: block;
+	}
+	.summary form.cart .addons .addon{
+		margin: 1em 0;
 	}
 }
 

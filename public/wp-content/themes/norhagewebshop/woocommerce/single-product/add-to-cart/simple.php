@@ -31,11 +31,16 @@ if ( $product->is_in_stock() ) : ?>
 	<?php
 		$cutting_fee = get_field('cutting_fee');
 		$has_cutting_fee = ($cutting_fee && $cutting_fee > 0)? true : false;
+		$extras = get_field('product_extras');
+		$has_extras = $extras ? true : false;
+		$step_count = 1;
 	?>
 	
-	<?php if(!$has_cutting_fee): ?><div class="woocommerce-simple-price">
-		<?php wc_get_template( 'single-product/price.php' ); ?>
-	</div><?php endif; ?>
+	<?php if(!$has_cutting_fee && !$has_extras): ?>
+		<div class="woocommerce-simple-price">
+			<?php wc_get_template( 'single-product/price.php' ); ?>
+		</div>
+	<?php endif; ?>
 
 	<form class="cart simple_form" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php
@@ -54,7 +59,7 @@ if ( $product->is_in_stock() ) : ?>
 				$min_height = (get_field('min_height')) ? get_field('min_height') * 1000 : 1;
 			?>
 			<div class="sizes_input">
-				<h3>1: <?php _e('Configure the size', 'norhagewebshop'); ?></h3>
+				<h3><?php echo $step_count++; ?>: <?php _e('Configure the size', 'norhagewebshop'); ?></h3>
 				<input type="hidden" name="cutting_variables[cutting_fee]" value="<?php echo $cutting_fee; ?>" />
 				<div class="width">
 					<label for="width"><?php _e('Width (mm)', 'norhagewebshop'); ?></label>
@@ -67,10 +72,41 @@ if ( $product->is_in_stock() ) : ?>
 			</div>
 		<?php endif; ?>
 
-		<div class="simple_product_wrap">
-			<?php if($has_cutting_fee): ?>
+		<?php if($has_extras): ?>
+			<div class="addons">
+				<h3><?php echo $step_count++; ?>: <?php _e('Select extra options', 'norhagewebshop'); ?></h3>
+				<div class="add-products">
+					<?php
+						foreach($extras as $addon):
+							if(!$addon['product']){
+								continue; // soms is de import niet goed gelukt en dan is er geen product opgeslagen als addon.
+							}
+							$product_identifier = 'product-' . $addon['product']->ID;
+							$max_quantity = $addon['maximum_quantity'];
+							$addon_product = wc_get_product($addon['product']->ID);
+							$addon_price = $addon_product->get_price();
+					?>
+					<div class="addon">
+						<div class="addon-image">
+							<?php echo wp_get_attachment_image(get_post_thumbnail_id($addon_product->get_id()), [420,420]); ?>
+						</div>
+						<h3><a href="<?php echo get_permalink( $addon_product->get_id() ); ?>" title="<?php printf('%s: %s', __('View', 'norhagewebshop'), $addon_product->get_name()); ?>" target="_blank"><?php echo $addon_product->get_name(); ?></a></h3>
+						<div class="addon-price">
+							<?php echo wc_price($addon_price); ?>
+						</div>
+						<div class="quantity">
+							<input class="qty" type="number" name="addons[<?php echo $addon_product->get_id(); ?>]" min="0" max="<?php echo $max_quantity; ?>" value="0" class="addon-quantity" data-price="<?php echo $addon_price; ?>" />
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</div>	
+			</div>
+		<?php endif; ?>
 
-				<h3>2: <?php _e('Select the quantity', 'norhagewebshop'); ?></h3>
+		<div class="simple_product_wrap">
+			<?php if($has_cutting_fee || $has_extras): ?>
+
+				<h3><?php echo $step_count++; ?>: <?php _e('Select the quantity', 'norhagewebshop'); ?></h3>
 				
 				<?php wc_get_template( 'single-product/price.php' ); ?>
 			<?php endif; ?>
