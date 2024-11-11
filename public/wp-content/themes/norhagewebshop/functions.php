@@ -439,8 +439,12 @@ add_filter( 'woocommerce_add_to_cart_validation', 'norhage_woocommerce_add_to_ca
  * @return array
  */
 function norhage_add_cart_item_data( $cart_item_data, $product_id, $variation_id, $quantity ){
-	if(isset($_POST['cutting_variables'])){
+	// Check if $_POST['cutting_variables'] is set.
+	// - also check wether $cart_item_data['cutting_variables'] is not deliberately set to FALSE.
+	if(isset($_POST['cutting_variables']) && $cart_item_data['cutting_variables'] !== FALSE){
 		$cart_item_data['cutting_variables'] = $_POST['cutting_variables'];
+	}else{
+		unset($cart_item_data['cutting_variables']);
 	}
 	return $cart_item_data;
 }
@@ -470,6 +474,7 @@ function norhage_add_addons_to_cart($cart_item_key, $product_id, $quantity, $var
 		}
 
 		$addon_product = wc_get_product( $addon_variation_id ? $addon_variation_id : $addon_product_id ); //wc_get_product($addon_product_id);
+		$cart_item_data['cutting_variables'] = FALSE;
 
 		WC()->cart->add_to_cart( $addon_variation_id ? $addon_variation_id : $addon_product_id, $addon_quantity, $addon_variation_id, $addon_variation, $cart_item_data);
 	}
@@ -480,7 +485,6 @@ add_action( 'woocommerce_add_to_cart', 'norhage_add_addons_to_cart', 10, 6);
  * Display custom cart_item_data in the cart
  */
 function norhage_get_item_data( $item_data, $cart_item_data ) {
-
 	if(isset($cart_item_data['cutting_variables'])){
 		if(!empty($cart_item_data['variation_id'])){
 			$product_variation = new WC_Product_Variation($cart_item_data['variation_id']);

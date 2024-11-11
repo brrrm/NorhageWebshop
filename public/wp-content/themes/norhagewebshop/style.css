@@ -2016,6 +2016,10 @@ div.quantity,
 	font-size: 0.75em;
 }
 .summary form.cart:has(.addons){
+	grid-template-areas: "addons totals"
+						"addons totals";
+}
+.summary form.cart:has(.addons):has(.sizes_input){
 	grid-template-areas: "vars addons"
 						"totals addons";
 }
@@ -2088,9 +2092,12 @@ div.quantity,
 
 .summary form.cart .addons{
 	grid-area: addons;
+	padding-bottom: 1em;
+}
+form.cart:has(.addons):has(.sizes_input) .addons,
+form.cart:has(.addons):has(.dimensions) .addons{
 	border-left: 1px dashed var(--store-color);
 	padding-left: 1em;
-	padding-bottom: 1em;
 }
 .summary form.cart .addons .add-products{
 	display: flex;
@@ -2140,8 +2147,14 @@ div.quantity,
 .summary form.variations_form .single_variation_wrap,
 .summary form.simple_form .simple_product_wrap{
 	grid-area: totals;
-	padding: 0;
+	padding: 0 0 0 0;
 	border-top: 1px dashed var(--store-color);
+}
+form.simple_form:has(.addons):not(:has(.sizes_input)) .simple_product_wrap{
+	border-top: none;
+	border-left: 1px dashed var(--store-color);
+	padding-left: 1em;
+	padding-right: 1em;
 }
 .summary form.variations_form .single_variation_wrap .woocommerce-variation.single_variation{
 	margin: 1em 0 0.5em;
@@ -2229,6 +2242,11 @@ div.quantity,
 		border-bottom: 1px dashed var(--store-color);
 		border-top: none;
 	}
+	.summary form.simple_form:has(.addons):not(:has(.sizes_input)) .simple_product_wrap{
+		border-left: none;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 	.summary form.cart > *:last-child{
 		border-bottom: none;
 	}
@@ -2238,8 +2256,12 @@ div.quantity,
 	.summary form.cart .single_variation_wrap:before{
 		content: none;
 	}
-	.summary form.cart .addons{
+	.summary form.cart .addons,
+	.summary form.cart:has(.addons):has(.sizes_input) .addons, 
+	.summary form.cart:has(.addons):has(.dimensions) .addons{
 		border-left: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 	.summary form.cart .addons h3{
 		padding-left: 0;
@@ -2249,6 +2271,11 @@ div.quantity,
 	}
 	.summary form.cart .addons .addon{
 		margin: 1em 0;
+	}
+	.summary form.simple_form .sizes_input:before, 
+	.summary form.simple_form .simple_product_wrap:before, 
+	.summary form.variations_form .single_variation_wrap:before{
+		content: none;
 	}
 }
 
