@@ -439,15 +439,42 @@ add_filter( 'woocommerce_add_to_cart_validation', 'norhage_woocommerce_add_to_ca
  * @return array
  */
 function norhage_add_cart_item_data( $cart_item_data, $product_id, $variation_id, $quantity ){
-	if(isset($_POST['addons']) && !empty($_POST['addons'])){
-		$cart_item_data['addons'] = $_POST['addons'];
-	}
 	if(isset($_POST['cutting_variables'])){
 		$cart_item_data['cutting_variables'] = $_POST['cutting_variables'];
 	}
 	return $cart_item_data;
 }
 add_filter( 'woocommerce_add_cart_item_data', 'norhage_add_cart_item_data', 10, 4 );
+
+
+function norhage_add_addons_to_cart($cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ){
+	if(!isset($_POST['addons']) || empty($_POST['addons'])){
+		return;
+	}
+
+	$addons = $_POST['addons'];
+	unset($_POST['addons']);
+
+	foreach($addons as $addon_product_id => $addon_quantity){
+		if($addon_quantity <= 0){
+			// don't show unselected extra's
+			continue;
+		}
+
+		// Ensure we don't add a variation to the cart directly by variation ID.
+		$addon_variation_id = 0;
+		$addon_variation = [];
+		if ( 'product_variation' === get_post_type( $addon_product_id ) ) {
+			$addon_variation_id = $addon_product_id;
+			$addon_product_id  = wp_get_post_parent_id( $addon_variation_id );
+		}
+
+		$addon_product = wc_get_product( $addon_variation_id ? $addon_variation_id : $addon_product_id ); //wc_get_product($addon_product_id);
+
+		WC()->cart->add_to_cart( $addon_variation_id ? $addon_variation_id : $addon_product_id, $addon_quantity, $addon_variation_id, $addon_variation, $cart_item_data);
+	}
+}
+add_action( 'woocommerce_add_to_cart', 'norhage_add_addons_to_cart', 10, 6);
 
 /**
  * Display custom cart_item_data in the cart
@@ -490,19 +517,6 @@ function norhage_get_item_data( $item_data, $cart_item_data ) {
 		];
 	}
 
-	if(isset($cart_item_data['addons']) && !empty($cart_item_data['addons'])) {
-		foreach($cart_item_data['addons'] as $product_id => $quantity){
-			if($quantity <= 0){
-				// don't show unselected extra's
-				continue;
-			}
-			$product = wc_get_product($product_id);
-			$item_data[] = [
-				'key'	=> __('Addon', 'norhagewebshop'),
-				'value'	=> $quantity . ' x ' . $product->get_name() . ' (' . wc_price($product->get_price()) . ')',
-			];
-		}
-	}
 	return $item_data;
 }
 add_filter( 'woocommerce_get_item_data', 'norhage_get_item_data', 10, 2 );
@@ -541,19 +555,6 @@ function norhage_before_calculate_totals($cart_object){
 				}
 			}
 			
-		}
-
-		if(isset($value['addons']) && !empty($value['addons'])){
-			$extra_costs = 0;
-			foreach($value['addons'] as $product_id => $quantity){
-				if($quantity < 1){
-					continue;
-				}
-				$addon_product = wc_get_product($product_id);
-				$addon_price = $addon_product->get_price();
-				$extra_costs += $addon_price * $quantity;
-			}
-			$product_price += $extra_costs;
 		}
 		
 		// round prices for NOK and SEK
@@ -609,20 +610,6 @@ function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values
 			$values['cutting_variables']['cutting_fee']
 		);
 	}
-
-	if( isset( $values['addons'] ) ) {
-		foreach($values['addons'] as $product_id => $quantity){
-			if($quantity < 1){
-				continue;
-			}
-			$product = wc_get_product( $product_id );
-			$item->add_meta_data(
-				'addon',
-				$quantity . ' x ' . $product->get_name() . ' (' . strip_tags((wc_price($product->get_price()))) . ')',
-				false
-			);
-		}
-	}
 }
 add_action( 'woocommerce_checkout_create_order_line_item', 'norhage_checkout_create_order_line_item', 10, 4 );
 
@@ -671,17 +658,7 @@ function norhage_order_item_name( $product_name, $item ) {
 			$cart_item_data['cutting_variables']['height']
 		);
 	}
-
-	if(isset($item['addons']) && !empty($item['addons'])){
-		foreach($values['addons'] as $product_id => $quantity){
-			if($quantity < 1){
-				continue;
-			}
-			$product = wc_get_product( $product_id );
-			$addon_text = sprintf('<br /> %s x %s', $quantity, $product->get_name());
-			$product_name .= $addon_text;
-		}
-	}
+	
 	return $product_name;
 }
 
