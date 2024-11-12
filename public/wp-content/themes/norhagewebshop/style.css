@@ -323,6 +323,9 @@ select{
 	width: auto;
 	margin-right: -25%;
 }
+.site-main .entry-content > *.alignfull.woocommerce{
+	padding-right: 2em;
+}
 header#masthead,
 footer.site-footer{
 	width: auto;
@@ -3123,6 +3126,39 @@ form.wc-block-components-form  .wp-block-woocommerce-checkout-actions-block butt
 .woocommerce.columns-6 ul.products li.product {
 	flex: 13.5% 0 0;
 	width: unset;
+}
+.woocommerce ul.products.columns-1 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-1 li.product:first-child:last-child,
+.woocommerce-page.columns-1 ul.products li.product:first-child:last-child,
+.woocommerce.columns-1 ul.products li.product:first-child:last-child,
+.woocommerce ul.products.columns-2 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-2 li.product:first-child:last-child,
+.woocommerce-page.columns-2 ul.products li.product:first-child:last-child,
+.woocommerce.columns-2 ul.products li.product:first-child:last-child,
+.woocommerce ul.products.columns-3 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-3 li.product:first-child:last-child,
+.woocommerce-page.columns-3 ul.products li.product:first-child:last-child,
+.woocommerce.columns-3 ul.products li.product:first-child:last-child,
+.woocommerce ul.products.columns-4 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-4 li.product:first-child:last-child,
+.woocommerce-page.columns-4 ul.products li.product:first-child:last-child,
+.woocommerce.columns-4 ul.products li.product:first-child:last-child,
+.woocommerce ul.products.columns-5 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-5 li.product:first-child:last-child,
+.woocommerce-page.columns-5 ul.products li.product:first-child:last-child,
+.woocommerce.columns-5 ul.products li.product:first-child:last-child,
+.woocommerce ul.products.columns-6 li.product:first-child:last-child,
+.woocommerce-page ul.products.columns-6 li.product:first-child:last-child,
+.woocommerce-page.columns-6 ul.products li.product:first-child:last-child,
+.woocommerce.columns-6 ul.products li.product:first-child:last-child {
+	flex-grow: 1;
+}
+.woocommerce .cart-collaterals .cross-sells, 
+.woocommerce-page .cart-collaterals .cross-sells{
+	width: 100%;
+	float: none;
+	margin-bottom: 2em;
+	gap: var(--gap);
 }
 @media all and (max-width:768px){
 	.woocommerce .product-listing{
