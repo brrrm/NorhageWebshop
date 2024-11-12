@@ -165,6 +165,7 @@
 	    bottom: 0;
 	    z-index: 10;
 	    background: #fff;
+	    border-top: 1px solid var(--store-color);
 	}
 	.productHeaderBlock .text-col p#breadcrumbs{
 		position: relative;
@@ -176,6 +177,8 @@
 		flex-direction: row;
 		height: auto;
 		order: 1;
+		border-left: none;
+		border-bottem: 1px solid var();
 
 	}
 	.productHeaderBlock .image-col figure{
