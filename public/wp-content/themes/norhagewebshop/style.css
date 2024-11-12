@@ -2076,7 +2076,8 @@ div.quantity,
 	grid-template-areas: "addons totals"
 						"addons totals";
 }
-.summary form.cart:has(.addons):has(.sizes_input){
+.summary form.cart:has(.addons):has(.sizes_input),
+.summary form.cart:has(.addons):has(.dimensions){
 	grid-template-areas: "vars addons"
 						"totals addons";
 }
