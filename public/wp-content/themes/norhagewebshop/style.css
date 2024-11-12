@@ -837,24 +837,6 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.ac
  .cart-btn span:empty{
  	display: none;
  }
- @media all and (max-width: 768px){
- 	.cart-btn{
- 		color: var(--store-color);
- 		padding: 0.5em 0 0.5em 2em;
- 		font-weight: 700;
- 		background-image:url(images/svg/cart-green.svg);
- 		height: auto;
- 		text-indent: 0;
- 		line-height: 1.5;
- 		width: 100%;
- 		display: block;
- 		text-align: left;
-	}
-	.cart-btn span{
-		left: 1.8em;
-		top: 0.3em;
-	}
-}
 p.open-filters-button-wrap,
 .woocommerce p.woocommerce-result-count{
 	float: left;
@@ -960,7 +942,7 @@ button.button.open-filters:hover{
 @media all and (max-width: 768px){
 	.cart-popout.open,
 	.widget_shopping_cart.open{
-    	top: 0;
+    	top: var(--header-height);
     	left: 0;
     	width: 100%;
     	z-index: 1;
@@ -1242,7 +1224,7 @@ header#masthead nav#site-navigation .menu-secondary-menu-container ul.menu li.la
 /*
  * MOBILE MEU
  */
-header#masthead .menu-toggle{
+header#masthead .toggles{
 	display: none;
 }
 header#masthead nav#site-navigation h2{
@@ -1257,20 +1239,52 @@ header#masthead nav#site-navigation h2{
 	header#masthead.over-headerblock{
 		background: var(--header-gradient);
 	}
-	header#masthead .menu-toggle{
-		display: block;
+	header#masthead .toggles{
 		position: absolute;
 		top: calc((var(--header-height) / 2) - 1.5em);
 		right: 1em;
-		width: 3em;
 		height: 3em;
+		display: flex;
+		gap: 1em;
+	}
+	header#masthead .menu-toggle{
+		display: block;
 		border: none;
 		background: transparent url(images/svg/hamburger.svg) center no-repeat;
 		background-size: contain;
 		overflow: hidden;
 		text-indent: -9999em;
+		width: 3em;
 	}
-	body.small-height-header header#masthead .menu-toggle{
+	header#masthead .cart-toggle{
+		display: block;
+		border: none;
+		background: transparent url(images/svg/cart.svg) center no-repeat;
+		background-size: contain;
+		text-indent: -9999em;
+		width: 3em;
+		position: relative;
+	}
+	header#masthead .cart-toggle .item-count{
+		position: absolute;
+		display: block;
+		font-size: 0.75em;
+		width: 1.5em;
+		height: 1.5em;
+		color: #fff;
+		background: red;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 1.5em;
+		right: -0.6em;
+		top: 0.3em;
+		text-indent: 0;
+	}
+	header#masthead .cart-toggle .item-count:empty{
+		display: none;
+	}
+	body.small-height-header header#masthead .menu-toggle,
+	body.small-height-header header#masthead .cart-toggle{
 		width: 2em;
 	}
 	header#masthead .site-branding{
@@ -1361,6 +1375,9 @@ header#masthead nav#site-navigation h2{
 	header#masthead nav#site-navigation .menu-container ul.menu li:last-child{
 		border-bottom: none;
 	}
+	header#masthead nav#site-navigation .menu-container ul.menu li.menu-item:has(.cart-btn){
+ 		display: none;
+ 	}
 	
 
 	header#masthead nav#site-navigation .menu-container ul.menu li.menu-item-has-children .expander{
@@ -2460,6 +2477,9 @@ form.simple_form:has(.addons):not(:has(.sizes_input)) .simple_product_wrap{
     text-decoration: none;
 }
 @media all and (max-width:768px){
+	.norhage-cart-wrap{
+		display: block;
+	}
 	.widget_shopping_cart .norhage-shipping-calculator-button{
 		font-size: 1.2rem;
 	}

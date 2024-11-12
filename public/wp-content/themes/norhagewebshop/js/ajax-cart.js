@@ -81,11 +81,12 @@
 		refreshCartCount();
 	});
 
-	$(document).on('click', '.cart-btn', function(e){
+	$(document).on('click', '.cart-btn, .cart-toggle', function(e){
 		e.preventDefault();
 		$('.widget_shopping_cart').toggleClass('open');
+		$('#site-navigation').removeClass('expanded');
 	});
-	$(document).on('click', '.widget_shopping_cart button.close-btn', function(e){
+	$(document).on('click', '.widget_shopping_cart button.close-btn, .menu-toggle', function(e){
 		e.preventDefault();
 		$('.widget_shopping_cart').removeClass('open');
 	});
@@ -135,9 +136,9 @@
 				}
 				
 				if(parseInt(response.cart_count) === 0){
-					$('.cart-btn .item-count').text('')	;
+					$('.cart-btn .item-count, .cart-toggle .item-count').text('')	;
 				}else{
-					$('.cart-btn .item-count').text(response.cart_count);
+					$('.cart-btn .item-count, .cart-toggle .item-count').text(response.cart_count);
 				}
 
 			},

@@ -132,7 +132,10 @@
 			</a>
 		</div><!-- .site-branding -->
 
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'norhagewebshop' ); ?></button>
+		<aside class="toggles">
+			<button class="cart-toggle" ><?php esc_html_e( 'Cart', 'norhagewebshop' ); ?><span class="item-count"></span></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'norhagewebshop' ); ?></button>
+		</aside>
 		
 		<nav id="site-navigation" class="main-navigation">
 			
@@ -162,10 +165,10 @@
 				<?php get_product_search_form(); ?>
 			</aside>
 
+		</nav><!-- #site-navigation -->
+
 			<?php //the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 			<div class="widget woocommerce widget_shopping_cart">
 				<div class="widget_shopping_cart_content">cart is loading...</div>
 			</div>
-
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
