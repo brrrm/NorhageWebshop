@@ -1088,10 +1088,29 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
         return $available_gateways;
     }
 
+    $small_shipping_classes = [
+    	260, // (XL)
+    	214, // (GIANT)
+    	490
+    ];
+    $unset_paypal = false;
+
+    foreach(WC()->cart->get_cart_contents() as $key => $values){
+    	if(!in_array($values['data']->get_shipping_class_id(), $small_shipping_classes)){
+    		$unset_paypal = true;
+    	}
+    }
+
 	switch(pll_current_language()){
 		case 'de':
+			unset($available_gateways['svea_checkout']);
+			if($unset_paypal){
+				unset($available_gateways['ppcp-gateway']);
+			}
+			break;
 		case 'en':
 			unset($available_gateways['svea_checkout']);
+			unset($available_gateways['ppcp-gateway']);
 			break;
 		case 'sv':
 		case 'da':
@@ -1099,6 +1118,7 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 		case 'nb':
 		default:
 			unset($available_gateways['kco']);
+			unset($available_gateways['ppcp-gateway']);
 	}
 
     return $available_gateways;
