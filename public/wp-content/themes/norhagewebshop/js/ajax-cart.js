@@ -90,7 +90,7 @@
 		$('.widget_shopping_cart').removeClass('open');
 	});
 
-	$(document).ready(function(){
+	$(document).on('ready wc_fragment_refresh', function(){
 		loadCart();
 		refreshCartCount();
 	});
@@ -143,6 +143,41 @@
 			},
 		});
 	};
+
+	function updateCart(itemKey, newQty) {
+        var data = {
+            action: 'woocommerce_update_cart_item',
+            cart_item_key: itemKey,
+            new_qty: newQty
+        };
+
+        // Add class to cart to indicate loading
+        $('.widget_shopping_cart_content').addClass('updating-cart');
+
+        $.ajax({
+            type: 'POST',
+            url: woocommerce_params.ajax_url.toString(),
+            data: data,
+            success: function(response) {
+               // Trigger a fragment refresh to update cart content
+               $(document.body).trigger('wc_fragment_refresh');
+
+               // Remove the updating class
+               $('.widget_shopping_cart_content').removeClass('updating-cart');
+            },
+            error: function() {
+               // Remove the updating class in case of error as well
+               $('.widget_shopping_cart_content').removeClass('updating-cart');
+            }
+        });
+    }
+   
+	
+	$(document).on('change', '.woocommerce-mini-cart .qty.text', function() {
+	   var cart_item_key = $(this).attr('name').match(/\[(.*?)\]/)[1];
+	   var new_qty = $(this).val();
+	   updateCart(cart_item_key, new_qty);
+	});
 
 	
 	/**

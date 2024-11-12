@@ -63,3 +63,18 @@ function norhage_load_cart(){
     ));
     wp_die();
 }
+
+
+function norhage_update_cart_item_quantity() {
+    $cart_item_key = sanitize_text_field( $_POST['cart_item_key'] );
+    $new_qty = intval( $_POST['new_qty'] );
+
+    if ( $cart_item_key && $new_qty >= 0 ) {
+        WC()->cart->set_quantity( $cart_item_key, $new_qty, true );
+        WC()->cart->calculate_totals();
+    }
+
+    wp_send_json_success();
+}
+add_action( 'wp_ajax_woocommerce_update_cart_item', 'norhage_update_cart_item_quantity' );
+add_action( 'wp_ajax_nopriv_woocommerce_update_cart_item', 'norhage_update_cart_item_quantity' );

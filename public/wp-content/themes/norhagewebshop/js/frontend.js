@@ -187,28 +187,31 @@
 	$('.quantity:has(input)').each(function(){
 		let plusBtn = $('<button class="qtyBtn plus">+</button>').appendTo($(this));
 		let minBtn = $('<button class="qtyBtn min">-</button>').prependTo($(this));
+	});
 
-		plusBtn.click(function(e){
-			e.preventDefault();
+	$(document).on('click', '.quantity button', function(e) {
+		e.preventDefault();
+		if($(this).hasClass('plus')){
 			$(this).buttonPlusMin('plus');
-		});
-		minBtn.click(function(e){
-			e.preventDefault();
+		}else{
 			$(this).buttonPlusMin('min');
-		});
-		$(this).find('input[type="number"]').change(function(e){
-			let numVal = parseInt($(this).val());
-			let min = parseInt($(this).attr('min'));
-			let max = parseInt($(this).attr('max'));
+		}
+	});
 
-			if(min !== 'NaN' && numVal < min){
-				numVal = min;
-			}
-			if(max !== 'NaN' && numVal > max){
-				numVal = max;
-			}
-			$(this).val(numVal);
-		});
+	$(document).on('change', '.quantity input[type="number"]', function(e){
+		let numVal = parseInt($(this).val());
+		let min = parseInt($(this).attr('min'));
+		let max = parseInt($(this).attr('max'));
+		console.log('numval = ' + numVal);
+		if(min !== 'NaN' && numVal < min){
+			numVal = min;
+		}
+		if(max !== 'NaN' && max > 0 && numVal > max){
+			console.log(max);
+			numVal = max;
+		}
+		$(this).val(numVal);
+
 	});
 
 	/**
