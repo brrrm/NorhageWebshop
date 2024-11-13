@@ -49,7 +49,7 @@ $max_shown = 4;
 				
 				<?php $product->is_type('simple') ? FALSE : wc_get_template( 'single-product/price.php' ); ?>
 
-				<div><?php echo wpautop($product->get_short_description()); ?></div>
+				<div class="short-desc"><?php echo wpautop($product->get_short_description()); ?></div>
 
 				<?php
 					$cutting_fee = get_field('cutting_fee');

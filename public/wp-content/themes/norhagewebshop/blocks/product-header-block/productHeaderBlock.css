@@ -11,14 +11,12 @@
 	flex: 35% 0 0;
 	height: 70vh;
 	padding: calc(var(--header-height) + 2.5em) 1em 0 2em;
-	display: flex;
-	flex-direction: column;
-    justify-content: space-between;
     font-size: 1em; /*min(2vw, 3vh, 1.3rem);*/
     line-height: 1.5em;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	overflow: auto;
 }
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
@@ -45,6 +43,9 @@
 	color: var(--store-color);
 	font-weight: 600;
 }
+.productHeaderBlock .text-col .short-desc:not(:empty){
+	margin: 2em 0;
+}
 .productHeaderBlock .image-col{
 	flex: 65% 0 0;
 	overflow: auto;
@@ -68,7 +69,7 @@
 }
 .productHeaderBlock .image-col figure{
 	flex: calc(33.333% - (var(--gap) * 2/3)) 0 0 ;
-	width: auto;
+	width: calc(30% - (var(--gap) / 2));
 	height: 1px; /* we need some value. doesn't matter what. I don't know why???? */
 	aspect-ratio: 1;
 	display: block;
@@ -78,7 +79,7 @@
 	flex: 100% 0 0;
 	height: 100%;
 	aspect-ratio: auto;
-	width: calc(100% - (var(--headerblockheight) / 3) - var(--gap));
+	width: calc(70% - (var(--gap) / 2));
 }
 .productHeaderBlock .image-col figure:first-child:last-child{
 	width: 100%;
