@@ -977,7 +977,7 @@ function norhage_woocommerce_email_from_name($default_from_name, $email, $from_n
 add_filter( 'woocommerce_email_from_address', 'norhage_woocommerce_email_from_address', 10, 3);
 function norhage_woocommerce_email_from_address($default_from_address, $email, $from_address ){
 	if(!function_exists('pll_get_post_language')){
-		return $default_from_address;
+		return 'info@norhage.no';
 	}
 
 	$lang = pll_get_post_language($email->object->get_id());
