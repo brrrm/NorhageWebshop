@@ -72,7 +72,7 @@
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -80,10 +80,11 @@
                         "id": ""
                     },
                     "default_value": "Maecenas pulvinar volutpat sollicitudin. Suspendisse iaculis eget mauris nec sodales. Proin vestibulum dui quam, posuere pharetra nunc dictum non. Aenean vulputate orci vitae tellus dignissim, vel viverra massa rhoncus.",
-                    "maxlength": "",
-                    "rows": "",
+                    "translations": "copy_once",
+                    "maxlength": 300,
+                    "rows": 4,
                     "placeholder": "",
-                    "new_lines": "",
+                    "new_lines": "wpautop",
                     "parent_repeater": "field_651fd6b8b0fe5"
                 },
                 {
@@ -153,6 +154,24 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "parent_repeater": "field_651fd6b8b0fe5"
+                },
+                {
+                    "key": "field_67347560d77ac",
+                    "label": "Read more link",
+                    "name": "read_more_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "translations": "copy_once",
+                    "parent_repeater": "field_651fd6b8b0fe5"
                 }
             ]
         }
@@ -175,5 +194,5 @@
     "active": true,
     "description": "Click \"Add review\" to publish a new review",
     "show_in_rest": 0,
-    "modified": 1707770752
+    "modified": 1731493714
 }

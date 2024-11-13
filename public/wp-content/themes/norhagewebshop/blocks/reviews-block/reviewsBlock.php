@@ -33,12 +33,16 @@ if ( ! empty( $block['align'] ) ) {
 	<?php if( have_rows('reviews') ): ?>
 	    <div class="reviews">
 	    <?php while( have_rows('reviews') ): the_row();
+	    	$title = get_sub_field('review_title');
 	    	$image = get_sub_field('review_image');
+	    	$link = get_sub_field('read_more_link');
 	        ?>
 	        <article>
-	        	<header>
-	        		<h3><?php the_sub_field('review_title'); ?></h3>
-	        	</header>
+	        	<?php if($title): ?>
+		        	<header>
+		        		<h3><?php the_sub_field('review_title'); ?></h3>
+		        	</header>
+	        	<?php endif; ?>
 	        	<figure>
 		        	<?php if($image):
 		        		echo wp_get_attachment_image( $image['ID'], 'full', '', [ 'alt' => $image['alt']] );
@@ -46,10 +50,13 @@ if ( ! empty( $block['align'] ) ) {
 		        		<span class="dashicons dashicons-heart"></span>
 		        	<?php endif; ?>
 	        	</figure>
-	        	<div class="review-text"><?php the_sub_field('review_text'); ?></div>
+	        	<div class="review-text"><?php echo wp_kses_post(get_sub_field('review_text')); ?></div>
 	        	<footer>
 	        		<span class="name"><?php the_sub_field('reviewer_name'); ?></span>
 	        		<span class="date"><?php the_sub_field('review_date'); ?></span>
+	        		<?php if($link): ?>
+	        			<p class="link"><?php printf('<a href="%s" target="%s">%s %s</a>', $link['url'], $link['target'] ?? '_self', __('Read more', 'norhagewebshop').':', $link['title']); ?></p>
+	        		<?php endif; ?>
 	        	</footer>
 	        </article>
 	    <?php endwhile; ?>
