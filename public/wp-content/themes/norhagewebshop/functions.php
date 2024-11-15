@@ -1111,6 +1111,12 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
     ];
     $unset_paypal = false;
 
+    // test if wc cart is available:
+    if(!WC()->cart){
+    	return $available_gateways;
+    }
+
+    // check products shipping classes:
     foreach(WC()->cart->get_cart_contents() as $key => $values){
     	if(!in_array($values['data']->get_shipping_class_id(), $small_shipping_classes)){
     		$unset_paypal = true;
