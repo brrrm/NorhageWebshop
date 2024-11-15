@@ -1026,14 +1026,19 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 	}
 }
 
-// fix email sender address in phpmailer
-function norhage_returnpath_phpmailer_init( $phpmailer ) {
-    // Set the Sender (return-path) if it is not already set
-    if ( filter_var( $params->Sender, FILTER_VALIDATE_EMAIL ) !== true ) {
+/**
+ * fix spam problems where envelope-from is the account on directadmin
+ * */
+function norhage_phpmailer_init($phpmailer){
+	// https://phpmailer.github.io/PHPMailer/classes/PHPMailer-PHPMailer-PHPMailer.html#method_setFrom
+	$phpmailer->SetFrom($phpmailer->From, $phpmailer->FromName, TRUE);
+
+	if ( filter_var( $phpmailer->Sender, FILTER_VALIDATE_EMAIL ) !== true ) {
         $phpmailer->Sender = $phpmailer->From;
     }
+	return;
 }
-add_action('phpmailer_init','norhage_returnpath_phpmailer_init');
+add_action( 'phpmailer_init', 'norhage_phpmailer_init' );
 
 
 add_filter('wt_order_number_sequence_prefix', 'norhage_wt_order_number_sequence_prefix', 10, 2); 
@@ -1147,16 +1152,6 @@ function norhage_svea_change_push_uri($data){
 		$data['MerchantSettings']['WebhookUri'] = str_replace( $home_url, pll_home_url(), $data['MerchantSettings']['WebhookUri'] );
 	}
 	return $data;
-}
-
-/**
- * fix spam problems where envelope-from is the account on directadmin
- * */
-add_action( 'phpmailer_init', 'norhage_phpmailer_init' );
-function norhage_phpmailer_init($phpmailer){
-	// https://phpmailer.github.io/PHPMailer/classes/PHPMailer-PHPMailer-PHPMailer.html#method_setFrom
-	$phpmailer->SetFrom($phpmailer->From, $phpmailer->FromName, TRUE);
-	return;
 }
 
 /** 
