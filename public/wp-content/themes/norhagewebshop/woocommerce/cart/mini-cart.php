@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							$max_quantity = 1;
 						} else {
 							$min_quantity = 0;
-							$max_quantity = $_product->get_max_purchase_quantity()? $max_quantity : 'NaN';
+							$max_quantity = $_product->get_max_purchase_quantity()? $_product->get_max_purchase_quantity() : 'NaN';
 						}
 					?>
 
