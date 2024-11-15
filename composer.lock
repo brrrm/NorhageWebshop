@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a28f6f39400c778fe92a920a2ede72d4",
+    "content-hash": "22429c7535befbffbe05774f656c53c3",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
@@ -682,6 +682,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-mail-logging",
+            "version": "1.13.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-mail-logging/",
+                "reference": "tags/1.13.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-logging.1.13.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-mail-logging/"
         },
         {
             "name": "wpackagist-plugin/wp-optimize",
