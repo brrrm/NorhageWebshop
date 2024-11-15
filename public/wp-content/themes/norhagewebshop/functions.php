@@ -441,7 +441,9 @@ add_filter( 'woocommerce_add_to_cart_validation', 'norhage_woocommerce_add_to_ca
 function norhage_add_cart_item_data( $cart_item_data, $product_id, $variation_id, $quantity ){
 	// Check if $_POST['cutting_variables'] is set.
 	// - also check wether $cart_item_data['cutting_variables'] is not deliberately set to FALSE.
-	if(isset($_POST['cutting_variables']) && $cart_item_data['cutting_variables'] !== FALSE){
+	if(isset($_POST['cutting_variables']) 
+	&& isset($cart_item_data['cutting_variables']) 
+	&& $cart_item_data['cutting_variables'] !== FALSE){
 		$cart_item_data['cutting_variables'] = $_POST['cutting_variables'];
 	}else{
 		unset($cart_item_data['cutting_variables']);
