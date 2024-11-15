@@ -954,6 +954,7 @@ remove_action('admin_notices', array( 'VillaTheme_Support_Pro', 'form_ads' ) );
 add_filter( 'woocommerce_email_from_name', 'norhage_woocommerce_email_from_name', 10, 3);
 function norhage_woocommerce_email_from_name($default_from_name, $email, $from_name){
 	if(!function_exists('pll_get_post_language')){
+		error_log('---function pll_get_post_language() doesnt exist!(norhage_woocommerce_email_from_name)---');
 		return $default_from_name;
 	}
 
@@ -977,6 +978,7 @@ function norhage_woocommerce_email_from_name($default_from_name, $email, $from_n
 add_filter( 'woocommerce_email_from_address', 'norhage_woocommerce_email_from_address', 10, 3);
 function norhage_woocommerce_email_from_address($default_from_address, $email, $from_address ){
 	if(!function_exists('pll_get_post_language')){
+		error_log('---function pll_get_post_language() doesnt exist!(norhage_woocommerce_email_from_address)---');
 		return 'info@norhage.no';
 	}
 
@@ -1023,6 +1025,15 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 			return 'sales@norhage.no';
 	}
 }
+
+// fix email sender address in phpmailer
+function norhage_returnpath_phpmailer_init( $phpmailer ) {
+    // Set the Sender (return-path) if it is not already set
+    if ( filter_var( $params->Sender, FILTER_VALIDATE_EMAIL ) !== true ) {
+        $phpmailer->Sender = $phpmailer->From;
+    }
+}
+add_action('phpmailer_init','norhage_returnpath_phpmailer_init');
 
 
 add_filter('wt_order_number_sequence_prefix', 'norhage_wt_order_number_sequence_prefix', 10, 2); 
