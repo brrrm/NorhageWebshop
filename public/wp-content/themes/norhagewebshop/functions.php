@@ -473,9 +473,8 @@ function norhage_add_addons_to_cart($cart_item_key, $product_id, $quantity, $var
 		}
 
 		$addon_product = wc_get_product( $addon_variation_id ? $addon_variation_id : $addon_product_id ); //wc_get_product($addon_product_id);
-		$cart_item_data['cutting_variables'] = FALSE;
 
-		WC()->cart->add_to_cart( $addon_variation_id ? $addon_variation_id : $addon_product_id, $addon_quantity, $addon_variation_id, $addon_variation, $cart_item_data);
+		WC()->cart->add_to_cart( $addon_variation_id ? $addon_variation_id : $addon_product_id, $addon_quantity, $addon_variation_id, $addon_variation, []);
 	}
 }
 add_action( 'woocommerce_add_to_cart', 'norhage_add_addons_to_cart', 10, 6);
@@ -484,7 +483,7 @@ add_action( 'woocommerce_add_to_cart', 'norhage_add_addons_to_cart', 10, 6);
  * Display custom cart_item_data in the cart
  */
 function norhage_get_item_data( $item_data, $cart_item_data ) {
-	if(isset($cart_item_data['cutting_variables'])){
+	if(isset($cart_item_data['cutting_variables'])  ){
 		if(!empty($cart_item_data['variation_id'])){
 			$product_variation = new WC_Product_Variation($cart_item_data['variation_id']);
 			$regular_price = $product_variation->get_price();
