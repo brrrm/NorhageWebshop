@@ -150,8 +150,14 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
 	        		'field'			=> 'term_id',
 	        		'terms'			=> $item->object_id
 	        	]
-        	]
-        ]);
+        	],
+        	'meta_query' => [
+        		[
+					'key' => '_stock_status',
+					'value' => 'instock'
+				]
+			]
+		]);
 
         // Check count, if more than 0 display count
         if(count($posts) > 0){
