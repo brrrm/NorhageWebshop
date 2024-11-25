@@ -17,6 +17,11 @@
 	position: sticky;
 	top: 0;
 	overflow: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+.productHeaderBlock .text-col::-webkit-scrollbar {
+	display: none;
 }
 .productHeaderBlock .text-col p#breadcrumbs{
 	position: absolute;
