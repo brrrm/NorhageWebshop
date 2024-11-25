@@ -223,6 +223,11 @@ function norhagewebshop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
+function norhagewebshop_scripts_late(){
+	wp_add_inline_script('kco', 'kco_params.standard_woo_checkout_fields.push("createaccount"); kco_params.standard_woo_checkout_fields.push("account_username"); kco_params.standard_woo_checkout_fields.push("account_password");', 'after');
+}
+add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts_late', 99 );
+
 /**
  * Ajax cart.
  */

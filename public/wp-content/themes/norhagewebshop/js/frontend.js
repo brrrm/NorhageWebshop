@@ -271,6 +271,8 @@
 		dataLayer.push({'event': 'contact_form_submit'});
 	});
 
+	$('#kco-extra-checkout-fields').after($('.woocommerce-checkout.kco-checkout .woocommerce-account-fields'));
+
 	$.fn.buttonPlusMin = function(action){
 		let inputSibling = $(this).siblings('input');
 		let currentValue = parseFloat(inputSibling.val());
