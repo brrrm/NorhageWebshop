@@ -784,11 +784,16 @@ function norhage_get_taxo_thumbnail($cat){
 }
 
 
+// sync WMC currencies
+function norhage_pll_copy_post_metas( $metas ) {
+    return array_merge( $metas, ['_regular_price_wmcp', '_sale_price_wmcp'] );
+}
+add_filter( 'pll_copy_post_metas', 'norhage_pll_copy_post_metas' );
+
 /**
  * Sync currency values on product->save();
  **/
-//add_action('save_post_product', 'norhage_wpmc_sync_on_product_save', 10, 3);
-if(function_exists('pll_get_post_translations')){
+/*if(function_exists('pll_get_post_translations')){
 	add_action( 'added_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
 	add_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
 	function norhage_wpmc_sync_on_product_save( $meta_id, $post_id, $meta_key, $meta_value ) {
@@ -810,7 +815,7 @@ if(function_exists('pll_get_post_translations')){
 			add_action( 'updated_post_meta', 'norhage_wpmc_sync_on_product_save', 10, 4 );
 		}
 	}
-}
+}*/
 
 /**
  * Sync prices during import
