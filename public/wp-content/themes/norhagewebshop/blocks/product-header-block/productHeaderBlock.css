@@ -20,6 +20,10 @@
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none;  /* Firefox */
 }
+.productHeaderBlock .text-col:has(.summary){
+	display: flex;
+	flex-direction: column;
+}
 .productHeaderBlock .text-col::-webkit-scrollbar {
 	display: none;
 }
@@ -31,11 +35,11 @@
 .productHeaderBlock .text-col h1{
 	margin: 0;
 	font-size: 2em;
+	flex: auto;
 }
 /* the short description should be hidden when there's not enough space */
-.productHeaderBlock .text-col h1 + div{
+.productHeaderBlock .text-col h1 .short-desc{
 	flex: auto 0 10;
-	overflow: hidden;
 }
 /* Empty divs should take up as little space as possible */
 .productHeaderBlock .text-col > *:empty{
@@ -50,6 +54,29 @@
 }
 .productHeaderBlock .text-col .short-desc:not(:empty){
 	margin: 2em 0;
+}
+.woocommerce .product .summary,
+.woocommerce div.product form.cart,
+.product .entry-content .summary.entry-summary{
+	margin-bottom: 0;
+}
+.product .entry-content .summary.entry-summary{
+	float: none;
+	width: auto;
+	background-color: var(--light-green);
+	padding: 0;
+	border-bottom: 1px solid var(--store-color);
+}
+
+.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
+	margin: 0 -1em 0 -2em;
+	padding: 1em 1em 1em 2em;
+	border-top: 1px solid var(--store-color);
+	border-bottom: none;
+	position: sticky;
+	bottom: 0;
+	width: auto;
+	flex: auto 0 0;
 }
 .productHeaderBlock .image-col{
 	flex: 65% 0 0;
@@ -157,18 +184,20 @@
 	}
 }
 @media screen and (max-width: 768px){
+	.norhage-block.productHeaderBlock{
+		display: block;
+	}
 	.productHeaderBlock .text-col,
 	.productHeaderBlock .text-col:has(.summary){
 		flex: 100% 0 0;
 		order: 2;
 		font-size: 1em;
-	    padding: 2em 1em ;
+	    padding: 2em 1em 0;
 	    display: block;
 	    height: auto;
 	    min-height: 50vh;
 	    position: sticky;
-	    top: auto;
-	    bottom: 0;
+	    top: 50vh;
 	    z-index: 10;
 	    background: #fff;
 	    border-top: 1px solid var(--store-color);
@@ -178,6 +207,12 @@
 		left:unset;
 		top: unset;
 	}
+	.product .entry-content .productHeaderBlock .text-col .summary.entry-summary{
+		margin: 0 -1em 0 -1em;
+		padding: 1em 1em 1em 1em;
+		position: static;
+		width: auto;
+	}
 	.productHeaderBlock .image-col{
 		flex: 100% 0 0;
 		flex-direction: row;
@@ -185,6 +220,8 @@
 		order: 1;
 		border-left: none;
 		border-bottem: 1px solid var();
+		position: sticky;
+		bottom: 50vh;
 
 	}
 	.productHeaderBlock .image-col figure{
