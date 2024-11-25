@@ -271,6 +271,8 @@
 		dataLayer.push({'event': 'contact_form_submit'});
 	});
 
+	// fix bug with Klarna Checkout
+	// Klarna messes up the account-creation-fields in the form
 	$('#kco-extra-checkout-fields').after($('.woocommerce-checkout.kco-checkout .woocommerce-account-fields'));
 
 	$.fn.buttonPlusMin = function(action){
