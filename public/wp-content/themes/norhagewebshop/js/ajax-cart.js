@@ -175,9 +175,14 @@
    
 	
 	$(document).on('change', '.woocommerce-mini-cart .qty.text', function() {
-	   var cart_item_key = $(this).attr('name').match(/\[(.*?)\]/)[1];
-	   var new_qty = $(this).val();
-	   updateCart(cart_item_key, new_qty);
+		clearTimeout(window.cartTimeout);
+
+		var cart_item_key = $(this).attr('name').match(/\[(.*?)\]/)[1];
+		var new_qty = $(this).val();
+
+		window.cartTimeout = setTimeout(function(){
+			updateCart(cart_item_key, new_qty);
+		}, 500, cart_item_key, new_qty);
 	});
 
 	

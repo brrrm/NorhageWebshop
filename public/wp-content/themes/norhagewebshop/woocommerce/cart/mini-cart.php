@@ -69,11 +69,12 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					
 					<?php
 						if ( $_product->is_sold_individually() ) {
-							$min_quantity = 1;
+							$min_quantity = 0;
 							$max_quantity = 1;
 						} else {
 							$min_quantity = 0;
-							$max_quantity = $_product->get_max_purchase_quantity()? $_product->get_max_purchase_quantity() : 'NaN';
+							$max_quantity = $_product->get_max_purchase_quantity() > 1? $_product->get_max_purchase_quantity() : '10000000';
+							error_log('maxmax: ' . $_product->get_max_purchase_quantity());
 						}
 					?>
 
