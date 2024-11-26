@@ -118,7 +118,7 @@
 		});
 
 		function add_addons_to_wc_variation_price(){
-			let newPrice = variationPrice;
+			let newPrice = parseFloat(variationPrice);
 
 			// first we need to calculate the unit price
 			if($('.sizes_input').length){
@@ -146,8 +146,8 @@
 
 			// then we add the addons
 			$('.addon input.qty').each(function(){
-				let quantity = $(this).val();
-				let price = $(this).data('price');
+				let quantity = parseInt($(this).val());
+				let price = parseFloat($(this).data('price'));
 				newPrice += (price * quantity);
 			});
 
