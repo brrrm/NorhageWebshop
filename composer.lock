@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22429c7535befbffbe05774f656c53c3",
+    "content-hash": "028cd1592574f2faec2ca995448cfe9c",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
@@ -574,6 +574,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/webp-express/"
+        },
+        {
+            "name": "wpackagist-plugin/woo-bulk-edit-products",
+            "version": "1.8.15",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woo-bulk-edit-products/",
+                "reference": "tags/1.8.15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woo-bulk-edit-products.1.8.15.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woo-bulk-edit-products/"
         },
         {
             "name": "wpackagist-plugin/woo-cart-abandonment-recovery",
