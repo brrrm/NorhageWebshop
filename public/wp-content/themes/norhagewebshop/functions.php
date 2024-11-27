@@ -1315,6 +1315,26 @@ function norhage_berocket_aapf_current_page_url($current_page_url, $br_options){
 }
 add_filter('berocket_aapf_current_page_url', 'norhage_berocket_aapf_current_page_url', 10, 2);
 
+
+
+/**
+ * Fix probleem waarbij sales prijs automatisch wordt berekend indien er geen sales prijs in de relevante currency is ingevoerd
+ * */
+function norhage_woocommerce_product_get__sale_price_wmcp($value, $product){
+	if(class_exists('WOOMULTI_CURRENCY_Data')){
+		$sale_prices = json_decode($value, true);
+		$multiCurrencySettings = WOOMULTI_CURRENCY_Data::get_ins();
+		$currentCurrency = $multiCurrencySettings->get_current_currency();
+		if($product->is_on_sale('edit') 
+			&& $currentCurrency !== 'NOK' 
+			&& empty($sale_prices[$currentCurrency])){
+			$value = $product->get_meta('_regular_price_wmcp');
+		}
+	}
+	return $value;
+}
+add_filter('woocommerce_product_get__sale_price_wmcp', 'norhage_woocommerce_product_get__sale_price_wmcp', 100, 2); 
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
