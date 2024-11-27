@@ -74,7 +74,6 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						} else {
 							$min_quantity = 0;
 							$max_quantity = $_product->get_max_purchase_quantity() > 1? $_product->get_max_purchase_quantity() : '10000000';
-							error_log('maxmax: ' . $_product->get_max_purchase_quantity());
 						}
 					?>
 
