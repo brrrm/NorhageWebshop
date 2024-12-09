@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-09 14:20+0200\n"
-"PO-Revision-Date: 2024-09-09 14:20+0200\n"
+"POT-Creation-Date: 2024-12-09 15:14+0100\n"
+"PO-Revision-Date: 2024-12-09 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fi\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,6 +110,12 @@ msgstr "Olemme ylpeitä tuotteidemme laadusta ja kestävyydestä."
 msgid "All showcases"
 msgstr "Kaikki vitriinit"
 
+#: blocks/reviews-block/reviewsBlock.php:58
+#, fuzzy
+#| msgid "Read More"
+msgid "Read more"
+msgstr "Lue lisää"
+
 #: blocks/text-image-block/textImageBlock.php:57
 msgid "Please contact us:"
 msgstr "Ota yhteyttä:"
@@ -168,19 +174,19 @@ msgstr "norhageindustri.fi"
 msgid "Find the Norhage shop for your country"
 msgstr "Etsi maasi Norhage-kauppa"
 
-#: footer.php:47 footer.php:48
+#: footer.php:51 footer.php:52
 msgid "Sitemap"
 msgstr "Sivukartta"
 
-#: footer.php:57
+#: footer.php:61
 msgid "Norhage can also be found on:"
 msgstr "Norhage löytyy myös:"
 
-#: footer.php:60
+#: footer.php:64
 msgid "https://www.facebook.com/norhage.no"
 msgstr ""
 
-#: footer.php:63
+#: footer.php:67
 msgid "https://www.instagram.com/norhage.no/"
 msgstr ""
 
@@ -204,23 +210,23 @@ msgstr "Yllä oleva tuoteluettelo"
 msgid "A widget area above the products listing"
 msgstr "Widget-alue tuotelistauksen yläpuolella"
 
-#: functions.php:172
+#: functions.php:178
 msgid "expand"
 msgstr "laajentaa"
 
-#: functions.php:308
+#: functions.php:314
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:380 functions.php:389
+#: functions.php:386 functions.php:395
 msgid "Customize"
 msgstr "Mukauta"
 
-#: functions.php:401
+#: functions.php:407
 msgid "Please, enter a value for width and height."
 msgstr "Anna arvo leveydelle ja korkeudelle."
 
-#: functions.php:422
+#: functions.php:428
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -229,63 +235,67 @@ msgstr ""
 "Leveyden tulee olla minkä tahansa kokoinen %s - %s mm ja korkeuden tulee "
 "olla minkä tahansa kokoinen %s - %smm."
 
-#: functions.php:476 functions.php:645 functions.php:668
+#: functions.php:511 functions.php:640 functions.php:663
 msgid "Width"
 msgstr "Leveys"
 
-#: functions.php:480 functions.php:647 functions.php:670
+#: functions.php:515 functions.php:642 functions.php:665
 msgid "Height"
 msgstr "Korkeus"
 
-#: functions.php:484 functions.php:651
+#: functions.php:519 functions.php:646
 msgid "Unit price"
 msgstr "Yksikköhinta"
 
-#: functions.php:488 functions.php:649 functions.php:665
+#: functions.php:523 functions.php:644 functions.php:660
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:501 functions.php:653
+#: functions.php:648
 msgid "Addon"
 msgstr ""
 
-#: functions.php:762
+#: functions.php:747
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:769
+#: functions.php:754
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:1086 sidebar-before_shop_loop.php:20
+#: functions.php:1089 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:1095
+#: functions.php:1098
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:1096
+#: functions.php:1099
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:1097
+#: functions.php:1100
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:1098
+#: functions.php:1101
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:1099
+#: functions.php:1102
 msgid "products"
 msgstr "tuotteet"
 
-#: header.php:77
+#: header.php:74
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: header.php:138
+#: header.php:136 inc/ajax-cart.php:4
+msgid "Cart"
+msgstr "Ostoskori"
+
+#: header.php:137
 msgid "Primary Menu"
 msgstr "Päävalikko"
 
@@ -297,15 +307,11 @@ msgstr "Navigaatio"
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
 
-#: inc/ajax-cart.php:6 inc/ajax-cart.php:10
-msgid "Cart"
-msgstr "Ostoskori"
-
-#: inc/ajax-cart.php:44
+#: inc/ajax-cart.php:36
 msgid "Shopping cart"
 msgstr "Ostoskori"
 
-#: inc/ajax-cart.php:45 sidebar-before_shop_loop.php:16
+#: inc/ajax-cart.php:37 sidebar-before_shop_loop.php:16
 msgid "Close"
 msgstr "Sulje"
 
@@ -537,7 +543,7 @@ msgid "Product"
 msgstr "Tuote"
 
 #. translators: %s is the product name
-#: woocommerce/cart/cart.php:123
+#: woocommerce/cart/cart.php:123 woocommerce/cart/mini-cart.php:53
 #, php-format
 msgid "Remove %s from cart"
 msgstr "Poista %s ostoskorista"
@@ -562,6 +568,12 @@ msgstr "Lisää kuponki"
 msgid "Update cart"
 msgstr "Päivitä ostoskori"
 
+#: woocommerce/cart/mini-cart.php:118
+#, fuzzy
+#| msgid "No projects found in trash"
+msgid "No products in the cart."
+msgstr "Projekteja ei löytynyt roskakorista"
+
 #: woocommerce/checkout/form-checkout.php:26
 msgid "You must be logged in to checkout."
 msgstr "Sinun täytyy olla kirjautunut sisään, kun aiot siirtyä kassalle."
@@ -570,31 +582,41 @@ msgstr "Sinun täytyy olla kirjautunut sisään, kun aiot siirtyä kassalle."
 msgid "Your order"
 msgstr "Tilauksesi"
 
-#: woocommerce/single-product/add-to-cart/simple.php:57
+#: woocommerce/single-product/add-to-cart/simple.php:62
 msgid "Configure the size"
 msgstr "Määritä koko"
 
-#: woocommerce/single-product/add-to-cart/simple.php:60
+#: woocommerce/single-product/add-to-cart/simple.php:65
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr "Leveys (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:64
+#: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr "Korkeus (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:73
+#: woocommerce/single-product/add-to-cart/simple.php:77
+#: woocommerce/single-product/add-to-cart/variable.php:87
+msgid "Select extra options"
+msgstr "Valitse lisäasetukset"
+
+#: woocommerce/single-product/add-to-cart/simple.php:93
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
+msgstr "Näytä"
+
+#: woocommerce/single-product/add-to-cart/simple.php:109
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Valitse määrä"
 
-#: woocommerce/single-product/add-to-cart/simple.php:105
+#: woocommerce/single-product/add-to-cart/simple.php:141
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr "Toimitusaika"
 
-#: woocommerce/single-product/add-to-cart/simple.php:110
+#: woocommerce/single-product/add-to-cart/simple.php:146
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr "Toimituskulut"
@@ -610,14 +632,6 @@ msgstr "Määritä tuoteasetukset"
 #: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr "Tyhjennä"
-
-#: woocommerce/single-product/add-to-cart/variable.php:87
-msgid "Select extra options"
-msgstr "Valitse lisäasetukset"
-
-#: woocommerce/single-product/add-to-cart/variable.php:103
-msgid "View"
-msgstr "Näytä"
 
 #: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
@@ -694,6 +708,3 @@ msgstr "https://garbo.nl"
 
 #~ msgid "No projects found"
 #~ msgstr "Projekteja ei löytynyt"
-
-#~ msgid "No projects found in trash"
-#~ msgstr "Projekteja ei löytynyt roskakorista"
