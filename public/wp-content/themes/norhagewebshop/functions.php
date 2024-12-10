@@ -45,6 +45,8 @@ function norhagewebshop_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+	add_image_size('nav-thumb', 420, 420, true);
+	add_image_size('teaser-thumb', 600, 600, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -105,6 +107,10 @@ function norhage_sidebar_before_shop_loop(){
 	get_sidebar('before_shop_loop');
 }
 
+
+add_filter( 'wp_calculate_image_srcset_meta', '__return_empty_array' );
+
+
 /**
  * We use WordPress's init hook to make sure
  * our blocks are registered early in the loading
@@ -163,7 +169,7 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
         if(count($posts) > 0){
         	$output .= '<ul class="products-sub-menu">';
         	foreach($posts as $post){
-        		$thumb = get_the_post_thumbnail($post->ID, [420, 420], ['loading' => 'lazy', 'fetchpriority' => 'auto']);
+        		$thumb = get_the_post_thumbnail($post->ID, 'nav-thumb', ['loading' => 'lazy', 'fetchpriority' => 'auto']);
         		$output .= '<li class="image-button"><a href="' . esc_url( get_permalink($post) ) . '">' . $thumb . '</a><div class="title-price"><span class="title"><a href="' . esc_url( get_permalink($post) ) . '">' . get_the_title($post) . '</a></span></div></li>' ;
         	}
         	$output .= '</ul>';
@@ -171,7 +177,7 @@ function norhage_menu_add_category_posts( $output, $item, $depth, $args ) {
     }
 
     if( $args->menu_id == 'primary-menu' && $item->type == 'post_type' && $item->object == 'service') {
-    	$thumb = get_the_post_thumbnail($item->object_id, [420,420], ['loading' => 'lazy', 'fetchpriority' => 'auto']);
+    	$thumb = get_the_post_thumbnail($item->object_id, 'nav-thumb', ['loading' => 'lazy', 'fetchpriority' => 'auto']);
         $output = '<div class="image-button"><a href="' . esc_url( $item->url ) . '">' . $thumb . '</a><div class="title-price"><span class="title"><a href="' . esc_url( $item->url ) . '">' . $item->title . '</a></span></div></div>' ;
     }
     if( in_array($args->menu_id, ['primary-menu', 'secondary-menu']) && in_array('menu-item-has-children', $item->classes) ){
@@ -228,6 +234,15 @@ function norhagewebshop_scripts() {
 	wp_add_inline_script('norhagewebshop-misc', 'var myThemeParams = ' . wp_json_encode( $myThemeParams ), 'before');*/
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
+
+// Remove Global Styles and SVG Filters from WP 5.9.1 - 2022-02-27
+function remove_global_styles_and_svg_filters() {
+	//remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+	remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+}
+add_action('init', 'remove_global_styles_and_svg_filters');
+
+add_filter( 'styles_inline_size_limit', '__return_zero' );
 
 /**
  * Ajax cart.
