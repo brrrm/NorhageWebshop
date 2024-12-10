@@ -142,11 +142,7 @@
 			<h2><?php _e('Navigation', 'norhagewebshop'); ?></h2>
 
 			<?php
-			wp_nav_menu([
-				'theme_location' 	=> 'menu-1',
-				'menu_id'        	=> 'primary-menu',
-				'container_class'	=> 'menu-main-navigation-container menu-container'
-			]);
+				echo norhage_get_nav_primary();
 			?>
 			<?php
 			wp_nav_menu([

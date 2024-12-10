@@ -141,6 +141,31 @@ add_action( 'init', 'norhagewebshop_register_acf_blocks' );
 
 
 
+function norhage_get_nav_primary(){
+	$lang = pll_current_language() ?? 'nb';
+	$cache_folder = WP_CONTENT_DIR . '/cache/_nav_primary';
+	$cache_primary_nav = $cache_folder . '/nav_primary_' . $lang . '.html';
+	$treshold = time() - (60*60*6);
+	if (file_exists($cache_primary_nav) && filectime($cache_primary_nav) > $treshold && !isset($_GET['clear_cache'])) {
+		$handle = fopen($cache_primary_nav, "r");
+		$nav_primary = fread($handle, filesize($cache_primary_nav));
+		fclose($handle);
+	}else{
+		$nav_primary = wp_nav_menu([
+			'theme_location' 	=> 'menu-1',
+			'menu_id'        	=> 'primary-menu',
+			'container_class'	=> 'menu-main-navigation-container menu-container',
+			'echo'				=> false
+		]);
+		// we can serve the cached file.
+		if ( !file_exists( $cache_folder ) && !is_dir( $cache_folder ) ) {
+			mkdir( $cache_folder );
+		}
+		file_put_contents($cache_primary_nav, $nav_primary);
+	}
+	return $nav_primary;
+}
+
 /**
  * ADD THE PRODUCTS TO THE CATEGORY MENU ITEMS
  * */
