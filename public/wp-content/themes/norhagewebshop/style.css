@@ -317,6 +317,7 @@ select{
 .site-main .entry-content > *.alignwide{
 	max-width: 100%;
 	margin-right: -25%;
+	margin-left: 25%;
 }
 .site-main .entry-content > *.alignfull{
 	max-width: none;
