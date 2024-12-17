@@ -1,31 +1,30 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2024-12-17 13:37+0100\n"
-"PO-Revision-Date: 2024-03-29 13:18+0100\n"
+"PO-Revision-Date: 2024-12-17 13:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: lt_LT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: 404.php:13
 msgid ""
-"It seems like the page you're trying to reach has moved or no longer "
-"exists. Our webshop recently underwent some changes, so it’s possible that "
-"the link is outdated. We apologize for the inconvenience!\n"
+"It seems like the page you're trying to reach has moved or no longer exists. "
+"Our webshop recently underwent some changes, so it’s possible that the link "
+"is outdated. We apologize for the inconvenience!\n"
 "\n"
 "You can try searching for what you need, or feel free to explore other "
 "sections of our website. We're confident you'll find what you're looking "
@@ -34,28 +33,38 @@ msgid ""
 "If you still need help, please don't hesitate to contact our team. We're "
 "always here to assist you!"
 msgstr ""
+"Atrodo, kad puslapis, kurį bandote pasiekti, pasislinko arba jo nebėra. Mūsų "
+"internetinėje parduotuvėje neseniai buvo atlikti kai kurie pakeitimai, todėl "
+"gali būti, kad nuoroda yra pasenusi. Atsiprašome už nepatogumus!\n"
+"\n"
+"Galite pabandyti ieškoti to, ko jums reikia, arba nedvejodami naršykite "
+"kitus mūsų svetainės skyrius. Esame tikri, kad rasite tai, ko ieškote.\n"
+"\n"
+"Jei vis tiek reikia pagalbos, nedvejodami susisiekite su mūsų komanda. Mes "
+"visada pasiruošę jums padėti!"
 
 #: 404.php:29
 msgid "Oh no! We couldn't find the page you're looking for."
-msgstr ""
+msgstr "Oi ne! Nepavyko rasti puslapio, kurio ieškote."
 
 #: 404.php:36
 msgid "Back to home"
-msgstr ""
+msgstr "Atgal į namus"
 
 #: 404.php:52
 msgid "Or have a look at our greenhouses"
-msgstr ""
+msgstr "Arba pažvelkite į mūsų šiltnamius"
 
 #: blocks/categories-block/categoriesBlock.php:33
 msgid ""
 "Is your garden big or small? <br />We have a matching greenhouse for you!"
 msgstr ""
+"Ar jūsų sodas didelis ar mažas? <br />Mes turime jums tinkamą šiltnamį!"
 
 #: blocks/cta-block/ctaBlock.php:38
 #: blocks/text-image-block/textImageBlock.php:45
 msgid "Need help with your choice?"
-msgstr ""
+msgstr "Reikia pagalbos dėl pasirinkimo?"
 
 #: blocks/cta-block/ctaBlock.php:44
 #: blocks/cta-within-text-block/ctaWithinTextBlock.php:40
@@ -65,72 +74,74 @@ msgid ""
 "Our experts are ready to assist you with selecting the best match for your "
 "growing operations."
 msgstr ""
+"Mūsų ekspertai yra pasirengę padėti jums pasirinkti geriausią variantą jūsų "
+"auginimo operacijoms."
 
 #: blocks/cta-block/ctaBlock.php:50
 msgid "Contact us today and we’ll jumpstart your project!"
-msgstr ""
+msgstr "Susisiekite su mumis šiandien ir mes pradėsime jūsų projektą!"
 
 #: blocks/cta-within-text-block/ctaWithinTextBlock.php:34
 msgid "Need emergency damage repair? <br>Call us today!"
-msgstr ""
+msgstr "Reikia avarinio žalos taisymo? <br>Skambinkite mums šiandien!"
 
 #: blocks/cta-within-text-block/ctaWithinTextBlock.php:56
 msgid "Contact us"
-msgstr ""
+msgstr "Susisiekite su mumis"
 
 #: blocks/products-block/productsBlock.php:37
 msgid "You might be interested in these items"
-msgstr ""
+msgstr "Galbūt jus domina šie elementai"
 
 #: blocks/products-block/productsBlock.php:49
 msgid "Call us today and we’ll jumpstart your project!"
-msgstr ""
+msgstr "Paskambinkite mums šiandien ir mes pradėsime jūsų projektą!"
 
 #: blocks/products-slider-block/productsSliderBlock.php:63
 #: blocks/projects-block/projectsBlock.php:84
 msgid "Left"
-msgstr ""
+msgstr "Kairė"
 
 #: blocks/products-slider-block/productsSliderBlock.php:64
 #: blocks/projects-block/projectsBlock.php:85
 msgid "Right"
-msgstr ""
+msgstr "Dešinė"
 
 #: blocks/projects-block/projectsBlock.php:52
 msgid "Our quality? Have a look for yourself!"
-msgstr ""
+msgstr "Mūsų kokybė? Pažvelkite į save!"
 
 #: blocks/projects-block/projectsBlock.php:58
 msgid "We take pride in the quality and durabillity of our products."
-msgstr ""
+msgstr "Mes didžiuojamės savo gaminių kokybe ir ilgaamžiškumu."
 
 #: blocks/projects-block/projectsBlock.php:64
 msgid "All showcases"
-msgstr ""
+msgstr "Visos vitrinos"
 
 #: blocks/reviews-block/reviewsBlock.php:58
 msgid "Read more"
-msgstr ""
+msgstr "Skaityti daugiau"
 
 #: blocks/text-image-block/textImageBlock.php:57
 msgid "Please contact us:"
-msgstr ""
+msgstr "Susisiekite su mumis:"
 
 #: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:157
 msgid "info@norhage.com"
-msgstr ""
+msgstr "info@norhage.com"
 
 #: blocks/text-image-block/textImageBlock.php:71
 msgid "info@norhage.no"
-msgstr ""
+msgstr "info@norhage.no"
 
 #: footer.php:16
 msgid "Norhage Webshop"
-msgstr ""
+msgstr "Norhage internetinė parduotuvė"
 
 #: footer.php:18
 msgid "Address"
-msgstr ""
+msgstr "Adresas"
 
 #: footer.php:20
 msgid ""
@@ -142,11 +153,11 @@ msgstr ""
 
 #: footer.php:26
 msgid "Email"
-msgstr ""
+msgstr "El. paštas"
 
 #: footer.php:29
 msgid "Phone"
-msgstr ""
+msgstr "Telefonas"
 
 #: footer.php:31
 msgid ""
@@ -156,27 +167,27 @@ msgstr ""
 
 #: footer.php:35
 msgid "B2B website"
-msgstr ""
+msgstr "B2B svetainė"
 
 #: footer.php:36
 msgid "https://norhageindustri.com"
-msgstr ""
+msgstr "https://norhageindustri.com"
 
 #: footer.php:36
 msgid "norhageindustri.com"
-msgstr ""
+msgstr "norhageindustri.com"
 
 #: footer.php:39
 msgid "Find the Norhage shop for your country"
-msgstr ""
+msgstr "Raskite savo šalies \"Norhage\" parduotuvę"
 
 #: footer.php:51 footer.php:52
 msgid "Sitemap"
-msgstr ""
+msgstr "Svetainės struktūra"
 
 #: footer.php:61
 msgid "Norhage can also be found on:"
-msgstr ""
+msgstr "Norhage taip pat galima rasti:"
 
 #: footer.php:64
 msgid "https://www.facebook.com/norhage.no"
@@ -188,290 +199,296 @@ msgstr ""
 
 #: functions.php:54
 msgid "Primary"
-msgstr ""
+msgstr "Pagrindinis"
 
 #: functions.php:55
 msgid "Secondary navigation"
-msgstr ""
+msgstr "Antrinė navigacija"
 
 #: functions.php:56
 msgid "Footer navigation"
-msgstr ""
+msgstr "Poraštės naršymas"
 
 #: functions.php:96
 msgid "Above products listing"
-msgstr ""
+msgstr "Aukščiau pateiktas produktų sąrašas"
 
 #: functions.php:97
 msgid "A widget area above the products listing"
-msgstr ""
+msgstr "Valdiklių sritis virš produktų sąrašo"
 
 #: functions.php:209
 msgid "expand"
-msgstr ""
+msgstr "Išplėsti"
 
 #: functions.php:354
 msgid "Read More"
-msgstr ""
+msgstr "Plačiau"
 
 #: functions.php:426 functions.php:435
 msgid "Customize"
-msgstr ""
+msgstr "Tinkinti"
 
 #: functions.php:447
 msgid "Please, enter a value for width and height."
-msgstr ""
+msgstr "Įveskite pločio ir aukščio reikšmę."
 
 #: functions.php:468
 #, php-format
 msgid ""
-"Width should be any size from %s to %smm and Height should be any size "
-"from %s to %smm."
+"Width should be any size from %s to %smm and Height should be any size from "
+"%s to %smm."
 msgstr ""
+"Plotis turi būti bet kokio dydžio nuo %s iki %s mm, o aukštis turi būti bet "
+"kokio dydžio nuo %s iki %s mm."
 
 #: functions.php:551 functions.php:680 functions.php:703
 msgid "Width"
-msgstr ""
+msgstr "Plotis"
 
 #: functions.php:555 functions.php:682 functions.php:705
 msgid "Height"
-msgstr ""
+msgstr "Aukštis"
 
 #: functions.php:559 functions.php:686
 msgid "Unit price"
-msgstr ""
+msgstr "Vieneto kaina"
 
 #: functions.php:563 functions.php:684 functions.php:700
 msgid "Cutting fee"
-msgstr ""
+msgstr "Pjovimo mokestis"
 
 #: functions.php:688
 msgid "Addon"
-msgstr ""
+msgstr "Priedas"
 
 #: functions.php:787
 msgid "Description"
-msgstr ""
+msgstr "Aprašymas"
 
 #: functions.php:794
 msgid "The description is shown on the category overview page."
-msgstr ""
+msgstr "Aprašas rodomas kategorijos apžvalgos puslapyje."
 
 #: functions.php:1129 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
-msgstr ""
+msgstr "Pasirinkti filtrai"
 
 #: functions.php:1138
 msgid "Show value(s)"
-msgstr ""
+msgstr "Rodyti vertę (-es)"
 
 #: functions.php:1139
 msgid "Hide value(s)"
-msgstr ""
+msgstr "Slėpti reikšmę (-es)"
 
 #: functions.php:1140
 msgid "Unselect all"
-msgstr ""
+msgstr "Panaikinti išrinkimą"
 
 #: functions.php:1141
 msgid "Nothing is selected"
-msgstr ""
+msgstr "Nieko nepažymėta"
 
 #: functions.php:1142
 msgid "products"
-msgstr ""
+msgstr "prekės"
 
 #: header.php:74
 msgid "Skip to content"
-msgstr ""
+msgstr "Praleisti ir pereiti į turinį"
 
 #: header.php:136 inc/ajax-cart.php:4
 msgid "Cart"
-msgstr ""
+msgstr "Krepšelis"
 
 #: header.php:137
 msgid "Primary Menu"
-msgstr ""
+msgstr "Pagrindinis meniu"
 
 #: header.php:142
 msgid "Navigation"
-msgstr ""
+msgstr "Navigacija"
 
 #: header.php:156
 msgid "Contact us today"
-msgstr ""
+msgstr "Susisiekite su mumis šiandien"
 
 #: inc/ajax-cart.php:36
 msgid "Shopping cart"
-msgstr ""
+msgstr "Krepšelis"
 
 #: inc/ajax-cart.php:37 sidebar-before_shop_loop.php:16
 msgid "Close"
-msgstr ""
+msgstr "Uždaryti"
 
 #. translators: %d: shipping package number
 #: inc/calc-shipping-costs.php:73
 #, php-format
 msgctxt "shipping packages"
 msgid "Shipping %d"
-msgstr ""
+msgstr "Pristatymas %d"
 
 #: inc/calc-shipping-costs.php:73 inc/calc-shipping-costs.php:86
 msgctxt "shipping packages"
 msgid "Shipping"
-msgstr ""
+msgstr "Pristatymas"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:30
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "Paskelbta %s"
 
 #. translators: %s: post author.
 #: inc/template-tags.php:46
 #, php-format
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "%s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:63
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of categories.
 #: inc/template-tags.php:66
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Publikuota %1$s"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:70
 msgctxt "list item separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #. translators: 1: list of tags.
 #: inc/template-tags.php:73
 #, php-format
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Pažymėtas %1$s"
 
 #. translators: %s: post title
 #: inc/template-tags.php:83
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
+msgstr "Palikite komentarą<span class=\"screen-reader-text\">  %s</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
+msgstr "Redaguoti <span class=\"screen-reader-text\">%s</span>"
 
 #. translators: %s: search query.
 #: search.php:26
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Rezultatai Ieškant: %s"
 
 #: shipping-calculator.php:26
 msgid "Calculate shipping"
-msgstr ""
+msgstr "Skaičiuoti pristatymą"
 
 #: shipping-calculator.php:32
 msgid "Country / region:"
-msgstr ""
+msgstr "Šalis / regionas:"
 
 #: shipping-calculator.php:34
 msgid "Select a country / region&hellip;"
-msgstr ""
+msgstr "Pasirinkite šalį / regioną&hellip;"
 
 #: shipping-calculator.php:53 shipping-calculator.php:59
 #: shipping-calculator.php:72
 msgid "State / County"
-msgstr ""
+msgstr "Apskritis"
 
 #: shipping-calculator.php:58 shipping-calculator.php:71
 msgid "State / County:"
-msgstr ""
+msgstr "Valstybė / apskritis:"
 
 #: shipping-calculator.php:60
 msgid "Select an option&hellip;"
-msgstr ""
+msgstr "Pasirinkite&hellip;"
 
 #: shipping-calculator.php:81
 msgid "City:"
-msgstr ""
+msgstr "Miestas:"
 
 #: shipping-calculator.php:82
 msgid "City"
-msgstr ""
+msgstr "Miestas"
 
 #: shipping-calculator.php:88
 msgid "Postcode / ZIP:"
-msgstr ""
+msgstr "Pašto kodas / ZIP:"
 
 #: shipping-calculator.php:89
 msgid "Postcode / ZIP"
-msgstr ""
+msgstr "Pašto kodas"
 
 #: shipping-calculator.php:93
 msgid "Update"
-msgstr ""
+msgstr "Atnaujinti"
 
 #: shipping-costs.php:35
 #, php-format
 msgid "Shipping to %s."
-msgstr ""
+msgstr "Pristatymas į %s."
 
 #: shipping-costs.php:36
 msgid "Change address"
-msgstr ""
+msgstr "Keisti adresą"
 
 #: shipping-costs.php:38
 msgid "Shipping options will be updated during checkout."
 msgstr ""
+"Tai tik apytikslė kaina. Kainos atsižvelgiant į pristatymo būdą bus "
+"atnaujinamos atsiskaitymo metu."
 
 #: shipping-costs.php:45
 msgid "Shipping costs are calculated during checkout."
-msgstr ""
+msgstr "Siuntimo išlaidos apskaičiuojamos atsiskaitant."
 
 #: shipping-costs.php:47
 msgid "Enter your address to view shipping options."
-msgstr ""
+msgstr "Kad galėtumėte peržiūrėti siuntimo parinktis, įveskite savo adresą."
 
 #: shipping-costs.php:50
 msgid ""
-"There are no shipping options available. Please ensure that your address "
-"has been entered correctly, or contact us if you need any help."
+"There are no shipping options available. Please ensure that your address has "
+"been entered correctly, or contact us if you need any help."
 msgstr ""
+"Jūsų adresui nerasta pristatymo parinkčių. Įsitikinkite, kad įvedėte savo "
+"adresą teisingai, arba susisiekite su mumis jei reikia pagalbos."
 
 #: shipping-costs.php:64
 #, php-format
 msgid "No shipping options were found for %s."
-msgstr ""
+msgstr "%s pristatymo parinkčių nerasta."
 
 #: shipping-costs.php:68
 msgid "Enter a different address"
-msgstr ""
+msgstr "Įvesti kitą adresą"
 
 #: sidebar-before_shop_loop.php:12
 msgid "Filter products"
-msgstr ""
+msgstr "Filtruoti produktus"
 
 #: sidebar-before_shop_loop.php:15
 msgid "Filters"
-msgstr ""
+msgstr "Filtrai"
 
 #: single-post.php:23
 msgid "Continue reading:"
-msgstr ""
+msgstr "Skaityti toliau:"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nieko nerasta"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
@@ -479,159 +496,163 @@ msgstr ""
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Pasiruošę paskelbti savo pirmąjį įrašą? <a href=\"%1$s\">Pradėkite čia</a>."
 
 #: template-parts/content-none.php:37
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Apgailestaujame, bet mes nieko neradome pagal jūsų paieškos kriterijus. Gal "
+"pamėginkite pasirinkti kitus žodžius."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Atrodo, kad mes negalime rasti to, ko ieškote. Galbūt paieška gali padėti."
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-post.php:53 template-parts/content.php:41
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Skaityti daugiau <span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: woocommerce/cart/cart-totals.php:25
 msgid "Cart totals"
-msgstr ""
+msgstr "Krepšelio suma"
 
 #: woocommerce/cart/cart-totals.php:30 woocommerce/cart/cart-totals.php:31
 #: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:145
 msgid "Subtotal"
-msgstr ""
+msgstr "Tarpinė suma"
 
 #: woocommerce/cart/cart-totals.php:52 woocommerce/cart/cart-totals.php:53
 msgid "Shipping"
-msgstr ""
+msgstr "Pristatymas"
 
 #. translators: %s location.
 #: woocommerce/cart/cart-totals.php:72
 #, php-format
 msgid "(estimated for %s)"
-msgstr ""
+msgstr "(apskaičiuota% s)"
 
 #: woocommerce/cart/cart-totals.php:98 woocommerce/cart/cart-totals.php:99
 msgid "Total"
-msgstr ""
+msgstr "Iš viso"
 
 #: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:68
 msgid "Product"
-msgstr ""
+msgstr "Produktas"
 
 #. translators: %s is the product name
 #: woocommerce/cart/cart.php:123 woocommerce/cart/mini-cart.php:53
 #, php-format
 msgid "Remove %s from cart"
-msgstr ""
+msgstr "Išimkite %s iš krepšelio"
 
 #: woocommerce/cart/cart.php:139
 msgid "Available on backorder"
-msgstr ""
+msgstr "Prieš užsakant susisiekti dėl likučio"
 
 #: woocommerce/cart/cart.php:163
 msgid "Coupon:"
-msgstr ""
+msgstr "Kuponas:"
 
 #: woocommerce/cart/cart.php:163
 msgid "Coupon code"
-msgstr ""
+msgstr "Kupono kodas"
 
 #: woocommerce/cart/cart.php:163
 msgid "Apply coupon"
-msgstr ""
+msgstr "Pritaikyti nuolaidą"
 
 #: woocommerce/cart/cart.php:168
 msgid "Update cart"
-msgstr ""
+msgstr "Atnaujinti krepšelį"
 
 #: woocommerce/cart/mini-cart.php:118
 msgid "No products in the cart."
-msgstr ""
+msgstr "Krepšelyje prekių nėra."
 
 #: woocommerce/checkout/form-checkout.php:26
 msgid "You must be logged in to checkout."
-msgstr ""
+msgstr "Reikia prisijungti."
 
 #: woocommerce/checkout/form-checkout.php:56
 msgid "Your order"
-msgstr ""
+msgstr "Jūsų užsakymas"
 
 #: woocommerce/single-product/add-to-cart/simple.php:62
 msgid "Configure the size"
-msgstr ""
+msgstr "Dydžio konfigūravimas"
 
 #: woocommerce/single-product/add-to-cart/simple.php:65
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
-msgstr ""
+msgstr "Plotis (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
-msgstr ""
+msgstr "Aukštis (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:77
 #: woocommerce/single-product/add-to-cart/variable.php:87
 msgid "Select extra options"
-msgstr ""
+msgstr "Pasirinkite papildomas parinktis"
 
 #: woocommerce/single-product/add-to-cart/simple.php:93
 #: woocommerce/single-product/add-to-cart/variable.php:103
 msgid "View"
-msgstr ""
+msgstr "Peržiūrėti"
 
 #: woocommerce/single-product/add-to-cart/simple.php:109
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
-msgstr ""
+msgstr "Pasirinkite kiekį"
 
 #: woocommerce/single-product/add-to-cart/simple.php:141
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
-msgstr ""
+msgstr "Pristatymo laikas"
 
 #: woocommerce/single-product/add-to-cart/simple.php:146
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
-msgstr ""
+msgstr "Pristatymo išlaidos"
 
 #: woocommerce/single-product/add-to-cart/variable.php:32
 msgid "This product is currently out of stock and unavailable."
-msgstr ""
+msgstr "Produkto neturime."
 
 #: woocommerce/single-product/add-to-cart/variable.php:35
 msgid "Configure product options"
-msgstr ""
+msgstr "Konfigūruokite produkto parinktis"
 
 #: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
-msgstr ""
+msgstr "Išvalyti"
 
 #: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
 msgid "Cutting fee is included in the price."
-msgstr ""
+msgstr "Pjovimo mokestis įskaičiuotas į kainą."
 
 #: woocommerce/single-product/add-to-cart/variation.php:32
 msgid ""
 "Sorry, this product is unavailable. Please choose a different combination."
-msgstr ""
+msgstr "Deja, ši prekė neprieinama. Pasirinkite kitokią kombinaciją."
 
 #. Theme Name of the plugin/theme
 msgid "Norhage webshop"
-msgstr ""
+msgstr "Norhage internetinė parduotuvė"
 
 #. Author of the plugin/theme
 msgid "Garbo"
-msgstr ""
+msgstr "Garbo"
 
 #. Author URI of the plugin/theme
 msgid "https://garbo.nl"
-msgstr ""
+msgstr "https://garbo.nl"

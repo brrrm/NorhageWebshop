@@ -942,6 +942,9 @@ function norhage_customer_default_location($default){
 		case 'da':
 			return 'DK';
 			break;
+		case 'lt':
+			return 'LT';
+			break;
 		case 'nb':
 		default:
 			return 'NO';
@@ -965,6 +968,9 @@ function change_default_checkout_country() {
 			break;
 		case 'da':
 			return 'DK';
+			break;
+		case 'lt':
+			return 'LT';
 			break;
 		case 'nb':
 		default:
@@ -1017,6 +1023,8 @@ function norhage_woocommerce_email_from_name($default_from_name, $email, $from_n
 			return 'Norhage.de';
 		case 'da':
 			return 'Norhage.dk';
+		case 'lt':
+			return 'Norhage.lt';
 		case 'nb':
 		default:
 			return 'Norhage.no';
@@ -1041,6 +1049,8 @@ function norhage_woocommerce_email_from_address($default_from_address, $email, $
 			return 'info@norhage.de';
 		case 'da':
 			return 'info@norhage.dk';
+		case 'lt':
+			return 'info@norhage.lt';
 		case 'nb':
 		default:
 			return 'info@norhage.no';
@@ -1069,6 +1079,8 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 			return 'info@norhage.de';
 		case 'da':
 			return 'info@norhage.dk';
+		case 'lt':
+			return 'info@norhage.lt';
 		case 'nb':
 		default:
 			return 'sales@norhage.no';
@@ -1106,6 +1118,8 @@ function norhage_wt_order_number_sequence_prefix($prefix,$order_id){
 			return 'DE-';
 		case 'da':
 			return 'DK-';
+		case 'lt':
+			return 'LT-';
 		case 'nb':
 		default:
 			return 'NO-';
@@ -1186,6 +1200,7 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 		case 'sv':
 		case 'da':
 		case 'fi':
+		case 'lt':
 		case 'nb':
 		default:
 			unset($available_gateways['kco']);
@@ -1255,6 +1270,8 @@ function norhage_wmc_set_currency_for_bot_index($bot_currency){
 		case 'https://norhage.de':
 		case 'https://norhage-com.test':
 		case 'https://norhage.com':
+		case 'https://norhage.lt':
+		case 'https://norhage-lt.test':
 			return 'EUR';
 		case 'https://norhage-dk.test':
 		case 'https://norhage.dk':
@@ -1290,6 +1307,9 @@ function norhage_script_loader_tag($tag, $handle, $src ){
 			break;
 		case 'en':
 			$tld = 'com';
+			break;
+		case 'lt':
+			$tld = 'lt';
 			break;
 		case 'nb':
 		default:
@@ -1339,6 +1359,7 @@ function norhage_crisp_website_id_per_domain($value, $option){
 		case 'fi':
 		case 'da':
 		case 'en':
+		case 'lt':
 		case 'nb':
 		default:
 			return 'af0d8c08-c7a2-4913-9003-1659258a2bf4';
