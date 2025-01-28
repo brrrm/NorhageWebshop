@@ -143,7 +143,7 @@ msgstr "Norhage Webshop"
 
 #: footer.php:18
 msgid "Address"
-msgstr "Adresse"
+msgstr "Büroadresse"
 
 #: footer.php:20
 msgid ""
