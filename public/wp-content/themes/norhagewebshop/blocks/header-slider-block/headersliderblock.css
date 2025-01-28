@@ -141,6 +141,7 @@
 		flex: 60% 0 0;
 		order: 1;
 		height: auto;
+		overflow: hidden;
 	}
 	.header-slider-block .text-col{
 		flex: 40% 0 0;
