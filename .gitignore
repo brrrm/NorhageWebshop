@@ -53,6 +53,7 @@ auth.json
 !/public/safari-pinned-tab.svg
 !/public/site.webmanifest
 !/public/robots.txt
+!/public/tester.txt
 
 # All plugins
 #
