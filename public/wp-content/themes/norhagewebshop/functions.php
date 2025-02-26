@@ -1039,7 +1039,7 @@ function norhage_woocommerce_email_from_address($default_from_address, $email, $
 		return 'info@norhage.no';
 	}
 
-	$lang = pll_get_post_language($email->object->get_id());
+	$lang = isset($email->object) ? pll_get_post_language($email->object->get_id()) : null;
 	switch($lang){
 		case 'sv':
 			return 'info@norhage.se';
