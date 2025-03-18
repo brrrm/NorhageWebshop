@@ -1396,6 +1396,20 @@ function norhage_woocommerce_product_get__sale_price_wmcp($value, $product){
 }
 add_filter('woocommerce_product_get__sale_price_wmcp', 'norhage_woocommerce_product_get__sale_price_wmcp', 100, 2); 
 
+
+function norhage_woocommerce_email_footer_text($text){
+	$text =  __('Navn/foretaksnavn: TEHI AS
+				Forretningsadresse: Vardheivegen 68, 4340 Bryne, Norge
+				Organisasjonsnr: 911648032
+				MVA-kode: 911648032MVA
+				', 'norhagewebshop');
+	return $text;
+}
+add_filter('woocommerce_email_footer_text', 'norhage_woocommerce_email_footer_text', 10, 1);
+
+
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );

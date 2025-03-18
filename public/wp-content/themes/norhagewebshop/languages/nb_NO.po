@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-17 10:56+0200\n"
-"PO-Revision-Date: 2025-03-13 14:52+0200\n"
+"POT-Creation-Date: 2025-03-18 13:45+0100\n"
+"PO-Revision-Date: 2025-03-18 13:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -119,11 +119,15 @@ msgstr "Vi er stolte av kvaliteten og holdbarheten til produktene våre."
 msgid "All showcases"
 msgstr "Alle utstillingsvinduer"
 
+#: blocks/reviews-block/reviewsBlock.php:58
+msgid "Read more"
+msgstr "Les mer ->"
+
 #: blocks/text-image-block/textImageBlock.php:57
 msgid "Please contact us:"
 msgstr "Ta kontakt med oss:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:158
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:157
 msgid "info@norhage.com"
 msgstr "info@norhage.no"
 
@@ -179,59 +183,59 @@ msgstr "norhageindustri.no"
 msgid "Find the Norhage shop for your country"
 msgstr "Finn Norhage-butikken for ditt land"
 
-#: footer.php:47 footer.php:48
+#: footer.php:51 footer.php:52
 msgid "Sitemap"
 msgstr "Sidekart"
 
-#: footer.php:57
+#: footer.php:61
 msgid "Norhage can also be found on:"
 msgstr "Norhage finnes også på:"
 
-#: footer.php:60
+#: footer.php:64
 msgid "https://www.facebook.com/norhage.no"
 msgstr "https://www.facebook.com/norhage.no"
 
-#: footer.php:63
+#: footer.php:67
 msgid "https://www.instagram.com/norhage.no/"
 msgstr "https://www.instagram.com/norhage.no/"
 
-#: functions.php:52
+#: functions.php:54
 msgid "Primary"
 msgstr "Primær"
 
-#: functions.php:53
+#: functions.php:55
 msgid "Secondary navigation"
 msgstr "Sekundær navigasjon"
 
-#: functions.php:54
+#: functions.php:56
 msgid "Footer navigation"
 msgstr "Navigasjon i bunntekst"
 
-#: functions.php:94
+#: functions.php:96
 msgid "Above products listing"
 msgstr "Over produktoppføring"
 
-#: functions.php:95
+#: functions.php:97
 msgid "A widget area above the products listing"
 msgstr "Et kontrollprogramområde over produktoppføringen"
 
-#: functions.php:172
+#: functions.php:209
 msgid "expand"
 msgstr "utvide"
 
-#: functions.php:308
+#: functions.php:354
 msgid "Read More"
 msgstr "Les mer ->"
 
-#: functions.php:380 functions.php:389
+#: functions.php:426 functions.php:435
 msgid "Customize"
 msgstr "Tilpass"
 
-#: functions.php:401
+#: functions.php:447
 msgid "Please, enter a value for width and height."
 msgstr "Vennligst skriv inn en verdi for bredde og høyde."
 
-#: functions.php:422
+#: functions.php:468
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -240,77 +244,86 @@ msgstr ""
 "Bredden skal være hvilken som helst størrelse fra %s til %s mm og høyden "
 "skal være hvilken som helst størrelse fra %s til %smm."
 
-#: functions.php:476 functions.php:645 functions.php:668
+#: functions.php:551 functions.php:680 functions.php:703
 msgid "Width"
 msgstr "Bredde"
 
-#: functions.php:480 functions.php:647 functions.php:670
+#: functions.php:555 functions.php:682 functions.php:705
 msgid "Height"
 msgstr "Lengde"
 
-#: functions.php:484 functions.php:651
+#: functions.php:559 functions.php:686
 msgid "Unit price"
 msgstr "Enhetspris"
 
-#: functions.php:488 functions.php:649 functions.php:665
+#: functions.php:563 functions.php:684 functions.php:700
 msgid "Cutting fee"
 msgstr "Kutter gebyr"
 
-#: functions.php:501 functions.php:653
+#: functions.php:688
 msgid "Addon"
 msgstr "Tillegg"
 
-#: functions.php:762
+#: functions.php:787
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: functions.php:769
+#: functions.php:794
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivelsen vises på siden for kategorioversikt."
 
-#: functions.php:1086 sidebar-before_shop_loop.php:20
+#: functions.php:1143 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valgte filtre"
 
-#: functions.php:1095
+#: functions.php:1152
 msgid "Show value(s)"
 msgstr "Vis verdi(er)"
 
-#: functions.php:1096
+#: functions.php:1153
 msgid "Hide value(s)"
 msgstr "Skjul verdi(er)"
 
-#: functions.php:1097
+#: functions.php:1154
 msgid "Unselect all"
 msgstr "Opphev alle"
 
-#: functions.php:1098
+#: functions.php:1155
 msgid "Nothing is selected"
 msgstr "Ingenting er valgt"
 
-#: functions.php:1099
+#: functions.php:1156
 msgid "products"
 msgstr "produkter"
+
+#: functions.php:1401
+msgid ""
+"Navn/foretaksnavn: TEHI AS\n"
+"\t\t\t\tForretningsadresse: Vardheivegen 68, 4340 Bryne, Norge\n"
+"\t\t\t\tOrganisasjonsnr: 911648032\n"
+"\t\t\t\tMVA-kode: 911648032MVA\n"
+"\t\t\t\t"
+msgstr ""
 
 #: header.php:74
 msgid "Skip to content"
 msgstr "Gå til innhold"
 
-#: header.php:135
+#: header.php:136 inc/ajax-cart.php:4
+msgid "Cart"
+msgstr "Handlekurv"
+
+#: header.php:137
 msgid "Primary Menu"
 msgstr "Hovedmeny"
 
-#: header.php:139
+#: header.php:142
 msgid "Navigation"
 msgstr "Navigasjon"
 
-#: header.php:157
+#: header.php:156
 msgid "Contact us today"
 msgstr "Kontakt oss i dag"
-
-#: inc/ajax-cart.php:4
-msgid "Cart"
-msgstr "Handlekurv"
 
 #: inc/ajax-cart.php:36
 msgid "Shopping cart"
@@ -544,7 +557,7 @@ msgid "Product"
 msgstr "Produkt"
 
 #. translators: %s is the product name
-#: woocommerce/cart/cart.php:123
+#: woocommerce/cart/cart.php:123 woocommerce/cart/mini-cart.php:53
 #, php-format
 msgid "Remove %s from cart"
 msgstr "Fjern %s fra handlekurven"
@@ -569,6 +582,12 @@ msgstr "Bruk kupong"
 msgid "Update cart"
 msgstr "Oppdater handlekurv"
 
+#: woocommerce/cart/mini-cart.php:118
+#, fuzzy
+#| msgid "No projects found in trash"
+msgid "No products in the cart."
+msgstr "Ingen prosjekter funnet i papirkurven"
+
 #: woocommerce/checkout/form-checkout.php:26
 msgid "You must be logged in to checkout."
 msgstr "Du må være innlogget for å fullføre betaling."
@@ -577,31 +596,41 @@ msgstr "Du må være innlogget for å fullføre betaling."
 msgid "Your order"
 msgstr "Din bestilling"
 
-#: woocommerce/single-product/add-to-cart/simple.php:57
+#: woocommerce/single-product/add-to-cart/simple.php:62
 msgid "Configure the size"
 msgstr "Konfigurer størrelsen"
 
-#: woocommerce/single-product/add-to-cart/simple.php:60
+#: woocommerce/single-product/add-to-cart/simple.php:65
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr "Bredde (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:64
+#: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr "Høyde (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:73
+#: woocommerce/single-product/add-to-cart/simple.php:77
+#: woocommerce/single-product/add-to-cart/variable.php:87
+msgid "Select extra options"
+msgstr "Velg ekstra alternativer"
+
+#: woocommerce/single-product/add-to-cart/simple.php:93
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
+msgstr "Vis"
+
+#: woocommerce/single-product/add-to-cart/simple.php:109
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Velg antall"
 
-#: woocommerce/single-product/add-to-cart/simple.php:105
+#: woocommerce/single-product/add-to-cart/simple.php:141
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr "Leveringstid"
 
-#: woocommerce/single-product/add-to-cart/simple.php:110
+#: woocommerce/single-product/add-to-cart/simple.php:146
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr "Leveringskostnader"
@@ -617,14 +646,6 @@ msgstr "Konfigurere produktalternativer"
 #: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr "Tøm"
-
-#: woocommerce/single-product/add-to-cart/variable.php:87
-msgid "Select extra options"
-msgstr "Velg ekstra alternativer"
-
-#: woocommerce/single-product/add-to-cart/variable.php:103
-msgid "View"
-msgstr "Vis"
 
 #: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
@@ -724,6 +745,3 @@ msgstr "https://garbo.nl"
 
 #~ msgid "No projects found"
 #~ msgstr "Ingen prosjekter funnet"
-
-#~ msgid "No projects found in trash"
-#~ msgstr "Ingen prosjekter funnet i papirkurven"

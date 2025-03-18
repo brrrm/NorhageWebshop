@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-12-17 13:37+0100\n"
+"POT-Creation-Date: 2025-03-18 13:45+0100\n"
 "PO-Revision-Date: 2024-03-29 13:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -257,28 +257,37 @@ msgstr ""
 msgid "The description is shown on the category overview page."
 msgstr ""
 
-#: functions.php:1129 sidebar-before_shop_loop.php:20
+#: functions.php:1143 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr ""
 
-#: functions.php:1138
+#: functions.php:1152
 msgid "Show value(s)"
 msgstr ""
 
-#: functions.php:1139
+#: functions.php:1153
 msgid "Hide value(s)"
 msgstr ""
 
-#: functions.php:1140
+#: functions.php:1154
 msgid "Unselect all"
 msgstr ""
 
-#: functions.php:1141
+#: functions.php:1155
 msgid "Nothing is selected"
 msgstr ""
 
-#: functions.php:1142
+#: functions.php:1156
 msgid "products"
+msgstr ""
+
+#: functions.php:1401
+msgid ""
+"Navn/foretaksnavn: TEHI AS\n"
+"\t\t\t\tForretningsadresse: Vardheivegen 68, 4340 Bryne, Norge\n"
+"\t\t\t\tOrganisasjonsnr: 911648032\n"
+"\t\t\t\tMVA-kode: 911648032MVA\n"
+"\t\t\t\t"
 msgstr ""
 
 #: header.php:74

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-09-17 10:56+0200\n"
-"PO-Revision-Date: 2025-03-13 14:53+0200\n"
+"POT-Creation-Date: 2025-03-18 13:46+0100\n"
+"PO-Revision-Date: 2025-03-18 13:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -120,11 +120,15 @@ msgstr "Vi är stolta över våra produkters kvalitet och hållbarhet."
 msgid "All showcases"
 msgstr "Alla montrar"
 
+#: blocks/reviews-block/reviewsBlock.php:58
+msgid "Read more"
+msgstr "Läs mer ->"
+
 #: blocks/text-image-block/textImageBlock.php:57
 msgid "Please contact us:"
 msgstr "Kontakta oss gärna:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:158
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:157
 msgid "info@norhage.com"
 msgstr "info@norhage.se"
 
@@ -182,59 +186,59 @@ msgstr "norhageindustri.se"
 msgid "Find the Norhage shop for your country"
 msgstr "Hitta Norhage-butiken för ditt land"
 
-#: footer.php:47 footer.php:48
+#: footer.php:51 footer.php:52
 msgid "Sitemap"
 msgstr "Webbplatskarta"
 
-#: footer.php:57
+#: footer.php:61
 msgid "Norhage can also be found on:"
 msgstr "Norhage finns också på:"
 
-#: footer.php:60
+#: footer.php:64
 msgid "https://www.facebook.com/norhage.no"
 msgstr "https://www.facebook.com/norhage.se"
 
-#: footer.php:63
+#: footer.php:67
 msgid "https://www.instagram.com/norhage.no/"
 msgstr "https://www.instagram.com/norhage.se/"
 
-#: functions.php:52
+#: functions.php:54
 msgid "Primary"
 msgstr "Primär"
 
-#: functions.php:53
+#: functions.php:55
 msgid "Secondary navigation"
 msgstr "Sekundär navigering"
 
-#: functions.php:54
+#: functions.php:56
 msgid "Footer navigation"
 msgstr "Sidfotsnavigering"
 
-#: functions.php:94
+#: functions.php:96
 msgid "Above products listing"
 msgstr "Ovanstående produktlista"
 
-#: functions.php:95
+#: functions.php:97
 msgid "A widget area above the products listing"
 msgstr "Ett widgetområde ovanför produktlistan"
 
-#: functions.php:172
+#: functions.php:209
 msgid "expand"
 msgstr "expandera"
 
-#: functions.php:308
+#: functions.php:354
 msgid "Read More"
 msgstr "Läs mer ->"
 
-#: functions.php:380 functions.php:389
+#: functions.php:426 functions.php:435
 msgid "Customize"
 msgstr "Anpassa"
 
-#: functions.php:401
+#: functions.php:447
 msgid "Please, enter a value for width and height."
 msgstr "Ange ett värde för bredd och höjd."
 
-#: functions.php:422
+#: functions.php:468
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -243,77 +247,90 @@ msgstr ""
 "Bredden ska vara vilken storlek som helst från %s till %s mm och höjden ska "
 "vara vilken storlek som helst från %s till %s mm."
 
-#: functions.php:476 functions.php:645 functions.php:668
+#: functions.php:551 functions.php:680 functions.php:703
 msgid "Width"
 msgstr "Bredd"
 
-#: functions.php:480 functions.php:647 functions.php:670
+#: functions.php:555 functions.php:682 functions.php:705
 msgid "Height"
 msgstr "Längd"
 
-#: functions.php:484 functions.php:651
+#: functions.php:559 functions.php:686
 msgid "Unit price"
 msgstr "Enhetspris"
 
-#: functions.php:488 functions.php:649 functions.php:665
+#: functions.php:563 functions.php:684 functions.php:700
 msgid "Cutting fee"
 msgstr "Avgift för sänkning"
 
-#: functions.php:501 functions.php:653
+#: functions.php:688
 msgid "Addon"
 msgstr "Tillägg"
 
-#: functions.php:762
+#: functions.php:787
 msgid "Description"
 msgstr "Beskrivning"
 
-#: functions.php:769
+#: functions.php:794
 msgid "The description is shown on the category overview page."
 msgstr "Beskrivningen visas på kategoriöversiktssidan."
 
-#: functions.php:1086 sidebar-before_shop_loop.php:20
+#: functions.php:1143 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valda filter"
 
-#: functions.php:1095
+#: functions.php:1152
 msgid "Show value(s)"
 msgstr "Visa värde(n)"
 
-#: functions.php:1096
+#: functions.php:1153
 msgid "Hide value(s)"
 msgstr "Dölj värde(n)"
 
-#: functions.php:1097
+#: functions.php:1154
 msgid "Unselect all"
 msgstr "Avmarkera alla"
 
-#: functions.php:1098
+#: functions.php:1155
 msgid "Nothing is selected"
 msgstr "Ingenting är markerat"
 
-#: functions.php:1099
+#: functions.php:1156
 msgid "products"
 msgstr "produkter"
+
+#: functions.php:1401
+msgid ""
+"Navn/foretaksnavn: TEHI AS\n"
+"\t\t\t\tForretningsadresse: Vardheivegen 68, 4340 Bryne, Norge\n"
+"\t\t\t\tOrganisasjonsnr: 911648032\n"
+"\t\t\t\tMVA-kode: 911648032MVA\n"
+"\t\t\t\t"
+msgstr ""
+"Forretningsadresse: Tehi filial\n"
+"Företagsadress: Tvärdalen, 67291 Årjäng, Sverige\n"
+"Organisationsnummer: 516411-9900\n"
+"Moms-kod: SE516411990001"
 
 #: header.php:74
 msgid "Skip to content"
 msgstr "Hoppa till innehåll"
 
-#: header.php:135
+#: header.php:136 inc/ajax-cart.php:4
+msgid "Cart"
+msgstr "Varukorg"
+
+#: header.php:137
 msgid "Primary Menu"
 msgstr "Primär meny"
 
-#: header.php:139
+#: header.php:142
 msgid "Navigation"
 msgstr "Navigering"
 
-#: header.php:157
+#: header.php:156
 msgid "Contact us today"
 msgstr "Kontakta oss idag"
-
-#: inc/ajax-cart.php:4
-msgid "Cart"
-msgstr "Varukorg"
 
 #: inc/ajax-cart.php:36
 msgid "Shopping cart"
@@ -325,15 +342,12 @@ msgstr "Stäng"
 
 #. translators: %d: shipping package number
 #: inc/calc-shipping-costs.php:73
-#, fuzzy, php-format
-#| msgid "Shipping"
+#, php-format
 msgctxt "shipping packages"
 msgid "Shipping %d"
-msgstr "Frakt"
+msgstr "Frakt %d"
 
 #: inc/calc-shipping-costs.php:73 inc/calc-shipping-costs.php:86
-#, fuzzy
-#| msgid "Shipping"
 msgctxt "shipping packages"
 msgid "Shipping"
 msgstr "Frakt"
@@ -549,7 +563,7 @@ msgid "Product"
 msgstr "Produkt"
 
 #. translators: %s is the product name
-#: woocommerce/cart/cart.php:123
+#: woocommerce/cart/cart.php:123 woocommerce/cart/mini-cart.php:53
 #, php-format
 msgid "Remove %s from cart"
 msgstr "Ta bort %s från kundvagnen"
@@ -574,6 +588,10 @@ msgstr "Använd rabattkupong"
 msgid "Update cart"
 msgstr "Uppdatera kundvagn"
 
+#: woocommerce/cart/mini-cart.php:118
+msgid "No products in the cart."
+msgstr "Inga produkter i varukorgen."
+
 #: woocommerce/checkout/form-checkout.php:26
 msgid "You must be logged in to checkout."
 msgstr "Du måste vara inloggad för att gå till kassan."
@@ -582,31 +600,41 @@ msgstr "Du måste vara inloggad för att gå till kassan."
 msgid "Your order"
 msgstr "Din beställning"
 
-#: woocommerce/single-product/add-to-cart/simple.php:57
+#: woocommerce/single-product/add-to-cart/simple.php:62
 msgid "Configure the size"
 msgstr "Konfigurera storleken"
 
-#: woocommerce/single-product/add-to-cart/simple.php:60
+#: woocommerce/single-product/add-to-cart/simple.php:65
 #: woocommerce/single-product/add-to-cart/variable.php:70
 msgid "Width (mm)"
 msgstr "Bredd (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:64
+#: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
 msgstr "Höjd (mm)"
 
-#: woocommerce/single-product/add-to-cart/simple.php:73
+#: woocommerce/single-product/add-to-cart/simple.php:77
+#: woocommerce/single-product/add-to-cart/variable.php:87
+msgid "Select extra options"
+msgstr "Välj extra alternativ"
+
+#: woocommerce/single-product/add-to-cart/simple.php:93
+#: woocommerce/single-product/add-to-cart/variable.php:103
+msgid "View"
+msgstr "Visa"
+
+#: woocommerce/single-product/add-to-cart/simple.php:109
 #: woocommerce/single-product/add-to-cart/variable.php:117
 msgid "Select the quantity"
 msgstr "Välj kvantitet"
 
-#: woocommerce/single-product/add-to-cart/simple.php:105
+#: woocommerce/single-product/add-to-cart/simple.php:141
 #: woocommerce/single-product/add-to-cart/variable.php:144
 msgid "Delivery time"
 msgstr "Leveranstid"
 
-#: woocommerce/single-product/add-to-cart/simple.php:110
+#: woocommerce/single-product/add-to-cart/simple.php:146
 #: woocommerce/single-product/add-to-cart/variable.php:149
 msgid "Delivery costs"
 msgstr "Kostnader för leverans"
@@ -622,14 +650,6 @@ msgstr "Konfigurera produktalternativ"
 #: woocommerce/single-product/add-to-cart/variable.php:50
 msgid "Clear"
 msgstr "Rensa"
-
-#: woocommerce/single-product/add-to-cart/variable.php:87
-msgid "Select extra options"
-msgstr "Välj extra alternativ"
-
-#: woocommerce/single-product/add-to-cart/variable.php:103
-msgid "View"
-msgstr "Visa"
 
 #: woocommerce/single-product/add-to-cart/variation.php:26
 #: woocommerce/single-product/price.php:32
@@ -729,6 +749,3 @@ msgstr "https://garbo.nl"
 
 #~ msgid "No projects found"
 #~ msgstr "Inga projekt hittades"
-
-#~ msgid "No projects found in trash"
-#~ msgstr "Inga projekt hittades i papperskorgen"
