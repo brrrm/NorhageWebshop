@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2025-03-18 13:46+0100\n"
-"PO-Revision-Date: 2025-03-18 13:47+0100\n"
+"PO-Revision-Date: 2025-03-25 10:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -621,7 +621,7 @@ msgstr "Breite (mm)"
 #: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
-msgstr "Höhe (mm)"
+msgstr "Länge (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:77
 #: woocommerce/single-product/add-to-cart/variable.php:87

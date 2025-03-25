@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
 "POT-Creation-Date: 2025-03-18 13:45+0100\n"
-"PO-Revision-Date: 2025-03-18 13:45+0100\n"
+"PO-Revision-Date: 2025-03-25 10:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -163,9 +163,7 @@ msgstr "Telefon"
 msgid ""
 "<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
 "\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
-msgstr ""
-"<a href=\"tel:+4796759359\">+47 967 59 359</a> <br />\n"
-"\t\t\t\t\t\t\t<a href=\"tel:+4798367181\">+47 983 67 181</a>"
+msgstr "<a href=\"tel:+4794099084\">+47 940 99 084</a>"
 
 #: footer.php:35
 msgid "B2B website"
@@ -608,7 +606,7 @@ msgstr "Bredde (mm)"
 #: woocommerce/single-product/add-to-cart/simple.php:69
 #: woocommerce/single-product/add-to-cart/variable.php:74
 msgid "Height (mm)"
-msgstr "Høyde (mm)"
+msgstr "Lengde (mm)"
 
 #: woocommerce/single-product/add-to-cart/simple.php:77
 #: woocommerce/single-product/add-to-cart/variable.php:87
