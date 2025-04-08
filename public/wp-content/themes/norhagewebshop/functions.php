@@ -1408,6 +1408,15 @@ function norhage_woocommerce_email_footer_text($text){
 add_filter('woocommerce_email_footer_text', 'norhage_woocommerce_email_footer_text', 10, 1);
 
 
+/**
+ * @snippet       Hide "Get the app" Ads @ WooCommerce Emails
+ */
+function norhage_remove_get_the_app_ad() {
+   $mailer = WC()->mailer()->get_emails();
+   $object = $mailer['WC_Email_New_Order'];
+   remove_action( 'woocommerce_email_footer', array( $object, 'mobile_messaging' ), 9 );
+}
+add_action( 'woocommerce_email_footer', 'norhage_remove_get_the_app_ad', 8 );
 
 
 /*
