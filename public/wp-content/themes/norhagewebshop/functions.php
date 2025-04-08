@@ -1070,22 +1070,49 @@ function norhage_woocommerce_email_recipient($recipient, $object, $email ){
 	}
 	
 	$lang = pll_get_post_language($email->object->get_id());
+	$non_default_locale = false;
 	switch($lang){
 		case 'sv':
-			return 'info@norhage.se';
+			$non_default_locale = 'sv_SE';
+			$recipient = 'info@norhage.se';
+			break;
 		case 'fi':
-			return 'info@norhage.fi';
+			$non_default_locale = 'fi_FI';
+			$recipient = 'info@norhage.fi';
+			break;
 		case 'de':
-			return 'info@norhage.de';
+			$non_default_locale = 'de_DE';
+			$recipient = 'info@norhage.de';
+			break;
 		case 'da':
-			return 'info@norhage.dk';
+			$non_default_locale = 'da_DK';
+			$recipient = 'info@norhage.dk';
 		case 'lt':
-			return 'info@norhage.lt';
+			$non_default_locale = 'lt_LT';
+			$recipient = 'info@norhage.lt';
+			break;
 		case 'nb':
 		default:
-			return 'sales@norhage.no';
+			$recipient = 'sales@norhage.no';
 	}
+
+	// here, we switch the language.
+	// for some weird reason, the WC mails to admins are by default not translated.
+	if($non_default_locale){
+		switch_to_locale($non_default_locale);
+		add_action( 'woocommerce_email_sent', 'norhage_restore_previous_locale', 10, 3);
+	}
+	return $recipient;
 }
+
+// return to previous locale
+// needs to be done after 'woocommerce_email_sent'
+// see norhage_woocommerce_email_recipient()
+function norhage_restore_previous_locale($return, $id, $email ){
+	restore_previous_locale();
+}
+
+
 
 /**
  * fix spam problems where envelope-from is the account on directadmin
