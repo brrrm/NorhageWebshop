@@ -1455,13 +1455,21 @@ function norhage_translate__wpo_wcpdf_settings_text(string $text, \WPO\WC\PDF_In
 	$translated_string = pll_translate_string($text, $lang);
 	return $translated_string;
 }
+function norhage_translate__only_on_bank_transfer__wpo_wcpdf_settings_text(
+string $text, 
+\WPO\WC\PDF_Invoices\Documents\Order_Document $document){
+	if($document->order->get_payment_method() == 'bacs'){
+		return norhage_translate__wpo_wcpdf_settings_text($text, $document);
+	}
+	return '';
+}
 add_filter('wpo_wcpdf_shop_name_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_shop_address_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_footer_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_vat_number_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_coc_number_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_shop_phone_number_settings_text', 'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
-add_filter('wpo_wcpdf_extra_1_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_extra_1_settings_text', 			'norhage_translate__only_on_bank_transfer__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_extra_2_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 add_filter('wpo_wcpdf_extra_3_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
 
