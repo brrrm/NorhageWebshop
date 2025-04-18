@@ -1446,6 +1446,95 @@ function norhage_remove_get_the_app_ad() {
 add_action( 'woocommerce_email_footer', 'norhage_remove_get_the_app_ad', 8 );
 
 
+
+/**
+ * make all settings for pdf invoice plugin translatable
+ * */
+function norhage_translate__wpo_wcpdf_settings_text(string $text, \WPO\WC\PDF_Invoices\Documents\Order_Document $document){
+	$lang = pll_get_post_language($document->order_id) ?? 'nb'; //this returns the language of the post/page.
+	$translated_string = pll_translate_string($text, $lang);
+	return $translated_string;
+}
+add_filter('wpo_wcpdf_shop_name_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_shop_address_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_footer_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_vat_number_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_coc_number_settings_text', 		'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_shop_phone_number_settings_text', 'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_extra_1_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_extra_2_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+add_filter('wpo_wcpdf_extra_3_settings_text', 			'norhage_translate__wpo_wcpdf_settings_text', 10, 2);
+
+/**
+ * register strings for PDF invoice for translation
+ * */
+add_action("init", function () {
+	$common_settings   = WPO_WCPDF()->settings->get_common_document_settings();
+	$document_settings = WPO_WCPDF()->settings->get_document_settings( 'invoice', 'pdf' );
+	$settings          = (array) $document_settings + (array) $common_settings;
+
+	pll_register_string(
+		'invoice shop name',
+		norhage_text_cleanup_for_translation($settings['shop_name']['default'], false) ?? 'Norhage',
+		'Norhage invoices'
+	);
+	pll_register_string(
+		'invoice shop address5',
+		norhage_text_cleanup_for_translation($settings['shop_address']['default']),
+		'Norhage invoices',
+		true
+	);
+	pll_register_string(
+		'invoice shop phone',
+		norhage_text_cleanup_for_translation($settings['shop_phone_number']['default'], false) ?? '',
+		'Norhage invoices',
+		true
+	);
+	pll_register_string(
+		'invoice footer',
+		norhage_text_cleanup_for_translation($settings['footer']['default'], true) ?? '',
+		'Norhage invoices',
+		true
+	);
+	pll_register_string(
+		'invoice vat_number',
+		norhage_text_cleanup_for_translation($settings['vat_number'], false) ?? '',
+		'Norhage invoices'
+	);
+	pll_register_string(
+		'invoice coc_number',
+		norhage_text_cleanup_for_translation($settings['coc_number'], false) ?? '',
+		'Norhage invoices'
+	);
+	pll_register_string(
+		'invoice extra 1',
+		norhage_text_cleanup_for_translation($settings['extra_1']['default']) ?? '',
+		'Norhage invoices',
+		true
+	);
+	pll_register_string(
+		'invoice extra 2',
+		norhage_text_cleanup_for_translation($settings['extra_2']['default']) ?? '',
+		'Norhage invoices',
+		true
+	);
+	pll_register_string(
+		'invoice extra 3',
+		norhage_text_cleanup_for_translation($settings['extra_3']['default']) ?? '',
+		'Norhage invoices',
+		true
+	);
+}, 9999);
+
+function norhage_text_cleanup_for_translation($text, $autop = true){
+	$text = wptexturize( trim( $text ) );
+	if($autop === true){
+		$text = wpautop( $text );
+	}
+	return $text;
+}
+
+
 /*
 // CORS HOT FIX BY NB:
 add_filter( 'script_loader_src', 'wpse47206_src' );
