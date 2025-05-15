@@ -15,6 +15,7 @@
 !/public/wp-content/plugins
 /public/wp-content/plugins/*
 !/public/wp-content/plugins/garbo-product-feed*
+!/public/wp-content/plugins/news-ticker-shortcode*
 !/public/wp-content/themes/norhage*
 
 # Configuration
