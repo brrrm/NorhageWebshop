@@ -1595,3 +1595,68 @@ function add_allowed_origins($origins) {
 }
 
 */
+
+// Extend WooCommerce search to include SKU
+add_filter( 'posts_search', 'search_products_and_variations_by_sku', 10, 2 );
+function search_products_and_variations_by_sku( $search, $query ) {
+    global $wpdb;
+
+    if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+        $term = $query->get( 's' );
+        if ( $term !== '' ) {
+            $like = '%' . $wpdb->esc_like( $term ) . '%';
+
+            // Get parent product IDs of variations that match the SKU
+            $variation_ids = $wpdb->get_col( $wpdb->prepare(
+                "SELECT post_parent FROM {$wpdb->posts} p
+                 INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+                 WHERE p.post_type = 'product_variation'
+                 AND pm.meta_key = '_sku'
+                 AND pm.meta_value LIKE %s",
+                 $like
+            ) );
+
+            $ids = implode(',', array_map('absint', $variation_ids));
+
+            $search = "AND (
+                {$wpdb->posts}.post_title LIKE '{$like}'
+                OR EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta}
+                    WHERE post_id = {$wpdb->posts}.ID
+                    AND meta_key = '_sku'
+                    AND meta_value LIKE '{$like}'
+                )" .
+                ( $ids ? " OR {$wpdb->posts}.ID IN ($ids)" : '' ) .
+            ")";
+        }
+    }
+
+    return $search;
+}
+
+add_action( 'pre_get_posts', function ( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
+        $query->set( 'post_type', 'product' );
+    }
+});
+
+// Automatically replace /page/1/ with / in pagination links
+add_action('template_redirect', function() {
+    ob_start(function($html) {
+        return str_replace('/page/1/', '/', $html);
+    });
+});
+
+// Adding x-default
+add_action('wp_head', function () {
+    $host = $_SERVER['HTTP_HOST'];
+    $path = esc_url($_SERVER['REQUEST_URI']); // safely escape path
+
+    if (strpos($host, 'norhage.no') !== false) {
+        echo '<link rel="alternate" hreflang="x-default" href="https://norhage.no' . $path . '" />' . "\n";
+    } elseif (strpos($host, 'norhage.se') !== false) {
+        echo '<link rel="alternate" hreflang="x-default" href="https://norhage.se' . $path . '" />' . "\n";
+    } elseif (strpos($host, 'norhage.de') !== false) {
+        echo '<link rel="alternate" hreflang="x-default" href="https://norhage.de' . $path . '" />' . "\n";
+    }
+});
