@@ -260,6 +260,12 @@ function norhagewebshop_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
+function norhagewebshop_remove_scripts(){
+	wp_dequeue_script('woocommerce-multi-currency-switcher');
+}
+add_action( 'wp_enqueue_scripts', 'norhagewebshop_remove_scripts', 999999999999 );
+
+
 // Remove Global Styles and SVG Filters from WP 5.9.1 - 2022-02-27
 function remove_global_styles_and_svg_filters() {
 	//remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );

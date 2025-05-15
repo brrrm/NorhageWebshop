@@ -34,7 +34,8 @@
 		"brrrm/garbo-translate-woocommerce-cart-abandonment-recovery": "^1.0",
 		"wpackagist-plugin/woocommerce-paypal-payments": "^2.9",
 		"wpackagist-plugin/wp-mail-logging": "^1.13",
-		"wpackagist-plugin/woo-bulk-edit-products": "^1.8"
+		"wpackagist-plugin/woo-bulk-edit-products": "^1.8",
+		"wpackagist-plugin/akismet": "^5.4"
 	},
 	"repositories": [
 		{
