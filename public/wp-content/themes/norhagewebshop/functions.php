@@ -1233,6 +1233,10 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 		case 'sv':
 		case 'da':
 		case 'fi':
+			unset($available_gateways['svea_checkout']); // SVEA
+			unset($available_gateways['ppcp-gateway']); // PayPal
+			unset($available_gateways['kco']); // Klarna
+			break;
 		case 'lt':
 		case 'nb':
 		default:
@@ -1658,5 +1662,7 @@ add_action('wp_head', function () {
         echo '<link rel="alternate" hreflang="x-default" href="https://norhage.se' . $path . '" />' . "\n";
     } elseif (strpos($host, 'norhage.de') !== false) {
         echo '<link rel="alternate" hreflang="x-default" href="https://norhage.de' . $path . '" />' . "\n";
+    } elseif (strpos($host, 'norhage.fi') !== false) {
+        echo '<link rel="alternate" hreflang="x-default" href="https://norhage.fi' . $path . '" />' . "\n";
     }
 });
