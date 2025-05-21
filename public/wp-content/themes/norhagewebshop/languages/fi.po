@@ -1,21 +1,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Norhage webshop\n"
-"POT-Creation-Date: 2024-12-09 15:14+0100\n"
-"PO-Revision-Date: 2025-05-20 11:45+0300\n"
+"POT-Creation-Date: 2025-03-18 13:45+0100\n"
+"PO-Revision-Date: 2025-05-21 12:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fi_FI\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -128,7 +130,7 @@ msgstr "Lue lisää"
 msgid "Please contact us:"
 msgstr "Ota yhteyttä:"
 
-#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:161
+#: blocks/text-image-block/textImageBlock.php:70 footer.php:27 header.php:157
 msgid "info@norhage.com"
 msgstr "info@norhage.fi"
 
@@ -202,43 +204,43 @@ msgstr "https://www.facebook.com/people/Norhagefi/61570467338675/"
 msgid "https://www.instagram.com/norhage.no/"
 msgstr "https://www.instagram.com/norhage.no/"
 
-#: functions.php:52
+#: functions.php:54
 msgid "Primary"
 msgstr "Ensisijainen"
 
-#: functions.php:53
+#: functions.php:55
 msgid "Secondary navigation"
 msgstr "Toissijainen navigointi"
 
-#: functions.php:54
+#: functions.php:56
 msgid "Footer navigation"
 msgstr "Alatunnisteen navigointi"
 
-#: functions.php:94
+#: functions.php:96
 msgid "Above products listing"
 msgstr "Yllä oleva tuoteluettelo"
 
-#: functions.php:95
+#: functions.php:97
 msgid "A widget area above the products listing"
 msgstr "Widget-alue tuotelistauksen yläpuolella"
 
-#: functions.php:178
+#: functions.php:209
 msgid "expand"
 msgstr "laajentaa"
 
-#: functions.php:314
+#: functions.php:354
 msgid "Read More"
 msgstr "Lue lisää"
 
-#: functions.php:386 functions.php:395
+#: functions.php:426 functions.php:435
 msgid "Customize"
 msgstr "Mukauta"
 
-#: functions.php:407
+#: functions.php:447
 msgid "Please, enter a value for width and height."
 msgstr "Anna arvo leveydelle ja korkeudelle."
 
-#: functions.php:428
+#: functions.php:468
 #, php-format
 msgid ""
 "Width should be any size from %s to %smm and Height should be any size from "
@@ -247,57 +249,66 @@ msgstr ""
 "Leveyden tulee olla minkä tahansa kokoinen %s - %s mm ja korkeuden tulee "
 "olla minkä tahansa kokoinen %s - %smm."
 
-#: functions.php:511 functions.php:640 functions.php:663
+#: functions.php:551 functions.php:680 functions.php:703
 msgid "Width"
 msgstr "Leveys"
 
-#: functions.php:515 functions.php:642 functions.php:665
+#: functions.php:555 functions.php:682 functions.php:705
 msgid "Height"
 msgstr "Korkeus"
 
-#: functions.php:519 functions.php:646
+#: functions.php:559 functions.php:686
 msgid "Unit price"
 msgstr "Yksikköhinta"
 
-#: functions.php:523 functions.php:644 functions.php:660
+#: functions.php:563 functions.php:684 functions.php:700
 msgid "Cutting fee"
 msgstr "Leikkausmaksu"
 
-#: functions.php:648
+#: functions.php:688
 msgid "Addon"
 msgstr "Lisäosa"
 
-#: functions.php:747
+#: functions.php:787
 msgid "Description"
 msgstr "Kuvaus"
 
-#: functions.php:754
+#: functions.php:794
 msgid "The description is shown on the category overview page."
 msgstr "Kuvaus näkyy luokan yleiskatsaussivulla."
 
-#: functions.php:1089 sidebar-before_shop_loop.php:20
+#: functions.php:1143 sidebar-before_shop_loop.php:20
 msgid "Selected filters"
 msgstr "Valitut suodattimet"
 
-#: functions.php:1098
+#: functions.php:1152
 msgid "Show value(s)"
 msgstr "Näytä arvot:"
 
-#: functions.php:1099
+#: functions.php:1153
 msgid "Hide value(s)"
 msgstr "Piilota osastot"
 
-#: functions.php:1100
+#: functions.php:1154
 msgid "Unselect all"
 msgstr "Poista kaikki valinnat"
 
-#: functions.php:1101
+#: functions.php:1155
 msgid "Nothing is selected"
 msgstr "Mitään ei ole valittu"
 
-#: functions.php:1102
+#: functions.php:1156
 msgid "products"
 msgstr "tuotteet"
+
+#: functions.php:1401
+msgid ""
+"Navn/foretaksnavn: TEHI AS\n"
+"\t\t\t\tForretningsadresse: Vardheivegen 68, 4340 Bryne, Norge\n"
+"\t\t\t\tOrganisasjonsnr: 911648032\n"
+"\t\t\t\tMVA-kode: 911648032MVA\n"
+"\t\t\t\t"
+msgstr ""
 
 #: header.php:74
 msgid "Skip to content"
@@ -315,7 +326,7 @@ msgstr "Päävalikko"
 msgid "Navigation"
 msgstr "Navigaatio"
 
-#: header.php:160
+#: header.php:156
 msgid "Contact us today"
 msgstr "Ota yhteyttä jo tänään"
 
