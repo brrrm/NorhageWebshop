@@ -1394,6 +1394,8 @@ function norhage_crisp_website_id_per_domain($value, $option){
 			return '1f0c4950-8bf2-4342-9c5b-aa2cf053127d';
 			break;
 		case 'fi':
+			return '656c0a0e-7b15-4d5f-8559-945e123accd2';
+			break;
 		case 'da':
 		case 'en':
 		case 'lt':
