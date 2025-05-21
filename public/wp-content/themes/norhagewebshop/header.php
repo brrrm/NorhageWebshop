@@ -21,6 +21,10 @@
 	<?php
 		if(isset($urlData['host'])):
 			switch($urlData['host']){
+				case 'norhage.fi':
+					$google_site_id = 'FTcLhFv_KFFI5N66x3_talrjpJhwuZhb5e5F5yBdGx4';
+					$gtm_container_id = 'GTM-TRGKPF4M';
+					break;
 				case 'norhage.de':
 					$google_site_id = 'YSoZjaW1CTc45URHx2GP7T7Q8300NXO8WrzLj7yFEHY';
 					$gtm_container_id = 'GTM-NH4LWCC7'; // German site GTM ID
