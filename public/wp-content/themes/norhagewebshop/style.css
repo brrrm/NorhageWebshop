@@ -2779,6 +2779,11 @@ form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table tr.
 form.checkout .order-review-wrapper .woocommerce-checkout-review-order-table tr.order-total td small{
 	font-weight: 200;
 }
+@media screen and (min-width: 768px) {
+    .woocommerce-page .wc-svea-checkout-page form.svea-checkout .order-review-wrapper {
+        padding: 0 1em 2em 0;
+    }
+}
 .woocommerce form .form-row{
 	padding: 0;
 	margin: 0 0 0.667em;
