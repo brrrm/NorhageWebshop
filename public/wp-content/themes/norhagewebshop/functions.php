@@ -1230,7 +1230,6 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 			unset($available_gateways['svea_checkout']);
 			unset($available_gateways['ppcp-gateway']);
 			break;
-		case 'sv':
 		case 'da':
 		case 'fi':
 			unset($available_gateways['svea_checkout']); // SVEA
@@ -1239,6 +1238,7 @@ function norhage_woocommerce_available_payment_gateways( $available_gateways ) {
 			break;
 		case 'lt':
 		case 'nb':
+		case 'sv':
 		default:
 			unset($available_gateways['kco']);
 			unset($available_gateways['ppcp-gateway']);
