@@ -638,7 +638,8 @@ add_action( 'woocommerce_before_calculate_totals', 'norhage_before_calculate_tot
  */
 function norhage_checkout_create_order_line_item( $item, $cart_item_key, $values, $order ) {
 	if(isset($values['cutting_variables'])){
-		if($variation_id = $item->get_product_id() && $variation_id > 0){
+		$variation_id = $item->get_product_id();
+		if(isset($variation_id) && $variation_id > 0){
 			$variation = new WC_Product_Variation($cart_item_data['variation_id']);
 			$regular_price = $variation->get_price();
 		}else{
