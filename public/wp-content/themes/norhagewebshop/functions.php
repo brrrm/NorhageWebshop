@@ -1494,57 +1494,75 @@ add_action("init", function () {
 	$document_settings = WPO_WCPDF()->settings->get_document_settings( 'invoice', 'pdf' );
 	$settings          = (array) $document_settings + (array) $common_settings;
 
-	pll_register_string(
-		'invoice shop name',
-		norhage_text_cleanup_for_translation($settings['shop_name']['default'], false) ?? 'Norhage',
-		'Norhage invoices'
-	);
-	pll_register_string(
-		'invoice shop address5',
-		norhage_text_cleanup_for_translation($settings['shop_address']['default']),
-		'Norhage invoices',
-		true
-	);
-	pll_register_string(
-		'invoice shop phone',
-		norhage_text_cleanup_for_translation($settings['shop_phone_number']['default'], false) ?? '',
-		'Norhage invoices',
-		true
-	);
-	pll_register_string(
-		'invoice footer',
-		norhage_text_cleanup_for_translation($settings['footer']['default'], true) ?? '',
-		'Norhage invoices',
-		true
-	);
-	pll_register_string(
-		'invoice vat_number',
-		norhage_text_cleanup_for_translation($settings['vat_number'], false) ?? '',
-		'Norhage invoices'
-	);
-	pll_register_string(
-		'invoice coc_number',
-		norhage_text_cleanup_for_translation($settings['coc_number'], false) ?? '',
-		'Norhage invoices'
-	);
-	pll_register_string(
-		'invoice extra 1',
-		norhage_text_cleanup_for_translation($settings['extra_1']['default']) ?? '',
-		'Norhage invoices',
-		true
-	);
-	pll_register_string(
-		'invoice extra 2',
-		norhage_text_cleanup_for_translation($settings['extra_2']['default']) ?? '',
-		'Norhage invoices',
-		true
-	);
-	pll_register_string(
-		'invoice extra 3',
-		norhage_text_cleanup_for_translation($settings['extra_3']['default']) ?? '',
-		'Norhage invoices',
-		true
-	);
+	if(isset($settings['shop_name']) && is_array($settings['shop_name'])){
+		pll_register_string(
+			'invoice shop name',
+			norhage_text_cleanup_for_translation($settings['shop_name']['default'], false) ?? 'Norhage',
+			'Norhage invoices'
+		);
+	}
+	if(isset($settings['shop_address']) && is_array($settings['shop_address'])){
+		pll_register_string(
+			'invoice shop address5',
+			norhage_text_cleanup_for_translation($settings['shop_address']['default']),
+			'Norhage invoices',
+			true
+		);
+	}
+	if(isset($settings['shop_phone_number']) && is_array($settings['shop_phone_number'])){
+		pll_register_string(
+			'invoice shop phone',
+			norhage_text_cleanup_for_translation($settings['shop_phone_number']['default'], false) ?? '',
+			'Norhage invoices',
+			true
+		);
+	}
+	if(isset($settings['footer']) && is_array($settings['footer'])){
+		pll_register_string(
+			'invoice footer',
+			norhage_text_cleanup_for_translation($settings['footer']['default'], true) ?? '',
+			'Norhage invoices',
+			true
+		);
+	}
+	if(isset($settings['vat_number'])){
+		pll_register_string(
+			'invoice vat_number',
+			norhage_text_cleanup_for_translation($settings['vat_number'], false) ?? '',
+			'Norhage invoices'
+		);
+	}
+	if(isset($settings['coc_number'])){
+		pll_register_string(
+			'invoice coc_number',
+			norhage_text_cleanup_for_translation($settings['coc_number'], false) ?? '',
+			'Norhage invoices'
+		);
+	}
+	if(isset($settings['extra_1']) && is_array($settings['extra_1'])){
+		pll_register_string(
+			'invoice extra 1',
+			norhage_text_cleanup_for_translation($settings['extra_1']['default']) ?? '',
+			'Norhage invoices',
+			true
+		);
+	}
+	if(isset($settings['extra_2']) && is_array($settings['extra_2'])){
+		pll_register_string(
+			'invoice extra 2',
+			norhage_text_cleanup_for_translation($settings['extra_2']['default']) ?? '',
+			'Norhage invoices',
+			true
+		);
+	}
+	if(isset($settings['extra_3']) && is_array($settings['extra_3'])){
+		pll_register_string(
+			'invoice extra 3',
+			norhage_text_cleanup_for_translation($settings['extra_3']['default']) ?? '',
+			'Norhage invoices',
+			true
+		);
+	}
 }, 9999);
 
 function norhage_text_cleanup_for_translation($text, $autop = true){
