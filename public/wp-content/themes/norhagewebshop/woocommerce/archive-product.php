@@ -50,7 +50,28 @@ do_action( 'woocommerce_shop_loop_header' );
 		<?php endif; ?>
 	</header>
 
-	
+	<?php
+    $this_category = get_queried_object();
+    if($this_category instanceof WP_Term):
+	    $args = [
+			'hierarchical' => 1,
+			'show_option_none' => '',
+			'hide_empty' => 0,
+			'parent' => $this_category->term_id,
+			'taxonomy' => 'product_cat'
+		];
+		if($subcats = get_categories($args)): ?>
+			<div class="alignwide subcategories">
+				<ul class="sub-categories">
+			
+				<?php foreach($subcats as $cat): 
+					get_template_part( 'template-parts/content', 'imagebutton', ['category' => $cat] );
+				?>
+				<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
+	<?php endif; ?>
 
 	<div class="before-products">
 	<?php
