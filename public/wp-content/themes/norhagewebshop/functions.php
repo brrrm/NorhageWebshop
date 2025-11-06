@@ -1490,6 +1490,9 @@ add_filter('wpo_wcpdf_extra_3_settings_text', 			'norhage_translate__wpo_wcpdf_s
  * register strings for PDF invoice for translation
  * */
 add_action("init", function () {
+	if(!class_exists('WPO_WCPDF')){
+		return;
+	}
 	$common_settings   = WPO_WCPDF()->settings->get_common_document_settings();
 	$document_settings = WPO_WCPDF()->settings->get_document_settings( 'invoice', 'pdf' );
 	$settings          = (array) $document_settings + (array) $common_settings;
