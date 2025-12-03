@@ -142,6 +142,9 @@ add_action( 'init', 'norhagewebshop_register_acf_blocks' );
 
 
 function norhage_get_nav_primary(){
+	if(!function_exists('pll_current_language')){
+		return null;
+	}
 	$lang = pll_current_language() ?? 'nb';
 	$cache_folder = WP_CONTENT_DIR . '/cache/_nav_primary';
 	$cache_primary_nav = $cache_folder . '/nav_primary_' . $lang . '.html';
@@ -251,12 +254,17 @@ add_filter("wp_nav_menu_objects",'norhage_wp_nav_menu_objects_start_in',10,2);
 function norhagewebshop_scripts() {
 	wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.css', [], _G_VERSION );
 	wp_enqueue_style( 'norhagewebshop-style', get_stylesheet_uri(), [], _G_VERSION );
+	// only load the following styles on product pages.
+	// on all other pages the styles are loaded through normal block loading magic
+	if ( is_product() ) {
+		wp_enqueue_style('productHeaderBlock', get_stylesheet_directory_uri() . '/blocks/product-header-block/productHeaderBlock.css', [], _G_VERSION);
+		wp_enqueue_style('text-image-block', get_stylesheet_directory_uri() . '/blocks/text-image-block/textImageBlock.css', [], _G_VERSION);
+		wp_enqueue_style('products-block', get_stylesheet_directory_uri() . '/blocks/products-block/productsBlock.css', [], _G_VERSION);
+		wp_enqueue_style('cta-block', get_stylesheet_directory_uri() . '/blocks/cta-block/ctaBlock.css', [], _G_VERSION);
+		wp_enqueue_style('projects-block', get_stylesheet_directory_uri() . '/blocks/projects-block/projectsBlock.css', [], _G_VERSION);
+	}
 	wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', ['jquery'], _G_VERSION, ['in_footer' => true, 'strategy' => 'defer'] );
 	wp_enqueue_script('norhagewebshop-misc', get_stylesheet_directory_uri() . '/js/frontend.js', ['jquery', 'wc-settings'], _G_VERSION, ['in_footer' => true, 'strategy' => 'defer']);
-	/*$myThemeParams = [
-		'test1'	=> 'lalala'
-	];
-	wp_add_inline_script('norhagewebshop-misc', 'var myThemeParams = ' . wp_json_encode( $myThemeParams ), 'before');*/
 }
 add_action( 'wp_enqueue_scripts', 'norhagewebshop_scripts' );
 
@@ -1490,7 +1498,8 @@ add_filter('wpo_wcpdf_extra_3_settings_text', 			'norhage_translate__wpo_wcpdf_s
  * register strings for PDF invoice for translation
  * */
 add_action("init", function () {
-	if(!class_exists('WPO_WCPDF')){
+	if(!class_exists('WPO_WCPDF') 
+		|| !function_exists('pll_register_string')){
 		return;
 	}
 	$common_settings   = WPO_WCPDF()->settings->get_common_document_settings();
