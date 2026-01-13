@@ -1699,3 +1699,12 @@ add_action('wp_head', function () {
         echo '<link rel="alternate" hreflang="x-default" href="https://norhage.fi' . $path . '" />' . "\n";
     }
 });
+
+
+function norhage_change_heartbeat_frequency( $settings ) {
+    $settings['interval'] = 120; // Change the interval to 60 seconds
+    return $settings;
+}
+add_filter( 'heartbeat_settings', 'norhage_change_heartbeat_frequency' );
+
+
