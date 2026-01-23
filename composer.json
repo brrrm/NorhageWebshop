@@ -36,7 +36,6 @@
 		"wpackagist-plugin/wp-mail-logging": "^1.13",
 		"wpackagist-plugin/woo-bulk-edit-products": "^1.8",
 		"wpackagist-plugin/akismet": "^5.4",
-		"wpackagist-plugin/advanced-database-cleaner": "^4.0",
 		"wpackagist-plugin/index-wp-mysql-for-speed": "^1.5"
 	},
 	"repositories": [

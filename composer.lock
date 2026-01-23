@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7885dcf269a06f2292730ca7db75fc30",
+    "content-hash": "ad85acbdc5abca5835766d59ddaeaba4",
     "packages": [
         {
             "name": "brrrm/bulk-actions-for-multi-currency",
@@ -358,24 +358,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/"
-        },
-        {
-            "name": "wpackagist-plugin/advanced-database-cleaner",
-            "version": "4.0.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/advanced-database-cleaner/",
-                "reference": "tags/4.0.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-database-cleaner.4.0.5.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/advanced-database-cleaner/"
         },
         {
             "name": "wpackagist-plugin/advanced-woo-labels",
